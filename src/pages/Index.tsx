@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Scissors, Palette, Heart } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-tecidos.jpg";
 
 const Index = () => {
   const whatsappNumber = "5511999999999";
@@ -29,25 +31,31 @@ const Index = () => {
   return (
     <div className="space-y-0">
       {/* Hero Section */}
-      <section className="relative bg-gradient-warm py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full bg-gradient-to-br from-primary/5 to-transparent"></div>
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Tecidos de <span className="text-primary">Qualidade</span> para seus Projetos
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30 hover:bg-white/30">
+              ✨ Tecidos de Qualidade Superior
+            </Badge>
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Tecidos de <span className="text-yellow-300">Qualidade</span> para seus Projetos
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button 
                 asChild
                 size="lg"
-                className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
+                className="bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -55,12 +63,101 @@ const Index = () => {
                 </a>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 h-auto hover:bg-primary hover:text-primary-foreground">
+              <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4 h-auto bg-white text-primary hover:bg-white/90">
                 <Link to="/catalogo">
                   Ver Catálogo
                 </Link>
               </Button>
             </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm">
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4" />
+                <span>Qualidade Garantida</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Truck className="w-4 h-4" />
+                <span>Entrega Rápida</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>+10 Anos de Experiência</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="py-16 lg:py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4">🔥 Bombando no momento</Badge>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Produtos em Destaque
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Os tecidos mais procurados pelos nossos clientes
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {[
+              { name: "Malha Liganete Premium", price: "R$ 32,90", description: "Por metro - Alta qualidade", badge: "Mais Vendido" },
+              { name: "Suplex Fitness", price: "R$ 38,50", description: "Ideal para roupas esportivas", badge: "Novidade" },
+              { name: "Algodão Percal", price: "R$ 25,90", description: "Macio e respirável", badge: "Oferta" },
+              { name: "Crepe Georgette", price: "R$ 42,90", description: "Elegante e fluido", badge: "Premium" }
+            ].map((product, index) => (
+              <Card key={index} className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
+                <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
+                  <Badge className="absolute top-2 left-2 text-xs">
+                    {product.badge}
+                  </Badge>
+                  <div className="text-center p-4">
+                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-primary text-2xl">🧵</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Foto do produto</p>
+                  </div>
+                </div>
+                
+                <CardContent className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+                      {product.name}
+                    </h3>
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {product.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl font-bold text-primary">{product.price}</span>
+                    <Button 
+                      asChild
+                      size="sm" 
+                      className="hover:scale-105 transition-transform"
+                    >
+                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                        <MessageCircle className="w-4 h-4 mr-1" />
+                        Consultar
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button asChild variant="outline" size="lg" className="hover:bg-primary hover:text-primary-foreground">
+              <Link to="/catalogo">Ver Todos os Produtos</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -93,6 +190,32 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 bg-gradient-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-display text-3xl font-bold mb-4">
+            Fique por dentro das novidades
+          </h2>
+          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Assine nossa newsletter e seja o primeiro a saber sobre novos tecidos, 
+            promoções exclusivas e dicas de costura.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <Button
+              asChild
+              variant="secondary"
+              size="lg"
+              className="flex-1 hover:scale-105 transition-all duration-300"
+            >
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Receber Novidades no WhatsApp
+              </a>
+            </Button>
           </div>
         </div>
       </section>
