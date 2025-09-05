@@ -8,55 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* 7 Fios Brand Colors - Warm and Welcoming */
-    --background: 45 20% 98%;
-    --foreground: 25 15% 20%;
+    /* 7 Fios Brand Colors - Navy Blue & Yellow */
+    --background: 220 30% 98%;
+    --foreground: 220 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 15% 20%;
+    --card-foreground: 220 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 15% 20%;
+    --popover-foreground: 220 40% 15%;
 
-    /* Primary: Rich Olive Green */
-    --primary: 75 25% 35%;
-    --primary-foreground: 45 20% 98%;
+    /* Primary: Navy Blue */
+    --primary: 220 85% 25%;
+    --primary-foreground: 45 95% 95%;
 
-    /* Secondary: Warm Beige */
-    --secondary: 35 25% 85%;
-    --secondary-foreground: 25 15% 30%;
+    /* Secondary: Warm Yellow */
+    --secondary: 45 95% 85%;
+    --secondary-foreground: 220 40% 15%;
 
-    /* Muted: Soft Cream */
-    --muted: 40 15% 92%;
-    --muted-foreground: 25 10% 50%;
+    /* Muted: Light Blue Gray */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 25% 45%;
 
-    /* Accent: Earthy Terra Cotta */
-    --accent: 15 40% 70%;
-    --accent-foreground: 45 20% 98%;
+    /* Accent: Golden Yellow */
+    --accent: 45 95% 55%;
+    --accent-foreground: 220 40% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 15% 88%;
-    --input: 35 15% 88%;
-    --ring: 75 25% 35%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 85% 25%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --warm-brown: 25 30% 45%;
-    --soft-cream: 45 25% 95%;
-    --deep-olive: 75 30% 25%;
-    --gentle-beige: 35 20% 90%;
+    --navy-blue: 220 85% 25%;
+    --navy-light: 220 60% 35%;
+    --golden-yellow: 45 95% 55%;
+    --warm-yellow: 45 90% 75%;
+    --cream-white: 45 40% 97%;
     
     /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(35 25% 85%), hsl(45 20% 98%));
-    --gradient-primary: linear-gradient(135deg, hsl(75 25% 35%), hsl(75 30% 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(15 40% 70%), hsl(25 35% 60%));
+    --gradient-warm: linear-gradient(135deg, hsl(45 90% 75%), hsl(45 40% 97%));
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 25%), hsl(220 60% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 95% 55%), hsl(45 90% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 25%), hsl(220 60% 35%), hsl(45 95% 55%));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(25 15% 20% / 0.15);
-    --shadow-warm: 0 8px 30px -12px hsl(75 25% 35% / 0.2);
+    --shadow-soft: 0 4px 20px -8px hsl(220 85% 25% / 0.15);
+    --shadow-warm: 0 8px 30px -12px hsl(45 95% 55% / 0.25);
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -69,45 +71,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 25 15% 8%;
-    --foreground: 45 20% 95%;
+    --background: 220 50% 8%;
+    --foreground: 45 90% 95%;
 
-    --card: 25 15% 12%;
-    --card-foreground: 45 20% 95%;
+    --card: 220 40% 12%;
+    --card-foreground: 45 90% 95%;
 
-    --popover: 25 15% 12%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 220 40% 12%;
+    --popover-foreground: 45 90% 95%;
 
-    --primary: 75 30% 50%;
-    --primary-foreground: 25 15% 8%;
+    --primary: 45 95% 55%;
+    --primary-foreground: 220 50% 8%;
 
-    --secondary: 25 20% 20%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 220 25% 20%;
+    --secondary-foreground: 45 90% 95%;
 
-    --muted: 25 20% 15%;
-    --muted-foreground: 35 15% 65%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 15 40% 55%;
-    --accent-foreground: 45 20% 95%;
+    --accent: 45 90% 50%;
+    --accent-foreground: 220 40% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 25 20% 20%;
-    --input: 25 20% 20%;
-    --ring: 75 30% 50%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 45 95% 55%;
     
-    --warm-brown: 25 25% 60%;
-    --soft-cream: 45 15% 15%;
-    --deep-olive: 75 25% 40%;
-    --gentle-beige: 35 15% 18%;
+    --navy-blue: 45 95% 55%;
+    --navy-light: 45 80% 60%;
+    --golden-yellow: 220 60% 40%;
+    --warm-yellow: 220 40% 25%;
+    --cream-white: 220 20% 15%;
     
-    --gradient-warm: linear-gradient(135deg, hsl(25 20% 20%), hsl(25 15% 12%));
-    --gradient-primary: linear-gradient(135deg, hsl(75 30% 50%), hsl(75 25% 40%));
-    --gradient-accent: linear-gradient(135deg, hsl(15 40% 55%), hsl(25 30% 45%));
+    --gradient-warm: linear-gradient(135deg, hsl(220 25% 20%), hsl(220 40% 12%));
+    --gradient-primary: linear-gradient(135deg, hsl(45 95% 55%), hsl(45 80% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 60% 40%), hsl(220 40% 25%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 95% 55%), hsl(45 80% 60%), hsl(220 60% 40%));
     
     --shadow-soft: 0 4px 20px -8px hsl(0 0% 0% / 0.3);
-    --shadow-warm: 0 8px 30px -12px hsl(75 30% 50% / 0.2);
+    --shadow-warm: 0 8px 30px -12px hsl(45 95% 55% / 0.2);
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

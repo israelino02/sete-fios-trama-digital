@@ -41,7 +41,7 @@ export const FeaturedProductCard = ({
           <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1">
             {name}
           </h3>
-          <div className="flex text-yellow-400">
+          <div className="flex text-accent">
             {[...Array(rating)].map((_, i) => (
               <Star key={i} className="w-3 h-3 fill-current" />
             ))}

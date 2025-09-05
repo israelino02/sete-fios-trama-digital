@@ -41,11 +41,11 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30 hover:bg-white/30">
+            <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
               ✨ Tecidos de Qualidade Superior
             </Badge>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Tecidos de <span className="text-yellow-300">Qualidade</span> para seus Projetos
+              Tecidos de <span className="text-accent">Qualidade</span> para seus Projetos
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
@@ -63,7 +63,7 @@ const Index = () => {
                 </a>
               </Button>
               
-              <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4 h-auto bg-white text-primary hover:bg-white/90">
+              <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4 h-auto bg-accent text-primary hover:bg-accent/90">
                 <Link to="/catalogo">
                   Ver Catálogo
                 </Link>
@@ -71,16 +71,16 @@ const Index = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap justify-center items-center gap-6 text-accent text-sm font-medium">
+              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
                 <Shield className="w-4 h-4" />
                 <span>Qualidade Garantida</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
                 <Truck className="w-4 h-4" />
                 <span>Entrega Rápida</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
                 <Users className="w-4 h-4" />
                 <span>+10 Anos de Experiência</span>
               </div>
@@ -93,7 +93,7 @@ const Index = () => {
       <section className="py-16 lg:py-24 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4">🔥 Bombando no momento</Badge>
+            <Badge className="mb-4 bg-primary text-primary-foreground">🔥 Bombando no momento</Badge>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Produtos em Destaque
             </h2>
@@ -104,14 +104,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
-              { name: "Malha Liganete Premium", price: "R$ 32,90", description: "Por metro - Alta qualidade", badge: "Mais Vendido" },
-              { name: "Suplex Fitness", price: "R$ 38,50", description: "Ideal para roupas esportivas", badge: "Novidade" },
-              { name: "Algodão Percal", price: "R$ 25,90", description: "Macio e respirável", badge: "Oferta" },
-              { name: "Crepe Georgette", price: "R$ 42,90", description: "Elegante e fluido", badge: "Premium" }
+              { name: "Malha Liganete Premium", price: "R$ 32,90", description: "Por metro - Alta qualidade", badge: "Mais Vendido", badgeColor: "bg-accent text-primary" },
+              { name: "Suplex Fitness", price: "R$ 38,50", description: "Ideal para roupas esportivas", badge: "Novidade", badgeColor: "bg-primary text-primary-foreground" },
+              { name: "Algodão Percal", price: "R$ 25,90", description: "Macio e respirável", badge: "Oferta", badgeColor: "bg-red-500 text-white" },
+              { name: "Crepe Georgette", price: "R$ 42,90", description: "Elegante e fluido", badge: "Premium", badgeColor: "bg-gradient-accent text-primary" }
             ].map((product, index) => (
               <Card key={index} className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
-                  <Badge className="absolute top-2 left-2 text-xs">
+                  <Badge className={`absolute top-2 left-2 text-xs ${product.badgeColor}`}>
                     {product.badge}
                   </Badge>
                   <div className="text-center p-4">
@@ -127,7 +127,7 @@ const Index = () => {
                     <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
                       {product.name}
                     </h3>
-                    <div className="flex text-yellow-400">
+                    <div className="flex text-accent">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-3 h-3 fill-current" />
                       ))}
@@ -195,12 +195,12 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-primary text-primary-foreground">
+      <section className="py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-3xl font-bold mb-4">
             Fique por dentro das novidades
           </h2>
-          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Assine nossa newsletter e seja o primeiro a saber sobre novos tecidos, 
             promoções exclusivas e dicas de costura.
           </p>
@@ -209,7 +209,7 @@ const Index = () => {
               asChild
               variant="secondary"
               size="lg"
-              className="flex-1 hover:scale-105 transition-all duration-300"
+              className="flex-1 hover:scale-105 transition-all duration-300 bg-accent text-primary hover:bg-accent/90"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />

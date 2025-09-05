@@ -63,16 +63,18 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				warm: {
-					brown: 'hsl(var(--warm-brown))',
-					cream: 'hsl(var(--soft-cream))',
-					olive: 'hsl(var(--deep-olive))',
-					beige: 'hsl(var(--gentle-beige))'
+					navy: 'hsl(var(--navy-blue))',
+					light: 'hsl(var(--navy-light))',
+					yellow: 'hsl(var(--golden-yellow))',
+					amber: 'hsl(var(--warm-yellow))',
+					cream: 'hsl(var(--cream-white))'
 				}
 			},
 			backgroundImage: {
 				'gradient-warm': 'var(--gradient-warm)',
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-hero': 'var(--gradient-hero)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
