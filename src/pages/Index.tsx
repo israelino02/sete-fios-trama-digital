@@ -104,10 +104,10 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
-              { name: "Malha Liganete Premium", price: "R$ 32,90", description: "Por metro - Alta qualidade", badge: "Mais Vendido", badgeColor: "bg-accent text-primary" },
-              { name: "Suplex Fitness", price: "R$ 38,50", description: "Ideal para roupas esportivas", badge: "Novidade", badgeColor: "bg-primary text-primary-foreground" },
-              { name: "Algodão Percal", price: "R$ 25,90", description: "Macio e respirável", badge: "Oferta", badgeColor: "bg-red-500 text-white" },
-              { name: "Crepe Georgette", price: "R$ 42,90", description: "Elegante e fluido", badge: "Premium", badgeColor: "bg-gradient-accent text-primary" }
+              { name: "Malha Liganete Premium", price: "op", description: "Por metro - Alta qualidade", badge: "Mais Vendido", badgeColor: "bg-accent text-primary" },
+              { name: "Suplex Fitness", price: "op", description: "Ideal para roupas esportivas", badge: "Novidade", badgeColor: "bg-primary text-primary-foreground" },
+              { name: "Algodão Percal", price: "op", description: "Macio e respirável", badge: "Oferta", badgeColor: "bg-red-500 text-white" },
+              { name: "Crepe Georgette", price: "op", description: "Elegante e fluido", badge: "Premium", badgeColor: "bg-gradient-accent text-primary" }
             ].map((product, index) => (
               <Card key={index} className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
                 <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
