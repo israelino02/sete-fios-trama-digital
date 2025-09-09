@@ -229,7 +229,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Visão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Queremos ser reconhecidos em todo o Brasil como a referência em tecidos e aviamentos, lembrados pela qualidade, inovação e custo-benefício que fazem diferença na rotina das confecções.
+                  Ser referência nacional em tecidos e aviamentos, reconhecida pela qualidade, inovação e custo-benefício de nossos produtos, proporcionando soluções em matéria-prima para confecções têxtil.
                 </p>
               </CardContent>
             </Card>
