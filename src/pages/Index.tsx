@@ -194,6 +194,111 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Missão, Visão e Valores */}
+      <section className="py-16 lg:py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary text-primary-foreground">🏢 Institucional</Badge>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Conheça a Sete Fios Têxtil
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Uma empresa comprometida com a excelência e inovação no mercado têxtil
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* Missão */}
+            <Card className="shadow-soft hover:shadow-warm transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Missão</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Na Sete Fios Têxtil, nossa missão é simples e clara: oferecer tecidos e aviamentos que unem durabilidade, inovação e preço justo. Trabalhamos com excelência e eficiência para entregar muito mais do que produtos — entregamos soluções inteligentes que acompanham as necessidades e tendências do mercado têxtil.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Visão */}
+            <Card className="shadow-soft hover:shadow-warm transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">🔭</span>
+                </div>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Visão</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Queremos ser reconhecidos em todo o Brasil como a referência em tecidos e aviamentos, lembrados pela qualidade, inovação e custo-benefício que fazem diferença na rotina das confecções.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Valores */}
+            <Card className="shadow-soft hover:shadow-warm transition-all duration-300 lg:col-span-1">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">⭐</span>
+                </div>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6">Nossos Valores</h3>
+                <div className="space-y-4 text-left">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Qualidade sem concessões:</p>
+                      <p className="text-muted-foreground text-sm">produtos que seguem os mais altos padrões, garantindo durabilidade e conforto.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Custo-benefício real:</p>
+                      <p className="text-muted-foreground text-sm">excelência e preço justo que agregam valor ao investimento de cada cliente.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Inteligência e inovação:</p>
+                      <p className="text-muted-foreground text-sm">tecnologia aplicada para otimizar processos e criar soluções modernas.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Agilidade que surpreende:</p>
+                      <p className="text-muted-foreground text-sm">rapidez e eficiência para responder ao ritmo do mercado.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Parceria de verdade:</p>
+                      <p className="text-muted-foreground text-sm">relações de confiança e proximidade que fortalecem projetos e objetivos.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Ética e transparência:</p>
+                      <p className="text-muted-foreground text-sm">cada negociação pautada por integridade e responsabilidade.</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Frase de Impacto */}
+          <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
+            <p className="text-lg md:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
+              "Aqui, cada fio conta uma história: a de uma empresa que cresce lado a lado com você, 
+              oferecendo muito mais do que matéria-prima — oferecemos segurança, confiança e resultados."
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
