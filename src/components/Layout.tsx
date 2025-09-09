@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { MessageCircle, Menu, X, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 interface LayoutProps {
@@ -117,6 +117,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <footer className="bg-muted mt-20">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 7 Fios - Descrição da empresa */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -124,39 +125,84 @@ export const Layout = ({ children }: LayoutProps) => {
                 </div>
                 <span className="font-display font-bold text-xl">7 Fios</span>
               </div>
-              <p className="text-muted-foreground text-sm">
-                Sua loja de tecidos de qualidade, aviamentos e acessórios para costura.
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Sete Fios Têxtil é uma empresa especializada em tecidos e aviamentos que unem qualidade, inovação e custo-benefício. Nosso compromisso é oferecer soluções inteligentes para o setor têxtil, sempre com ética, agilidade e parceria, ajudando confecções em todo o Brasil a crescerem com segurança e confiança.
               </p>
             </div>
 
+            {/* Navegação */}
             <div>
-              <h3 className="font-semibold mb-4">Navegação</h3>
+              <h3 className="font-semibold mb-4 text-foreground">Navegação</h3>
               <ul className="space-y-2">
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      to={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    to="/"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Início
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/sobre"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Sobre
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/catalogo"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Produtos
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/#institucional"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Missão, Visão e Valores
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contato"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Contato
+                  </Link>
+                </li>
               </ul>
             </div>
 
+            {/* Contato */}
             <div>
-              <h3 className="font-semibold mb-4">Contato</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>📧 contato@7fios.com.br</p>
-                <p>📞 (11) 99999-9999</p>
-                <p>📍 São Paulo, SP</p>
+              <h3 className="font-semibold mb-4 text-foreground">Contato</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>7fiosloja@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>(81) 99461-6071</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Av. Pref. Braz de Líra - Santa Cruz do Capibaribe, PE, 55192-512</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Clock className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Segunda a Sexta, das 8h às 18h</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 7 Fios. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Sete Fios Têxtil. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
