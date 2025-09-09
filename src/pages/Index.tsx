@@ -259,29 +259,8 @@ const Index = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="font-semibold text-foreground">Inteligência e inovação:</p>
-                      <p className="text-muted-foreground text-sm">tecnologia aplicada para otimizar processos e criar soluções modernas.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Agilidade que surpreende:</p>
-                      <p className="text-muted-foreground text-sm">rapidez e eficiência para responder ao ritmo do mercado.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
                       <p className="font-semibold text-foreground">Parceria de verdade:</p>
                       <p className="text-muted-foreground text-sm">relações de confiança e proximidade que fortalecem projetos e objetivos.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Ética e transparência:</p>
-                      <p className="text-muted-foreground text-sm">cada negociação pautada por integridade e responsabilidade.</p>
                     </div>
                   </div>
                 </div>
