@@ -3,39 +3,45 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contato = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de entrar em contato com a 7 Fios Têxtil.";
+  const whatsappNumber = "5511999999999";
+  const message = "Olá! Gostaria de entrar em contato com a 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const contactInfo = [
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "WhatsApp",
-      content: "(81) 99461-6071",
+      content: "(11) 99999-9999",
       description: "Nossa principal forma de atendimento",
-      action: { label: "Fale Conosco no WhatsApp", url: whatsappUrl }
+      action: { label: "Enviar Mensagem", url: whatsappUrl }
+    },
+    {
+      icon: <Phone className="w-6 h-6" />,
+      title: "Telefone",
+      content: "(11) 3333-4444",
+      description: "Atendimento comercial",
+      action: { label: "Ligar Agora", url: "tel:+551133334444" }
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "E-mail",
-      content: "7fiosloja@gmail.com",
+      content: "contato@7fios.com.br",
       description: "Para parcerias e orçamentos",
-      action: { label: "Enviar E-mail", url: "mailto:7fiosloja@gmail.com" }
+      action: { label: "Enviar E-mail", url: "mailto:contato@7fios.com.br" }
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Endereço",
-      content: "Av. Pref. Braz de Líra",
-      description: "Santa Cruz do Capibaribe, PE, 55192-512",
-      action: { label: "Ver no Mapa", url: "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra+Santa+Cruz+do+Capibaribe+PE" }
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Horário de Funcionamento",
-      content: "Segunda a Sexta",
-      description: "Das 8h às 18h",
-      action: { label: "Fale Conosco no WhatsApp", url: whatsappUrl }
+      content: "Rua das Flores, 123 - Centro",
+      description: "São Paulo, SP - CEP: 01000-000",
+      action: { label: "Ver no Mapa", url: "https://maps.google.com/?q=Rua+das+Flores+123+Centro+São+Paulo" }
     }
+  ];
+
+  const horarios = [
+    { dia: "Segunda a Sexta", horario: "8:00 às 18:00" },
+    { dia: "Sábado", horario: "8:00 às 12:00" },
+    { dia: "Domingo", horario: "Fechado" }
   ];
 
   return (
@@ -110,55 +116,66 @@ const Contato = () => {
         </div>
       </section>
 
-      {/* Store Location */}
+      {/* Business Hours */}
       <section className="mb-16">
-        <Card className="shadow-warm max-w-2xl mx-auto">
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold text-foreground text-center">
-              Visite Nossa Loja
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="aspect-video bg-gradient-warm rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                <p className="text-muted-foreground">Nossa Localização</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-6 flex items-center">
+              <Clock className="w-8 h-8 mr-3 text-primary" />
+              Horário de Funcionamento
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              Nossa loja física está aberta nos seguintes horários. Para atendimento pelo WhatsApp, 
+              estamos disponíveis durante o horário comercial.
+            </p>
+            
+            <div className="space-y-3">
+              {horarios.map((item, index) => (
+                <div key={index} className="flex justify-between items-center p-3 bg-muted rounded-lg">
+                  <span className="font-medium text-foreground">{item.dia}</span>
+                  <span className="text-muted-foreground">{item.horario}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <Card className="shadow-warm">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-foreground text-center">
+                Visite Nossa Loja
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="aspect-video bg-gradient-warm rounded-lg flex items-center justify-center">
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
+                  <p className="text-muted-foreground">Localização da Loja</p>
+                </div>
               </div>
-            </div>
-            <div className="text-center space-y-2">
-              <p className="font-medium text-foreground">Av. Pref. Braz de Líra</p>
-              <p className="text-muted-foreground">Santa Cruz do Capibaribe, PE, 55192-512</p>
-              <p className="text-sm text-muted-foreground">
-                Atendimento de Segunda a Sexta, das 8h às 18h
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="text-center space-y-2">
+                <p className="font-medium text-foreground">Rua das Flores, 123 - Centro</p>
+                <p className="text-muted-foreground">São Paulo, SP - CEP: 01000-000</p>
+                <p className="text-sm text-muted-foreground">
+                  Próximo ao metrô Sé, fácil acesso de transporte público
+                </p>
+              </div>
               <Button
                 asChild
-                className="flex-1 hover:scale-105 transition-all duration-300"
+                className="w-full hover:scale-105 transition-all duration-300"
                 variant="outline"
               >
                 <a 
-                  href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra+Santa+Cruz+do+Capibaribe+PE" 
+                  href="https://maps.google.com/?q=Rua+das+Flores+123+Centro+São+Paulo" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <MapPin className="w-4 h-4 mr-2" />
-                  Ver no Mapa
+                  Como Chegar
                 </a>
               </Button>
-              <Button
-                asChild
-                className="flex-1 hover:scale-105 transition-all duration-300"
-              >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Fale Conosco no WhatsApp
-                </a>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       {/* FAQ Section */}
@@ -246,7 +263,7 @@ const Contato = () => {
             size="lg"
             className="text-lg px-8 py-4 h-auto hover:bg-primary hover:text-primary-foreground"
           >
-            <a href="tel:+5581994616071">
+            <a href="tel:+551133334444">
               <Phone className="w-5 h-5 mr-2" />
               Ligar
             </a>
