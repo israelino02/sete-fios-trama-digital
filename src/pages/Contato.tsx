@@ -139,8 +139,8 @@ const Contato = () => {
             <CardContent className="space-y-4">
               <div className="aspect-video rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/fb98f4a6-f42f-4f1d-8177-f6d1cb555cc8.png"
-                  alt="Fachada da Sete Fios Têxtil - Loja de tecidos em Santa Cruz do Capibaribe"
+                  src="/lovable-uploads/a282eb7b-c32f-418c-a45f-803457dd1fb1.png" 
+                  alt="Fachada da loja Sete Fios Têxtil" 
                   className="w-full h-full object-cover"
                 />
               </div>
