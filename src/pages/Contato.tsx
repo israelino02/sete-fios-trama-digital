@@ -137,11 +137,12 @@ const Contato = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="aspect-video bg-gradient-warm rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                  <p className="text-muted-foreground">Localização da Loja</p>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/fb98f4a6-f42f-4f1d-8177-f6d1cb555cc8.png"
+                  alt="Fachada da Sete Fios Têxtil - Loja de tecidos em Santa Cruz do Capibaribe"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="text-center space-y-2">
                 <p className="font-medium text-foreground">Av. Pref. Braz de Líra</p>
