@@ -52,18 +52,18 @@ const Sobre = () => {
           </h2>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Em 2010, Maria Silva, costureira há mais de 20 anos, decidiu abrir sua própria loja 
-              de tecidos no centro de São Paulo. O nome "7 Fios" surgiu da crença de que cada 
-              tecido é formado por múltiplos fios que, entrelaçados, criam algo belo e resistente.
+              Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. 
+              Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe 
+              e a fidelidade dos clientes que estiveram conosco desde o início.
             </p>
             <p>
-              Com o tempo, a loja cresceu e se tornou referência na região. Hoje, atendemos 
-              costureiras profissionais, estilistas iniciantes e amantes do DIY que buscam 
-              materiais de qualidade para seus projetos.
+              Nesse período, entendemos que a Sete Fios já não era apenas um projeto, mas uma 
+              empresa sólida, construída sobre união, fé e dedicação. Muitos clientes deixaram 
+              de ser apenas compradores e se tornaram amigos, inspirando inovações e ajudando 
+              a moldar novos produtos.
             </p>
             <p>
-              Nossa missão é simples: fornecer os melhores materiais para que cada cliente 
-              possa dar vida às suas criações mais especiais.
+              Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
             </p>
           </div>
         </div>
