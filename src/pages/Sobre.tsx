@@ -39,10 +39,8 @@ const Sobre = () => {
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, 
-          os primeiros clientes surgiram entre idas e vindas em uma moto. 
-        </p>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">
-          O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro.
+          os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma 
+          história de superação, gratidão e confiança no futuro.
         </p>
       </section>
 
