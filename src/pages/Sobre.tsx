@@ -72,8 +72,8 @@ const Sobre = () => {
               Nossa Missão
             </h3>
             <p className="text-muted-foreground">
-              "Inspirar e capacitar pessoas a criarem peças únicas através da 
-              disponibilização de materiais de qualidade superior e atendimento especializado."
+              Na Sete Fios Têxtil, oferecemos tecidos que unem durabilidade, inovação e preço justo. 
+              Mais que um produto, entregamos soluções inteligentes ao mercado.
             </p>
           </div>
         </div>
