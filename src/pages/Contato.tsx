@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Mail, Clock } from "lucide-react";
+import StoreLocationMap from "@/components/StoreLocationMap";
 
 const Contato = () => {
   const whatsappNumber = "5581994616071";
@@ -137,13 +138,7 @@ const Contato = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="aspect-video rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/fb98f4a6-f42f-4f1d-8177-f6d1cb555cc8.png"
-                  alt="Fachada da Sete Fios Têxtil - Loja de tecidos em Santa Cruz do Capibaribe"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <StoreLocationMap />
               <div className="text-center space-y-2">
                 <p className="font-medium text-foreground">Av. Pref. Braz de Líra</p>
                 <p className="text-muted-foreground">Santa Cruz do Capibaribe, PE</p>
