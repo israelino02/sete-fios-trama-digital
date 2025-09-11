@@ -32,54 +32,53 @@ const Sobre = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Hero Section */}
-      <section className="text-center mb-16">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Nossa História
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          A <strong>Sete Fios</strong> nasceu do improviso e da fé. Com apenas um computador, um birô e uma mala de mostruário, 
-          os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de 
-          superação, gratidão e confiança no futuro.
-        </p>
+      {/* Nossa História */}
+      <section className="mb-16">
+        <Card className="p-8 shadow-soft">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">
+            Nossa História
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
+            A Sete Fios nasceu do improviso e da fé. No começo, era apenas um computador, um birô e uma mala que servia de mostruário. Entre idas e vindas em uma pequena moto, com coragem e determinação, os primeiros clientes surgiram — alguns até brincavam com a cena. O que parecia simples se transformou em uma jornada de superação, onde cada desafio fortaleceu nossa missão: entregar qualidade, custo-benefício e confiança. Hoje, com estrutura consolidada, olhamos para trás com gratidão e seguimos em frente com os mesmos sonhos que nos impulsionaram desde o início.
+          </p>
+        </Card>
       </section>
 
-      {/* Story Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-        <div>
-          <h2 className="font-display text-3xl font-bold text-foreground mb-6">
+      {/* Como Tudo Começou */}
+      <section className="mb-16">
+        <Card className="p-8 shadow-soft">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">
             Como Tudo Começou
           </h2>
-          <div className="space-y-4 text-muted-foreground">
-            <p>
-              Em 2010, Maria Silva, costureira há mais de 20 anos, decidiu abrir sua própria loja 
-              de tecidos no centro de São Paulo. O nome "7 Fios" surgiu da crença de que cada 
-              tecido é formado por múltiplos fios que, entrelaçados, criam algo belo e resistente.
+          <div className="space-y-4 text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-lg leading-relaxed">
+              Desde os primeiros passos, nossa trajetória foi marcada por aprendizados e superações. Durante a pandemia, enfrentamos momentos de incerteza, mas também descobrimos a força da nossa equipe e a importância dos clientes que caminham conosco desde o início.
             </p>
-            <p>
-              Com o tempo, a loja cresceu e se tornou referência na região. Hoje, atendemos 
-              costureiras profissionais, estilistas iniciantes e amantes do DIY que buscam 
-              materiais de qualidade para seus projetos.
+            <p className="text-lg leading-relaxed">
+              Foi nesse período que percebemos que a Sete Fios já não era apenas um projeto — era uma empresa sólida, sustentada pela união das pessoas que acreditam no mesmo propósito. Muitos clientes se tornaram verdadeiros amigos, ajudando a moldar nossos produtos e inspirando cada inovação.
             </p>
-            <p>
-              Nossa missão é simples: fornecer os melhores materiais para que cada cliente 
-              possa dar vida às suas criações mais especiais.
+            <p className="text-lg leading-relaxed">
+              Nossa caminhada é guiada pela fé, pela dedicação e pela confiança de que, juntos, podemos sempre alcançar novos patamares.
             </p>
           </div>
-        </div>
-        
-        <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
+        </Card>
+      </section>
+
+      {/* Nossa Missão - Destaque especial */}
+      <section className="mb-20">
+        <div className="bg-gradient-primary/10 border border-primary/20 rounded-lg p-8 lg:p-12 shadow-warm">
           <div className="text-center">
             <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-4xl">🧵</span>
+              <span className="text-4xl">🎯</span>
             </div>
-            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl font-bold text-foreground mb-6">
               Nossa Missão
-            </h3>
-            <p className="text-muted-foreground">
-              "Inspirar e capacitar pessoas a criarem peças únicas através da 
-              disponibilização de materiais de qualidade superior e atendimento especializado."
-            </p>
+            </h2>
+            <div className="bg-background/80 rounded-lg p-6 max-w-3xl mx-auto">
+              <p className="text-lg text-foreground font-medium leading-relaxed italic">
+                "Na Sete Fios Têxtil, nossa missão é simples e clara: oferecer tecidos e aviamentos que unem durabilidade, inovação e preço justo. Trabalhamos com excelência e eficiência para entregar muito mais do que produtos — entregamos soluções inteligentes que acompanham as necessidades e tendências do mercado têxtil."
+              </p>
+            </div>
           </div>
         </div>
       </section>
