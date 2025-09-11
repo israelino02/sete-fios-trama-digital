@@ -38,9 +38,9 @@ const Sobre = () => {
           Nossa História
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          A <strong>7 Fios</strong> nasceu do sonho de uma família apaixonada pela costura e pelo artesanato. 
-          Há mais de uma década, oferecemos tecidos de qualidade e aviamentos especiais para quem 
-          busca criar peças únicas e especiais.
+          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, 
+          os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma 
+          história de superação, gratidão e confiança no futuro.
         </p>
       </section>
 
