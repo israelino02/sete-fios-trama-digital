@@ -50,20 +50,15 @@ const Sobre = () => {
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">
             Como Tudo Começou
           </h2>
-          <div className="space-y-4 text-muted-foreground">
+          <div className="text-muted-foreground">
             <p>
               Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. 
               Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe 
-              e a fidelidade dos clientes que estiveram conosco desde o início.
-            </p>
-            <p>
-              Nesse período, entendemos que a Sete Fios já não era apenas um projeto, mas uma 
-              empresa sólida, construída sobre união, fé e dedicação. Muitos clientes deixaram 
-              de ser apenas compradores e se tornaram amigos, inspirando inovações e ajudando 
-              a moldar novos produtos.
-            </p>
-            <p>
-              Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
+              e a fidelidade dos clientes que estiveram conosco desde o início. Nesse período, 
+              entendemos que a Sete Fios já não era apenas um projeto, mas uma empresa sólida, 
+              construída sobre união, fé e dedicação. Muitos clientes deixaram de ser apenas 
+              compradores e se tornaram amigos, inspirando inovações e ajudando a moldar novos 
+              produtos. Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
             </p>
           </div>
         </div>
