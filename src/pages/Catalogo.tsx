@@ -7,7 +7,14 @@ import { useState } from "react";
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const tecidos = [
+  interface Tecido {
+    name: string;
+    description: string;
+    category: string;
+    imageUrl?: string;
+  }
+
+  const tecidos: Tecido[] = [
     { name: "Algodão Percal", description: "Tecido de algodão macio e fresco, ideal para roupas casuais e roupas de cama.", category: "Algodão" },
     { name: "Linho Natural", description: "Fibra natural respirável, perfeita para roupas de verão e peças elegantes.", category: "Linho" },
     { name: "Viscose Estampada", description: "Tecido fluido com estampas modernas, ideal para vestidos e blusas.", category: "Viscose" },
@@ -37,11 +44,11 @@ const Catalogo = () => {
     { name: "Piquet Texturizado", description: "Tecido com textura especial, perfeito para polos e peças esportivas.", category: "Piquet" },
     { name: "Cambraia Delicada", description: "Tecido fino e transparente, ideal para lingerie e peças íntimas.", category: "Cambraia" },
     { name: "Fustão Aveludado", description: "Tecido com textura macia e aveludada, perfeito para peças confortáveis.", category: "Fustão" },
-    { name: "Romantik Floral", description: "Tecido delicado com estampas florais românticas, ideal para vestidos e blusas femininas.", category: "ROMANTIK" },
-    { name: "Romantik Rendado", description: "Tecido com aplicações de renda e detalhes românticos, perfeito para peças especiais.", category: "ROMANTIK" },
-    { name: "Romantik Babados", description: "Tecido com textura de babados delicados, ideal para saias e vestidos românticos.", category: "ROMANTIK" },
-    { name: "Romantik Vintage", description: "Tecido inspirado no estilo vintage com toque romântico, perfeito para peças retrô.", category: "ROMANTIK" },
-    { name: "Romantik Pérolas", description: "Tecido com aplicação de pérolas e bordados, ideal para ocasiões especiais.", category: "ROMANTIK" }
+    { name: "Tangerina ROMANTIK", description: "Tecido vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina.jpg" },
+    { name: "Marrom ROMANTIK", description: "Tecido elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
+    { name: "Turquesa ROMANTIK", description: "Tecido refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
+    { name: "Coral ROMANTIK", description: "Tecido delicado na cor coral, perfeito para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
+    { name: "Chumbo ROMANTIK", description: "Tecido neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
@@ -111,6 +118,7 @@ const Catalogo = () => {
             description={tecido.description}
             category={tecido.category}
             imagePlaceholder={`Foto do ${tecido.name}`}
+            imageUrl={tecido.imageUrl}
           />
         ))}
       </div>

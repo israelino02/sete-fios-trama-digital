@@ -7,13 +7,15 @@ interface ProductCardProps {
   description: string;
   category?: string;
   imagePlaceholder?: string;
+  imageUrl?: string;
 }
 
 export const ProductCard = ({ 
   name, 
   description, 
   category,
-  imagePlaceholder = "Imagem do produto" 
+  imagePlaceholder = "Imagem do produto",
+  imageUrl
 }: ProductCardProps) => {
   const whatsappNumber = "5511999999999";
   const message = `Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`;
@@ -22,12 +24,20 @@ export const ProductCard = ({
   return (
     <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
       <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
-        <div className="text-center p-4">
-          <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-            <span className="text-primary text-2xl">📷</span>
+        {imageUrl ? (
+          <img 
+            src={imageUrl} 
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : (
+          <div className="text-center p-4">
+            <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+              <span className="text-primary text-2xl">📷</span>
+            </div>
+            <p className="text-sm text-muted-foreground">{imagePlaceholder}</p>
           </div>
-          <p className="text-sm text-muted-foreground">{imagePlaceholder}</p>
-        </div>
+        )}
         {category && (
           <div className="absolute top-2 left-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-md">
             {category}
