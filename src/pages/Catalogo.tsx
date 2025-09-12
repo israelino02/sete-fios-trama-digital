@@ -51,6 +51,8 @@ const Catalogo = () => {
   );
 
   const categories = [...new Set(tecidos.map(tecido => tecido.category))];
+  const displayCategories = categories.filter(cat => cat !== "Chiffon").slice(0, 7);
+  displayCategories.push("ROMANTIK");
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -87,7 +89,7 @@ const Catalogo = () => {
         >
           Todos
         </Button>
-        {categories.slice(0, 8).map((category) => (
+        {displayCategories.map((category) => (
           <Button
             key={category}
             variant={searchTerm === category.toLowerCase() ? "default" : "outline"}
