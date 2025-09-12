@@ -48,7 +48,17 @@ const Catalogo = () => {
     { name: "Marrom ROMANTIK", description: "Tecido elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
     { name: "Turquesa ROMANTIK", description: "Tecido refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
     { name: "Coral ROMANTIK", description: "Tecido delicado na cor coral, perfeito para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
-    { name: "Chumbo ROMANTIK", description: "Tecido neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" }
+    { name: "Chumbo ROMANTIK", description: "Tecido neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" },
+    { name: "Castanho ROMANTIK", description: "Tecido rico na cor castanho, perfeito para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-castanho.jpg" },
+    { name: "Verde Musgo ROMANTIK", description: "Tecido natural na cor verde musgo, ideal para peças modernas e estilosas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-musgo.jpg" },
+    { name: "Azul Oceano ROMANTIK", description: "Tecido profundo na cor azul oceano, perfeito para peças marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-azul-oceano.jpg" },
+    { name: "Verde Jade ROMANTIK", description: "Tecido vibrante na cor verde jade, ideal para peças únicas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-jade.jpg" },
+    { name: "Branco ROMANTIK", description: "Tecido clássico na cor branco, perfeito para peças atemporais e versáteis.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-branco.jpg" },
+    { name: "Tulipero ROMANTIK", description: "Tecido delicado na cor tulipero, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tulipero.jpg" },
+    { name: "Canela ROMANTIK", description: "Tecido aconchegante na cor canela, perfeito para peças casuais e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-canela.jpg" },
+    { name: "Preto ROMANTIK", description: "Tecido clássico na cor preta, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-preto.jpg" },
+    { name: "BIC ROMANTIK", description: "Tecido vibrante na cor azul bic, perfeito para peças marcantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-bic.jpg" },
+    { name: "Terra ROMANTIK", description: "Tecido terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-terra.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
