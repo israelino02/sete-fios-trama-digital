@@ -140,7 +140,7 @@ const Contato = () => {
             <CardContent className="space-y-4">
               <div className="w-full h-64 overflow-hidden rounded-lg">
                 <img 
-                  src="/lovable-uploads/ce990ed5-fc42-41d4-87b1-1e5813607933.png" 
+                  src="/lovable-uploads/b5bbe798-b57a-4a3b-8c16-3c5766f44906.png" 
                   alt="Fachada da loja Sete Fios Têxtil"
                   className="w-full h-full object-cover"
                 />
