@@ -44,7 +44,7 @@ const Catalogo = () => {
     { name: "Piquet Texturizado", description: "Tecido com textura especial, perfeito para polos e peças esportivas.", category: "Piquet" },
     { name: "Cambraia Delicada", description: "Tecido fino e transparente, ideal para lingerie e peças íntimas.", category: "Cambraia" },
     { name: "Fustão Aveludado", description: "Tecido com textura macia e aveludada, perfeito para peças confortáveis.", category: "Fustão" },
-    { name: "Tangerina ROMANTIK", description: "Tecido vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina.jpg" },
+    { name: "Tangerina ROMANTIK", description: "Tecido vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
     { name: "Marrom ROMANTIK", description: "Tecido elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
     { name: "Turquesa ROMANTIK", description: "Tecido refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
     { name: "Coral ROMANTIK", description: "Tecido delicado na cor coral, perfeito para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
