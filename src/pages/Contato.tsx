@@ -138,7 +138,13 @@ const Contato = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <StoreLocationMap />
+              <div className="w-full h-64 overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/ce990ed5-fc42-41d4-87b1-1e5813607933.png" 
+                  alt="Fachada da loja Sete Fios Têxtil"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="text-center space-y-2">
                 <p className="font-medium text-foreground">Av. Pref. Braz de Líra</p>
                 <p className="text-muted-foreground">Santa Cruz do Capibaribe, PE</p>
