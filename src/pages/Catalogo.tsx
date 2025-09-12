@@ -36,7 +36,12 @@ const Catalogo = () => {
     { name: "Moletom Flanelado", description: "Tecido quente e confortável, ideal para agasalhos e peças casuais.", category: "Moletom" },
     { name: "Piquet Texturizado", description: "Tecido com textura especial, perfeito para polos e peças esportivas.", category: "Piquet" },
     { name: "Cambraia Delicada", description: "Tecido fino e transparente, ideal para lingerie e peças íntimas.", category: "Cambraia" },
-    { name: "Fustão Aveludado", description: "Tecido com textura macia e aveludada, perfeito para peças confortáveis.", category: "Fustão" }
+    { name: "Fustão Aveludado", description: "Tecido com textura macia e aveludada, perfeito para peças confortáveis.", category: "Fustão" },
+    { name: "Romantik Floral", description: "Tecido delicado com estampas florais românticas, ideal para vestidos e blusas femininas.", category: "ROMANTIK" },
+    { name: "Romantik Rendado", description: "Tecido com aplicações de renda e detalhes românticos, perfeito para peças especiais.", category: "ROMANTIK" },
+    { name: "Romantik Babados", description: "Tecido com textura de babados delicados, ideal para saias e vestidos românticos.", category: "ROMANTIK" },
+    { name: "Romantik Vintage", description: "Tecido inspirado no estilo vintage com toque romântico, perfeito para peças retrô.", category: "ROMANTIK" },
+    { name: "Romantik Pérolas", description: "Tecido com aplicação de pérolas e bordados, ideal para ocasiões especiais.", category: "ROMANTIK" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
