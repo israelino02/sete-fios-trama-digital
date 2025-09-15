@@ -68,7 +68,11 @@ const Catalogo = () => {
     { name: "Pink ROMANTIK", description: "Tecido vibrante na cor pink, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
     { name: "Ires ROMANTIK", description: "Tecido suave na cor ires, perfeito para peças delicadas e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-ires.jpg" },
     { name: "Rosa BB ROMANTIK", description: "Tecido suave na cor rosa bb, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-rosa-bb.jpg" },
-    { name: "Fucsia ROMANTIK", description: "Tecido vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" }
+    { name: "Fucsia ROMANTIK", description: "Tecido vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" },
+    { name: "Verde Pavão ROMANTIK", description: "Tecido elegante na cor verde pavão, ideal para peças sofisticadas e marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
+    { name: "Frozen ROMANTIK", description: "Tecido fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
+    { name: "Lavanda ROMANTIK", description: "Tecido suave na cor lavanda, ideal para peças delicadas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
+    { name: "Mescla ROMANTIK", description: "Tecido texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
