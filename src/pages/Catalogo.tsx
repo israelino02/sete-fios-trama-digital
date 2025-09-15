@@ -72,7 +72,8 @@ const Catalogo = () => {
     { name: "Verde Pavão ROMANTIK", description: "Tecido elegante na cor verde pavão, ideal para peças sofisticadas e marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
     { name: "Frozen ROMANTIK", description: "Tecido fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
     { name: "Lavanda ROMANTIK", description: "Tecido suave na cor lavanda, ideal para peças delicadas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
-    { name: "Mescla ROMANTIK", description: "Tecido texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" }
+    { name: "Mescla ROMANTIK", description: "Tecido texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" },
+    { name: "Theos ROMANTIK", description: "Tecido elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-theos.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
