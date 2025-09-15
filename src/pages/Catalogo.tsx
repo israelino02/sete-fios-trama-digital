@@ -58,7 +58,17 @@ const Catalogo = () => {
     { name: "Canela ROMANTIK", description: "Tecido aconchegante na cor canela, perfeito para peças casuais e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-canela.jpg" },
     { name: "Preto ROMANTIK", description: "Tecido clássico na cor preta, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-preto.jpg" },
     { name: "BIC ROMANTIK", description: "Tecido vibrante na cor azul bic, perfeito para peças marcantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-bic.jpg" },
-    { name: "Terra ROMANTIK", description: "Tecido terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-terra.jpg" }
+    { name: "Terra ROMANTIK", description: "Tecido terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-terra.jpg" },
+    { name: "Sensuale ROMANTIK", description: "Tecido sensual na cor vinho, ideal para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-sensuale.jpg" },
+    { name: "Vermelho ROMANTIK", description: "Tecido vibrante na cor vermelho, perfeito para peças marcantes e cheias de energia.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-vermelho.jpg" },
+    { name: "Pimenta ROMANTIK", description: "Tecido ardente na cor pimenta, ideal para peças modernas e impactantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pimenta.jpg" },
+    { name: "Amarelo BB ROMANTIK", description: "Tecido luminoso na cor amarelo bb, perfeito para peças alegres e vibrantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-amarelo-bb.jpg" },
+    { name: "Tibeton ROMANTIK", description: "Tecido dourado na cor tibeton, ideal para peças luxuosas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tibeton.jpg" },
+    { name: "Romance ROMANTIK", description: "Tecido delicado na cor romance, perfeito para peças românticas e femininas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-romance.jpg" },
+    { name: "Pink ROMANTIK", description: "Tecido vibrante na cor pink, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
+    { name: "Ires ROMANTIK", description: "Tecido suave na cor ires, perfeito para peças delicadas e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-ires.jpg" },
+    { name: "Rosa BB ROMANTIK", description: "Tecido suave na cor rosa bb, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-rosa-bb.jpg" },
+    { name: "Fucsia ROMANTIK", description: "Tecido vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
