@@ -15,13 +15,6 @@ const Catalogo = () => {
   }
 
   const tecidos: Tecido[] = [
-    { name: "Algodão Percal", description: "Tecido de algodão macio e fresco, ideal para roupas casuais e roupas de cama.", category: "Algodão" },
-    { name: "Linho Natural", description: "Fibra natural respirável, perfeita para roupas de verão e peças elegantes.", category: "Linho" },
-    { name: "Viscose Estampada", description: "Tecido fluido com estampas modernas, ideal para vestidos e blusas.", category: "Viscose" },
-    { name: "Crepe Georgette", description: "Tecido leve e transparente, perfeito para peças delicadas e sobreposições.", category: "Crepe" },
-    { name: "Jeans Denim", description: "Tecido resistente 100% algodão, ideal para calças, jaquetas e saias.", category: "Jeans" },
-    { name: "Seda Pura", description: "Tecido nobre e brilhante, perfeito para ocasiões especiais e peças sofisticadas.", category: "Seda" },
-    { name: "Tricoline Lisa", description: "Algodão de qualidade superior, ideal para camisas e peças estruturadas.", category: "Algodão" },
     { name: "Chiffon Transparente", description: "Tecido leve e etéreo, perfeito para vestidos de festa e sobreposições.", category: "Chiffon" },
     { name: "Malha Ribana", description: "Tecido elástico confortável, ideal para camisetas e roupas íntimas.", category: "Malha" },
     { name: "Cetim Acetinado", description: "Tecido com brilho intenso, perfeito para roupas de festa e forros.", category: "Cetim" },
