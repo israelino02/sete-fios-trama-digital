@@ -15,28 +15,6 @@ const Catalogo = () => {
   }
 
   const tecidos: Tecido[] = [
-    { name: "Chiffon Transparente", description: "Tecido leve e etéreo, perfeito para vestidos de festa e sobreposições.", category: "Chiffon" },
-    { name: "Malha Ribana", description: "Tecido elástico confortável, ideal para camisetas e roupas íntimas.", category: "Malha" },
-    { name: "Cetim Acetinado", description: "Tecido com brilho intenso, perfeito para roupas de festa e forros.", category: "Cetim" },
-    { name: "Flanela Xadrez", description: "Tecido quente e macio, ideal para camisas de inverno e pijamas.", category: "Flanela" },
-    { name: "Organza Cristal", description: "Tecido transparente e estruturado, perfeito para vestidos de noiva e festa.", category: "Organza" },
-    { name: "Veludo Molhado", description: "Tecido com textura aveludada e brilho sutil, ideal para peças elegantes.", category: "Veludo" },
-    { name: "Oxford Listrado", description: "Tecido estruturado com listras finas, perfeito para camisas sociais.", category: "Oxford" },
-    { name: "Tule Bordado", description: "Tecido delicado com bordados, ideal para vestidos de festa e aplicações.", category: "Tule" },
-    { name: "Lã Batida", description: "Tecido quente e encorpado, perfeito para casacos e peças de inverno.", category: "Lã" },
-    { name: "Popeline Stretch", description: "Algodão com elastano, oferece conforto e movimento às suas peças.", category: "Popeline" },
-    { name: "Renda Francesa", description: "Tecido delicado com padrões elaborados, ideal para lingerie e detalhes.", category: "Renda" },
-    { name: "Jacquard Texturizado", description: "Tecido com desenhos em relevo, perfeito para peças especiais.", category: "Jacquard" },
-    { name: "Musseline Plissada", description: "Tecido leve com textura plissada, ideal para saias e vestidos românticos.", category: "Musseline" },
-    { name: "Gabardine Importada", description: "Tecido resistente e elegante, perfeito para ternos e peças formais.", category: "Gabardine" },
-    { name: "Lycra Fitness", description: "Tecido com alta elasticidade, ideal para roupas esportivas e fitness.", category: "Lycra" },
-    { name: "Brocado Dourado", description: "Tecido luxuoso com fios metálicos, perfeito para ocasiões especiais.", category: "Brocado" },
-    { name: "Chambray Lavado", description: "Tecido casual com aparência desbotada, ideal para peças do dia a dia.", category: "Chambray" },
-    { name: "Tafetá Encorpado", description: "Tecido estruturado com brilho sutil, perfeito para vestidos de festa.", category: "Tafetá" },
-    { name: "Moletom Flanelado", description: "Tecido quente e confortável, ideal para agasalhos e peças casuais.", category: "Moletom" },
-    { name: "Piquet Texturizado", description: "Tecido com textura especial, perfeito para polos e peças esportivas.", category: "Piquet" },
-    { name: "Cambraia Delicada", description: "Tecido fino e transparente, ideal para lingerie e peças íntimas.", category: "Cambraia" },
-    { name: "Fustão Aveludado", description: "Tecido com textura macia e aveludada, perfeito para peças confortáveis.", category: "Fustão" },
     { name: "Tangerina ROMANTIK", description: "Tecido vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
     { name: "Marrom ROMANTIK", description: "Tecido elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
     { name: "Turquesa ROMANTIK", description: "Tecido refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
@@ -83,9 +61,8 @@ const Catalogo = () => {
     tecido.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const categories = [...new Set(tecidos.map(tecido => tecido.category))];
-  const displayCategories = categories.filter(cat => cat !== "Chiffon").slice(0, 6);
-  displayCategories.push("ROMANTIK", "POLISIDE PRIME");
+  const categories = ["ROMANTIK", "POLISIDE PRIME"];
+  const displayCategories = categories;
 
   return (
     <div className="container mx-auto px-4 py-12">
