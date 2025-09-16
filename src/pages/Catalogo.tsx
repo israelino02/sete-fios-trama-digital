@@ -73,7 +73,15 @@ const Catalogo = () => {
     { name: "Frozen ROMANTIK", description: "Tecido fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
     { name: "Lavanda ROMANTIK", description: "Tecido suave na cor lavanda, ideal para peças delicadas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
     { name: "Mescla ROMANTIK", description: "Tecido texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" },
-    { name: "Theos ROMANTIK", description: "Tecido elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-theos.jpg" }
+    { name: "Theos ROMANTIK", description: "Tecido elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-theos.jpg" },
+    { name: "Marfim POLISIDE PRIME", description: "Tecido premium na cor marfim, com proteção UV, ideal para roupas de praia e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-marfim.jpg" },
+    { name: "Azul BB POLISIDE PRIME", description: "Tecido premium na cor azul bb, com proteção UV, perfeito para peças infantis e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-azul-bb.jpg" },
+    { name: "Grafite POLISIDE PRIME", description: "Tecido premium na cor grafite, com proteção UV, ideal para peças masculinas e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-grafite.jpg" },
+    { name: "Tame POLISIDE PRIME", description: "Tecido premium na cor tame, com proteção UV, perfeito para roupas de banho e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-tame.jpg" },
+    { name: "Branco POLISIDE PRIME", description: "Tecido premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
+    { name: "Denim POLISIDE PRIME", description: "Tecido premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
+    { name: "Salmão POLISIDE PRIME", description: "Tecido premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
+    { name: "Erva-Doce POLISIDE PRIME", description: "Tecido premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
@@ -83,8 +91,8 @@ const Catalogo = () => {
   );
 
   const categories = [...new Set(tecidos.map(tecido => tecido.category))];
-  const displayCategories = categories.filter(cat => cat !== "Chiffon").slice(0, 7);
-  displayCategories.push("ROMANTIK");
+  const displayCategories = categories.filter(cat => cat !== "Chiffon").slice(0, 6);
+  displayCategories.push("ROMANTIK", "POLISIDE PRIME");
 
   return (
     <div className="container mx-auto px-4 py-12">
