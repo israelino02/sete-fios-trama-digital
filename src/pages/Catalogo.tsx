@@ -64,7 +64,12 @@ const Catalogo = () => {
     { name: "Terra MILÃO", description: "Tecido MILÃO premium na cor terra, com proteção UV, ideal para peças naturais e contemporâneas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-terra.jpg" },
     { name: "Marfim MILÃO", description: "Tecido MILÃO premium na cor marfim, com proteção UV, perfeito para peças clássicas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-marfim.jpg" },
     { name: "Branco MILÃO", description: "Tecido MILÃO premium na cor branca, com proteção UV, ideal para peças atemporais e versáteis.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-branco.jpg" },
-    { name: "Romance MILÃO", description: "Tecido MILÃO premium na cor romance, com proteção UV, perfeito para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" }
+    { name: "Romance MILÃO", description: "Tecido MILÃO premium na cor romance, com proteção UV, perfeito para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" },
+    { name: "Cronos MILÃO", description: "Tecido MILÃO premium na cor cronos, com proteção UV, ideal para peças vibrantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-cronos.jpg" },
+    { name: "Canela MILÃO", description: "Tecido MILÃO premium na cor canela, com proteção UV, perfeito para peças elegantes e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-canela.jpg" },
+    { name: "Sanremo MILÃO", description: "Tecido MILÃO premium na cor sanremo, com proteção UV, ideal para peças refrescantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-sanremo.jpg" },
+    { name: "Tibeton MILÃO", description: "Tecido MILÃO premium na cor tibeton, com proteção UV, perfeito para peças luminosas e marcantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-tibeton.jpg" },
+    { name: "Tulipero MILÃO", description: "Tecido MILÃO premium na cor tulipero, com proteção UV, ideal para peças sofisticadas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-tulipero.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
