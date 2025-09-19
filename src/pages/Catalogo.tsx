@@ -65,17 +65,7 @@ const Catalogo = () => {
     { name: "Terra MILÃO", description: "Tecido de microfibra com proteção UV na cor terra, ideal para peças naturais e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-terra.jpg" },
     { name: "Marfim MILÃO", description: "Tecido de microfibra com proteção UV na cor marfim, perfeito para peças clássicas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-marfim.jpg" },
     { name: "Branco MILÃO", description: "Tecido de microfibra com proteção UV na cor branca, ideal para peças elegantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-branco.jpg" },
-    { name: "Romance MILÃO", description: "Tecido de microfibra com proteção UV na cor romance, perfeito para peças românticas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" },
-    
-    // ROMANTIK - Linha premium de tecidos com proteção UV
-    { name: "Fúcsia ROMANTIK", description: "Tecido premium com proteção UV na cor fúcsia, ideal para peças vibrantes e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" },
-    { name: "Coral ROMANTIK", description: "Tecido premium com proteção UV na cor coral, perfeito para peças delicadas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
-    { name: "Tangerina ROMANTIK", description: "Tecido premium com proteção UV na cor tangerina, ideal para peças energéticas e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-tangerina.jpg" },
-    { name: "Pink ROMANTIK", description: "Tecido premium com proteção UV na cor pink, perfeito para peças jovens e estilosas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
-    { name: "Turquesa ROMANTIK", description: "Tecido premium com proteção UV na cor turquesa, ideal para peças refrescantes e tropicais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
-    { name: "Verde Jade ROMANTIK", description: "Tecido premium com proteção UV na cor verde jade, perfeito para peças naturais e sofisticadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-verde-jade.jpg" },
-    { name: "Verde Pavão ROMANTIK", description: "Tecido premium com proteção UV na cor verde pavão, ideal para peças exóticas e marcantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
-    { name: "Vermelho ROMANTIK", description: "Tecido premium com proteção UV na cor vermelha, perfeito para peças impactantes e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-vermelho.jpg" }
+    { name: "Romance MILÃO", description: "Tecido de microfibra com proteção UV na cor romance, perfeito para peças românticas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
