@@ -52,7 +52,47 @@ const Catalogo = () => {
     { name: "Branco POLISIDE PRIME", description: "Tecido premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
     { name: "Denim POLISIDE PRIME", description: "Tecido premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
     { name: "Salmão POLISIDE PRIME", description: "Tecido premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
-    { name: "Erva-Doce POLISIDE PRIME", description: "Tecido premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" }
+    { name: "Erva-Doce POLISIDE PRIME", description: "Tecido premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" },
+    
+    // POLIESTER - Combinação de todos os tecidos
+    { name: "Tangerina POLIESTER", description: "Tecido poliéster vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
+    { name: "Marrom POLIESTER", description: "Tecido poliéster elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
+    { name: "Turquesa POLIESTER", description: "Tecido poliéster refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
+    { name: "Coral POLIESTER", description: "Tecido poliéster delicado na cor coral, perfeito para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
+    { name: "Chumbo POLIESTER", description: "Tecido poliéster neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" },
+    { name: "Castanho POLIESTER", description: "Tecido poliéster rico na cor castanho, perfeito para peças elegantes e sofisticadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-castanho.jpg" },
+    { name: "Verde Musgo POLIESTER", description: "Tecido poliéster natural na cor verde musgo, ideal para peças modernas e estilosas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-verde-musgo.jpg" },
+    { name: "Azul Oceano POLIESTER", description: "Tecido poliéster profundo na cor azul oceano, perfeito para peças marcantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-azul-oceano.jpg" },
+    { name: "Verde Jade POLIESTER", description: "Tecido poliéster vibrante na cor verde jade, ideal para peças únicas e especiais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-verde-jade.jpg" },
+    { name: "Branco POLIESTER", description: "Tecido poliéster clássico na cor branco, perfeito para peças atemporais e versáteis.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-branco.jpg" },
+    { name: "Tulipero POLIESTER", description: "Tecido poliéster delicado na cor tulipero, ideal para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-tulipero.jpg" },
+    { name: "Canela POLIESTER", description: "Tecido poliéster aconchegante na cor canela, perfeito para peças casuais e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-canela.jpg" },
+    { name: "Preto POLIESTER", description: "Tecido poliéster clássico na cor preta, ideal para peças sofisticadas e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-preto.jpg" },
+    { name: "BIC POLIESTER", description: "Tecido poliéster vibrante na cor azul bic, perfeito para peças marcantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-bic.jpg" },
+    { name: "Terra POLIESTER", description: "Tecido poliéster terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-terra.jpg" },
+    { name: "Sensuale POLIESTER", description: "Tecido poliéster sensual na cor vinho, ideal para peças elegantes e sofisticadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-sensuale.jpg" },
+    { name: "Vermelho POLIESTER", description: "Tecido poliéster vibrante na cor vermelho, perfeito para peças marcantes e cheias de energia.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-vermelho.jpg" },
+    { name: "Pimenta POLIESTER", description: "Tecido poliéster ardente na cor pimenta, ideal para peças modernas e impactantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-pimenta.jpg" },
+    { name: "Amarelo BB POLIESTER", description: "Tecido poliéster luminoso na cor amarelo bb, perfeito para peças alegres e vibrantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-amarelo-bb.jpg" },
+    { name: "Tibeton POLIESTER", description: "Tecido poliéster dourado na cor tibeton, ideal para peças luxuosas e especiais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-tibeton.jpg" },
+    { name: "Romance POLIESTER", description: "Tecido poliéster delicado na cor romance, perfeito para peças românticas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-romance.jpg" },
+    { name: "Pink POLIESTER", description: "Tecido poliéster vibrante na cor pink, ideal para peças alegres e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
+    { name: "Ires POLIESTER", description: "Tecido poliéster suave na cor ires, perfeito para peças delicadas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-ires.jpg" },
+    { name: "Rosa BB POLIESTER", description: "Tecido poliéster suave na cor rosa bb, ideal para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-rosa-bb.jpg" },
+    { name: "Fucsia POLIESTER", description: "Tecido poliéster vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" },
+    { name: "Verde Pavão POLIESTER", description: "Tecido poliéster elegante na cor verde pavão, ideal para peças sofisticadas e marcantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
+    { name: "Frozen POLIESTER", description: "Tecido poliéster fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
+    { name: "Lavanda POLIESTER", description: "Tecido poliéster suave na cor lavanda, ideal para peças delicadas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
+    { name: "Mescla POLIESTER", description: "Tecido poliéster texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-mescla.jpg" },
+    { name: "Theos POLIESTER", description: "Tecido poliéster elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-theos.jpg" },
+    { name: "Marfim POLIESTER PRIME", description: "Tecido poliéster premium na cor marfim, com proteção UV, ideal para roupas de praia e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-marfim.jpg" },
+    { name: "Azul BB POLIESTER PRIME", description: "Tecido poliéster premium na cor azul bb, com proteção UV, perfeito para peças infantis e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-azul-bb.jpg" },
+    { name: "Grafite POLIESTER PRIME", description: "Tecido poliéster premium na cor grafite, com proteção UV, ideal para peças masculinas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-grafite.jpg" },
+    { name: "Tame POLIESTER PRIME", description: "Tecido poliéster premium na cor tame, com proteção UV, perfeito para roupas de banho e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-tame.jpg" },
+    { name: "Branco POLIESTER PRIME", description: "Tecido poliéster premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
+    { name: "Denim POLIESTER PRIME", description: "Tecido poliéster premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
+    { name: "Salmão POLIESTER PRIME", description: "Tecido poliéster premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
+    { name: "Erva-Doce POLIESTER PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
@@ -61,7 +101,7 @@ const Catalogo = () => {
     tecido.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const categories = ["ROMANTIK", "POLISIDE PRIME"];
+  const categories = ["ROMANTIK", "POLISIDE PRIME", "POLIESTER"];
   const displayCategories = categories;
 
   return (
