@@ -53,19 +53,7 @@ const Catalogo = () => {
     { name: "Branco POLIESTER PRIME", description: "Tecido poliéster premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
     { name: "Denim POLIESTER PRIME", description: "Tecido poliéster premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
     { name: "Salmão POLIESTER PRIME", description: "Tecido poliéster premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
-    { name: "Erva-Doce POLIESTER PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" },
-    
-    // MILÃO - Nova linha de tecidos com proteção UV
-    { name: "Ires MILÃO", description: "Tecido de microfibra com proteção UV na cor ires, ideal para peças elegantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-ires.jpg" },
-    { name: "Preto MILÃO", description: "Tecido de microfibra com proteção UV na cor preta, perfeito para peças sofisticadas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-preto.jpg" },
-    { name: "Amarelo BB MILÃO", description: "Tecido de microfibra com proteção UV na cor amarelo bb, ideal para peças vibrantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-amarelo-bb.jpg" },
-    { name: "Frozen MILÃO", description: "Tecido de microfibra com proteção UV na cor frozen, perfeito para peças refrescantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-frozen.jpg" },
-    { name: "Lavanda MILÃO", description: "Tecido de microfibra com proteção UV na cor lavanda, ideal para peças delicadas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-lavanda.jpg" },
-    { name: "BIC MILÃO", description: "Tecido de microfibra com proteção UV na cor azul bic, perfeito para peças marcantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-bic.jpg" },
-    { name: "Terra MILÃO", description: "Tecido de microfibra com proteção UV na cor terra, ideal para peças naturais e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-terra.jpg" },
-    { name: "Marfim MILÃO", description: "Tecido de microfibra com proteção UV na cor marfim, perfeito para peças clássicas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-marfim.jpg" },
-    { name: "Branco MILÃO", description: "Tecido de microfibra com proteção UV na cor branca, ideal para peças elegantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-branco.jpg" },
-    { name: "Romance MILÃO", description: "Tecido de microfibra com proteção UV na cor romance, perfeito para peças românticas e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" }
+    { name: "Erva-Doce POLIESTER PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
