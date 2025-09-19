@@ -69,7 +69,10 @@ const Catalogo = () => {
     { name: "Canela MILÃO", description: "Tecido MILÃO premium na cor canela, com proteção UV, perfeito para peças elegantes e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-canela.jpg" },
     { name: "Sanremo MILÃO", description: "Tecido MILÃO premium na cor sanremo, com proteção UV, ideal para peças refrescantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-sanremo.jpg" },
     { name: "Tibeton MILÃO", description: "Tecido MILÃO premium na cor tibeton, com proteção UV, perfeito para peças luminosas e marcantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-tibeton.jpg" },
-    { name: "Tulipero MILÃO", description: "Tecido MILÃO premium na cor tulipero, com proteção UV, ideal para peças sofisticadas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-tulipero.jpg" }
+    { name: "Tulipero MILÃO", description: "Tecido MILÃO premium na cor tulipero, com proteção UV, ideal para peças sofisticadas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-tulipero.jpg" },
+    { name: "Pimenta MILÃO", description: "Tecido MILÃO premium na cor pimenta, com proteção UV, perfeito para peças impactantes e vibrantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-pimenta.jpg" },
+    { name: "Verde TW MILÃO", description: "Tecido MILÃO premium na cor verde tw, com proteção UV, ideal para peças elegantes e naturais.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-verde-tw.jpg" },
+    { name: "Coral POLIAMIDA", description: "Tecido POLIAMIDA premium na cor coral, com proteção UV, perfeito para peças delicadas e femininas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliamida-coral.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
