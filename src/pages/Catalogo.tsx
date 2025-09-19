@@ -15,45 +15,6 @@ const Catalogo = () => {
   }
 
   const tecidos: Tecido[] = [
-    { name: "Tangerina ROMANTIK", description: "Tecido vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
-    { name: "Marrom ROMANTIK", description: "Tecido elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
-    { name: "Turquesa ROMANTIK", description: "Tecido refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
-    { name: "Coral ROMANTIK", description: "Tecido delicado na cor coral, perfeito para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
-    { name: "Chumbo ROMANTIK", description: "Tecido neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" },
-    { name: "Castanho ROMANTIK", description: "Tecido rico na cor castanho, perfeito para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-castanho.jpg" },
-    { name: "Verde Musgo ROMANTIK", description: "Tecido natural na cor verde musgo, ideal para peças modernas e estilosas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-musgo.jpg" },
-    { name: "Azul Oceano ROMANTIK", description: "Tecido profundo na cor azul oceano, perfeito para peças marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-azul-oceano.jpg" },
-    { name: "Verde Jade ROMANTIK", description: "Tecido vibrante na cor verde jade, ideal para peças únicas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-jade.jpg" },
-    { name: "Branco ROMANTIK", description: "Tecido clássico na cor branco, perfeito para peças atemporais e versáteis.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-branco.jpg" },
-    { name: "Tulipero ROMANTIK", description: "Tecido delicado na cor tulipero, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tulipero.jpg" },
-    { name: "Canela ROMANTIK", description: "Tecido aconchegante na cor canela, perfeito para peças casuais e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-canela.jpg" },
-    { name: "Preto ROMANTIK", description: "Tecido clássico na cor preta, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-preto.jpg" },
-    { name: "BIC ROMANTIK", description: "Tecido vibrante na cor azul bic, perfeito para peças marcantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-bic.jpg" },
-    { name: "Terra ROMANTIK", description: "Tecido terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-terra.jpg" },
-    { name: "Sensuale ROMANTIK", description: "Tecido sensual na cor vinho, ideal para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-sensuale.jpg" },
-    { name: "Vermelho ROMANTIK", description: "Tecido vibrante na cor vermelho, perfeito para peças marcantes e cheias de energia.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-vermelho.jpg" },
-    { name: "Pimenta ROMANTIK", description: "Tecido ardente na cor pimenta, ideal para peças modernas e impactantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pimenta.jpg" },
-    { name: "Amarelo BB ROMANTIK", description: "Tecido luminoso na cor amarelo bb, perfeito para peças alegres e vibrantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-amarelo-bb.jpg" },
-    { name: "Tibeton ROMANTIK", description: "Tecido dourado na cor tibeton, ideal para peças luxuosas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tibeton.jpg" },
-    { name: "Romance ROMANTIK", description: "Tecido delicado na cor romance, perfeito para peças românticas e femininas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-romance.jpg" },
-    { name: "Pink ROMANTIK", description: "Tecido vibrante na cor pink, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
-    { name: "Ires ROMANTIK", description: "Tecido suave na cor ires, perfeito para peças delicadas e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-ires.jpg" },
-    { name: "Rosa BB ROMANTIK", description: "Tecido suave na cor rosa bb, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-rosa-bb.jpg" },
-    { name: "Fucsia ROMANTIK", description: "Tecido vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" },
-    { name: "Verde Pavão ROMANTIK", description: "Tecido elegante na cor verde pavão, ideal para peças sofisticadas e marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
-    { name: "Frozen ROMANTIK", description: "Tecido fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
-    { name: "Lavanda ROMANTIK", description: "Tecido suave na cor lavanda, ideal para peças delicadas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
-    { name: "Mescla ROMANTIK", description: "Tecido texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" },
-    { name: "Theos ROMANTIK", description: "Tecido elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-theos.jpg" },
-    { name: "Marfim POLISIDE PRIME", description: "Tecido premium na cor marfim, com proteção UV, ideal para roupas de praia e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-marfim.jpg" },
-    { name: "Azul BB POLISIDE PRIME", description: "Tecido premium na cor azul bb, com proteção UV, perfeito para peças infantis e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-azul-bb.jpg" },
-    { name: "Grafite POLISIDE PRIME", description: "Tecido premium na cor grafite, com proteção UV, ideal para peças masculinas e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-grafite.jpg" },
-    { name: "Tame POLISIDE PRIME", description: "Tecido premium na cor tame, com proteção UV, perfeito para roupas de banho e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-tame.jpg" },
-    { name: "Branco POLISIDE PRIME", description: "Tecido premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
-    { name: "Denim POLISIDE PRIME", description: "Tecido premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
-    { name: "Salmão POLISIDE PRIME", description: "Tecido premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
-    { name: "Erva-Doce POLISIDE PRIME", description: "Tecido premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" },
-    
     // POLIESTER - Combinação de todos os tecidos
     { name: "Tangerina POLIESTER", description: "Tecido poliéster vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
     { name: "Marrom POLIESTER", description: "Tecido poliéster elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
@@ -101,7 +62,7 @@ const Catalogo = () => {
     tecido.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const categories = ["ROMANTIK", "POLISIDE PRIME", "POLIESTER"];
+  const categories = ["POLIESTER"];
   const displayCategories = categories;
 
   return (
