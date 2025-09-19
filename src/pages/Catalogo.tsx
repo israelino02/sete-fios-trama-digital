@@ -53,7 +53,18 @@ const Catalogo = () => {
     { name: "Branco POLIESTER PRIME", description: "Tecido poliéster premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
     { name: "Denim POLIESTER PRIME", description: "Tecido poliéster premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
     { name: "Salmão POLIESTER PRIME", description: "Tecido poliéster premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
-    { name: "Erva-Doce POLIESTER PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" }
+    { name: "Erva-Doce POLIESTER PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLIESTER", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" },
+    // MILÃO - Linha premium com proteção UV
+    { name: "Ires MILÃO", description: "Tecido MILÃO premium na cor ires, com proteção UV, ideal para peças elegantes e esportivas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-ires.jpg" },
+    { name: "Preto MILÃO", description: "Tecido MILÃO premium na cor preta, com proteção UV, perfeito para peças sofisticadas e atemporais.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-preto.jpg" },
+    { name: "Amarelo BB MILÃO", description: "Tecido MILÃO premium na cor amarelo bb, com proteção UV, ideal para peças alegres e vibrantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-amarelo-bb.jpg" },
+    { name: "Frozen MILÃO", description: "Tecido MILÃO premium na cor frozen, com proteção UV, perfeito para peças modernas e refrescantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-frozen.jpg" },
+    { name: "Lavanda MILÃO", description: "Tecido MILÃO premium na cor lavanda, com proteção UV, ideal para peças delicadas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-lavanda.jpg" },
+    { name: "BIC MILÃO", description: "Tecido MILÃO premium na cor azul bic, com proteção UV, perfeito para peças marcantes e modernas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-bic.jpg" },
+    { name: "Terra MILÃO", description: "Tecido MILÃO premium na cor terra, com proteção UV, ideal para peças naturais e contemporâneas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-terra.jpg" },
+    { name: "Marfim MILÃO", description: "Tecido MILÃO premium na cor marfim, com proteção UV, perfeito para peças clássicas e elegantes.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-marfim.jpg" },
+    { name: "Branco MILÃO", description: "Tecido MILÃO premium na cor branca, com proteção UV, ideal para peças atemporais e versáteis.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-branco.jpg" },
+    { name: "Romance MILÃO", description: "Tecido MILÃO premium na cor romance, com proteção UV, perfeito para peças femininas e românticas.", category: "POLIESTER", imageUrl: "/lovable-uploads/milao-romance.jpg" }
   ];
 
   const filteredTecidos = tecidos.filter(tecido =>
