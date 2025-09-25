@@ -1,90 +1,251 @@
-import { ProductCard } from "@/components/ProductCard";
+import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { ProductModal } from "@/components/ProductModal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Search, Download } from "lucide-react";
 import { useState } from "react";
 
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  interface Tecido {
-    name: string;
-    description: string;
+  interface Product {
+    id: string;
+    nome: string;
+    codigo: string;
+    imagens: string[];
+    descricao: string;
+    caracteristicas: string[];
+    link_ficha_tecnica?: string;
     category: string;
-    imageUrl?: string;
   }
 
-  const tecidos: Tecido[] = [
+  const produtos: Product[] = [
     // ROMANTIK - Linha básica de poliéster
-    { name: "Tangerina ROMANTIK", description: "Tecido poliéster vibrante na cor tangerina, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tangerina-nova.jpg" },
-    { name: "Marrom ROMANTIK", description: "Tecido poliéster elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-marrom.jpg" },
-    { name: "Turquesa ROMANTIK", description: "Tecido poliéster refrescante na cor turquesa, ideal para peças de verão e looks casuais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-turquesa.jpg" },
-    { name: "Coral ROMANTIK", description: "Tecido poliéster delicado na cor coral, perfeito para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-coral.jpg" },
-    { name: "Chumbo ROMANTIK", description: "Tecido poliéster neutro na cor chumbo, ideal para peças versáteis e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-chumbo.jpg" },
-    { name: "Castanho ROMANTIK", description: "Tecido poliéster rico na cor castanho, perfeito para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-castanho.jpg" },
-    { name: "Verde Musgo ROMANTIK", description: "Tecido poliéster natural na cor verde musgo, ideal para peças modernas e estilosas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-musgo.jpg" },
-    { name: "Azul Oceano ROMANTIK", description: "Tecido poliéster profundo na cor azul oceano, perfeito para peças marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-azul-oceano.jpg" },
-    { name: "Verde Jade ROMANTIK", description: "Tecido poliéster vibrante na cor verde jade, ideal para peças únicas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-jade.jpg" },
-    { name: "Branco ROMANTIK", description: "Tecido poliéster clássico na cor branco, perfeito para peças atemporais e versáteis.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-branco.jpg" },
-    { name: "Tulipero ROMANTIK", description: "Tecido poliéster delicado na cor tulipero, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tulipero.jpg" },
-    { name: "Canela ROMANTIK", description: "Tecido poliéster aconchegante na cor canela, perfeito para peças casuais e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-canela.jpg" },
-    { name: "Preto ROMANTIK", description: "Tecido poliéster clássico na cor preta, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-preto.jpg" },
-    { name: "BIC ROMANTIK", description: "Tecido poliéster vibrante na cor azul bic, perfeito para peças marcantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-bic.jpg" },
-    { name: "Terra ROMANTIK", description: "Tecido poliéster terroso na cor terra, ideal para peças naturais e contemporâneas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-terra.jpg" },
-    { name: "Sensuale ROMANTIK", description: "Tecido poliéster sensual na cor vinho, ideal para peças elegantes e sofisticadas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-sensuale.jpg" },
-    { name: "Vermelho ROMANTIK", description: "Tecido poliéster vibrante na cor vermelho, perfeito para peças marcantes e cheias de energia.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-vermelho.jpg" },
-    { name: "Pimenta ROMANTIK", description: "Tecido poliéster ardente na cor pimenta, ideal para peças modernas e impactantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pimenta.jpg" },
-    { name: "Amarelo BB ROMANTIK", description: "Tecido poliéster luminoso na cor amarelo bb, perfeito para peças alegres e vibrantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-amarelo-bb.jpg" },
-    { name: "Tibeton ROMANTIK", description: "Tecido poliéster dourado na cor tibeton, ideal para peças luxuosas e especiais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-tibeton.jpg" },
-    { name: "Romance ROMANTIK", description: "Tecido poliéster delicado na cor romance, perfeito para peças românticas e femininas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-romance.jpg" },
-    { name: "Pink ROMANTIK", description: "Tecido poliéster vibrante na cor pink, ideal para peças alegres e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-pink.jpg" },
-    { name: "Ires ROMANTIK", description: "Tecido poliéster suave na cor ires, perfeito para peças delicadas e elegantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-ires.jpg" },
-    { name: "Rosa BB ROMANTIK", description: "Tecido poliéster suave na cor rosa bb, ideal para peças femininas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-rosa-bb.jpg" },
-    { name: "Fucsia ROMANTIK", description: "Tecido poliéster vibrante na cor fucsia, perfeito para peças impactantes e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-fucsia.jpg" },
-    { name: "Verde Pavão ROMANTIK", description: "Tecido poliéster elegante na cor verde pavão, ideal para peças sofisticadas e marcantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-verde-pavao.jpg" },
-    { name: "Frozen ROMANTIK", description: "Tecido poliéster fresco na cor frozen, perfeito para peças modernas e refrescantes.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-frozen.jpg" },
-    { name: "Lavanda ROMANTIK", description: "Tecido poliéster suave na cor lavanda, ideal para peças delicadas e românticas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-lavanda.jpg" },
-    { name: "Mescla ROMANTIK", description: "Tecido poliéster texturizado na cor mescla, perfeito para peças casuais e modernas.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-mescla.jpg" },
-    { name: "Theos ROMANTIK", description: "Tecido poliéster elegante na cor theos, ideal para peças sofisticadas e atemporais.", category: "ROMANTIK", imageUrl: "/lovable-uploads/romantik-theos.jpg" },
-    
+    { 
+      id: "rom_001", 
+      nome: "Tangerina ROMANTIK", 
+      codigo: "8313",
+      imagens: ["/lovable-uploads/romantik-tangerina-nova.jpg"], 
+      descricao: "Tecido poliéster vibrante na cor tangerina, ideal para peças alegres e modernas. Excelente caimento e durabilidade.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Anti-pilling"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_002", 
+      nome: "Marrom ROMANTIK", 
+      codigo: "8314",
+      imagens: ["/lovable-uploads/romantik-marrom.jpg"], 
+      descricao: "Tecido poliéster elegante na cor marrom, perfeito para peças sofisticadas e atemporais.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Resistente"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_003", 
+      nome: "Turquesa ROMANTIK", 
+      codigo: "8315",
+      imagens: ["/lovable-uploads/romantik-turquesa.jpg"], 
+      descricao: "Tecido poliéster refrescante na cor turquesa, ideal para peças de verão e looks casuais.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Secagem Rápida"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_004", 
+      nome: "Coral ROMANTIK", 
+      codigo: "8316",
+      imagens: ["/lovable-uploads/romantik-coral.jpg"], 
+      descricao: "Tecido poliéster delicado na cor coral, perfeito para peças femininas e românticas.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Macio ao Toque"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_005", 
+      nome: "Chumbo ROMANTIK", 
+      codigo: "8317",
+      imagens: ["/lovable-uploads/romantik-chumbo.jpg"], 
+      descricao: "Tecido poliéster neutro na cor chumbo, ideal para peças versáteis e modernas.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Não Desbota"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_006", 
+      nome: "Castanho ROMANTIK", 
+      codigo: "8318",
+      imagens: ["/lovable-uploads/romantik-castanho.jpg"], 
+      descricao: "Tecido poliéster rico na cor castanho, perfeito para peças elegantes e sofisticadas.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Durável"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_007", 
+      nome: "Verde Musgo ROMANTIK", 
+      codigo: "8319",
+      imagens: ["/lovable-uploads/romantik-verde-musgo.jpg"], 
+      descricao: "Tecido poliéster natural na cor verde musgo, ideal para peças modernas e estilosas.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Eco-friendly"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_008", 
+      nome: "Azul Oceano ROMANTIK", 
+      codigo: "8320",
+      imagens: ["/lovable-uploads/romantik-azul-oceano.jpg"], 
+      descricao: "Tecido poliéster profundo na cor azul oceano, perfeito para peças marcantes.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Resistente"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_009", 
+      nome: "Verde Jade ROMANTIK", 
+      codigo: "8321",
+      imagens: ["/lovable-uploads/romantik-verde-jade.jpg"], 
+      descricao: "Tecido poliéster vibrante na cor verde jade, ideal para peças únicas e especiais.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Eco-friendly"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_010", 
+      nome: "Branco ROMANTIK", 
+      codigo: "8322",
+      imagens: ["/lovable-uploads/romantik-branco.jpg"], 
+      descricao: "Tecido poliéster clássico na cor branco, perfeito para peças atemporais e versáteis.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Não Amarela"], 
+      category: "ROMANTIK" 
+    },
+    { 
+      id: "rom_011", 
+      nome: "Preto ROMANTIK", 
+      codigo: "8323",
+      imagens: ["/lovable-uploads/romantik-preto.jpg"], 
+      descricao: "Tecido poliéster clássico na cor preta, ideal para peças sofisticadas e atemporais.", 
+      caracteristicas: ["100% Poliéster", "Gramatura 150g/m²", "Largura 1,50m", "Não Desbota"], 
+      category: "ROMANTIK" 
+    },
+
     // POLISIDE PRIME - Linha premium com proteção UV
-    { name: "Marfim POLISIDE PRIME", description: "Tecido poliéster premium na cor marfim, com proteção UV, ideal para roupas de praia e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-marfim.jpg" },
-    { name: "Azul BB POLISIDE PRIME", description: "Tecido poliéster premium na cor azul bb, com proteção UV, perfeito para peças infantis e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-azul-bb.jpg" },
-    { name: "Grafite POLISIDE PRIME", description: "Tecido poliéster premium na cor grafite, com proteção UV, ideal para peças masculinas e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-grafite.jpg" },
-    { name: "Tame POLISIDE PRIME", description: "Tecido poliéster premium na cor tame, com proteção UV, perfeito para roupas de banho e esportivas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-tame.jpg" },
-    { name: "Branco POLISIDE PRIME", description: "Tecido poliéster premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-branco.jpg" },
-    { name: "Denim POLISIDE PRIME", description: "Tecido poliéster premium na cor denim, com proteção UV, perfeito para peças casuais e modernas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-denim.jpg" },
-    { name: "Salmão POLISIDE PRIME", description: "Tecido poliéster premium na cor salmão, com proteção UV, ideal para peças femininas e delicadas.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-salmao.jpg" },
-    { name: "Erva-Doce POLISIDE PRIME", description: "Tecido poliéster premium na cor erva-doce, com proteção UV, perfeito para peças esportivas e casuais.", category: "POLISIDE PRIME", imageUrl: "/lovable-uploads/poliside-erva-doce.jpg" },
-    
+    { 
+      id: "pol_001", 
+      nome: "Marfim POLISIDE PRIME", 
+      codigo: "9001",
+      imagens: ["/lovable-uploads/poliside-marfim.jpg"], 
+      descricao: "Tecido poliéster premium na cor marfim, com proteção UV, ideal para roupas de praia e esportivas.", 
+      caracteristicas: ["100% Poliéster", "Proteção UV 50+", "Dope Dyeing", "Secagem Rápida", "Antibacteriano"], 
+      category: "POLISIDE PRIME" 
+    },
+    { 
+      id: "pol_002", 
+      nome: "Azul BB POLISIDE PRIME", 
+      codigo: "9002",
+      imagens: ["/lovable-uploads/poliside-azul-bb.jpg"], 
+      descricao: "Tecido poliéster premium na cor azul bb, com proteção UV, perfeito para peças infantis e esportivas.", 
+      caracteristicas: ["100% Poliéster", "Proteção UV 50+", "Dope Dyeing", "Hipoalergênico"], 
+      category: "POLISIDE PRIME" 
+    },
+    { 
+      id: "pol_003", 
+      nome: "Grafite POLISIDE PRIME", 
+      codigo: "9003",
+      imagens: ["/lovable-uploads/poliside-grafite.jpg"], 
+      descricao: "Tecido poliéster premium na cor grafite, com proteção UV, ideal para peças masculinas e esportivas.", 
+      caracteristicas: ["100% Poliéster", "Proteção UV 50+", "Dope Dyeing", "Anti-odor"], 
+      category: "POLISIDE PRIME" 
+    },
+    { 
+      id: "pol_004", 
+      nome: "Tame POLISIDE PRIME", 
+      codigo: "9004",
+      imagens: ["/lovable-uploads/poliside-tame.jpg"], 
+      descricao: "Tecido poliéster premium na cor tame, com proteção UV, perfeito para roupas de banho e esportivas.", 
+      caracteristicas: ["100% Poliéster", "Proteção UV 50+", "Dope Dyeing", "Secagem Rápida"], 
+      category: "POLISIDE PRIME" 
+    },
+    { 
+      id: "pol_005", 
+      nome: "Branco POLISIDE PRIME", 
+      codigo: "9005",
+      imagens: ["/lovable-uploads/poliside-branco.jpg"], 
+      descricao: "Tecido poliéster premium na cor branca, com proteção UV, ideal para peças clássicas e elegantes.", 
+      caracteristicas: ["100% Poliéster", "Proteção UV 50+", "Dope Dyeing", "Não Amarela"], 
+      category: "POLISIDE PRIME" 
+    },
+
     // MILÃO - Linha premium com proteção UV
-    { name: "Ires MILÃO", description: "Tecido MILÃO premium na cor ires, com proteção UV, ideal para peças elegantes e esportivas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-ires.jpg" },
-    { name: "Preto MILÃO", description: "Tecido MILÃO premium na cor preta, com proteção UV, perfeito para peças sofisticadas e atemporais.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-preto.jpg" },
-    { name: "Amarelo BB MILÃO", description: "Tecido MILÃO premium na cor amarelo bb, com proteção UV, ideal para peças alegres e vibrantes.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-amarelo-bb.jpg" },
-    { name: "Frozen MILÃO", description: "Tecido MILÃO premium na cor frozen, com proteção UV, perfeito para peças modernas e refrescantes.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-frozen.jpg" },
-    { name: "Lavanda MILÃO", description: "Tecido MILÃO premium na cor lavanda, com proteção UV, ideal para peças delicadas e românticas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-lavanda.jpg" },
-    { name: "BIC MILÃO", description: "Tecido MILÃO premium na cor azul bic, com proteção UV, perfeito para peças marcantes e modernas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-bic.jpg" },
-    { name: "Terra MILÃO", description: "Tecido MILÃO premium na cor terra, com proteção UV, ideal para peças naturais e contemporâneas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-terra.jpg" },
-    { name: "Marfim MILÃO", description: "Tecido MILÃO premium na cor marfim, com proteção UV, perfeito para peças clássicas e elegantes.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-marfim.jpg" },
-    { name: "Branco MILÃO", description: "Tecido MILÃO premium na cor branca, com proteção UV, ideal para peças atemporais e versáteis.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-branco.jpg" },
-    { name: "Romance MILÃO", description: "Tecido MILÃO premium na cor romance, com proteção UV, perfeito para peças femininas e românticas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-romance.jpg" },
-    { name: "Cronos MILÃO", description: "Tecido MILÃO premium na cor cronos, com proteção UV, ideal para peças vibrantes e modernas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-cronos.jpg" },
-    { name: "Canela MILÃO", description: "Tecido MILÃO premium na cor canela, com proteção UV, perfeito para peças elegantes e atemporais.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-canela.jpg" },
-    { name: "Sanremo MILÃO", description: "Tecido MILÃO premium na cor sanremo, com proteção UV, ideal para peças refrescantes e modernas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-sanremo.jpg" },
-    { name: "Tibeton MILÃO", description: "Tecido MILÃO premium na cor tibeton, com proteção UV, perfeito para peças luminosas e marcantes.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-tibeton.jpg" },
-    { name: "Tulipero MILÃO", description: "Tecido MILÃO premium na cor tulipero, com proteção UV, ideal para peças sofisticadas e femininas.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-tulipero.jpg" },
-    { name: "Pimenta MILÃO", description: "Tecido MILÃO premium na cor pimenta, com proteção UV, perfeito para peças impactantes e vibrantes.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-pimenta.jpg" },
-    { name: "Verde TW MILÃO", description: "Tecido MILÃO premium na cor verde tw, com proteção UV, ideal para peças elegantes e naturais.", category: "MILÃO", imageUrl: "/lovable-uploads/milao-verde-tw.jpg" },
-    
+    { 
+      id: "mil_001", 
+      nome: "Ires MILÃO", 
+      codigo: "7501",
+      imagens: ["/lovable-uploads/milao-ires.jpg"], 
+      descricao: "Tecido MILÃO premium na cor ires, com proteção UV, ideal para peças elegantes e esportivas.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Recicle +", "Elastano", "Compress"], 
+      category: "MILÃO" 
+    },
+    { 
+      id: "mil_002", 
+      nome: "Preto MILÃO", 
+      codigo: "7502",
+      imagens: ["/lovable-uploads/milao-preto.jpg"], 
+      descricao: "Tecido MILÃO premium na cor preta, com proteção UV, perfeito para peças sofisticadas e atemporais.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Recicle +", "Elastano"], 
+      category: "MILÃO" 
+    },
+    { 
+      id: "mil_003", 
+      nome: "Amarelo BB MILÃO", 
+      codigo: "7503",
+      imagens: ["/lovable-uploads/milao-amarelo-bb.jpg"], 
+      descricao: "Tecido MILÃO premium na cor amarelo bb, com proteção UV, ideal para peças alegres e vibrantes.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Recicle +", "Elastano"], 
+      category: "MILÃO" 
+    },
+    { 
+      id: "mil_004", 
+      nome: "Frozen MILÃO", 
+      codigo: "7504",
+      imagens: ["/lovable-uploads/milao-frozen.jpg"], 
+      descricao: "Tecido MILÃO premium na cor frozen, com proteção UV, perfeito para peças modernas e refrescantes.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Recicle +", "Elastano"], 
+      category: "MILÃO" 
+    },
+    { 
+      id: "mil_005", 
+      nome: "Branco MILÃO", 
+      codigo: "7505",
+      imagens: ["/lovable-uploads/milao-branco.jpg"], 
+      descricao: "Tecido MILÃO premium na cor branca, com proteção UV, ideal para peças atemporais e versáteis.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Recicle +", "Elastano"], 
+      category: "MILÃO" 
+    },
+
     // POLIAMIDA - Tecido especial
-    { name: "Coral POLIAMIDA", description: "Tecido POLIAMIDA premium na cor coral, com proteção UV, perfeito para peças delicadas e femininas.", category: "POLIAMIDA", imageUrl: "/lovable-uploads/poliamida-coral.jpg" }
+    { 
+      id: "pa_001", 
+      nome: "Coral POLIAMIDA", 
+      codigo: "6001",
+      imagens: ["/lovable-uploads/poliamida-coral.jpg"], 
+      descricao: "Tecido POLIAMIDA premium na cor coral, com proteção UV, perfeito para peças delicadas e femininas.", 
+      caracteristicas: ["100% Poliamida", "Proteção UV 50+", "Elastano", "Antibacteriano", "Eco-friendly"], 
+      category: "POLIAMIDA" 
+    }
   ];
 
-  const filteredTecidos = tecidos.filter(tecido =>
-    tecido.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    tecido.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    tecido.category.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredProdutos = produtos.filter(produto =>
+    produto.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    produto.descricao.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    produto.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    produto.codigo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    produto.caracteristicas.some(c => c.toLowerCase().includes(searchTerm.toLowerCase()))
   );
+
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   const categories = ["ROMANTIK", "MILÃO", "POLISIDE PRIME", "POLIAMIDA"];
   const displayCategories = categories;
@@ -138,20 +299,17 @@ const Catalogo = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filteredTecidos.map((tecido, index) => (
-          <ProductCard
-            key={index}
-            name={tecido.name}
-            description={tecido.description}
-            category={tecido.category}
-            imagePlaceholder={`Foto do ${tecido.name}`}
-            imageUrl={tecido.imageUrl}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProdutos.map((produto) => (
+          <CatalogProductCard
+            key={produto.id}
+            product={produto}
+            onClick={() => handleProductClick(produto)}
           />
         ))}
       </div>
 
-      {filteredTecidos.length === 0 && (
+      {filteredProdutos.length === 0 && (
         <div className="text-center py-12">
           <p className="text-muted-foreground text-lg">
             Nenhum tecido encontrado com os critérios de busca.
@@ -174,16 +332,36 @@ const Catalogo = () => {
         <p className="text-muted-foreground mb-6">
           Entre em contato conosco pelo WhatsApp e nos conte sobre seu projeto. Temos muito mais opções!
         </p>
-        <Button
-          asChild
-          size="lg"
-          className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm"
-        >
-          <a href="https://wa.me/5511999999999?text=Olá! Estou procurando um tecido específico e gostaria de ajuda." target="_blank" rel="noopener noreferrer">
-            Falar no WhatsApp
-          </a>
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm"
+          >
+            <a href="https://wa.me/5511999999999?text=Olá! Estou procurando um tecido específico e gostaria de ajuda." target="_blank" rel="noopener noreferrer">
+              Falar no WhatsApp
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="hover:bg-primary hover:text-primary-foreground"
+          >
+            <a href="/catalogo-malhas.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="w-5 h-5 mr-2" />
+              Download Catálogo Completo
+            </a>
+          </Button>
+        </div>
       </div>
+
+      {/* Product Modal */}
+      <ProductModal 
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };
