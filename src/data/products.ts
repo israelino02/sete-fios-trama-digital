@@ -125,7 +125,6 @@ export const products: Product[] = [
       "/lovable-uploads/poliside-preto.jpg",
       "/lovable-uploads/poliside-azul-bb.jpg",
       "/lovable-uploads/poliside-bic.jpg",
-      "/lovable-uploads/poliside-denim.jpg",
       "/lovable-uploads/poliside-marinho.jpg",
       "/lovable-uploads/poliside-turquesa.jpg",
       "/lovable-uploads/poliside-jade.jpg",
@@ -136,7 +135,7 @@ export const products: Product[] = [
       "/lovable-uploads/poliside-sensuale.jpg",
       "/lovable-uploads/poliside-erva-doce.jpg"
     ],
-    descricao: "Versão premium do Poliside, com tecnologia avançada e acabamento superior. Disponível em 16 cores: Branco, Marfim, Grafite, Preto, Azul BB, Bic, Denim, Marinho, Turquesa, Jade, Verde TW, Coral, Terra, Castanho, Sensuale e Erva Doce.",
+    descricao: "Versão premium do Poliside, com tecnologia avançada e acabamento superior. Disponível em 15 cores: Branco, Marfim, Grafite, Preto, Azul BB, Bic, Marinho, Turquesa, Jade, Verde TW, Coral, Terra, Castanho, Sensuale e Erva Doce.",
     composicao: "90% Poliéster, 10% Elastano",
     recomendacoes: "Base perfeita para qualquer look. Fácil manutenção.",
     caracteristicas: ["Anti-manchas", "Easy Care", "Durabilidade +"],
