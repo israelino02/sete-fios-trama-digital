@@ -1,17 +1,23 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Product } from "@/data/products";
+import { useNavigate } from "react-router-dom";
 
 interface CatalogProductCardProps {
   product: Product;
-  onClick: () => void;
 }
 
-export const CatalogProductCard = ({ product, onClick }: CatalogProductCardProps) => {
+export const CatalogProductCard = ({ product }: CatalogProductCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/produto/${product.id}`);
+  };
+
   return (
     <Card 
       className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border"
-      onClick={onClick}
+      onClick={handleClick}
     >
       <CardContent className="p-0">
         {/* Image */}

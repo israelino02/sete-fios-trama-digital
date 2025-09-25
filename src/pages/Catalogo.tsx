@@ -4,14 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
-import { ProductModal } from "@/components/ProductModal";
-import { products, Product } from "@/data/products";
+import { products } from "@/data/products";
 
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Get unique categories
   const categories = ["all", ...Array.from(new Set(products.map(product => product.categoria)))];
@@ -31,15 +28,6 @@ const Catalogo = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const handleProductClick = (product: Product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
 
   const handleDownloadCatalog = () => {
     // Implementar download do catálogo geral
@@ -106,7 +94,6 @@ const Catalogo = () => {
             <CatalogProductCard
               key={product.id}
               product={product}
-              onClick={() => handleProductClick(product)}
             />
           ))}
         </div>
@@ -171,12 +158,6 @@ const Catalogo = () => {
         </div>
       </div>
 
-      {/* Product Modal */}
-      <ProductModal
-        product={selectedProduct}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </div>
   );
 };
