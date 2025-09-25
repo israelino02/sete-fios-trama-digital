@@ -44,8 +44,8 @@ const Index = () => {
             <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
               ✨ Tecidos de Qualidade Superior
             </Badge>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Tecendo ideias, <span className="text-accent">criando</span> possibilidades
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+              Tecendo ideias, <span>criando</span> possibilidades
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
