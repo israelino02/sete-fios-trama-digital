@@ -1,22 +1,14 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Phone, MessageCircle, Download } from "lucide-react";
+import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/data/products";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
   const [selectedImage, setSelectedImage] = useState(0);
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    mensagem: ""
-  });
 
   const product = products.find(p => p.id === productId);
 
@@ -39,17 +31,6 @@ const ProductDetail = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Formulário enviado:', { ...formData, produto: product.nome });
-    // Implementar envio do formulário
-  };
-
-  const handleDownloadFicha = () => {
-    if (product.link_ficha_tecnica) {
-      window.open(product.link_ficha_tecnica, '_blank');
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -119,75 +100,16 @@ const ProductDetail = () => {
               </CardContent>
             </Card>
 
-            {/* Ações Rápidas */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            {/* Ação Rápida */}
+            <div className="mb-6">
               <Button 
                 onClick={handleWhatsAppContact}
-                className="bg-green-600 hover:bg-green-700"
+                className="bg-green-600 hover:bg-green-700 w-full"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
-              </Button>
-              <Button 
-                onClick={handleDownloadFicha}
-                variant="outline"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Ficha Técnica
+                Entrar em Contato via WhatsApp
               </Button>
             </div>
-
-            {/* Formulário de Contato */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Solicitar Informações
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <Input
-                        placeholder="Seu nome"
-                        value={formData.nome}
-                        onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="email"
-                        placeholder="Seu e-mail"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <Input
-                      type="tel"
-                      placeholder="Seu telefone"
-                      value={formData.telefone}
-                      onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Sua mensagem (opcional)"
-                      value={formData.mensagem}
-                      onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
-                      rows={4}
-                    />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Enviar Solicitação
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
 
