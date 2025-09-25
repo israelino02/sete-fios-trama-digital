@@ -39,9 +39,16 @@ export const products: Product[] = [
       "/lovable-uploads/romantik-pimenta-novo.jpg",
       "/lovable-uploads/romantik-amarelo-bb-novo.jpg",
       "/lovable-uploads/romantik-tibeton-novo.jpg",
-      "/lovable-uploads/romantik-rosa-bb-novo.jpg"
+      "/lovable-uploads/romantik-rosa-bb-novo.jpg",
+      "/lovable-uploads/romantik-ires-novo.jpg",
+      "/lovable-uploads/romantik-fucsia-novo.jpg",
+      "/lovable-uploads/romantik-theos-novo.jpg",
+      "/lovable-uploads/romantik-verde-pavao-novo.jpg",
+      "/lovable-uploads/romantik-frozen-novo.jpg",
+      "/lovable-uploads/romantik-lavanda-novo.jpg",
+      "/lovable-uploads/romantik-mescla-novo.jpg"
     ],
-    descricao: "Malha lisa com toque suave e caimento perfeito, ideal para peças versáteis e confortáveis. Disponível em ampla gama de cores incluindo Tangerina, Marrom, Turquesa, Coral, Chumbo, Castanho, Verde Musgo, Azul Oceano, Verde Jade, Branco, Canela, Preto, Bic, Terra, Sensuale, Vermelho, Pimenta, Amarelo BB, Tibeton e Rosa BB.",
+    descricao: "Malha lisa com toque suave e caimento perfeito, ideal para peças versáteis e confortáveis. Disponível em ampla gama de cores incluindo Tangerina, Marrom, Turquesa, Coral, Chumbo, Castanho, Verde Musgo, Azul Oceano, Verde Jade, Branco, Canela, Preto, Bic, Terra, Sensuale, Vermelho, Pimenta, Amarelo BB, Tibeton, Rosa BB, Ires, Fucsia, Theos, Verde Pavão, Frozen, Lavanda e Mescla.",
     composicao: "80% Poliéster, 20% Elastano",
     recomendacoes: "Ideal para vestidos, blusas e peças básicas. Lavagem a 30°C.",
     caracteristicas: ["Toque Suave", "Boa Elasticidade", "Fácil Manutenção"],
