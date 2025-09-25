@@ -72,36 +72,14 @@ const ProductDetail = () => {
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Galeria de Imagens */}
+          {/* Imagem Principal */}
           <div>
-            {/* Imagem Principal */}
             <div className="aspect-square mb-4 overflow-hidden rounded-lg border bg-card">
               <img
                 src={product.imagens[selectedImage]}
                 alt={`${product.nome} - Imagem ${selectedImage + 1}`}
                 className="w-full h-full object-cover"
               />
-            </div>
-            
-            {/* Thumbnails */}
-            <div className="grid grid-cols-3 gap-2">
-              {product.imagens.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`aspect-square overflow-hidden rounded-md border-2 transition-colors ${
-                    selectedImage === index 
-                      ? 'border-primary' 
-                      : 'border-border hover:border-muted-foreground'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`${product.nome} - Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
             </div>
           </div>
 
@@ -210,6 +188,32 @@ const ProductDetail = () => {
                 </form>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Galeria de Cores */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Cores Disponíveis
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {product.imagens.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedImage(index)}
+                className={`aspect-square overflow-hidden rounded-lg border-2 transition-all duration-300 hover:scale-105 ${
+                  selectedImage === index 
+                    ? 'border-primary shadow-lg' 
+                    : 'border-border hover:border-muted-foreground hover:shadow-md'
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`${product.nome} - Cor ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+            ))}
           </div>
         </div>
       </div>
