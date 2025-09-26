@@ -129,9 +129,16 @@ export const products: Product[] = [
       "/lovable-uploads/madri-cor5-novo.jpg",
       "/lovable-uploads/madri-cor6-novo.jpg",
       "/lovable-uploads/madri-cor7-novo.jpg",
-      "/lovable-uploads/madri-cor8-novo.jpg"
+      "/lovable-uploads/madri-cor8-novo.jpg",
+      "/lovable-uploads/madri-verde-jade-novo.jpg",
+      "/lovable-uploads/madri-branco-novo.jpg",
+      "/lovable-uploads/madri-tulipero-novo.jpg",
+      "/lovable-uploads/madri-canela-novo.jpg",
+      "/lovable-uploads/madri-preto-novo.jpg",
+      "/lovable-uploads/madri-bic-novo.jpg",
+      "/lovable-uploads/madri-terra-novo.jpg"
     ],
-    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 8 cores variadas para maior versatilidade na confecção.",
+    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 15 cores variadas incluindo Verde Jade, Branco, Tulipero, Canela, Preto, Bic, Terra e outras opções versáteis para confecção.",
     composicao: "70% Poliéster, 30% Viscose",
     recomendacoes: "Ideal para peças sociais e casuais elegantes. Muito confortável.",
     caracteristicas: ["Toque Nobre", "Caimento Elegante", "Durabilidade"],
