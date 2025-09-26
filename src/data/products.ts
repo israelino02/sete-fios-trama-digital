@@ -122,9 +122,6 @@ export const products: Product[] = [
     nome: "MADRI",
     codigo: "7845",
     imagens: [
-      "/lovable-uploads/romantik-terra.jpg",
-      "/lovable-uploads/romantik-castanho.jpg",
-      "/lovable-uploads/romantik-canela.jpg",
       "/lovable-uploads/madri-cor1-novo.jpg",
       "/lovable-uploads/madri-cor2-novo.jpg",
       "/lovable-uploads/madri-cor3-novo.jpg",
@@ -134,7 +131,7 @@ export const products: Product[] = [
       "/lovable-uploads/madri-cor7-novo.jpg",
       "/lovable-uploads/madri-cor8-novo.jpg"
     ],
-    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Agora disponível em 11 cores variadas para maior versatilidade na confecção.",
+    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 8 cores variadas para maior versatilidade na confecção.",
     composicao: "70% Poliéster, 30% Viscose",
     recomendacoes: "Ideal para peças sociais e casuais elegantes. Muito confortável.",
     caracteristicas: ["Toque Nobre", "Caimento Elegante", "Durabilidade"],
