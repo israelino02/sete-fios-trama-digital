@@ -148,9 +148,11 @@ export const products: Product[] = [
       "/lovable-uploads/madri-cor9-novo.jpg",
       "/lovable-uploads/madri-cor10-novo.jpg",
       "/lovable-uploads/madri-cor11-novo.jpg",
-      "/lovable-uploads/madri-cor12-novo.jpg"
+      "/lovable-uploads/madri-cor12-novo.jpg",
+      "/lovable-uploads/madri-rosa-bb-novo.jpg",
+      "/lovable-uploads/madri-fucsia-novo.jpg"
     ],
-    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 27 cores variadas incluindo tons vibrantes, neutros e sofisticados com uma ampla gama de opções para confecção versátil e criativa.",
+    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 29 cores variadas incluindo tons vibrantes como Rosa BB e Fucsia, neutros e sofisticados com uma ampla gama de opções para confecção versátil e criativa.",
     composicao: "70% Poliéster, 30% Viscose",
     recomendacoes: "Ideal para peças sociais e casuais elegantes. Muito confortável.",
     caracteristicas: ["Toque Nobre", "Caimento Elegante", "Durabilidade"],
