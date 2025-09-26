@@ -163,9 +163,13 @@ export const products: Product[] = [
       "/lovable-uploads/milao-cronos2-novo.jpg",
       "/lovable-uploads/milao-canela2-novo.jpg",
       "/lovable-uploads/milao-fuscia-novo.jpg",
-      "/lovable-uploads/milao-sanremo2-novo.jpg"
+      "/lovable-uploads/milao-sanremo2-novo.jpg",
+      "/lovable-uploads/milao-tibeton2-novo.jpg",
+      "/lovable-uploads/milao-tulipero2-novo.jpg",
+      "/lovable-uploads/milao-pimenta2-novo.jpg",
+      "/lovable-uploads/milao-coral-novo.jpg"
     ],
-    descricao: "Malha premium com design italiano, perfeita para peças de alta qualidade. Disponível em 27 cores: Preto, Branco, Verde TW, Marrom, Ires, Pink, Amarelo BB, Frozen, Lavanda, Bic, Terra, Canela, Cronos, Marfim, Pimenta, Romance, Sanremo, Tibeton, Tulipero, Castanho, Vermelho, Gris, Pavão, Fuscia e mais variações.",
+    descricao: "Malha premium com design italiano, perfeita para peças de alta qualidade. Disponível em 31 cores variadas incluindo tons neutros, vibrantes e sofisticados para todos os tipos de confecção.",
     composicao: "82% Poliéster, 18% Elastano",
     recomendacoes: "Perfeito para peças sofisticadas e de qualidade superior.",
     caracteristicas: ["Design Premium", "Alta Qualidade", "Resistência"],
