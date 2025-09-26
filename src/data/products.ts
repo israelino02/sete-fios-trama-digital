@@ -139,9 +139,17 @@ export const products: Product[] = [
     imagens: [
       "/lovable-uploads/milao-preto.jpg",
       "/lovable-uploads/milao-branco.jpg",
-      "/lovable-uploads/milao-verde-tw.jpg"
+      "/lovable-uploads/milao-verde-tw.jpg",
+      "/lovable-uploads/milao-marrom.jpg",
+      "/lovable-uploads/milao-ires-novo.jpg",
+      "/lovable-uploads/milao-pink.jpg",
+      "/lovable-uploads/milao-amarelo-bb-novo.jpg",
+      "/lovable-uploads/milao-frozen-novo.jpg",
+      "/lovable-uploads/milao-lavanda-novo.jpg",
+      "/lovable-uploads/milao-bic-novo.jpg",
+      "/lovable-uploads/milao-terra-novo.jpg"
     ],
-    descricao: "Malha premium com design italiano, perfeita para peças de alta qualidade.",
+    descricao: "Malha premium com design italiano, perfeita para peças de alta qualidade. Disponível em 11 cores: Preto, Branco, Verde TW, Marrom, Ires, Pink, Amarelo BB, Frozen, Lavanda, Bic e Terra.",
     composicao: "82% Poliéster, 18% Elastano",
     recomendacoes: "Perfeito para peças sofisticadas e de qualidade superior.",
     caracteristicas: ["Design Premium", "Alta Qualidade", "Resistência"],
