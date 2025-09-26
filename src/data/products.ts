@@ -144,9 +144,13 @@ export const products: Product[] = [
       "/lovable-uploads/madri-tibeton-novo.jpg",
       "/lovable-uploads/madri-romance-novo.jpg",
       "/lovable-uploads/madri-pink-novo.jpg",
-      "/lovable-uploads/madri-ires-novo.jpg"
+      "/lovable-uploads/madri-ires-novo.jpg",
+      "/lovable-uploads/madri-cor9-novo.jpg",
+      "/lovable-uploads/madri-cor10-novo.jpg",
+      "/lovable-uploads/madri-cor11-novo.jpg",
+      "/lovable-uploads/madri-cor12-novo.jpg"
     ],
-    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 23 cores variadas incluindo tons vibrantes, neutros e sofisticados como Sensuale, Vermelho, Pimenta, Amarelo BB, Tibeton, Romance, Pink, Ires e muitas outras opções para confecção versátil.",
+    descricao: "Tecido sofisticado com inspiração europeia, ideal para peças elegantes. Disponível em 27 cores variadas incluindo tons vibrantes, neutros e sofisticados com uma ampla gama de opções para confecção versátil e criativa.",
     composicao: "70% Poliéster, 30% Viscose",
     recomendacoes: "Ideal para peças sociais e casuais elegantes. Muito confortável.",
     caracteristicas: ["Toque Nobre", "Caimento Elegante", "Durabilidade"],
