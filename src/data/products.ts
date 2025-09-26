@@ -107,11 +107,16 @@ export const products: Product[] = [
     nome: "HAWAI",
     codigo: "9012",
     imagens: [
-      "/lovable-uploads/romantik-azul-oceano.jpg",
-      "/lovable-uploads/romantik-turquesa.jpg",
-      "/lovable-uploads/poliside-azul-bb.jpg"
+      "/lovable-uploads/hawai-turquesa-novo.jpg",
+      "/lovable-uploads/hawai-coral-novo.jpg",
+      "/lovable-uploads/hawai-chumbo-novo.jpg",
+      "/lovable-uploads/hawai-castanho-novo.jpg",
+      "/lovable-uploads/hawai-verde-musgo-novo.jpg",
+      "/lovable-uploads/hawai-azul-oceano-novo.jpg",
+      "/lovable-uploads/hawai-verde-jade-novo.jpg",
+      "/lovable-uploads/hawai-branco-novo.jpg"
     ],
-    descricao: "Malha fresca e leve inspirada no verão tropical, ideal para peças casuais.",
+    descricao: "Malha fresca e leve inspirada no verão tropical, ideal para peças casuais. Disponível em 8 cores vibrantes: Turquesa, Coral, Chumbo, Castanho, Verde Musgo, Azul Oceano, Verde Jade e Branco, perfeitas para peças de praia e roupas de verão.",
     composicao: "85% Poliéster, 15% Elastano",
     recomendacoes: "Perfeito para peças de praia e roupas casuais de verão.",
     caracteristicas: ["UV Protection", "Respirável", "Quick Dry"],
