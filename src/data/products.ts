@@ -62,10 +62,9 @@ export const products: Product[] = [
       "/lovable-uploads/poliside-turquesa-novo.jpg",
       "/lovable-uploads/poliside-coral-novo.jpg",
       "/lovable-uploads/poliside-marfim-novo.jpg",
-      "/lovable-uploads/poliside-azul-bb-novo.jpg",
-      "/lovable-uploads/poliside-gris-novo.jpg"
+      "/lovable-uploads/poliside-azul-bb-novo.jpg"
     ],
-    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais. Disponível em 5 cores: Turquesa, Coral, Marfim, Azul BB e Gris.",
+    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais. Disponível em 4 cores: Turquesa, Coral, Marfim e Azul BB.",
     composicao: "75% Poliéster Reciclado, 25% Elastano",
     recomendacoes: "Excelente para atividades físicas e uso diário. Secagem rápida.",
     caracteristicas: ["Recicle +", "UV Protection", "Quick Dry"],
