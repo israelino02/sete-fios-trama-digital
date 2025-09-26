@@ -78,9 +78,16 @@ export const products: Product[] = [
       "/lovable-uploads/poliside-denim-novo.jpg",
       "/lovable-uploads/poliside-terra-novo.jpg",
       "/lovable-uploads/poliside-sensuale-novo.jpg",
-      "/lovable-uploads/poliside-vermelho-novo.jpg"
+      "/lovable-uploads/poliside-vermelho-novo.jpg",
+      "/lovable-uploads/poliside-pimenta-novo.jpg",
+      "/lovable-uploads/poliside-biscoito-novo.jpg",
+      "/lovable-uploads/poliside-tibeton-novo.jpg",
+      "/lovable-uploads/poliside-salmao-novo.jpg",
+      "/lovable-uploads/poliside-romance-novo.jpg",
+      "/lovable-uploads/poliside-pink-novo.jpg",
+      "/lovable-uploads/poliside-ires-novo.jpg"
     ],
-    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais. Disponível em 20 cores: Turquesa, Coral, Marfim, Azul BB, Gris, Grafite, Castanho, Verde TW, Marinho, Tame, Jade, Branco, Satim, Canela, Preto, Bic, Denim, Terra, Sensuale e Vermelho.",
+    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais. Disponível em 27 cores: Turquesa, Coral, Marfim, Azul BB, Gris, Grafite, Castanho, Verde TW, Marinho, Tame, Jade, Branco, Satim, Canela, Preto, Bic, Denim, Terra, Sensuale, Vermelho, Pimenta, Biscoito, Tibeton, Salmão, Romance, Pink e Ires.",
     composicao: "75% Poliéster Reciclado, 25% Elastano",
     recomendacoes: "Excelente para atividades físicas e uso diário. Secagem rápida.",
     caracteristicas: ["Recicle +", "UV Protection", "Quick Dry"],
