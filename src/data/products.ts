@@ -59,11 +59,16 @@ export const products: Product[] = [
     nome: "POLISIDE",
     codigo: "8874",
     imagens: [
-      "/lovable-uploads/poliside-grafite.jpg",
-      "/lovable-uploads/poliside-branco.jpg",
-      "/lovable-uploads/poliside-azul-bb.jpg"
+      "/lovable-uploads/poliside-turquesa-novo.jpg",
+      "/lovable-uploads/poliside-coral-novo.jpg",
+      "/lovable-uploads/poliside-marfim-novo.jpg",
+      "/lovable-uploads/poliside-azul-bb-novo.jpg",
+      "/lovable-uploads/poliside-gris-novo2.jpg",
+      "/lovable-uploads/poliside-grafite-novo.jpg",
+      "/lovable-uploads/poliside-castanho-novo.jpg",
+      "/lovable-uploads/poliside-verde-tw-novo.jpg"
     ],
-    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais.",
+    descricao: "Tecido técnico de alta performance, perfeito para roupas esportivas e casuais. Disponível em 8 cores: Turquesa, Coral, Marfim, Azul BB, Gris, Grafite, Castanho e Verde TW.",
     composicao: "75% Poliéster Reciclado, 25% Elastano",
     recomendacoes: "Excelente para atividades físicas e uso diário. Secagem rápida.",
     caracteristicas: ["Recicle +", "UV Protection", "Quick Dry"],
