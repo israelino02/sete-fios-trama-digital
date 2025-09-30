@@ -7,7 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import Index from "./pages/Index";
 import Catalogo from "./pages/Catalogo";
+import CategoryDetail from "./pages/CategoryDetail";
 import FabricDetail from "./pages/FabricDetail";
+import EstampadoGenderSelect from "./pages/EstampadoGenderSelect";
 import ProductDetail from "./pages/ProductDetail";
 import OutrosProdutos from "./pages/OutrosProdutos";
 import Sobre from "./pages/Sobre";
@@ -26,7 +28,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/catalogo" element={<Catalogo />} />
-            <Route path="/catalogo/:fabricType" element={<FabricDetail />} />
+            <Route path="/catalogo/:categorySlug" element={<CategoryDetail />} />
+            <Route path="/catalogo/:categorySlug/:fabricType/selecionar-genero" element={<EstampadoGenderSelect />} />
+            <Route path="/catalogo/:categorySlug/:fabricType/:gender" element={<FabricDetail />} />
+            <Route path="/catalogo/:categorySlug/:fabricType" element={<FabricDetail />} />
             <Route path="/produto/:productId" element={<ProductDetail />} />
             <Route path="/outros-produtos" element={<OutrosProdutos />} />
             <Route path="/sobre" element={<Sobre />} />

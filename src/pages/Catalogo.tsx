@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { fabricsData, Fabric } from "@/data/fabrics";
+import { fabricsData } from "@/data/fabrics";
 
 const Catalogo = () => {
   const navigate = useNavigate();
 
-  const handleCardClick = (fabric: Fabric) => {
-    navigate(`/catalogo/${encodeURIComponent(fabric.type)}`);
+  const handleCategoryClick = (slug: string) => {
+    navigate(`/catalogo/${slug}`);
   };
 
   return (
@@ -23,20 +23,20 @@ const Catalogo = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Fabric Cards Grid - Always 2 columns on mobile/tablet, 3 on desktop */}
+        {/* Category Cards Grid - 2 columns on mobile/tablet, 3 on desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {fabricsData.fabrics.map((fabric) => (
+          {fabricsData.categories.map((category) => (
             <button
-              key={fabric.type}
-              onClick={() => handleCardClick(fabric)}
+              key={category.slug}
+              onClick={() => handleCategoryClick(category.slug)}
               className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary"
-              aria-label={`Ver detalhes de ${fabric.type}`}
+              aria-label={`Ver tecidos de ${category.name}`}
             >
               {/* Image */}
               <div className="aspect-square overflow-hidden">
                 <img
-                  src={fabric.mainImage}
-                  alt={fabric.type}
+                  src={category.mainImage}
+                  alt={category.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -44,7 +44,7 @@ const Catalogo = () => {
               {/* Name */}
               <div className="p-4 bg-card border-t">
                 <h3 className="font-display font-bold text-lg text-foreground text-center">
-                  {fabric.type}
+                  {category.name}
                 </h3>
               </div>
             </button>
