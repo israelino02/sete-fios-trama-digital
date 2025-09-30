@@ -4,6 +4,16 @@ export interface ColorSwatch {
   swatch: string;
 }
 
+export interface TechnicalSpec {
+  label: string;
+  value: string;
+}
+
+export interface Technology {
+  name: string;
+  description: string;
+}
+
 export interface Fabric {
   type: string;
   description: string;
@@ -11,6 +21,9 @@ export interface Fabric {
   recommendedUse: string;
   mainImage: string;
   colors: ColorSwatch[];
+  technicalSpecs?: TechnicalSpec[];
+  usageExamples?: string[];
+  technologies?: Technology[];
 }
 
 export interface FabricsData {
@@ -21,10 +34,23 @@ export const fabricsData: FabricsData = {
   fabrics: [
     {
       type: "MICROFIBRAS DE POLIESTER",
-      description: "Tecido leve e resistente com toque suave e fácil manutenção.",
+      description: "Tecido leve e resistente com toque suave e fácil manutenção. Malha com excelente caimento, flexibilidade e conforto térmico. Ideal para confecção de peças versáteis e duráveis.",
       composition: "80% Poliéster, 20% Elastano",
-      recommendedUse: "Ideal para vestidos, blusas e peças básicas",
+      recommendedUse: "Ideal para vestidos, blusas, peças básicas e moda casual",
       mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
+      technicalSpecs: [
+        { label: "Largura", value: "1,70m" },
+        { label: "Gramatura", value: "180 g/m²" },
+        { label: "Rendimento", value: "Alto" },
+        { label: "Poliéster", value: "80%" },
+        { label: "Elastano", value: "20%" }
+      ],
+      usageExamples: ["Vestidos", "Blusas", "Saias", "Moda Casual"],
+      technologies: [
+        { name: "Conforto Térmico", description: "Tecido respirável que proporciona conforto em diversas temperaturas" },
+        { name: "Flexibilidade", description: "Elasticidade ideal para movimentos livres e conforto" },
+        { name: "Secagem Rápida", description: "Tecnologia que permite secagem eficiente" }
+      ],
       colors: [
         { name: "Romance", code: "ROM-001", swatch: "/lovable-uploads/romantik-romance.jpg" },
         { name: "Tulipero", code: "TUL-001", swatch: "/lovable-uploads/romantik-tulipero.jpg" },
@@ -59,10 +85,23 @@ export const fabricsData: FabricsData = {
     },
     {
       type: "MICROFIBRAS DE POLIAMIDA",
-      description: "Tecido flexível e confortável de alta qualidade.",
+      description: "Tecido flexível e confortável de alta qualidade. Malha premium com toque sedoso, excelente elasticidade e durabilidade superior. Possui proteção UV 50+ e secagem ultra-rápida.",
       composition: "85% Poliamida, 15% Elastano",
-      recommendedUse: "Indicado para lingerie, moda fitness e peças íntimas",
+      recommendedUse: "Indicado para lingerie, moda fitness, peças íntimas e blusas de proteção solar",
       mainImage: "/lovable-uploads/poliamida-coral.jpg",
+      technicalSpecs: [
+        { label: "Largura", value: "1,60m" },
+        { label: "Gramatura", value: "200 g/m²" },
+        { label: "Rendimento", value: "Médio/Alto" },
+        { label: "Poliamida", value: "85%" },
+        { label: "Elastano", value: "15%" }
+      ],
+      usageExamples: ["Lingerie", "Sutiãs", "Calcinhas", "Moda Fitness", "Blusas UV"],
+      technologies: [
+        { name: "Proteção UV 50+", description: "Bloqueia raios solares nocivos oferecendo máxima proteção" },
+        { name: "Conforto Térmico", description: "Mantém a temperatura corporal ideal" },
+        { name: "Flexibilidade Superior", description: "Alta elasticidade para máximo conforto e movimento" }
+      ],
       colors: [
         { name: "Coral", code: "COR-PA-001", swatch: "/lovable-uploads/poliamida-coral.jpg" },
         { name: "Rosa BB", code: "RSB-PA-001", swatch: "/lovable-uploads/romantik-rosa-bb-novo.jpg" },
