@@ -71,16 +71,18 @@ const FabricDetail = () => {
               Tecidos disponíveis:
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {fabricsData.fabrics.map((f) => (
-                <Button
-                  key={f.type}
-                  variant={f.type === selectedFabric.type ? "default" : "outline"}
-                  className="h-auto py-4 px-6 font-medium text-base"
-                  onClick={() => handleFabricSelect(f)}
-                >
-                  {f.type}
-                </Button>
-              ))}
+              {fabricsData.fabrics
+                .filter((f) => f.category === selectedFabric.category)
+                .map((f) => (
+                  <Button
+                    key={f.type}
+                    variant={f.type === selectedFabric.type ? "default" : "outline"}
+                    className="h-auto py-4 px-6 font-medium text-base"
+                    onClick={() => handleFabricSelect(f)}
+                  >
+                    {f.type}
+                  </Button>
+                ))}
             </div>
           </div>
 
