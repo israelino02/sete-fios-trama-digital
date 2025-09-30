@@ -25,9 +25,6 @@ const FabricDetail = () => {
   const handleFabricSelect = (fabric: Fabric) => {
     setSelectedFabric(fabric);
     navigate(`/catalogo/${encodeURIComponent(fabric.type)}`);
-  };
-
-  const handleOpenColorModal = () => {
     setIsColorModalOpen(true);
   };
 
@@ -87,16 +84,6 @@ const FabricDetail = () => {
             </div>
           </div>
 
-          {/* Button to open color modal */}
-          <div className="flex justify-center pt-4">
-            <Button
-              size="lg"
-              onClick={handleOpenColorModal}
-              className="font-semibold text-lg"
-            >
-              Ver Cores Disponíveis
-            </Button>
-          </div>
         </div>
       </div>
 
