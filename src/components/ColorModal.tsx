@@ -52,7 +52,7 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
           </div>
 
           {/* Swatches */}
-          <SwatchGrid colors={fabric.colors} />
+          <SwatchGrid colors={fabric.colors} fabric={fabric} />
 
           {/* Budget button */}
           <div className="flex justify-center pt-4 border-t">

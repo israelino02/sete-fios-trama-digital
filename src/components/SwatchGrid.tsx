@@ -1,15 +1,24 @@
 import * as React from "react";
-import { ColorSwatch } from "@/data/fabrics";
+import { ColorSwatch, Fabric } from "@/data/fabrics";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SwatchGridProps {
   colors: ColorSwatch[];
+  fabric?: Fabric;
 }
 
-export const SwatchGrid = ({ colors }: SwatchGridProps) => {
+export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
   const [selectedSwatch, setSelectedSwatch] = React.useState<ColorSwatch | null>(null);
+
+  const handleBudgetRequest = () => {
+    if (!selectedSwatch || !fabric) return;
+    
+    const message = `Olá! Gostaria de fazer um orçamento para:\n\nTecido: ${fabric.type}\nCor: ${selectedSwatch.name}\nCódigo: ${selectedSwatch.code}`;
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   if (colors.length === 0) {
     return (
@@ -42,10 +51,9 @@ export const SwatchGrid = ({ colors }: SwatchGridProps) => {
                 />
               </div>
               
-              {/* Color name below swatch */}
+              {/* Color name below swatch - only name, no code */}
               <div className="text-center">
                 <p className="text-sm font-medium text-foreground">{color.name}</p>
-                <p className="text-xs text-muted-foreground">({color.code})</p>
               </div>
             </div>
           ))}
@@ -54,30 +62,54 @@ export const SwatchGrid = ({ colors }: SwatchGridProps) => {
 
       {/* Lightbox for enlarged swatch */}
       <Dialog open={!!selectedSwatch} onOpenChange={() => setSelectedSwatch(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden">
+        <DialogContent className="max-w-3xl">
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-4 top-4 z-10 bg-background/80 hover:bg-background"
+            className="absolute right-4 top-4 z-10"
             onClick={() => setSelectedSwatch(null)}
             aria-label="Fechar"
           >
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           </Button>
           
           {selectedSwatch && (
-            <div className="space-y-4 p-6">
+            <div className="space-y-6 p-2">
+              {/* Color name and code */}
               <div className="text-center space-y-2">
-                <h3 className="text-2xl font-semibold text-foreground">{selectedSwatch.name}</h3>
-                <p className="text-muted-foreground">{selectedSwatch.code}</p>
+                <h2 className="text-3xl font-display font-bold text-foreground">
+                  {selectedSwatch.name}
+                </h2>
+                <p className="text-xl text-muted-foreground font-medium">
+                  Código: {selectedSwatch.code}
+                </p>
               </div>
               
-              <div className="aspect-square w-full rounded-lg overflow-hidden border">
+              {/* Enlarged swatch image */}
+              <div className="aspect-square w-full max-w-xl mx-auto rounded-lg overflow-hidden border-2 shadow-lg">
                 <img
                   src={selectedSwatch.swatch}
                   alt={`${selectedSwatch.name} - ${selectedSwatch.code}`}
                   className="w-full h-full object-cover"
                 />
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex gap-4 justify-center pt-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => setSelectedSwatch(null)}
+                >
+                  Fechar
+                </Button>
+                <Button
+                  size="lg"
+                  onClick={handleBudgetRequest}
+                  className="bg-gradient-primary hover:scale-105 transition-all duration-300"
+                >
+                  Fazer orçamento
+                </Button>
               </div>
             </div>
           )}
