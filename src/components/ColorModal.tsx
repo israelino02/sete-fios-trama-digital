@@ -27,15 +27,6 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
           <DialogTitle className="text-3xl font-display font-bold text-foreground">
             {fabric.type}
           </DialogTitle>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-4"
-            onClick={onClose}
-            aria-label="Fechar"
-          >
-            <X className="h-4 w-4" />
-          </Button>
         </DialogHeader>
 
         <div className="space-y-6 mt-6">
