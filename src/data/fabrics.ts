@@ -18,7 +18,7 @@ export interface FabricsData {
 export const fabricsData: FabricsData = {
   fabrics: [
     {
-      type: "POLIESTER",
+      type: "MICROFIBRAS DE POLIESTER",
       description: "Tecido leve e resistente. Composição: 80% Poliéster, 20% Elastano. Ideal para vestidos, blusas e peças básicas. Toque suave e fácil manutenção.",
       mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
       colors: [
@@ -54,7 +54,7 @@ export const fabricsData: FabricsData = {
       ]
     },
     {
-      type: "POLIAMIDA",
+      type: "MICROFIBRAS DE POLIAMIDA",
       description: "Tecido flexível e confortável. Composição: 85% Poliamida, 15% Elastano. Indicado para lingerie, moda fitness e peças íntimas de alta qualidade.",
       mainImage: "/lovable-uploads/poliamida-coral.jpg",
       colors: [
