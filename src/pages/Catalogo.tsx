@@ -1,28 +1,11 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { fabricsData, Fabric } from "@/data/fabrics";
-import { FabricModal } from "@/components/FabricModal";
-import { ColorModal } from "@/components/ColorModal";
 
 const Catalogo = () => {
-  const [selectedFabric, setSelectedFabric] = useState<Fabric | null>(null);
-  const [isFabricModalOpen, setIsFabricModalOpen] = useState(false);
-  const [isColorModalOpen, setIsColorModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleCardClick = (fabric: Fabric) => {
-    setSelectedFabric(fabric);
-    setIsFabricModalOpen(true);
-  };
-
-  const handleFabricSelect = (fabric: Fabric) => {
-    setSelectedFabric(fabric);
-    setIsFabricModalOpen(false);
-    setIsColorModalOpen(true);
-  };
-
-  const handleCloseColorModal = () => {
-    setIsColorModalOpen(false);
-    // Optionally reopen fabric modal when color modal closes
-    setIsFabricModalOpen(true);
+    navigate(`/catalogo/${encodeURIComponent(fabric.type)}`);
   };
 
   return (
@@ -68,22 +51,6 @@ const Catalogo = () => {
           ))}
         </div>
       </div>
-
-      {/* Modal 1 - Fabric Information */}
-      <FabricModal
-        fabric={selectedFabric}
-        isOpen={isFabricModalOpen}
-        onClose={() => setIsFabricModalOpen(false)}
-        onSelectFabric={handleFabricSelect}
-        allFabrics={fabricsData.fabrics}
-      />
-
-      {/* Modal 2 - Color Selection */}
-      <ColorModal
-        fabric={selectedFabric}
-        isOpen={isColorModalOpen}
-        onClose={handleCloseColorModal}
-      />
     </div>
   );
 };
