@@ -23,53 +23,55 @@ export const FabricModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-display font-bold text-foreground">
-            {fabric.type}
-          </DialogTitle>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-4"
-            onClick={onClose}
-            aria-label="Fechar"
-          >
-            <X className="h-4 w-4" />
-          </Button>
-        </DialogHeader>
+      <DialogContent className="max-w-full max-h-screen h-screen w-screen overflow-y-auto p-0">
+        <div className="container mx-auto px-4 py-8 max-w-5xl">
+          <DialogHeader className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-0 top-0 z-10"
+              onClick={onClose}
+              aria-label="Fechar"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+            <DialogTitle className="text-3xl font-display font-bold text-foreground pr-12">
+              {fabric.type}
+            </DialogTitle>
+          </DialogHeader>
 
-        <div className="space-y-6 mt-4">
-          {/* Main Image */}
-          <div className="aspect-video rounded-lg overflow-hidden border">
-            <img
-              src={fabric.mainImage}
-              alt={fabric.type}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <div className="space-y-8 mt-8">
+            {/* Main Image */}
+            <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
+              <img
+                src={fabric.mainImage}
+                alt={fabric.type}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-          {/* Description */}
-          <div className="bg-muted/50 p-4 rounded-lg">
-            <p className="text-foreground leading-relaxed">{fabric.description}</p>
-          </div>
+            {/* Description */}
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <p className="text-foreground text-lg leading-relaxed">{fabric.description}</p>
+            </div>
 
-          {/* Available Fabrics List */}
-          <div>
-            <h3 className="font-semibold text-lg text-foreground mb-4">
-              Tecidos disponíveis:
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {allFabrics.map((f) => (
-                <Button
-                  key={f.type}
-                  variant={f.type === fabric.type ? "default" : "outline"}
-                  className="h-auto py-3 font-medium"
-                  onClick={() => onSelectFabric(f)}
-                >
-                  {f.type}
-                </Button>
-              ))}
+            {/* Available Fabrics List */}
+            <div>
+              <h3 className="font-semibold text-xl text-foreground mb-6">
+                Tecidos disponíveis:
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {allFabrics.map((f) => (
+                  <Button
+                    key={f.type}
+                    variant={f.type === fabric.type ? "default" : "outline"}
+                    className="h-auto py-4 px-6 font-medium text-base"
+                    onClick={() => onSelectFabric(f)}
+                  >
+                    {f.type}
+                  </Button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -7,6 +7,8 @@ export interface ColorSwatch {
 export interface Fabric {
   type: string;
   description: string;
+  composition: string;
+  recommendedUse: string;
   mainImage: string;
   colors: ColorSwatch[];
 }
@@ -19,7 +21,9 @@ export const fabricsData: FabricsData = {
   fabrics: [
     {
       type: "MICROFIBRAS DE POLIESTER",
-      description: "Tecido leve e resistente. Composição: 80% Poliéster, 20% Elastano. Ideal para vestidos, blusas e peças básicas. Toque suave e fácil manutenção.",
+      description: "Tecido leve e resistente com toque suave e fácil manutenção.",
+      composition: "80% Poliéster, 20% Elastano",
+      recommendedUse: "Ideal para vestidos, blusas e peças básicas",
       mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
       colors: [
         { name: "Romance", code: "ROM-001", swatch: "/lovable-uploads/romantik-romance.jpg" },
@@ -55,7 +59,9 @@ export const fabricsData: FabricsData = {
     },
     {
       type: "MICROFIBRAS DE POLIAMIDA",
-      description: "Tecido flexível e confortável. Composição: 85% Poliamida, 15% Elastano. Indicado para lingerie, moda fitness e peças íntimas de alta qualidade.",
+      description: "Tecido flexível e confortável de alta qualidade.",
+      composition: "85% Poliamida, 15% Elastano",
+      recommendedUse: "Indicado para lingerie, moda fitness e peças íntimas",
       mainImage: "/lovable-uploads/poliamida-coral.jpg",
       colors: [
         { name: "Coral", code: "COR-PA-001", swatch: "/lovable-uploads/poliamida-coral.jpg" },
@@ -68,7 +74,9 @@ export const fabricsData: FabricsData = {
     },
     {
       type: "SUEDE",
-      description: "Tecido aveludado com toque macio e aspecto sofisticado. Composição: 85% Poliéster, 15% Lycra. Ideal para peças diferenciadas e com personalidade.",
+      description: "Tecido aveludado com toque macio e aspecto sofisticado.",
+      composition: "85% Poliéster, 15% Lycra",
+      recommendedUse: "Ideal para peças diferenciadas e com personalidade",
       mainImage: "/lovable-uploads/romantik-sensuale-novo.jpg",
       colors: [
         { name: "Canela", code: "CAN-SU-001", swatch: "/lovable-uploads/romantik-canela-novo.jpg" },
@@ -80,7 +88,9 @@ export const fabricsData: FabricsData = {
     },
     {
       type: "DRY-FIT",
-      description: "Tecido técnico respirável com tecnologia dry fit. Composição: 78% Poliéster Técnico, 22% Elastano. Indicado para atividades físicas intensas e esportes.",
+      description: "Tecido técnico respirável com tecnologia dry fit.",
+      composition: "78% Poliéster Técnico, 22% Elastano",
+      recommendedUse: "Indicado para atividades físicas intensas e esportes",
       mainImage: "/lovable-uploads/milao-preto.jpg",
       colors: [
         { name: "Preto", code: "PRE-DF-001", swatch: "/lovable-uploads/romantik-preto-novo.jpg" },
@@ -90,7 +100,9 @@ export const fabricsData: FabricsData = {
     },
     {
       type: "ESTAMPADOS",
-      description: "Tecidos com padrões exclusivos e cores vibrantes. Diversos tipos de estampas disponíveis para peças únicas e criativas.",
+      description: "Tecidos com padrões exclusivos e cores vibrantes.",
+      composition: "Variável conforme estampa",
+      recommendedUse: "Diversos tipos de estampas disponíveis para peças únicas e criativas",
       mainImage: "/lovable-uploads/romantik-fucsia-novo.jpg",
       colors: [
         { name: "Fucsia", code: "FUC-ES-001", swatch: "/lovable-uploads/romantik-fucsia-novo.jpg" },

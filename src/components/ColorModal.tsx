@@ -22,9 +22,9 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-display font-bold text-foreground">
+          <DialogTitle className="text-3xl font-display font-bold text-foreground">
             {fabric.type}
           </DialogTitle>
           <Button
@@ -38,10 +38,26 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
           </Button>
         </DialogHeader>
 
-        <div className="space-y-6 mt-4">
-          {/* Description */}
-          <div className="bg-muted/50 p-4 rounded-lg">
-            <p className="text-foreground leading-relaxed">{fabric.description}</p>
+        <div className="space-y-6 mt-6">
+          {/* Information Boxes */}
+          <div className="space-y-4">
+            {/* Description */}
+            <div className="bg-muted/50 p-5 rounded-lg border">
+              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Descrição</h3>
+              <p className="text-foreground leading-relaxed">{fabric.description}</p>
+            </div>
+
+            {/* Composition */}
+            <div className="bg-muted/50 p-5 rounded-lg border">
+              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Composição</h3>
+              <p className="text-foreground font-medium">{fabric.composition}</p>
+            </div>
+
+            {/* Recommended Use */}
+            <div className="bg-muted/50 p-5 rounded-lg border">
+              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Uso Recomendado</h3>
+              <p className="text-foreground leading-relaxed">{fabric.recommendedUse}</p>
+            </div>
           </div>
 
           {/* Swatches */}
