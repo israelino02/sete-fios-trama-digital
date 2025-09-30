@@ -1,3 +1,4 @@
+import * as React from "react";
 import { ColorSwatch } from "@/data/fabrics";
 
 interface SwatchGridProps {
