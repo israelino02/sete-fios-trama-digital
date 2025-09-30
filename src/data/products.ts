@@ -218,9 +218,7 @@ export const products: Product[] = [
     id: "poliside-prime-006",
     nome: "POLISIDE PRIME",
     codigo: "5534",
-    imagens: [
-      "/lovable-uploads/poliside-branco.jpg"
-    ],
+    imagens: [],
     descricao: "Versão premium do Poliside, com tecnologia avançada e acabamento superior.",
     composicao: "90% Poliéster, 10% Elastano",
     recomendacoes: "Base perfeita para qualquer look. Fácil manutenção.",
