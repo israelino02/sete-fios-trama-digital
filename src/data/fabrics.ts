@@ -193,9 +193,14 @@ export const fabricsData: FabricsData = {
           type: "MILÃO",
           category: "POLIESTER",
           description: "Microfibra premium com toque sedoso e ótimo caimento.",
-          composition: "85% Poliéster, 15% Elastano",
+          composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para peças sofisticadas e confortáveis",
           mainImage: "/lovable-uploads/milao-branco.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,65m" },
+            { label: "Gramatura", value: "165" },
+            { label: "Rendimento", value: "3,70m²/kg" }
+          ],
           colors: [
             { name: "Branco", code: "MIL-001", swatch: "/lovable-uploads/milao-branco.jpg" },
             { name: "Preto", code: "MIL-002", swatch: "/lovable-uploads/milao-preto.jpg" },
