@@ -37,18 +37,6 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
               <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Descrição</h3>
               <p className="text-foreground leading-relaxed">{fabric.description}</p>
             </div>
-
-            {/* Composition */}
-            <div className="bg-muted/50 p-5 rounded-lg border">
-              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Composição</h3>
-              <p className="text-foreground font-medium">{fabric.composition}</p>
-            </div>
-
-            {/* Recommended Use */}
-            <div className="bg-muted/50 p-5 rounded-lg border">
-              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Uso Recomendado</h3>
-              <p className="text-foreground leading-relaxed">{fabric.recommendedUse}</p>
-            </div>
           </div>
 
           {/* Swatches */}
