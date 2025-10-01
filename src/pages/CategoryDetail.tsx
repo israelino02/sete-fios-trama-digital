@@ -33,7 +33,7 @@ const CategoryDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Back Button */}
         <Button
           variant="ghost"
@@ -45,7 +45,7 @@ const CategoryDetail = () => {
         </Button>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - Image Only */}
           <div>
             <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
@@ -60,24 +60,24 @@ const CategoryDetail = () => {
           {/* Right Column - Title, Description & Subfabrics List */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
                 {category.name}
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 {category.description}
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-xl text-foreground mb-6">
+              <h3 className="font-semibold text-lg text-foreground mb-4">
                 Subtecidos disponíveis:
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {category.fabrics.map((fabric) => (
                   <Button
                     key={fabric.type}
                     variant="outline"
-                    className="h-auto py-4 px-6 font-medium text-base hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="h-auto py-3 px-4 font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
                     onClick={() => handleFabricClick(fabric.type)}
                   >
                     {fabric.type}
