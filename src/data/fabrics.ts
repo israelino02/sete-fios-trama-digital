@@ -42,7 +42,7 @@ export interface FabricsData {
 export const fabricsData: FabricsData = {
   categories: [
     {
-      name: "POLIESTER",
+      name: "MICROFIBRAS DE POLIESTER",
       slug: "poliester",
       description: "Microfibras de poliéster de alta qualidade, versáteis e duráveis.",
       mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
@@ -241,7 +241,7 @@ export const fabricsData: FabricsData = {
       ]
     },
     {
-      name: "POLIAMIDA",
+      name: "MICROFIBRAS DE POLIAMIDA",
       slug: "poliamida",
       description: "Microfibras de poliamida com alta elasticidade e conforto.",
       mainImage: "/lovable-uploads/poliamida-coral.jpg",
