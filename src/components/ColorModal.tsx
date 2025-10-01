@@ -32,43 +32,11 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
         <div className="space-y-6 mt-6">
           {/* Information Boxes */}
           <div className="space-y-4">
-            {/* Description with Composition and Recommended Use */}
+            {/* Description */}
             <div className="bg-muted/50 p-5 rounded-lg border">
-              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-3">Descrição</h3>
-              <p className="text-foreground leading-relaxed mb-4">{fabric.description}</p>
-              <p className="text-foreground">
-                <span className="font-semibold text-primary">Composição:</span> {fabric.composition}
-              </p>
-              <p className="text-foreground mt-2">
-                <span className="font-semibold text-primary">Uso Recomendado:</span> {fabric.recommendedUse}
-              </p>
+              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Descrição</h3>
+              <p className="text-foreground leading-relaxed">{fabric.description}</p>
             </div>
-
-            {/* Technical Specifications */}
-            {fabric.technicalSpecs && fabric.technicalSpecs.length > 0 && (
-              <div className="bg-muted/50 p-5 rounded-lg border">
-                <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-3">Ficha Técnica</h3>
-                <div className="space-y-2">
-                  {fabric.technicalSpecs.map((spec, index) => (
-                    <p key={index} className="text-foreground">
-                      <span className="font-semibold">{spec.label}:</span> {spec.value}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Usage Examples */}
-            {fabric.usageExamples && fabric.usageExamples.length > 0 && (
-              <div className="bg-muted/50 p-5 rounded-lg border">
-                <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-3">Possibilidades de Uso</h3>
-                <ul className="list-disc list-inside space-y-1">
-                  {fabric.usageExamples.map((example, index) => (
-                    <li key={index} className="text-foreground">{example}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
 
           {/* Swatches */}
