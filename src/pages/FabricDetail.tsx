@@ -76,114 +76,120 @@ const FabricDetail = () => {
           {pageTitle}
         </h1>
 
-        <div className="space-y-8">
-          {/* Main Image */}
-          <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
-            <img
-              src={selectedFabric.mainImage}
-              alt={selectedFabric.type}
-              className="w-full h-full object-cover"
-            />
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Left Column - Main Image */}
+          <div>
+            <div className="aspect-video rounded-lg overflow-hidden border shadow-lg sticky top-8">
+              <img
+                src={selectedFabric.mainImage}
+                alt={selectedFabric.type}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
-          {/* Description Card */}
-          <Card className="p-6">
-            <h2 className="text-xl font-semibold text-foreground mb-4">
-              Descrição
-            </h2>
-            <p className="text-foreground text-lg leading-relaxed mb-4">
-              {selectedFabric.description}
-            </p>
-            <div className="space-y-2 text-muted-foreground">
-              <p><strong>Composição:</strong> {selectedFabric.composition}</p>
-              <p><strong>Uso Recomendado:</strong> {selectedFabric.recommendedUse}</p>
+          {/* Right Column - All Information */}
+          <div className="space-y-6">
+            {/* Description Card */}
+            <Card className="p-6">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                Descrição
+              </h2>
+              <p className="text-foreground leading-relaxed mb-4">
+                {selectedFabric.description}
+              </p>
+              <div className="space-y-2 text-muted-foreground text-sm">
+                <p><strong>Composição:</strong> {selectedFabric.composition}</p>
+                <p><strong>Uso Recomendado:</strong> {selectedFabric.recommendedUse}</p>
+              </div>
+            </Card>
+
+            {/* Technical Specs */}
+            {selectedFabric.technicalSpecs && selectedFabric.technicalSpecs.length > 0 && (
+              <Card className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <FileText className="h-5 w-5 text-primary" />
+                  <h2 className="text-xl font-semibold text-foreground">
+                    Ficha Técnica
+                  </h2>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {selectedFabric.technicalSpecs.map((spec, index) => (
+                    <div key={index} className="bg-muted/50 p-4 rounded-lg">
+                      <p className="text-xs text-muted-foreground mb-1">
+                        {spec.label}
+                      </p>
+                      <p className="text-base font-semibold text-foreground">
+                        {spec.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            )}
+
+            {/* Usage Examples */}
+            {selectedFabric.usageExamples && selectedFabric.usageExamples.length > 0 && (
+              <Card className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Shirt className="h-5 w-5 text-primary" />
+                  <h2 className="text-xl font-semibold text-foreground">
+                    Possibilidades de Uso
+                  </h2>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {selectedFabric.usageExamples.map((example, index) => (
+                    <Badge key={index} variant="secondary" className="text-sm py-1 px-3">
+                      {example}
+                    </Badge>
+                  ))}
+                </div>
+              </Card>
+            )}
+
+            {/* Technologies */}
+            {selectedFabric.technologies && selectedFabric.technologies.length > 0 && (
+              <Card className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Lightbulb className="h-5 w-5 text-primary" />
+                  <h2 className="text-xl font-semibold text-foreground">
+                    Tecnologias Aplicadas
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 gap-4">
+                  {selectedFabric.technologies.map((tech, index) => (
+                    <div key={index} className="bg-muted/50 p-4 rounded-lg">
+                      <h3 className="font-semibold text-foreground mb-2">
+                        {tech.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {tech.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            )}
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-3 pt-4">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full text-base py-6"
+                onClick={() => setIsColorModalOpen(true)}
+              >
+                Ver Cores
+              </Button>
+              <Button
+                size="lg"
+                className="w-full text-base py-6 bg-gradient-primary hover:scale-105 transition-all duration-300"
+                onClick={handleGeneralBudgetRequest}
+              >
+                Solicitar Orçamento
+              </Button>
             </div>
-          </Card>
-
-          {/* Technical Specs */}
-          {selectedFabric.technicalSpecs && selectedFabric.technicalSpecs.length > 0 && (
-            <Card className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <FileText className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold text-foreground">
-                  Ficha Técnica
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {selectedFabric.technicalSpecs.map((spec, index) => (
-                  <div key={index} className="bg-muted/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">
-                      {spec.label}
-                    </p>
-                    <p className="text-lg font-semibold text-foreground">
-                      {spec.value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          )}
-
-          {/* Usage Examples */}
-          {selectedFabric.usageExamples && selectedFabric.usageExamples.length > 0 && (
-            <Card className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Shirt className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold text-foreground">
-                  Possibilidades de Uso
-                </h2>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {selectedFabric.usageExamples.map((example, index) => (
-                  <Badge key={index} variant="secondary" className="text-base py-2 px-4">
-                    {example}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          )}
-
-          {/* Technologies */}
-          {selectedFabric.technologies && selectedFabric.technologies.length > 0 && (
-            <Card className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Lightbulb className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold text-foreground">
-                  Tecnologias Aplicadas
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {selectedFabric.technologies.map((tech, index) => (
-                  <div key={index} className="bg-muted/50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-foreground mb-2">
-                      {tech.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {tech.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          )}
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button
-              size="lg"
-              variant="outline"
-              className="flex-1 text-lg py-6"
-              onClick={() => setIsColorModalOpen(true)}
-            >
-              Ver Cores
-            </Button>
-            <Button
-              size="lg"
-              className="flex-1 text-lg py-6 bg-gradient-primary hover:scale-105 transition-all duration-300"
-              onClick={handleGeneralBudgetRequest}
-            >
-              Solicitar Orçamento
-            </Button>
           </div>
         </div>
       </div>
