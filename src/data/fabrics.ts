@@ -141,12 +141,13 @@ export const fabricsData: FabricsData = {
           type: "HAWAI",
           category: "POLIESTER",
           description: "Microfibra com textura especial e cores vibrantes.",
-          composition: "80% Poliéster, 20% Elastano",
+          composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Perfeito para peças esportivas e casuais",
           mainImage: "/lovable-uploads/hawai-branco-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,55m" },
-            { label: "Gramatura", value: "190 g/m²" }
+            { label: "Largura", value: "170" },
+            { label: "Gramatura", value: "185" },
+            { label: "Rendimento", value: "3,70" }
           ],
           usageExamples: ["Sportswear", "Casual", "Moda Praia"],
           colors: [
