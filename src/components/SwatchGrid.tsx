@@ -63,16 +63,6 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
       {/* Lightbox for enlarged swatch */}
       <Dialog open={!!selectedSwatch} onOpenChange={() => setSelectedSwatch(null)}>
         <DialogContent className="max-w-3xl">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-4 z-10"
-            onClick={() => setSelectedSwatch(null)}
-            aria-label="Fechar"
-          >
-            <X className="h-5 w-5" />
-          </Button>
-          
           {selectedSwatch && (
             <div className="space-y-6 p-2">
               {/* Color name and code */}
