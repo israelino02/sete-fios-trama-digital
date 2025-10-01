@@ -29,20 +29,20 @@ const Catalogo = () => {
             <button
               key={category.slug}
               onClick={() => handleCategoryClick(category.slug)}
-              className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary flex flex-col h-full"
               aria-label={`Ver tecidos de ${category.name}`}
             >
               {/* Image */}
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden w-full">
                 <img
                   src={category.mainImage}
                   alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               
               {/* Name */}
-              <div className="p-4 bg-card border-t">
+              <div className="p-4 bg-card border-t flex-shrink-0">
                 <h3 className="font-display font-bold text-lg text-foreground text-center">
                   {category.name}
                 </h3>
