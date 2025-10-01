@@ -33,7 +33,7 @@ const CategoryDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
+      <div className="container mx-auto px-4 py-8">
         {/* Back Button */}
         <Button
           variant="ghost"
@@ -44,41 +44,46 @@ const CategoryDetail = () => {
           Voltar ao Catálogo
         </Button>
 
-        {/* Category Title */}
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-          {category.name}
-        </h1>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column - Category Info */}
+          <div className="space-y-6">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+                {category.name}
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                {category.description}
+              </p>
+            </div>
 
-        {/* Category Description */}
-        <p className="text-lg text-muted-foreground mb-8">
-          {category.description}
-        </p>
+            {/* Main Image */}
+            <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
+              <img
+                src={category.mainImage}
+                alt={category.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-        {/* Main Image */}
-        <div className="aspect-video rounded-lg overflow-hidden border shadow-lg mb-12">
-          <img
-            src={category.mainImage}
-            alt={category.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Subfabrics List */}
-        <div>
-          <h3 className="font-semibold text-xl text-foreground mb-6">
-            Subtecidos disponíveis:
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {category.fabrics.map((fabric) => (
-              <Button
-                key={fabric.type}
-                variant="outline"
-                className="h-auto py-4 px-6 font-medium text-base hover:bg-primary hover:text-primary-foreground transition-colors"
-                onClick={() => handleFabricClick(fabric.type)}
-              >
-                {fabric.type}
-              </Button>
-            ))}
+          {/* Right Column - Subfabrics List */}
+          <div>
+            <h3 className="font-semibold text-xl text-foreground mb-6">
+              Subtecidos disponíveis:
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {category.fabrics.map((fabric) => (
+                <Button
+                  key={fabric.type}
+                  variant="outline"
+                  className="h-auto py-4 px-6 font-medium text-base hover:bg-primary hover:text-primary-foreground transition-colors"
+                  onClick={() => handleFabricClick(fabric.type)}
+                >
+                  {fabric.type}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
