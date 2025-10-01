@@ -30,15 +30,6 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
         </DialogHeader>
 
         <div className="space-y-6 mt-6">
-          {/* Information Boxes */}
-          <div className="space-y-4">
-            {/* Description */}
-            <div className="bg-muted/50 p-5 rounded-lg border">
-              <h3 className="font-semibold text-sm text-muted-foreground uppercase mb-2">Descrição</h3>
-              <p className="text-foreground leading-relaxed">{fabric.description}</p>
-            </div>
-          </div>
-
           {/* Swatches */}
           <SwatchGrid colors={fabric.colors} fabric={fabric} />
 
