@@ -173,9 +173,14 @@ export const fabricsData: FabricsData = {
           type: "MADRI",
           category: "POLIESTER",
           description: "Microfibra de alta qualidade com ampla cartela de cores.",
-          composition: "78% Poliéster, 22% Elastano",
+          composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Versátil para diversos tipos de confecção",
           mainImage: "/lovable-uploads/madri-branco-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,70" },
+            { label: "Gramatura", value: "160" },
+            { label: "Rendimento", value: "4MM" }
+          ],
           colors: [
             { name: "Branco", code: "MAD-001", swatch: "/lovable-uploads/madri-branco-novo.jpg" },
             { name: "Preto", code: "MAD-002", swatch: "/lovable-uploads/madri-preto-novo.jpg" },
