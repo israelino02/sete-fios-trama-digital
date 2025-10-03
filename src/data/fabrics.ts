@@ -79,7 +79,15 @@ export const fabricsData: FabricsData = {
             { name: "Lavanda", code: "LAV-001", swatch: "/lovable-uploads/romantik-lavanda-new.jpg" },
             { name: "Marrom", code: "MAR-001", swatch: "/lovable-uploads/romantik-marrom-new.jpg" },
             { name: "Pimenta", code: "PIM-001", swatch: "/lovable-uploads/romantik-pimenta-new.jpg" },
-            { name: "Pink", code: "PIN-001", swatch: "/lovable-uploads/romantik-pink-new.jpg" }
+            { name: "Pink", code: "PIN-001", swatch: "/lovable-uploads/romantik-pink-new.jpg" },
+            { name: "Preto", code: "PRE-001", swatch: "/lovable-uploads/romantik-preto-new.jpg" },
+            { name: "Romance", code: "ROM-001", swatch: "/lovable-uploads/romantik-romance-new.jpg" },
+            { name: "Rosa BB", code: "RSB-001", swatch: "/lovable-uploads/romantik-rosa-bb-new.jpg" },
+            { name: "Sensuale", code: "SEN-001", swatch: "/lovable-uploads/romantik-sensuale-new.jpg" },
+            { name: "Tangerina", code: "TAN-001", swatch: "/lovable-uploads/romantik-tangerina-new.jpg" },
+            { name: "Teos", code: "TEO-001", swatch: "/lovable-uploads/romantik-teos-new.jpg" },
+            { name: "Terra", code: "TER-001", swatch: "/lovable-uploads/romantik-terra-new.jpg" },
+            { name: "Tibeton", code: "TIB-001", swatch: "/lovable-uploads/romantik-tibeton-new.jpg" }
           ]
         },
         {
