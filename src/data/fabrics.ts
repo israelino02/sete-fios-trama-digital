@@ -256,6 +256,23 @@ export const fabricsData: FabricsData = {
             { name: "Chumbo", code: "RRG-003", swatch: "/lovable-uploads/romantik-chumbo-novo.jpg" },
             { name: "Castanho", code: "RRG-004", swatch: "/lovable-uploads/romantik-castanho-novo.jpg" }
           ]
+        },
+        {
+          type: "ROMANTIK MESCLADO",
+          category: "POLIESTER",
+          description: "Romantik com efeito mesclado moderno e versátil.",
+          composition: "92% Poliéster, 8% Elastano",
+          recommendedUse: "Ideal para peças casuais e estilosas",
+          mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,65" },
+            { label: "Gramatura", value: "180 g/m²" },
+            { label: "Rendimento", value: "3,60MM" }
+          ],
+          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Casuais"],
+          colors: [
+            { name: "Mescla", code: "RME-001", swatch: "/lovable-uploads/romantik-mescla-novo.jpg" }
+          ]
         }
       ]
     },
