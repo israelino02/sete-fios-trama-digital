@@ -195,18 +195,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "165" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
-          colors: [
-            { name: "Branco", code: "MIL-001", swatch: "/lovable-uploads/milao-branco.jpg" },
-            { name: "Preto", code: "MIL-002", swatch: "/lovable-uploads/milao-preto.jpg" },
-            { name: "Bic", code: "MIL-003", swatch: "/lovable-uploads/milao-bic-novo.jpg" },
-            { name: "Canela", code: "MIL-004", swatch: "/lovable-uploads/milao-canela-novo.jpg" },
-            { name: "Castanho", code: "MIL-005", swatch: "/lovable-uploads/milao-castanho-novo.jpg" },
-            { name: "Coral", code: "MIL-006", swatch: "/lovable-uploads/milao-coral-novo.jpg" },
-            { name: "Cronos", code: "MIL-007", swatch: "/lovable-uploads/milao-cronos-novo.jpg" },
-            { name: "Frozen", code: "MIL-008", swatch: "/lovable-uploads/milao-frozen-novo.jpg" },
-            { name: "Fuscia", code: "MIL-009", swatch: "/lovable-uploads/milao-fuscia-novo.jpg" },
-            { name: "Gris", code: "MIL-010", swatch: "/lovable-uploads/milao-gris-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "POLISIDE PRIME",
