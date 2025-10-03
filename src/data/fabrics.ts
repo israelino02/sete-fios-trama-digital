@@ -196,13 +196,21 @@ export const fabricsData: FabricsData = {
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
           colors: [
+            { name: "Amarelo BB", code: "MIL-001", swatch: "/lovable-uploads/milao-amarelo-bb-novo2.jpg" },
             { name: "Azul Oceano", code: "MIL-002", swatch: "/lovable-uploads/milao-azul-oceano-novo.jpg" },
             { name: "Bic", code: "MIL-003", swatch: "/lovable-uploads/milao-bic-novo2.jpg" },
             { name: "Branco", code: "MIL-004", swatch: "/lovable-uploads/milao-branco-novo.jpg" },
             { name: "Canela", code: "MIL-005", swatch: "/lovable-uploads/milao-canela-novo2.jpg" },
             { name: "Castanho", code: "MIL-006", swatch: "/lovable-uploads/milao-castanho-novo2.jpg" },
             { name: "Chumbo", code: "MIL-007", swatch: "/lovable-uploads/milao-chumbo-novo.jpg" },
-            { name: "Coral", code: "MIL-008", swatch: "/lovable-uploads/milao-coral-novo2.jpg" }
+            { name: "Coral", code: "MIL-008", swatch: "/lovable-uploads/milao-coral-novo2.jpg" },
+            { name: "Frozen", code: "MIL-009", swatch: "/lovable-uploads/milao-frozen-novo2.jpg" },
+            { name: "Fucsia", code: "MIL-010", swatch: "/lovable-uploads/milao-fuscia-novo2.jpg" },
+            { name: "Ires", code: "MIL-011", swatch: "/lovable-uploads/milao-ires-novo2.jpg" },
+            { name: "Lavanda", code: "MIL-012", swatch: "/lovable-uploads/milao-lavanda-novo2.jpg" },
+            { name: "Marrom", code: "MIL-013", swatch: "/lovable-uploads/milao-marrom-novo.jpg" },
+            { name: "Pimenta", code: "MIL-014", swatch: "/lovable-uploads/milao-pimenta-novo3.jpg" },
+            { name: "Pink", code: "MIL-015", swatch: "/lovable-uploads/milao-pink-novo.jpg" }
           ]
         },
         {
