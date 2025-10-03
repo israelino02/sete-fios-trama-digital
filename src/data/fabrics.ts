@@ -196,7 +196,6 @@ export const fabricsData: FabricsData = {
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
           colors: [
-            { name: "Amarelo BB", code: "MIL-001", swatch: "/lovable-uploads/milao-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "MIL-002", swatch: "/lovable-uploads/milao-azul-oceano-novo.jpg" },
             { name: "Bic", code: "MIL-003", swatch: "/lovable-uploads/milao-bic-novo2.jpg" },
             { name: "Branco", code: "MIL-004", swatch: "/lovable-uploads/milao-branco-novo.jpg" },
