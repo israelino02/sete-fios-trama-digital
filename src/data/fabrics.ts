@@ -223,8 +223,7 @@ export const fabricsData: FabricsData = {
             { name: "Turquesa", code: "MIL-025", swatch: "/lovable-uploads/milao-turquesa-novo.jpg" },
             { name: "Verde Jade", code: "MIL-026", swatch: "/lovable-uploads/milao-verde-jade-novo.jpg" },
             { name: "Verde Musgo", code: "MIL-027", swatch: "/lovable-uploads/milao-verde-musgo-novo.jpg" },
-            { name: "Verde Pavão", code: "MIL-028", swatch: "/lovable-uploads/milao-verde-pavao-novo.jpg" },
-            { name: "Vermelho", code: "MIL-029", swatch: "/lovable-uploads/milao-vermelho-novo.jpg" }
+            { name: "Verde Pavão", code: "MIL-028", swatch: "/lovable-uploads/milao-verde-pavao-novo.jpg" }
           ]
         },
         {
