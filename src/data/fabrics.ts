@@ -71,7 +71,15 @@ export const fabricsData: FabricsData = {
             { name: "Branco", code: "BRA-001", swatch: "/lovable-uploads/romantik-branco-new.jpg" },
             { name: "Canela", code: "CAN-001", swatch: "/lovable-uploads/romantik-canela-new.jpg" },
             { name: "Castanho", code: "CAS-001", swatch: "/lovable-uploads/romantik-castanho-new.jpg" },
-            { name: "Chumbo", code: "CHU-001", swatch: "/lovable-uploads/romantik-chumbo-new.jpg" }
+            { name: "Chumbo", code: "CHU-001", swatch: "/lovable-uploads/romantik-chumbo-new.jpg" },
+            { name: "Coral", code: "COR-001", swatch: "/lovable-uploads/romantik-coral-new.jpg" },
+            { name: "Frozen", code: "FRO-001", swatch: "/lovable-uploads/romantik-frozen-new.jpg" },
+            { name: "Fucsia", code: "FUC-001", swatch: "/lovable-uploads/romantik-fucsia-new.jpg" },
+            { name: "Ires", code: "IRE-001", swatch: "/lovable-uploads/romantik-ires-new.jpg" },
+            { name: "Lavanda", code: "LAV-001", swatch: "/lovable-uploads/romantik-lavanda-new.jpg" },
+            { name: "Marrom", code: "MAR-001", swatch: "/lovable-uploads/romantik-marrom-new.jpg" },
+            { name: "Pimenta", code: "PIM-001", swatch: "/lovable-uploads/romantik-pimenta-new.jpg" },
+            { name: "Pink", code: "PIN-001", swatch: "/lovable-uploads/romantik-pink-new.jpg" }
           ]
         },
         {
