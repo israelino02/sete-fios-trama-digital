@@ -218,7 +218,13 @@ export const fabricsData: FabricsData = {
             { name: "Sensuale", code: "MIL-020", swatch: "/lovable-uploads/milao-sensuale-novo.jpg" },
             { name: "Teos", code: "MIL-021", swatch: "/lovable-uploads/milao-teos-novo.jpg" },
             { name: "Terra", code: "MIL-022", swatch: "/lovable-uploads/milao-terra-novo2.jpg" },
-            { name: "Tibeton", code: "MIL-023", swatch: "/lovable-uploads/milao-tibeton-novo3.jpg" }
+            { name: "Tibeton", code: "MIL-023", swatch: "/lovable-uploads/milao-tibeton-novo3.jpg" },
+            { name: "Tulipero", code: "MIL-024", swatch: "/lovable-uploads/milao-tulipero-novo2.jpg" },
+            { name: "Turquesa", code: "MIL-025", swatch: "/lovable-uploads/milao-turquesa-novo.jpg" },
+            { name: "Verde Jade", code: "MIL-026", swatch: "/lovable-uploads/milao-verde-jade-novo.jpg" },
+            { name: "Verde Musgo", code: "MIL-027", swatch: "/lovable-uploads/milao-verde-musgo-novo.jpg" },
+            { name: "Verde Pavão", code: "MIL-028", swatch: "/lovable-uploads/milao-verde-pavao-novo.jpg" },
+            { name: "Vermelho", code: "MIL-029", swatch: "/lovable-uploads/milao-vermelho-novo.jpg" }
           ]
         },
         {
