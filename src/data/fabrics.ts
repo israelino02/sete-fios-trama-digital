@@ -145,8 +145,7 @@ export const fabricsData: FabricsData = {
             { name: "Branco", code: "HAW-003", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
             { name: "Canela", code: "HAW-004", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
             { name: "Castanho", code: "HAW-005", swatch: "/lovable-uploads/hawai-castanho-novo.jpg" },
-            { name: "Chumbo", code: "HAW-006", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" },
-            { name: "Coral", code: "HAW-007", swatch: "/lovable-uploads/hawai-coral-novo.jpg" }
+            { name: "Chumbo", code: "HAW-006", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" }
           ]
         },
         {
