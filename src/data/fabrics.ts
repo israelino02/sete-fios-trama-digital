@@ -115,13 +115,7 @@ export const fabricsData: FabricsData = {
           ],
           colors: [
             { name: "Azul Celeste", code: "POL-001", swatch: "/lovable-uploads/poliside-azul-celeste-novo.jpg" },
-            { name: "Salmão", code: "POL-002", swatch: "/lovable-uploads/poliside-salmao-novo.jpg" },
-            { name: "Marfim", code: "POL-003", swatch: "/lovable-uploads/poliside-marfim-novo.jpg" },
-            { name: "Azul BB", code: "POL-004", swatch: "/lovable-uploads/poliside-azul-bb-novo.jpg" },
-            { name: "Gris", code: "POL-005", swatch: "/lovable-uploads/poliside-gris-novo.jpg" },
-            { name: "Grafite", code: "POL-006", swatch: "/lovable-uploads/poliside-grafite-novo.jpg" },
-            { name: "Canela", code: "POL-007", swatch: "/lovable-uploads/poliside-canela-novo.jpg" },
-            { name: "Verde Jade", code: "POL-008", swatch: "/lovable-uploads/poliside-verde-jade-novo.jpg" }
+            { name: "Verde Jade", code: "POL-002", swatch: "/lovable-uploads/poliside-verde-jade-novo.jpg" }
           ]
         },
         {
