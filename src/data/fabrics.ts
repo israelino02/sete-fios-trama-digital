@@ -114,26 +114,14 @@ export const fabricsData: FabricsData = {
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
           ],
           colors: [
-            { name: "Branco", code: "POL-001", swatch: "/lovable-uploads/poliside-branco-novo.jpg" },
-            { name: "Preto", code: "POL-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" },
-            { name: "Bic", code: "POL-003", swatch: "/lovable-uploads/poliside-bic-novo.jpg" },
-            { name: "Canela", code: "POL-004", swatch: "/lovable-uploads/poliside-canela-novo.jpg" },
-            { name: "Castanho", code: "POL-005", swatch: "/lovable-uploads/poliside-castanho-novo.jpg" },
-            { name: "Coral", code: "POL-006", swatch: "/lovable-uploads/poliside-coral-novo.jpg" },
-            { name: "Marfim", code: "POL-007", swatch: "/lovable-uploads/poliside-marfim-novo.jpg" },
-            { name: "Pimenta", code: "POL-008", swatch: "/lovable-uploads/poliside-pimenta-novo.jpg" },
-            { name: "Terra", code: "POL-009", swatch: "/lovable-uploads/poliside-terra-novo.jpg" },
-            { name: "Vermelho", code: "POL-010", swatch: "/lovable-uploads/poliside-vermelho-novo.jpg" },
-            { name: "Jade", code: "POL-011", swatch: "/lovable-uploads/poliside-jade-novo.jpg" },
-            { name: "Turquesa", code: "POL-012", swatch: "/lovable-uploads/poliside-turquesa-novo.jpg" },
-            { name: "Grafite", code: "POL-013", swatch: "/lovable-uploads/poliside-grafite-novo.jpg" },
-            { name: "Marinho", code: "POL-014", swatch: "/lovable-uploads/poliside-marinho-novo.jpg" },
-            { name: "Pink", code: "POL-015", swatch: "/lovable-uploads/poliside-pink-novo.jpg" },
-            { name: "Rosa BB", code: "POL-016", swatch: "/lovable-uploads/poliside-rosa-bb.jpg" },
-            { name: "Romance", code: "POL-017", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
-            { name: "Sensuale", code: "POL-018", swatch: "/lovable-uploads/poliside-sensuale-novo.jpg" },
-            { name: "Tibeton", code: "POL-019", swatch: "/lovable-uploads/poliside-tibeton-novo.jpg" },
-            { name: "Ires", code: "POL-020", swatch: "/lovable-uploads/poliside-ires-novo.jpg" }
+            { name: "Azul Celeste", code: "POL-001", swatch: "/lovable-uploads/poliside-azul-celeste-novo.jpg" },
+            { name: "Salmão", code: "POL-002", swatch: "/lovable-uploads/poliside-salmao-novo.jpg" },
+            { name: "Marfim", code: "POL-003", swatch: "/lovable-uploads/poliside-marfim-novo.jpg" },
+            { name: "Azul BB", code: "POL-004", swatch: "/lovable-uploads/poliside-azul-bb-novo.jpg" },
+            { name: "Gris", code: "POL-005", swatch: "/lovable-uploads/poliside-gris-novo.jpg" },
+            { name: "Grafite", code: "POL-006", swatch: "/lovable-uploads/poliside-grafite-novo.jpg" },
+            { name: "Canela", code: "POL-007", swatch: "/lovable-uploads/poliside-canela-novo.jpg" },
+            { name: "Verde Jade", code: "POL-008", swatch: "/lovable-uploads/poliside-verde-jade-novo.jpg" }
           ]
         },
         {
