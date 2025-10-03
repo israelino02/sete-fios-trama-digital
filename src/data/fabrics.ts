@@ -45,7 +45,7 @@ export const fabricsData: FabricsData = {
       name: "MICROFIBRAS DE POLIESTER",
       slug: "poliester",
       description: "Microfibras de poliéster de alta qualidade, versáteis e duráveis.",
-      mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
+      mainImage: "/lovable-uploads/romantik-branco-new.jpg",
       fabrics: [
         {
           type: "ROMANTIK LISO",
@@ -53,7 +53,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção.",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para vestidos, blusas e peças básicas",
-          mainImage: "/lovable-uploads/romantik-branco-novo.jpg",
+          mainImage: "/lovable-uploads/romantik-branco-new.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
             { label: "Gramatura", value: "180 g/m²" },
@@ -65,36 +65,13 @@ export const fabricsData: FabricsData = {
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
           ],
           colors: [
-            { name: "Romance", code: "ROM-001", swatch: "/lovable-uploads/romantik-romance.jpg" },
-            { name: "Tulipero", code: "TUL-001", swatch: "/lovable-uploads/romantik-tulipero.jpg" },
-            { name: "Rosa BB", code: "RSB-001", swatch: "/lovable-uploads/romantik-rosa-bb.jpg" },
-            { name: "Tangerina", code: "TAN-001", swatch: "/lovable-uploads/romantik-tangerina.jpg" },
-            { name: "Marrom", code: "MAR-001", swatch: "/lovable-uploads/romantik-marrom-novo.jpg" },
-            { name: "Turquesa", code: "TUR-001", swatch: "/lovable-uploads/romantik-turquesa-novo.jpg" },
-            { name: "Coral", code: "COR-001", swatch: "/lovable-uploads/romantik-coral-novo.jpg" },
-            { name: "Chumbo", code: "CHU-001", swatch: "/lovable-uploads/romantik-chumbo-novo.jpg" },
-            { name: "Castanho", code: "CAS-001", swatch: "/lovable-uploads/romantik-castanho-novo.jpg" },
-            { name: "Verde Musgo", code: "VEM-001", swatch: "/lovable-uploads/romantik-verde-musgo-novo.jpg" },
-            { name: "Azul Oceano", code: "AZO-001", swatch: "/lovable-uploads/romantik-azul-oceano-novo.jpg" },
-            { name: "Verde Jade", code: "VEJ-001", swatch: "/lovable-uploads/romantik-verde-jade-novo.jpg" },
-            { name: "Branco", code: "BRA-001", swatch: "/lovable-uploads/romantik-branco-novo.jpg" },
-            { name: "Canela", code: "CAN-001", swatch: "/lovable-uploads/romantik-canela-novo.jpg" },
-            { name: "Preto", code: "PRE-001", swatch: "/lovable-uploads/romantik-preto-novo.jpg" },
-            { name: "Bic", code: "BIC-001", swatch: "/lovable-uploads/romantik-bic-novo.jpg" },
-            { name: "Terra", code: "TER-001", swatch: "/lovable-uploads/romantik-terra-novo.jpg" },
-            { name: "Sensuale", code: "SEN-001", swatch: "/lovable-uploads/romantik-sensuale-novo.jpg" },
-            { name: "Vermelho", code: "VER-001", swatch: "/lovable-uploads/romantik-vermelho-novo.jpg" },
-            { name: "Pimenta", code: "PIM-001", swatch: "/lovable-uploads/romantik-pimenta-novo.jpg" },
-            { name: "Amarelo BB", code: "AMB-001", swatch: "/lovable-uploads/romantik-amarelo-bb-novo.jpg" },
-            { name: "Tibeton", code: "TIB-001", swatch: "/lovable-uploads/romantik-tibeton-novo.jpg" },
-            { name: "Ires", code: "IRE-001", swatch: "/lovable-uploads/romantik-ires-novo.jpg" },
-            { name: "Fucsia", code: "FUC-001", swatch: "/lovable-uploads/romantik-fucsia-novo.jpg" },
-            { name: "Theos", code: "THE-001", swatch: "/lovable-uploads/romantik-theos-novo.jpg" },
-            { name: "Verde Pavão", code: "VEP-001", swatch: "/lovable-uploads/romantik-verde-pavao-novo.jpg" },
-            { name: "Frozen", code: "FRO-001", swatch: "/lovable-uploads/romantik-frozen-novo.jpg" },
-            { name: "Lavanda", code: "LAV-001", swatch: "/lovable-uploads/romantik-lavanda-novo.jpg" },
-            { name: "Mescla", code: "MES-001", swatch: "/lovable-uploads/romantik-mescla-novo.jpg" },
-            { name: "Pink", code: "PIN-001", swatch: "/lovable-uploads/romantik-pink.jpg" }
+            { name: "Amarelo BB", code: "AMB-001", swatch: "/lovable-uploads/romantik-amarelo-bb-new.jpg" },
+            { name: "Azul Oceano", code: "AZO-001", swatch: "/lovable-uploads/romantik-azul-oceano-new.jpg" },
+            { name: "Bic", code: "BIC-001", swatch: "/lovable-uploads/romantik-bic-new.jpg" },
+            { name: "Branco", code: "BRA-001", swatch: "/lovable-uploads/romantik-branco-new.jpg" },
+            { name: "Canela", code: "CAN-001", swatch: "/lovable-uploads/romantik-canela-new.jpg" },
+            { name: "Castanho", code: "CAS-001", swatch: "/lovable-uploads/romantik-castanho-new.jpg" },
+            { name: "Chumbo", code: "CHU-001", swatch: "/lovable-uploads/romantik-chumbo-new.jpg" }
           ]
         },
         {
