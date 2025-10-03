@@ -87,7 +87,13 @@ export const fabricsData: FabricsData = {
             { name: "Tangerina", code: "TAN-001", swatch: "/lovable-uploads/romantik-tangerina-new.jpg" },
             { name: "Teos", code: "TEO-001", swatch: "/lovable-uploads/romantik-teos-new.jpg" },
             { name: "Terra", code: "TER-001", swatch: "/lovable-uploads/romantik-terra-new.jpg" },
-            { name: "Tibeton", code: "TIB-001", swatch: "/lovable-uploads/romantik-tibeton-new.jpg" }
+            { name: "Tibeton", code: "TIB-001", swatch: "/lovable-uploads/romantik-tibeton-new.jpg" },
+            { name: "Tulipero", code: "TUL-001", swatch: "/lovable-uploads/romantik-tulipero-new.jpg" },
+            { name: "Turquesa", code: "TUR-001", swatch: "/lovable-uploads/romantik-turquesa-new.jpg" },
+            { name: "Verde Jade", code: "VJA-001", swatch: "/lovable-uploads/romantik-verde-jade-new.jpg" },
+            { name: "Verde Musgo", code: "VMU-001", swatch: "/lovable-uploads/romantik-verde-musgo-new.jpg" },
+            { name: "Verde Pavão", code: "VPA-001", swatch: "/lovable-uploads/romantik-verde-pavao-new.jpg" },
+            { name: "Vermelho", code: "VER-001", swatch: "/lovable-uploads/romantik-vermelho-new.jpg" }
           ]
         },
         {
