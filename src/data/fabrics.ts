@@ -210,7 +210,15 @@ export const fabricsData: FabricsData = {
             { name: "Lavanda", code: "MIL-012", swatch: "/lovable-uploads/milao-lavanda-novo2.jpg" },
             { name: "Marrom", code: "MIL-013", swatch: "/lovable-uploads/milao-marrom-novo.jpg" },
             { name: "Pimenta", code: "MIL-014", swatch: "/lovable-uploads/milao-pimenta-novo3.jpg" },
-            { name: "Pink", code: "MIL-015", swatch: "/lovable-uploads/milao-pink-novo.jpg" }
+            { name: "Pink", code: "MIL-015", swatch: "/lovable-uploads/milao-pink-novo.jpg" },
+            { name: "Preto", code: "MIL-016", swatch: "/lovable-uploads/milao-preto-novo.jpg" },
+            { name: "Romance", code: "MIL-017", swatch: "/lovable-uploads/milao-romance-novo2.jpg" },
+            { name: "Rosa BB", code: "MIL-018", swatch: "/lovable-uploads/milao-rosa-bb-novo.jpg" },
+            { name: "Sanremo", code: "MIL-019", swatch: "/lovable-uploads/milao-sanremo-novo3.jpg" },
+            { name: "Sensuale", code: "MIL-020", swatch: "/lovable-uploads/milao-sensuale-novo.jpg" },
+            { name: "Teos", code: "MIL-021", swatch: "/lovable-uploads/milao-teos-novo.jpg" },
+            { name: "Terra", code: "MIL-022", swatch: "/lovable-uploads/milao-terra-novo2.jpg" },
+            { name: "Tibeton", code: "MIL-023", swatch: "/lovable-uploads/milao-tibeton-novo3.jpg" }
           ]
         },
         {
