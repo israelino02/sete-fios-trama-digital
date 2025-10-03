@@ -142,9 +142,10 @@ export const fabricsData: FabricsData = {
           colors: [
             { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
-            { name: "Bic", code: "HAW-003", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
-            { name: "Branco", code: "HAW-004", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
-            { name: "Canela", code: "HAW-005", swatch: "/lovable-uploads/hawai-canela-novo.jpg" }
+            { name: "Azul O", code: "HAW-003", swatch: "/lovable-uploads/hawai-azul-o-novo.jpg" },
+            { name: "Bic", code: "HAW-004", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
+            { name: "Branco", code: "HAW-005", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
+            { name: "Canela", code: "HAW-006", swatch: "/lovable-uploads/hawai-canela-novo.jpg" }
           ]
         },
         {
