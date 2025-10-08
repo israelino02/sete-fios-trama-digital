@@ -128,7 +128,14 @@ export const fabricsData: FabricsData = {
             { label: "Rendimento", value: "3,70" }
           ],
           usageExamples: ["Sportswear", "Casual", "Moda Praia"],
-          colors: []
+          colors: [
+            { name: "Azul Marinho", code: "MAD-001", swatch: "/lovable-uploads/madri-azul-marinho-novo.jpg" },
+            { name: "Coral", code: "MAD-002", swatch: "/lovable-uploads/madri-coral-novo.jpg" },
+            { name: "Frozen", code: "MAD-003", swatch: "/lovable-uploads/madri-frozen-novo.jpg" },
+            { name: "Fucsia", code: "MAD-004", swatch: "/lovable-uploads/madri-fucsia-novo.jpg" },
+            { name: "Ires", code: "MAD-005", swatch: "/lovable-uploads/madri-ires-novo.jpg" },
+            { name: "Lavanda", code: "MAD-006", swatch: "/lovable-uploads/madri-lavanda-novo.jpg" }
+          ]
         },
         {
           type: "MADRI",
