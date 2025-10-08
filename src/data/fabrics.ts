@@ -113,18 +113,7 @@ export const fabricsData: FabricsData = {
             { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
           ],
-          colors: [
-            { name: "Azul Celeste", code: "POL-001", swatch: "/lovable-uploads/poliside-azul-celeste-novo.jpg" },
-            { name: "Verde Jade", code: "POL-002", swatch: "/lovable-uploads/poliside-verde-jade-novo.jpg" },
-            { name: "Cor 1", code: "POL-003", swatch: "/lovable-uploads/poliside-cor1-novo.jpg" },
-            { name: "Cor 2", code: "POL-004", swatch: "/lovable-uploads/poliside-cor2-novo.jpg" },
-            { name: "Cor 3", code: "POL-005", swatch: "/lovable-uploads/poliside-cor3-novo.jpg" },
-            { name: "Cor 4", code: "POL-006", swatch: "/lovable-uploads/poliside-cor4-novo.jpg" },
-            { name: "Cor 5", code: "POL-007", swatch: "/lovable-uploads/poliside-cor5-novo.jpg" },
-            { name: "Cor 6", code: "POL-008", swatch: "/lovable-uploads/poliside-cor6-novo.jpg" },
-            { name: "Cor 7", code: "POL-009", swatch: "/lovable-uploads/poliside-cor7-novo.jpg" },
-            { name: "Cor 8", code: "POL-010", swatch: "/lovable-uploads/poliside-cor8-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "HAWAI",
@@ -139,16 +128,7 @@ export const fabricsData: FabricsData = {
             { label: "Rendimento", value: "3,70" }
           ],
           usageExamples: ["Sportswear", "Casual", "Moda Praia"],
-          colors: [
-            { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
-            { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
-            { name: "Bic", code: "HAW-004", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
-            { name: "Branco", code: "HAW-005", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
-            { name: "Canela", code: "HAW-006", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
-            { name: "Frozen", code: "HAW-010", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
-            { name: "Fucsia", code: "HAW-011", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
-            { name: "Ires", code: "HAW-012", swatch: "/lovable-uploads/hawai-ires-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "MADRI",
@@ -162,18 +142,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "4MM" }
           ],
-          colors: [
-            { name: "Branco", code: "MAD-001", swatch: "/lovable-uploads/madri-branco-novo.jpg" },
-            { name: "Preto", code: "MAD-002", swatch: "/lovable-uploads/madri-preto-novo.jpg" },
-            { name: "Bic", code: "MAD-003", swatch: "/lovable-uploads/madri-bic-novo.jpg" },
-            { name: "Canela", code: "MAD-004", swatch: "/lovable-uploads/madri-canela-novo.jpg" },
-            { name: "Fucsia", code: "MAD-005", swatch: "/lovable-uploads/madri-fucsia-novo.jpg" },
-            { name: "Ires", code: "MAD-006", swatch: "/lovable-uploads/madri-ires-novo.jpg" },
-            { name: "Pimenta", code: "MAD-007", swatch: "/lovable-uploads/madri-pimenta-novo.jpg" },
-            { name: "Pink", code: "MAD-008", swatch: "/lovable-uploads/madri-pink-novo.jpg" },
-            { name: "Romance", code: "MAD-009", swatch: "/lovable-uploads/madri-romance-novo.jpg" },
-            { name: "Rosa BB", code: "MAD-010", swatch: "/lovable-uploads/madri-rosa-bb-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "MILÃO",
@@ -226,14 +195,7 @@ export const fabricsData: FabricsData = {
           composition: "85% Poliéster, 18% Elastano",
           recommendedUse: "Premium para lingerie e moda fitness de alta qualidade",
           mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
-          colors: [
-            { name: "Branco", code: "PP-001", swatch: "/lovable-uploads/poliside-branco-novo.jpg" },
-            { name: "Preto", code: "PP-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" },
-            { name: "Sensuale", code: "PP-003", swatch: "/lovable-uploads/poliside-sensuale-novo.jpg" },
-            { name: "Romance", code: "PP-004", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
-            { name: "Coral", code: "PP-005", swatch: "/lovable-uploads/poliside-coral-novo.jpg" },
-            { name: "Jade", code: "PP-006", swatch: "/lovable-uploads/poliside-jade-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "ROMANTIK RISCA DE GIZ",
@@ -242,12 +204,7 @@ export const fabricsData: FabricsData = {
           composition: "80% Poliéster, 20% Elastano",
           recommendedUse: "Ideal para peças diferenciadas e executivas",
           mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
-          colors: [
-            { name: "Mescla", code: "RRG-001", swatch: "/lovable-uploads/romantik-mescla-novo.jpg" },
-            { name: "Preto", code: "RRG-002", swatch: "/lovable-uploads/romantik-preto-novo.jpg" },
-            { name: "Chumbo", code: "RRG-003", swatch: "/lovable-uploads/romantik-chumbo-novo.jpg" },
-            { name: "Castanho", code: "RRG-004", swatch: "/lovable-uploads/romantik-castanho-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "ROMANTIK MESCLADO",
@@ -262,9 +219,7 @@ export const fabricsData: FabricsData = {
             { label: "Rendimento", value: "3,60MM" }
           ],
           usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Casuais"],
-          colors: [
-            { name: "Mescla", code: "RME-001", swatch: "/lovable-uploads/romantik-mescla-novo.jpg" }
-          ]
+          colors: []
         }
       ]
     },
