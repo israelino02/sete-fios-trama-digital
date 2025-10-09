@@ -172,7 +172,37 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "4MM" }
           ],
-          colors: []
+          colors: [
+            { name: "Amarelo BB", code: "MAD-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
+            { name: "Azul Oceano", code: "MAD-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
+            { name: "Bic", code: "MAD-003", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
+            { name: "Branco", code: "MAD-004", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
+            { name: "Canela", code: "MAD-005", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
+            { name: "Castanho", code: "MAD-006", swatch: "/lovable-uploads/hawai-castanho-novo.jpg" },
+            { name: "Chumbo", code: "MAD-007", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" },
+            { name: "Coral", code: "MAD-008", swatch: "/lovable-uploads/hawai-coral-novo2.jpg" },
+            { name: "Frozen", code: "MAD-009", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
+            { name: "Fucsia", code: "MAD-010", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
+            { name: "Ires", code: "MAD-011", swatch: "/lovable-uploads/hawai-ires-novo.jpg" },
+            { name: "Pimenta", code: "MAD-012", swatch: "/lovable-uploads/hawai-pimenta-novo2.jpg" },
+            { name: "Preto", code: "MAD-013", swatch: "/lovable-uploads/hawai-preto-novo2.jpg" },
+            { name: "Sensuale", code: "MAD-014", swatch: "/lovable-uploads/hawai-sensuale-novo2.jpg" },
+            { name: "Terra", code: "MAD-015", swatch: "/lovable-uploads/hawai-terra-novo2.jpg" },
+            { name: "Tulipero", code: "MAD-016", swatch: "/lovable-uploads/hawai-tulipero-novo2.jpg" },
+            { name: "Turquesa", code: "MAD-017", swatch: "/lovable-uploads/hawai-turquesa-novo2.jpg" },
+            { name: "Verde Jade", code: "MAD-018", swatch: "/lovable-uploads/hawai-verde-jade-novo2.jpg" },
+            { name: "Verde Musgo", code: "MAD-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo2.jpg" },
+            { name: "Vermelho", code: "MAD-020", swatch: "/lovable-uploads/hawai-vermelho-novo2.jpg" },
+            { name: "Lavanda", code: "MAD-021", swatch: "/lovable-uploads/hawai-lavanda-novo.jpg" },
+            { name: "Marrom", code: "MAD-022", swatch: "/lovable-uploads/hawai-marrom-novo.jpg" },
+            { name: "Pink", code: "MAD-023", swatch: "/lovable-uploads/hawai-pink-novo.jpg" },
+            { name: "Romance", code: "MAD-024", swatch: "/lovable-uploads/hawai-romance-novo.jpg" },
+            { name: "Rosa BB", code: "MAD-025", swatch: "/lovable-uploads/hawai-rosa-bb-novo.jpg" },
+            { name: "Tangerina", code: "MAD-026", swatch: "/lovable-uploads/hawai-tangerina-novo.jpg" },
+            { name: "Teos", code: "MAD-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
+            { name: "Tibeton", code: "MAD-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
+            { name: "Verde Pavão", code: "MAD-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" }
+          ]
         },
         {
           type: "MILÃO",
