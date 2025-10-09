@@ -142,7 +142,14 @@ export const fabricsData: FabricsData = {
             { name: "Tangerina", code: "POL-026", swatch: "/lovable-uploads/hawai-tangerina-novo.jpg" },
             { name: "Teos", code: "POL-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
             { name: "Tibeton", code: "POL-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
-            { name: "Verde Pavão", code: "POL-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" }
+            { name: "Verde Pavão", code: "POL-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" },
+            { name: "Azul BB", code: "POL-030", swatch: "/lovable-uploads/poliside-azul-bb-novo2.jpg" },
+            { name: "Denim", code: "POL-031", swatch: "/lovable-uploads/poliside-denim-novo2.jpg" },
+            { name: "Erva Doce", code: "POL-032", swatch: "/lovable-uploads/poliside-erva-doce-novo.jpg" },
+            { name: "Grafite", code: "POL-033", swatch: "/lovable-uploads/poliside-grafite-novo2.jpg" },
+            { name: "Marfim", code: "POL-034", swatch: "/lovable-uploads/poliside-marfim-novo2.jpg" },
+            { name: "Salmão", code: "POL-035", swatch: "/lovable-uploads/poliside-salmao-novo2.jpg" },
+            { name: "Tame", code: "POL-036", swatch: "/lovable-uploads/poliside-tame-novo2.jpg" }
           ]
         },
         {
