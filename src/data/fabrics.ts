@@ -129,12 +129,11 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Sportswear", "Casual", "Moda Praia"],
           colors: [
-            { name: "Azul Marinho", code: "MAD-001", swatch: "/lovable-uploads/madri-azul-marinho-novo.jpg" },
-            { name: "Coral", code: "MAD-002", swatch: "/lovable-uploads/madri-coral-novo.jpg" },
-            { name: "Frozen", code: "MAD-003", swatch: "/lovable-uploads/madri-frozen-novo.jpg" },
-            { name: "Fucsia", code: "MAD-004", swatch: "/lovable-uploads/madri-fucsia-novo.jpg" },
-            { name: "Ires", code: "MAD-005", swatch: "/lovable-uploads/madri-ires-novo.jpg" },
-            { name: "Lavanda", code: "MAD-006", swatch: "/lovable-uploads/madri-lavanda-novo.jpg" }
+            { name: "Azul Marinho", code: "HAW-001", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
+            { name: "Coral", code: "HAW-002", swatch: "/lovable-uploads/hawai-coral-novo.jpg" },
+            { name: "Frozen", code: "HAW-003", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
+            { name: "Fucsia", code: "HAW-004", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
+            { name: "Ires", code: "HAW-005", swatch: "/lovable-uploads/hawai-ires-novo.jpg" }
           ]
         },
         {
