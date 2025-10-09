@@ -286,15 +286,6 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "POLISIDE PRIME",
-          category: "POLIESTER",
-          description: "Versão premium da linha Poliside com acabamento especial.",
-          composition: "85% Poliéster, 18% Elastano",
-          recommendedUse: "Premium para lingerie e moda fitness de alta qualidade",
-          mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
-          colors: []
-        },
-        {
           type: "ROMANTIK RISCA DE GIZ",
           category: "POLIESTER",
           description: "Romantik com padrão de risca de giz elegante e moderno.",
