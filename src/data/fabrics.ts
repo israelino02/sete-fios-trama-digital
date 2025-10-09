@@ -288,25 +288,39 @@ export const fabricsData: FabricsData = {
         {
           type: "ROMANTIK RISCA DE GIZ",
           category: "POLIESTER",
-          description: "Romantik com padrão de risca de giz elegante e moderno.",
-          composition: "80% Poliéster, 20% Elastano",
-          recommendedUse: "Ideal para peças diferenciadas e executivas",
+          description: "Tecido leve e resistente com toque suave e fácil manutenção.",
+          composition: "92% Poliéster, 8% Elastano",
+          recommendedUse: "Ideal para vestidos, blusas e peças básicas",
           mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,65" },
+            { label: "Gramatura", value: "180" },
+            { label: "Rendimento", value: "3,60MM" }
+          ],
+          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Básicas"],
+          technologies: [
+            { name: "Toque Suave", description: "Textura macia ao toque" },
+            { name: "Fácil Manutenção", description: "Não amassa facilmente" }
+          ],
           colors: []
         },
         {
           type: "ROMANTIK MESCLADO",
           category: "POLIESTER",
-          description: "Romantik com efeito mesclado moderno e versátil.",
+          description: "Tecido leve e resistente com toque suave e fácil manutenção.",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Ideal para peças casuais e estilosas",
+          recommendedUse: "Ideal para vestidos, blusas e peças básicas",
           mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
-            { label: "Gramatura", value: "180 g/m²" },
+            { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Casuais"],
+          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Básicas"],
+          technologies: [
+            { name: "Toque Suave", description: "Textura macia ao toque" },
+            { name: "Fácil Manutenção", description: "Não amassa facilmente" }
+          ],
           colors: []
         }
       ]
