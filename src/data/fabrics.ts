@@ -148,7 +148,16 @@ export const fabricsData: FabricsData = {
             { name: "Turquesa", code: "HAW-017", swatch: "/lovable-uploads/hawai-turquesa-novo2.jpg" },
             { name: "Verde Jade", code: "HAW-018", swatch: "/lovable-uploads/hawai-verde-jade-novo2.jpg" },
             { name: "Verde Musgo", code: "HAW-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo2.jpg" },
-            { name: "Vermelho", code: "HAW-020", swatch: "/lovable-uploads/hawai-vermelho-novo2.jpg" }
+            { name: "Vermelho", code: "HAW-020", swatch: "/lovable-uploads/hawai-vermelho-novo2.jpg" },
+            { name: "Lavanda", code: "HAW-021", swatch: "/lovable-uploads/hawai-lavanda-novo.jpg" },
+            { name: "Marrom", code: "HAW-022", swatch: "/lovable-uploads/hawai-marrom-novo.jpg" },
+            { name: "Pink", code: "HAW-023", swatch: "/lovable-uploads/hawai-pink-novo.jpg" },
+            { name: "Romance", code: "HAW-024", swatch: "/lovable-uploads/hawai-romance-novo.jpg" },
+            { name: "Rosa BB", code: "HAW-025", swatch: "/lovable-uploads/hawai-rosa-bb-novo.jpg" },
+            { name: "Tangerina", code: "HAW-026", swatch: "/lovable-uploads/hawai-tangerina-novo.jpg" },
+            { name: "Teos", code: "HAW-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
+            { name: "Tibeton", code: "HAW-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
+            { name: "Verde Pavão", code: "HAW-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" }
           ]
         },
         {
