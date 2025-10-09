@@ -113,7 +113,37 @@ export const fabricsData: FabricsData = {
             { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
           ],
-          colors: []
+          colors: [
+            { name: "Amarelo BB", code: "POL-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
+            { name: "Azul Oceano", code: "POL-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
+            { name: "Bic", code: "POL-003", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
+            { name: "Branco", code: "POL-004", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
+            { name: "Canela", code: "POL-005", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
+            { name: "Castanho", code: "POL-006", swatch: "/lovable-uploads/hawai-castanho-novo.jpg" },
+            { name: "Chumbo", code: "POL-007", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" },
+            { name: "Coral", code: "POL-008", swatch: "/lovable-uploads/hawai-coral-novo2.jpg" },
+            { name: "Frozen", code: "POL-009", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
+            { name: "Fucsia", code: "POL-010", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
+            { name: "Ires", code: "POL-011", swatch: "/lovable-uploads/hawai-ires-novo.jpg" },
+            { name: "Pimenta", code: "POL-012", swatch: "/lovable-uploads/hawai-pimenta-novo2.jpg" },
+            { name: "Preto", code: "POL-013", swatch: "/lovable-uploads/hawai-preto-novo2.jpg" },
+            { name: "Sensuale", code: "POL-014", swatch: "/lovable-uploads/hawai-sensuale-novo2.jpg" },
+            { name: "Terra", code: "POL-015", swatch: "/lovable-uploads/hawai-terra-novo2.jpg" },
+            { name: "Tulipero", code: "POL-016", swatch: "/lovable-uploads/hawai-tulipero-novo2.jpg" },
+            { name: "Turquesa", code: "POL-017", swatch: "/lovable-uploads/hawai-turquesa-novo2.jpg" },
+            { name: "Verde Jade", code: "POL-018", swatch: "/lovable-uploads/hawai-verde-jade-novo2.jpg" },
+            { name: "Verde Musgo", code: "POL-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo2.jpg" },
+            { name: "Vermelho", code: "POL-020", swatch: "/lovable-uploads/hawai-vermelho-novo2.jpg" },
+            { name: "Lavanda", code: "POL-021", swatch: "/lovable-uploads/hawai-lavanda-novo.jpg" },
+            { name: "Marrom", code: "POL-022", swatch: "/lovable-uploads/hawai-marrom-novo.jpg" },
+            { name: "Pink", code: "POL-023", swatch: "/lovable-uploads/hawai-pink-novo.jpg" },
+            { name: "Romance", code: "POL-024", swatch: "/lovable-uploads/hawai-romance-novo.jpg" },
+            { name: "Rosa BB", code: "POL-025", swatch: "/lovable-uploads/hawai-rosa-bb-novo.jpg" },
+            { name: "Tangerina", code: "POL-026", swatch: "/lovable-uploads/hawai-tangerina-novo.jpg" },
+            { name: "Teos", code: "POL-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
+            { name: "Tibeton", code: "POL-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
+            { name: "Verde Pavão", code: "POL-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" }
+          ]
         },
         {
           type: "HAWAI",
