@@ -129,11 +129,26 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Sportswear", "Casual", "Moda Praia"],
           colors: [
-            { name: "Azul Marinho", code: "HAW-001", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
-            { name: "Coral", code: "HAW-002", swatch: "/lovable-uploads/hawai-coral-novo.jpg" },
-            { name: "Frozen", code: "HAW-003", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
-            { name: "Fucsia", code: "HAW-004", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
-            { name: "Ires", code: "HAW-005", swatch: "/lovable-uploads/hawai-ires-novo.jpg" }
+            { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
+            { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
+            { name: "Bic", code: "HAW-003", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
+            { name: "Branco", code: "HAW-004", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
+            { name: "Canela", code: "HAW-005", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
+            { name: "Castanho", code: "HAW-006", swatch: "/lovable-uploads/hawai-castanho-novo.jpg" },
+            { name: "Chumbo", code: "HAW-007", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" },
+            { name: "Coral", code: "HAW-008", swatch: "/lovable-uploads/hawai-coral-novo.jpg" },
+            { name: "Frozen", code: "HAW-009", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
+            { name: "Fucsia", code: "HAW-010", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
+            { name: "Ires", code: "HAW-011", swatch: "/lovable-uploads/hawai-ires-novo.jpg" },
+            { name: "Pimenta", code: "HAW-012", swatch: "/lovable-uploads/hawai-pimenta-novo.jpg" },
+            { name: "Preto", code: "HAW-013", swatch: "/lovable-uploads/hawai-preto-novo.jpg" },
+            { name: "Sensuale", code: "HAW-014", swatch: "/lovable-uploads/hawai-sensuale-novo.jpg" },
+            { name: "Terra", code: "HAW-015", swatch: "/lovable-uploads/hawai-terra-novo.jpg" },
+            { name: "Tulipero", code: "HAW-016", swatch: "/lovable-uploads/hawai-tulipero-novo.jpg" },
+            { name: "Turquesa", code: "HAW-017", swatch: "/lovable-uploads/hawai-turquesa-novo.jpg" },
+            { name: "Verde Jade", code: "HAW-018", swatch: "/lovable-uploads/hawai-verde-jade-novo.jpg" },
+            { name: "Verde Musgo", code: "HAW-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo.jpg" },
+            { name: "Vermelho", code: "HAW-020", swatch: "/lovable-uploads/hawai-vermelho-novo.jpg" }
           ]
         },
         {
