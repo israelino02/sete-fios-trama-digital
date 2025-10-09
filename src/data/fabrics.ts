@@ -172,29 +172,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "4MM" }
           ],
-          colors: [
-            { name: "Amarelo BB", code: "MAD-001", swatch: "/lovable-uploads/madri-amarelo-bb-novo.jpg" },
-            { name: "Azul Marinho", code: "MAD-002", swatch: "/lovable-uploads/madri-azul-marinho-novo.jpg" },
-            { name: "Bic", code: "MAD-003", swatch: "/lovable-uploads/madri-bic-novo.jpg" },
-            { name: "Branco", code: "MAD-004", swatch: "/lovable-uploads/madri-branco-novo.jpg" },
-            { name: "Canela", code: "MAD-005", swatch: "/lovable-uploads/madri-canela-novo.jpg" },
-            { name: "Coral", code: "MAD-006", swatch: "/lovable-uploads/madri-coral-novo.jpg" },
-            { name: "Frozen", code: "MAD-007", swatch: "/lovable-uploads/madri-frozen-novo.jpg" },
-            { name: "Fucsia", code: "MAD-008", swatch: "/lovable-uploads/madri-fucsia-novo.jpg" },
-            { name: "Ires", code: "MAD-009", swatch: "/lovable-uploads/madri-ires-novo.jpg" },
-            { name: "Lavanda", code: "MAD-010", swatch: "/lovable-uploads/madri-lavanda-novo.jpg" },
-            { name: "Pimenta", code: "MAD-011", swatch: "/lovable-uploads/madri-pimenta-novo.jpg" },
-            { name: "Pink", code: "MAD-012", swatch: "/lovable-uploads/madri-pink-novo.jpg" },
-            { name: "Preto", code: "MAD-013", swatch: "/lovable-uploads/madri-preto-novo.jpg" },
-            { name: "Romance", code: "MAD-014", swatch: "/lovable-uploads/madri-romance-novo.jpg" },
-            { name: "Rosa BB", code: "MAD-015", swatch: "/lovable-uploads/madri-rosa-bb-novo.jpg" },
-            { name: "Sensuale", code: "MAD-016", swatch: "/lovable-uploads/madri-sensuale-novo.jpg" },
-            { name: "Terra", code: "MAD-017", swatch: "/lovable-uploads/madri-terra-novo.jpg" },
-            { name: "Tibeton", code: "MAD-018", swatch: "/lovable-uploads/madri-tibeton-novo.jpg" },
-            { name: "Tulipero", code: "MAD-019", swatch: "/lovable-uploads/madri-tulipero-novo.jpg" },
-            { name: "Verde Jade", code: "MAD-020", swatch: "/lovable-uploads/madri-verde-jade-novo.jpg" },
-            { name: "Vermelho", code: "MAD-021", swatch: "/lovable-uploads/madri-vermelho-novo.jpg" }
-          ]
+          colors: []
         },
         {
           type: "MILÃO",
