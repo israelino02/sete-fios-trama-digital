@@ -38,8 +38,8 @@ const StoreLocationMap = () => {
           .setHTML(`
             <div class="p-2">
               <h3 class="font-semibold text-sm">Sete Fios Têxtil</h3>
-              <p class="text-xs text-gray-600">Av. Pref. Braz de Líra</p>
-              <p class="text-xs text-gray-600">Santa Cruz do Capibaribe, PE</p>
+              <p class="text-xs text-gray-600">Av. Pref. Braz de Líra, 760 - Novo</p>
+              <p class="text-xs text-gray-600">Santa Cruz do Capibaribe - PE, 55192-460</p>
             </div>
           `)
       )

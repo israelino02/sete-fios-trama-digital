@@ -26,9 +26,9 @@ const Contato = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Endereço",
-      content: "Av. Pref. Braz de Líra",
-      description: "Santa Cruz do Capibaribe, PE - CEP: 55.192-460",
-      action: { label: "Ver no Mapa", url: "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra+Santa+Cruz+do+Capibaribe+PE" }
+      content: "Av. Pref. Braz de Líra, 760 - Novo",
+      description: "Santa Cruz do Capibaribe - PE, 55192-460",
+      action: { label: "Ver no Mapa", url: "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" }
     }
   ];
 
@@ -146,9 +146,9 @@ const Contato = () => {
                 />
               </div>
               <div className="text-center space-y-2">
-                <p className="font-medium text-foreground">Av. Pref. Braz de Líra</p>
-                <p className="text-muted-foreground">Santa Cruz do Capibaribe, PE</p>
-                <p className="text-muted-foreground">CEP: 55.192-460</p>
+                <p className="font-medium text-foreground">Av. Pref. Braz de Líra, 760 - Novo</p>
+                <p className="text-muted-foreground">Santa Cruz do Capibaribe - PE</p>
+                <p className="text-muted-foreground">CEP: 55192-460</p>
               </div>
               <Button
                 asChild
@@ -156,7 +156,7 @@ const Contato = () => {
                 variant="outline"
               >
                 <a 
-                  href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra+Santa+Cruz+do+Capibaribe+PE" 
+                  href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

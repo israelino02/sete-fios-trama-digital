@@ -191,7 +191,7 @@ export const Layout = ({ children }: LayoutProps) => {
                 </div>
                 <div className="flex items-start gap-3 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Av. Pref. Braz de Líra - Santa Cruz do Capibaribe, PE, 55192-512</span>
+                  <span>Av. Pref. Braz de Líra, 760 - Novo, Santa Cruz do Capibaribe - PE, 55192-460</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Clock className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
