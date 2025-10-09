@@ -56,7 +56,7 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/romantik-branco-new.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
-            { label: "Gramatura", value: "180 g/m²" },
+            { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
           usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Básicas"],
