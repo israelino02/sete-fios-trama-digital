@@ -140,15 +140,15 @@ export const fabricsData: FabricsData = {
             { name: "Frozen", code: "HAW-009", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
             { name: "Fucsia", code: "HAW-010", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
             { name: "Ires", code: "HAW-011", swatch: "/lovable-uploads/hawai-ires-novo.jpg" },
-            { name: "Pimenta", code: "HAW-012", swatch: "/lovable-uploads/hawai-pimenta-novo.jpg" },
-            { name: "Preto", code: "HAW-013", swatch: "/lovable-uploads/hawai-preto-novo.jpg" },
-            { name: "Sensuale", code: "HAW-014", swatch: "/lovable-uploads/hawai-sensuale-novo.jpg" },
-            { name: "Terra", code: "HAW-015", swatch: "/lovable-uploads/hawai-terra-novo.jpg" },
-            { name: "Tulipero", code: "HAW-016", swatch: "/lovable-uploads/hawai-tulipero-novo.jpg" },
-            { name: "Turquesa", code: "HAW-017", swatch: "/lovable-uploads/hawai-turquesa-novo.jpg" },
-            { name: "Verde Jade", code: "HAW-018", swatch: "/lovable-uploads/hawai-verde-jade-novo.jpg" },
-            { name: "Verde Musgo", code: "HAW-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo.jpg" },
-            { name: "Vermelho", code: "HAW-020", swatch: "/lovable-uploads/hawai-vermelho-novo.jpg" }
+            { name: "Pimenta", code: "HAW-012", swatch: "/lovable-uploads/hawai-pimenta-novo.jpg?v=2" },
+            { name: "Preto", code: "HAW-013", swatch: "/lovable-uploads/hawai-preto-novo.jpg?v=2" },
+            { name: "Sensuale", code: "HAW-014", swatch: "/lovable-uploads/hawai-sensuale-novo.jpg?v=2" },
+            { name: "Terra", code: "HAW-015", swatch: "/lovable-uploads/hawai-terra-novo.jpg?v=2" },
+            { name: "Tulipero", code: "HAW-016", swatch: "/lovable-uploads/hawai-tulipero-novo.jpg?v=2" },
+            { name: "Turquesa", code: "HAW-017", swatch: "/lovable-uploads/hawai-turquesa-novo.jpg?v=2" },
+            { name: "Verde Jade", code: "HAW-018", swatch: "/lovable-uploads/hawai-verde-jade-novo.jpg?v=2" },
+            { name: "Verde Musgo", code: "HAW-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo.jpg?v=2" },
+            { name: "Vermelho", code: "HAW-020", swatch: "/lovable-uploads/hawai-vermelho-novo.jpg?v=2" }
           ]
         },
         {
