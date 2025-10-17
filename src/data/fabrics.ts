@@ -371,7 +371,7 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "POLIAMIDA FLEX",
+          type: "POLIAMIDA DARLYNG",
           category: "POLIAMIDA",
           description: "Poliamida com máxima elasticidade para máximo conforto.",
           composition: "82% Poliamida, 18% Elastano",
