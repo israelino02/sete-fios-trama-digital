@@ -434,7 +434,15 @@ export const fabricsData: FabricsData = {
             { name: "Pérola Sol", code: "PP-024", swatch: "/lovable-uploads/poliamida-premium-perola-sol.png" },
             { name: "Pimenta", code: "PP-025", swatch: "/lovable-uploads/poliamida-premium-pimenta.png" },
             { name: "Preto", code: "PP-026", swatch: "/lovable-uploads/poliamida-premium-preto.png" },
-            { name: "Rouse", code: "PP-027", swatch: "/lovable-uploads/poliamida-premium-rouse.png" }
+            { name: "Rouse", code: "PP-027", swatch: "/lovable-uploads/poliamida-premium-rouse.png" },
+            { name: "Sandia", code: "PP-028", swatch: "/lovable-uploads/poliamida-premium-sandia.png" },
+            { name: "Sanremo", code: "PP-029", swatch: "/lovable-uploads/poliamida-premium-sanremo.png" },
+            { name: "Sensuale", code: "PP-030", swatch: "/lovable-uploads/poliamida-premium-sensuale.png" },
+            { name: "Sun Kiss", code: "PP-031", swatch: "/lovable-uploads/poliamida-premium-sunkiss.png" },
+            { name: "Teos", code: "PP-032", swatch: "/lovable-uploads/poliamida-premium-teos.png" },
+            { name: "Terra", code: "PP-033", swatch: "/lovable-uploads/poliamida-premium-terra.png" },
+            { name: "Tulipero", code: "PP-034", swatch: "/lovable-uploads/poliamida-premium-tulipero.png" },
+            { name: "Vintage", code: "PP-035", swatch: "/lovable-uploads/poliamida-premium-vintage.png" }
           ]
         }
       ]
