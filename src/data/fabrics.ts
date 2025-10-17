@@ -434,7 +434,15 @@ export const fabricsData: FabricsData = {
             { name: "Chumbo", code: "DRY-005", swatch: "/lovable-uploads/dry-fit-chumbo.png" },
             { name: "Laranja", code: "DRY-006", swatch: "/lovable-uploads/dry-fit-laranja.png" },
             { name: "Lavanda", code: "DRY-007", swatch: "/lovable-uploads/dry-fit-lavanda.png" },
-            { name: "Lipstick", code: "DRY-008", swatch: "/lovable-uploads/dry-fit-lipstick.png" }
+            { name: "Lipstick", code: "DRY-008", swatch: "/lovable-uploads/dry-fit-lipstick.png" },
+            { name: "Major", code: "DRY-009", swatch: "/lovable-uploads/dry-fit-major.png" },
+            { name: "Marinho", code: "DRY-010", swatch: "/lovable-uploads/dry-fit-marinho.png" },
+            { name: "Marrom", code: "DRY-011", swatch: "/lovable-uploads/dry-fit-marrom.png" },
+            { name: "Preto", code: "DRY-012", swatch: "/lovable-uploads/dry-fit-preto.png" },
+            { name: "Rosa", code: "DRY-013", swatch: "/lovable-uploads/dry-fit-rosa.png" },
+            { name: "Terra", code: "DRY-014", swatch: "/lovable-uploads/dry-fit-terra.png" },
+            { name: "Verde", code: "DRY-015", swatch: "/lovable-uploads/dry-fit-verde.png" },
+            { name: "Vermelho", code: "DRY-016", swatch: "/lovable-uploads/dry-fit-vermelho.png" }
           ]
         }
       ]
