@@ -102,7 +102,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra de poliéster com excelente caimento e proteção UV 30+",
           composition: "93% Poliéster, 7% Elastano",
           recommendedUse: "Ideal para moda íntima e sleep wear",
-          mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
+          mainImage: "/lovable-uploads/poliside-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70" },
             { label: "Gramatura", value: "160" },
