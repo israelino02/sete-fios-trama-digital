@@ -382,7 +382,7 @@ export const fabricsData: FabricsData = {
           description: "É um tecido de alta qualidade, desenvolvido para quem busca conforto, toque macio e excelente caimento.",
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Ideal para moda casual, íntima, praia e fitness",
-          mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
+          mainImage: "/lovable-uploads/poliamida-darlyng-principal.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,50m" },
             { label: "Gramatura", value: "200g/m²" },
