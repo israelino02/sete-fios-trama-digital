@@ -327,7 +327,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
-          mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
+          mainImage: "/lovable-uploads/romantik-mesclado-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
             { label: "Gramatura", value: "180" },
