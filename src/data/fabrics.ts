@@ -59,7 +59,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Vestidos", "Lingerie", "Camisolas", "Calcinha", "Cuecas", "Camisas"],
+          usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
@@ -108,7 +108,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "3,80MM" }
           ],
-          usageExamples: ["Lingerie", "Maiôs", "Biquínis", "Camisolas", "Calcinha"],
+          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           technologies: [
             { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
@@ -164,7 +164,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "185" },
             { label: "Rendimento", value: "3,70" }
           ],
-          usageExamples: ["Lingerie", "Maiôs", "Biquínis", "Camisolas", "Calcinha"],
+          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           colors: [
             { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
@@ -209,7 +209,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "4MM" }
           ],
-          usageExamples: ["Camisas", "Lingerie", "Camisolas", "Calcinha", "Cuecas"],
+          usageExamples: ["Camisa UV", "Lingerie", "Baby Dolls", "Moda Infantil", "Cuecas"],
           colors: [
             { name: "Amarelo BB", code: "MAD-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "MAD-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
@@ -254,7 +254,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "165" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
-          usageExamples: ["Vestidos", "Lingerie", "Camisolas", "Calcinha", "Cuecas", "Camisas"],
+          usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
           colors: [
             { name: "Amarelo BB", code: "MIL-001", swatch: "/lovable-uploads/milao-amarelo-bb-novo2.jpg" },
             { name: "Azul Oceano", code: "MIL-002", swatch: "/lovable-uploads/milao-azul-oceano-novo.jpg" },
@@ -299,7 +299,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Camisas", "Cuecas", "Calcinha", "Lingerie", "Camisolas"],
+          usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
@@ -333,7 +333,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Lingerie", "Maiôs", "Biquínis", "Calcinha", "Cuecas"],
+          usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
@@ -426,7 +426,7 @@ export const fabricsData: FabricsData = {
             { label: "Respirabilidade", value: "Alta" },
             { label: "Secagem", value: "Rápida" }
           ],
-          usageExamples: ["Camisas", "Maiôs", "Biquínis", "Cuecas"],
+          usageExamples: ["Fitness", "Corrida", "Esportes", "Academia"],
           technologies: [
             { name: "Secagem Rápida", description: "Elimina umidade rapidamente" },
             { name: "Respirável", description: "Permite circulação de ar" },

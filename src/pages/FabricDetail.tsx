@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fabricsData, Fabric } from "@/data/fabrics";
 import { ColorModal } from "@/components/ColorModal";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText, Shirt, Heart, Sparkles, Waves, Candy, Wind } from "lucide-react";
+import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -138,37 +138,12 @@ const FabricDetail = () => {
                     Possibilidades de Uso
                   </h2>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {selectedFabric.usageExamples.map((example, index) => {
-                    const getIcon = (name: string) => {
-                      const iconMap: { [key: string]: any } = {
-                        "Lingerie": Heart,
-                        "Camisolas": Sparkles,
-                        "Maiôs": Waves,
-                        "Biquínis": Waves,
-                        "Vestidos": Wind,
-                        "Calcinha": Heart,
-                        "Cuecas": Candy,
-                        "Camisas": Shirt,
-                      };
-                      const IconComponent = iconMap[name] || Shirt;
-                      return <IconComponent className="h-5 w-5" />;
-                    };
-
-                    return (
-                      <div
-                        key={index}
-                        className="flex flex-col items-center gap-2 p-4 bg-muted/30 hover:bg-muted/50 rounded-lg transition-colors"
-                      >
-                        <div className="text-primary">
-                          {getIcon(example)}
-                        </div>
-                        <span className="text-sm font-medium text-foreground text-center">
-                          {example}
-                        </span>
-                      </div>
-                    );
-                  })}
+                <div className="flex flex-wrap gap-2">
+                  {selectedFabric.usageExamples.map((example, index) => (
+                    <Badge key={index} variant="secondary" className="text-sm py-1 px-3">
+                      {example}
+                    </Badge>
+                  ))}
                 </div>
               </Card>
             )}
