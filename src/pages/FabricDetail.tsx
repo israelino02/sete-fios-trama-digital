@@ -5,16 +5,17 @@ import { ColorModal } from "@/components/ColorModal";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { 
-  BikinisIcon, 
-  LingerieIcon, 
-  CamisolasIcon, 
-  MaiosIcon, 
-  VestidosIcon, 
-  CalcinhaIcon, 
-  CuecasIcon, 
-  CamisasIcon 
-} from "@/components/UsageIcons";
+
+// Import usage icons
+import iconBiquini from "@/assets/icon-biquini.png";
+import iconVestido from "@/assets/icon-vestido.png";
+import iconCamisola from "@/assets/icon-camisola.png";
+import iconRegata from "@/assets/icon-regata.png";
+import iconVestidoLongo from "@/assets/icon-vestido-longo.png";
+import iconMaio from "@/assets/icon-maio.png";
+import iconCropped from "@/assets/icon-cropped.png";
+import iconCamisa from "@/assets/icon-camisa.png";
+import iconCueca from "@/assets/icon-cueca.png";
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -147,18 +148,17 @@ const FabricDetail = () => {
                 <div className="flex flex-wrap gap-3 justify-center">
                   {selectedFabric.usageExamples.map((example, index) => {
                     const getIcon = (name: string) => {
-                      const iconMap: { [key: string]: any } = {
-                        "Lingerie": LingerieIcon,
-                        "Camisolas": CamisolasIcon,
-                        "Maiôs": MaiosIcon,
-                        "Biquínis": BikinisIcon,
-                        "Vestidos": VestidosIcon,
-                        "Calcinha": CalcinhaIcon,
-                        "Cuecas": CuecasIcon,
-                        "Camisas": CamisasIcon,
+                      const iconMap: { [key: string]: string } = {
+                        "Lingerie": iconBiquini,
+                        "Camisolas": iconCamisola,
+                        "Maiôs": iconMaio,
+                        "Biquínis": iconBiquini,
+                        "Vestidos": iconVestido,
+                        "Calcinha": iconBiquini,
+                        "Cuecas": iconCueca,
+                        "Camisas": iconCamisa,
                       };
-                      const IconComponent = iconMap[name] || CamisasIcon;
-                      return <IconComponent className="w-12 h-12" />;
+                      return iconMap[name] || iconCamisa;
                     };
 
                     return (
@@ -166,9 +166,11 @@ const FabricDetail = () => {
                         key={index}
                         className="flex flex-col items-center gap-2 p-3 border border-border rounded-lg hover:border-primary/50 transition-colors min-w-[80px]"
                       >
-                        <div className="text-foreground">
-                          {getIcon(example)}
-                        </div>
+                        <img 
+                          src={getIcon(example)} 
+                          alt={example}
+                          className="w-12 h-12 object-contain"
+                        />
                         <span className="text-xs text-muted-foreground text-center">
                           {example}
                         </span>
