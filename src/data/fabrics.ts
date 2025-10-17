@@ -158,7 +158,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra de poliéster com excelente caimento",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda íntima e sleep wear",
-          mainImage: "/lovable-uploads/hawai-branco-novo.jpg",
+          mainImage: "/lovable-uploads/hawai-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "170" },
             { label: "Gramatura", value: "185" },
