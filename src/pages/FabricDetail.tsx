@@ -145,7 +145,7 @@ const FabricDetail = () => {
                 <h2 className="text-lg font-semibold text-foreground mb-4">
                   Possibilidades de Uso
                 </h2>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-5 gap-3">
                   {selectedFabric.usageExamples.map((example, index) => {
                     const getIcon = (name: string) => {
                       const iconMap: { [key: string]: string } = {
