@@ -379,7 +379,15 @@ export const fabricsData: FabricsData = {
             { name: "Burgundy", code: "DPA-006", swatch: "/lovable-uploads/delitex-burgundy.png" },
             { name: "Canela", code: "DPA-007", swatch: "/lovable-uploads/delitex-canela.png" },
             { name: "Carol", code: "DPA-008", swatch: "/lovable-uploads/delitex-carol.png" },
-            { name: "Castanho", code: "DPA-009", swatch: "/lovable-uploads/delitex-castanho.png" }
+            { name: "Castanho", code: "DPA-009", swatch: "/lovable-uploads/delitex-castanho.png" },
+            { name: "Cronos", code: "DPA-010", swatch: "/lovable-uploads/delitex-cronos.png" },
+            { name: "Denim", code: "DPA-011", swatch: "/lovable-uploads/delitex-denim.png" },
+            { name: "Frozen", code: "DPA-012", swatch: "/lovable-uploads/delitex-frozen.png" },
+            { name: "Fuscia", code: "DPA-013", swatch: "/lovable-uploads/delitex-fuscia.png" },
+            { name: "Grafite", code: "DPA-014", swatch: "/lovable-uploads/delitex-grafite.png" },
+            { name: "Green Olive", code: "DPA-015", swatch: "/lovable-uploads/delitex-green-olive.png" },
+            { name: "Gris", code: "DPA-016", swatch: "/lovable-uploads/delitex-gris.png" },
+            { name: "Ires", code: "DPA-017", swatch: "/lovable-uploads/delitex-ires.png" }
           ]
         },
         {
