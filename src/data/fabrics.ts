@@ -200,15 +200,16 @@ export const fabricsData: FabricsData = {
         {
           type: "MADRI",
           category: "POLIESTER",
-          description: "Microfibra de alta qualidade com ampla cartela de cores.",
+          description: "Microfibra com alto rendimento e variedade de cores",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Versátil para diversos tipos de confecção",
+          recommendedUse: "Ideal para moda praia e moda íntima",
           mainImage: "/lovable-uploads/madri-branco-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70" },
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "4MM" }
           ],
+          usageExamples: ["Camisa UV", "Lingerie", "Baby Dolls", "Moda Infantil", "Cuecas"],
           colors: [
             { name: "Amarelo BB", code: "MAD-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "MAD-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
