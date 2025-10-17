@@ -310,7 +310,13 @@ export const fabricsData: FabricsData = {
             { name: "Frozen", code: "RRC-005", swatch: "/lovable-uploads/romantik-risca-frozen.jpg" },
             { name: "Gris", code: "RRC-006", swatch: "/lovable-uploads/romantik-risca-gris.jpg" },
             { name: "Jade", code: "RRC-007", swatch: "/lovable-uploads/romantik-risca-jade.jpg" },
-            { name: "Pavão", code: "RRC-008", swatch: "/lovable-uploads/romantik-risca-pavao.jpg" }
+            { name: "Pavão", code: "RRC-008", swatch: "/lovable-uploads/romantik-risca-pavao.jpg" },
+            { name: "Pimenta", code: "RRC-009", swatch: "/lovable-uploads/romantik-risca-pimenta.jpg" },
+            { name: "Preto", code: "RRC-010", swatch: "/lovable-uploads/romantik-risca-preto.jpg" },
+            { name: "Sensuale", code: "RRC-011", swatch: "/lovable-uploads/romantik-risca-sensuale.jpg" },
+            { name: "Tibeton", code: "RRC-012", swatch: "/lovable-uploads/romantik-risca-tibeton.jpg" },
+            { name: "Turquesa", code: "RRC-013", swatch: "/lovable-uploads/romantik-risca-turquesa.jpg" },
+            { name: "Vermelho", code: "RRC-014", swatch: "/lovable-uploads/romantik-risca-vermelho.jpg" }
           ]
         },
         {
