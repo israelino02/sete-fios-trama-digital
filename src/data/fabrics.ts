@@ -248,7 +248,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra premium com toque sedoso e ótimo caimento",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para peças confortáveis, ideal para o verão",
-          mainImage: "/lovable-uploads/milao-branco.jpg",
+          mainImage: "/lovable-uploads/milao-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "165" },
