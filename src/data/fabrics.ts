@@ -371,9 +371,15 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Calcinha", "Cuecas", "Saias", "Vestidos Leves"],
           colors: [
-            { name: "Coral", code: "DPA-001", swatch: "/lovable-uploads/poliamida-coral.jpg" },
-            { name: "Rosa BB", code: "DPA-002", swatch: "/lovable-uploads/romantik-rosa-bb-novo.jpg" },
-            { name: "Lavanda", code: "DPA-003", swatch: "/lovable-uploads/romantik-lavanda-novo.jpg" }
+            { name: "Amarelo BB", code: "DPA-001", swatch: "/lovable-uploads/delitex-amarelo-bb.png" },
+            { name: "Aventurine", code: "DPA-002", swatch: "/lovable-uploads/delitex-aventurine.png" },
+            { name: "Azulejo", code: "DPA-003", swatch: "/lovable-uploads/delitex-azulejo.png" },
+            { name: "Bic", code: "DPA-004", swatch: "/lovable-uploads/delitex-bic.png" },
+            { name: "Branco", code: "DPA-005", swatch: "/lovable-uploads/delitex-branco.png" },
+            { name: "Burgundy", code: "DPA-006", swatch: "/lovable-uploads/delitex-burgundy.png" },
+            { name: "Canela", code: "DPA-007", swatch: "/lovable-uploads/delitex-canela.png" },
+            { name: "Carol", code: "DPA-008", swatch: "/lovable-uploads/delitex-carol.png" },
+            { name: "Castanho", code: "DPA-009", swatch: "/lovable-uploads/delitex-castanho.png" }
           ]
         },
         {
