@@ -155,16 +155,16 @@ export const fabricsData: FabricsData = {
         {
           type: "HAWAI",
           category: "POLIESTER",
-          description: "Microfibra com textura especial e cores vibrantes.",
+          description: "Microfibra de poliéster com excelente caimento",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Perfeito para peças esportivas e casuais",
+          recommendedUse: "Ideal para moda íntima e sleep wear",
           mainImage: "/lovable-uploads/hawai-branco-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "170" },
             { label: "Gramatura", value: "185" },
             { label: "Rendimento", value: "3,70" }
           ],
-          usageExamples: ["Sportswear", "Casual", "Moda Praia"],
+          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           colors: [
             { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
