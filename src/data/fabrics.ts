@@ -408,8 +408,15 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Macacões", "Calcinhas", "Sutiãs", "Cuecas", "Blusas ajustadas", "Vestidos leves", "Saias confortáveis", "Camisetas"],
           colors: [
-            { name: "Romance", code: "PPR-001", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
-            { name: "Coral", code: "PPR-002", swatch: "/lovable-uploads/poliside-coral-novo.jpg" }
+            { name: "Aço", code: "PP-001", swatch: "/lovable-uploads/poliamida-premium-aco.png" },
+            { name: "Aquaril", code: "PP-002", swatch: "/lovable-uploads/poliamida-premium-aquaril.png" },
+            { name: "Atalaia", code: "PP-003", swatch: "/lovable-uploads/poliamida-premium-atalaia.png" },
+            { name: "Blue", code: "PP-004", swatch: "/lovable-uploads/poliamida-premium-blue.png" },
+            { name: "Branco", code: "PP-005", swatch: "/lovable-uploads/poliamida-premium-branco.png" },
+            { name: "Bubblegum", code: "PP-006", swatch: "/lovable-uploads/poliamida-premium-bubblegum.png" },
+            { name: "Cabaret", code: "PP-007", swatch: "/lovable-uploads/poliamida-premium-cabaret.png" },
+            { name: "Canela", code: "PP-008", swatch: "/lovable-uploads/poliamida-premium-canela.png" },
+            { name: "Coral", code: "PP-009", swatch: "/lovable-uploads/poliamida-premium-coral.png" }
           ]
         }
       ]
