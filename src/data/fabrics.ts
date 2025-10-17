@@ -53,7 +53,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção.",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda íntima, sleep wear, vestidos e peças básicas",
-          mainImage: "/lovable-uploads/romantik-branco-new.jpg",
+          mainImage: "/lovable-uploads/romantik-liso-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
             { label: "Gramatura", value: "180" },
