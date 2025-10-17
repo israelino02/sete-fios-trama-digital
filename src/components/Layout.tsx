@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import logo7Fios from "@/assets/logo-7fios.png";
 
 interface LayoutProps {
   children: ReactNode;
@@ -45,13 +46,8 @@ export const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">7</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                7 Fios
-              </span>
+            <Link to="/" className="flex items-center">
+              <img src={logo7Fios} alt="7 Fios Têxtil" className="h-12 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -119,11 +115,8 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 7 Fios - Descrição da empresa */}
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">7</span>
-                </div>
-                <span className="font-display font-bold text-xl">7 Fios</span>
+              <div className="flex items-center mb-4">
+                <img src={logo7Fios} alt="7 Fios Têxtil" className="h-10 w-auto" />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Sete Fios Têxtil é uma empresa especializada em tecidos e aviamentos que unem qualidade, inovação e custo-benefício. Nosso compromisso é oferecer soluções inteligentes para o setor têxtil, sempre com ética, agilidade e parceria, ajudando confecções em todo o Brasil a crescerem com segurança e confiança.
