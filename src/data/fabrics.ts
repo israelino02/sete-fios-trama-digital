@@ -302,7 +302,16 @@ export const fabricsData: FabricsData = {
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
           ],
-          colors: []
+          colors: [
+            { name: "Azul Oceano", code: "RRC-001", swatch: "/lovable-uploads/romantik-risca-azul-oceano.jpg" },
+            { name: "Bic", code: "RRC-002", swatch: "/lovable-uploads/romantik-risca-bic.jpg" },
+            { name: "Branco", code: "RRC-003", swatch: "/lovable-uploads/romantik-risca-branco.jpg" },
+            { name: "Castanho", code: "RRC-004", swatch: "/lovable-uploads/romantik-risca-castanho.jpg" },
+            { name: "Frozen", code: "RRC-005", swatch: "/lovable-uploads/romantik-risca-frozen.jpg" },
+            { name: "Gris", code: "RRC-006", swatch: "/lovable-uploads/romantik-risca-gris.jpg" },
+            { name: "Jade", code: "RRC-007", swatch: "/lovable-uploads/romantik-risca-jade.jpg" },
+            { name: "Pavão", code: "RRC-008", swatch: "/lovable-uploads/romantik-risca-pavao.jpg" }
+          ]
         },
         {
           type: "ROMANTIK MESCLADO",
