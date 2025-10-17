@@ -397,7 +397,7 @@ export const fabricsData: FabricsData = {
         {
           type: "POLIAMIDA PREMIUM",
           category: "POLIAMIDA",
-          description: "Nossa melhor poliamida com acabamento premium.",
+          description: "É um tecido de alto padrão, desenvolvido para quem busca qualidade superior, conforto e durabilidade.",
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Linha premium para peças exclusivas",
           mainImage: "/lovable-uploads/poliamida-premium-novo.jpg",
@@ -406,6 +406,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,47" }
           ],
+          usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Macacões", "Calcinhas", "Sutiãs", "Cuecas", "Blusas ajustadas", "Vestidos leves", "Saias confortáveis", "Camisetas"],
           colors: [
             { name: "Romance", code: "PPR-001", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
             { name: "Coral", code: "PPR-002", swatch: "/lovable-uploads/poliside-coral-novo.jpg" }
