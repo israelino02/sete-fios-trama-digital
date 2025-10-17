@@ -414,7 +414,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido técnico respirável com tecnologia dry fit para performance máxima.",
           composition: "78% Poliéster Técnico, 22% Elastano",
           recommendedUse: "Indicado para atividades físicas intensas e esportes",
-          mainImage: "/lovable-uploads/milao-preto.jpg",
+          mainImage: "/lovable-uploads/dry-fit-principal.jpg",
           technicalSpecs: [
             { label: "Tecnologia", value: "Dry Fit" },
             { label: "Respirabilidade", value: "Alta" },
