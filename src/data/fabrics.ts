@@ -379,10 +379,16 @@ export const fabricsData: FabricsData = {
         {
           type: "POLIAMIDA DARLYNG",
           category: "POLIAMIDA",
-          description: "Poliamida com máxima elasticidade para máximo conforto.",
-          composition: "82% Poliamida, 18% Elastano",
-          recommendedUse: "Ideal para peças que exigem alta flexibilidade",
+          description: "É um tecido de alta qualidade, desenvolvido para quem busca conforto, toque macio e excelente caimento.",
+          composition: "90% Poliamida, 10% Elastano",
+          recommendedUse: "Ideal para moda casual, íntima, praia e fitness",
           mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,50m" },
+            { label: "Gramatura", value: "200g/m²" },
+            { label: "Rendimento", value: "3,80m²/kg" }
+          ],
+          usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
           colors: [
             { name: "Branco", code: "PFL-001", swatch: "/lovable-uploads/poliside-branco-novo.jpg" },
             { name: "Preto", code: "PFL-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" }
