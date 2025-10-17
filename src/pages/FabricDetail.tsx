@@ -3,9 +3,18 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fabricsData, Fabric } from "@/data/fabrics";
 import { ColorModal } from "@/components/ColorModal";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText, Shirt, Heart, Sparkles, Waves, Candy, Wind } from "lucide-react";
+import { ArrowLeft, FileText } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { 
+  BikinisIcon, 
+  LingerieIcon, 
+  CamisolasIcon, 
+  MaiosIcon, 
+  VestidosIcon, 
+  CalcinhaIcon, 
+  CuecasIcon, 
+  CamisasIcon 
+} from "@/components/UsageIcons";
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -132,38 +141,35 @@ const FabricDetail = () => {
             {/* Usage Examples */}
             {selectedFabric.usageExamples && selectedFabric.usageExamples.length > 0 && (
               <Card className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <Shirt className="h-5 w-5 text-primary" />
-                  <h2 className="text-xl font-semibold text-foreground">
-                    Possibilidades de Uso
-                  </h2>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <h2 className="text-lg font-semibold text-foreground mb-4">
+                  Possibilidades de Uso
+                </h2>
+                <div className="flex flex-wrap gap-3 justify-center">
                   {selectedFabric.usageExamples.map((example, index) => {
                     const getIcon = (name: string) => {
                       const iconMap: { [key: string]: any } = {
-                        "Lingerie": Heart,
-                        "Camisolas": Sparkles,
-                        "Maiôs": Waves,
-                        "Biquínis": Waves,
-                        "Vestidos": Wind,
-                        "Calcinha": Heart,
-                        "Cuecas": Candy,
-                        "Camisas": Shirt,
+                        "Lingerie": LingerieIcon,
+                        "Camisolas": CamisolasIcon,
+                        "Maiôs": MaiosIcon,
+                        "Biquínis": BikinisIcon,
+                        "Vestidos": VestidosIcon,
+                        "Calcinha": CalcinhaIcon,
+                        "Cuecas": CuecasIcon,
+                        "Camisas": CamisasIcon,
                       };
-                      const IconComponent = iconMap[name] || Shirt;
-                      return <IconComponent className="h-5 w-5" />;
+                      const IconComponent = iconMap[name] || CamisasIcon;
+                      return <IconComponent className="w-12 h-12" />;
                     };
 
                     return (
                       <div
                         key={index}
-                        className="flex flex-col items-center gap-2 p-4 bg-muted/30 hover:bg-muted/50 rounded-lg transition-colors"
+                        className="flex flex-col items-center gap-2 p-3 border border-border rounded-lg hover:border-primary/50 transition-colors min-w-[80px]"
                       >
-                        <div className="text-primary">
+                        <div className="text-foreground">
                           {getIcon(example)}
                         </div>
-                        <span className="text-sm font-medium text-foreground text-center">
+                        <span className="text-xs text-muted-foreground text-center">
                           {example}
                         </span>
                       </div>
