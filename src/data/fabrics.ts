@@ -290,16 +290,16 @@ export const fabricsData: FabricsData = {
         {
           type: "ROMANTIK RISCA DE GIZ",
           category: "POLIESTER",
-          description: "Tecido leve e resistente com toque suave e fácil manutenção.",
+          description: "Tecido leve e resistente com toque suave e fácil manutenção",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Ideal para vestidos, blusas e peças básicas",
+          recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
           mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Básicas"],
+          usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
@@ -324,16 +324,16 @@ export const fabricsData: FabricsData = {
         {
           type: "ROMANTIK MESCLADO",
           category: "POLIESTER",
-          description: "Tecido leve e resistente com toque suave e fácil manutenção.",
+          description: "Tecido leve e resistente com toque suave e fácil manutenção",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Ideal para vestidos, blusas e peças básicas",
+          recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
           mainImage: "/lovable-uploads/romantik-mescla-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65" },
             { label: "Gramatura", value: "180" },
             { label: "Rendimento", value: "3,60MM" }
           ],
-          usageExamples: ["Vestidos", "Blusas", "Saias", "Peças Básicas"],
+          usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
