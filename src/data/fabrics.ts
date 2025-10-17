@@ -400,7 +400,7 @@ export const fabricsData: FabricsData = {
           description: "Nossa melhor poliamida com acabamento premium.",
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Linha premium para peças exclusivas",
-          mainImage: "/lovable-uploads/poliside-romance-novo.jpg",
+          mainImage: "/lovable-uploads/poliamida-premium-novo.jpg",
           colors: [
             { name: "Romance", code: "PPR-001", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
             { name: "Coral", code: "PPR-002", swatch: "/lovable-uploads/poliside-coral-novo.jpg" }
