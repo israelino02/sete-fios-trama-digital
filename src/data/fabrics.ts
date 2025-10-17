@@ -468,10 +468,16 @@ export const fabricsData: FabricsData = {
         {
           type: "ROMANTIK ESTAMPADO",
           category: "ESTAMPADOS",
-          description: "Tecidos com padrões exclusivos e cores vibrantes para peças únicas e criativas.",
-          composition: "80% Poliéster, 20% Elastano",
-          recommendedUse: "Diversos tipos de estampas disponíveis para peças únicas",
+          description: "Tecido leve e resistente com toque suave e fácil manutenção. 92% Poliéster, 8% Elastano",
+          composition: "92% Poliéster, 8% Elastano",
+          recommendedUse: "Ideal para moda intima, moda praia, moda sleep wear e moda infantil",
           mainImage: "/lovable-uploads/romantik-fucsia-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,60" },
+            { label: "Gramatura", value: "150" },
+            { label: "Rendimento", value: "4,15" }
+          ],
+          usageExamples: ["Vestidos", "Lingerie", "Blusas", "Camisolas"],
           colors: [
             { name: "Fucsia", code: "EST-001", swatch: "/lovable-uploads/romantik-fucsia-novo.jpg" },
             { name: "Tangerina", code: "EST-002", swatch: "/lovable-uploads/romantik-tangerina-nova.jpg" },
