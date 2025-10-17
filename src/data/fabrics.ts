@@ -389,18 +389,6 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "POLIAMIDA SENSI",
-          category: "POLIAMIDA",
-          description: "Poliamida com toque extra suave para peles sensíveis.",
-          composition: "88% Poliamida, 12% Elastano",
-          recommendedUse: "Perfeito para peças delicadas e íntimas",
-          mainImage: "/lovable-uploads/romantik-sensuale-novo.jpg",
-          colors: [
-            { name: "Sensuale", code: "PSE-001", swatch: "/lovable-uploads/romantik-sensuale-novo.jpg" },
-            { name: "Marfim", code: "PSE-002", swatch: "/lovable-uploads/poliside-marfim-novo.jpg" }
-          ]
-        },
-        {
           type: "POLIAMIDA PREMIUM",
           category: "POLIAMIDA",
           description: "Nossa melhor poliamida com acabamento premium.",
