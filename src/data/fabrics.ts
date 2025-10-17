@@ -363,7 +363,7 @@ export const fabricsData: FabricsData = {
           description: "Poliamida de alta qualidade com toque sedoso e excelente elasticidade.",
           composition: "85% Poliamida, 15% Elastano",
           recommendedUse: "Indicado para lingerie premium e moda fitness",
-          mainImage: "/lovable-uploads/poliamida-coral.jpg",
+          mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
           colors: [
             { name: "Coral", code: "DPA-001", swatch: "/lovable-uploads/poliamida-coral.jpg" },
             { name: "Rosa BB", code: "DPA-002", swatch: "/lovable-uploads/romantik-rosa-bb-novo.jpg" },
