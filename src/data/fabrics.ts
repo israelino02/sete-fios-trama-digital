@@ -361,7 +361,7 @@ export const fabricsData: FabricsData = {
           type: "DELITEX POLIAMIDA",
           category: "POLIAMIDA",
           description: "Poliamida de alta qualidade com toque sedoso e excelente elasticidade.",
-          composition: "85% Poliamida, 15% Elastano",
+          composition: "91% Poliamida, 9% Elastano",
           recommendedUse: "Ideal para moda fitness, praia e íntima",
           mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
           technicalSpecs: [
