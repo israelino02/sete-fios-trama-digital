@@ -99,16 +99,16 @@ export const fabricsData: FabricsData = {
         {
           type: "POLISIDE",
           category: "POLIESTER",
-          description: "Microfibra de poliéster premium com excelente caimento e proteção UV 30+.",
+          description: "Microfibra de poliéster com excelente caimento e proteção UV 30+",
           composition: "93% Poliéster, 7% Elastano",
-          recommendedUse: "Ideal para moda íntima, fitness e peças confortáveis",
+          recommendedUse: "Ideal para moda íntima e sleep wear",
           mainImage: "/lovable-uploads/poliside-branco-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70" },
             { label: "Gramatura", value: "160" },
             { label: "Rendimento", value: "3,80MM" }
           ],
-          usageExamples: ["Lingerie", "Fitness", "Moda Praia", "Peças Confortáveis"],
+          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           technologies: [
             { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
