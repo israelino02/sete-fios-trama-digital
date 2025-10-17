@@ -365,9 +365,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda fitness, praia e íntima",
           mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,50m" },
-            { label: "Gramatura", value: "220g/m²" },
-            { label: "Rendimento", value: "3,50m²/kg" }
+            { label: "Largura", value: "160m" },
+            { label: "Gramatura", value: "180" },
+            { label: "Rendimento", value: "3,47" }
           ],
           usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Calcinha", "Cuecas", "Saias", "Vestidos Leves"],
           colors: [
@@ -384,9 +384,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda casual, íntima, praia e fitness",
           mainImage: "/lovable-uploads/poliamida-darlyng-principal.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,50m" },
-            { label: "Gramatura", value: "200g/m²" },
-            { label: "Rendimento", value: "3,80m²/kg" }
+            { label: "Largura", value: "160m" },
+            { label: "Gramatura", value: "180" },
+            { label: "Rendimento", value: "3,47" }
           ],
           usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
           colors: [
@@ -401,6 +401,11 @@ export const fabricsData: FabricsData = {
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Linha premium para peças exclusivas",
           mainImage: "/lovable-uploads/poliamida-premium-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "160m" },
+            { label: "Gramatura", value: "180" },
+            { label: "Rendimento", value: "3,47" }
+          ],
           colors: [
             { name: "Romance", code: "PPR-001", swatch: "/lovable-uploads/poliside-romance-novo.jpg" },
             { name: "Coral", code: "PPR-002", swatch: "/lovable-uploads/poliside-coral-novo.jpg" }
