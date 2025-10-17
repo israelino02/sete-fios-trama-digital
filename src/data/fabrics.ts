@@ -364,6 +364,12 @@ export const fabricsData: FabricsData = {
           composition: "85% Poliamida, 15% Elastano",
           recommendedUse: "Indicado para lingerie premium e moda fitness",
           mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
+          technicalSpecs: [
+            { label: "Largura", value: "1,50m" },
+            { label: "Gramatura", value: "220g/m²" },
+            { label: "Rendimento", value: "3,50m²/kg" }
+          ],
+          usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Calcinha", "Cuecas", "Saias", "Vestidos Leves"],
           colors: [
             { name: "Coral", code: "DPA-001", swatch: "/lovable-uploads/poliamida-coral.jpg" },
             { name: "Rosa BB", code: "DPA-002", swatch: "/lovable-uploads/romantik-rosa-bb-novo.jpg" },
