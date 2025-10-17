@@ -245,15 +245,16 @@ export const fabricsData: FabricsData = {
         {
           type: "MILÃO",
           category: "POLIESTER",
-          description: "Microfibra premium com toque sedoso e ótimo caimento.",
+          description: "Microfibra premium com toque sedoso e ótimo caimento",
           composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Ideal para peças sofisticadas e confortáveis",
+          recommendedUse: "Ideal para peças confortáveis, ideal para o verão",
           mainImage: "/lovable-uploads/milao-branco.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "165" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
+          usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
           colors: [
             { name: "Amarelo BB", code: "MIL-001", swatch: "/lovable-uploads/milao-amarelo-bb-novo2.jpg" },
             { name: "Azul Oceano", code: "MIL-002", swatch: "/lovable-uploads/milao-azul-oceano-novo.jpg" },
