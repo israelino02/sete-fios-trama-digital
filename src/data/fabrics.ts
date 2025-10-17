@@ -406,7 +406,7 @@ export const fabricsData: FabricsData = {
       name: "DRY-FIT",
       slug: "dry-fit",
       description: "Tecidos técnicos com tecnologia de secagem rápida.",
-      mainImage: "/lovable-uploads/milao-preto.jpg",
+      mainImage: "/lovable-uploads/dry-fit-principal.jpg",
       fabrics: [
         {
           type: "DRY FIT PRIME",
