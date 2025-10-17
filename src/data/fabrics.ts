@@ -423,16 +423,16 @@ export const fabricsData: FabricsData = {
         {
           type: "DRY FIT PRIME",
           category: "DRY-FIT",
-          description: "Tecido técnico respirável com tecnologia dry fit para performance máxima.",
-          composition: "78% Poliéster Técnico, 22% Elastano",
-          recommendedUse: "Indicado para atividades físicas intensas e esportes",
+          description: "É um tecido tecnológico de alta performance, desenvolvido para proporcionar máximo conforto, respirabilidade e liberdade de movimento, tecido soft touch.",
+          composition: "90% Poliéster, 10% Elastano",
+          recommendedUse: "Ideal para quem busca conforto térmico e leveza em roupas esportivas ou casuais.",
           mainImage: "/lovable-uploads/dry-fit-principal.jpg",
           technicalSpecs: [
-            { label: "Tecnologia", value: "Dry Fit" },
-            { label: "Respirabilidade", value: "Alta" },
-            { label: "Secagem", value: "Rápida" }
+            { label: "Largura", value: "1,60" },
+            { label: "Gramatura", value: "150" },
+            { label: "Rendimento", value: "4,15" }
           ],
-          usageExamples: ["Fitness", "Corrida", "Esportes", "Academia"],
+          usageExamples: ["Moda fitness", "Moda esportiva", "Moda casual", "Uniformes profissionais"],
           technologies: [
             { name: "Secagem Rápida", description: "Elimina umidade rapidamente" },
             { name: "Respirável", description: "Permite circulação de ar" },
