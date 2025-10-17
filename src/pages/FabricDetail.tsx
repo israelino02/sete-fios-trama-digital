@@ -3,19 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fabricsData, Fabric } from "@/data/fabrics";
 import { ColorModal } from "@/components/ColorModal";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText } from "lucide-react";
+import { ArrowLeft, FileText, Shirt, Heart, Sparkles, Waves, Candy, Wind } from "lucide-react";
 import { Card } from "@/components/ui/card";
-
-// Import usage icons
-import iconBiquini from "@/assets/icon-biquini.png";
-import iconVestido from "@/assets/icon-vestido.png";
-import iconCamisola from "@/assets/icon-camisola.png";
-import iconRegata from "@/assets/icon-regata.png";
-import iconVestidoLongo from "@/assets/icon-vestido-longo.png";
-import iconMaio from "@/assets/icon-maio.png";
-import iconCropped from "@/assets/icon-cropped.png";
-import iconCamisa from "@/assets/icon-camisa.png";
-import iconCueca from "@/assets/icon-cueca.png";
+import { Badge } from "@/components/ui/badge";
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -142,36 +132,38 @@ const FabricDetail = () => {
             {/* Usage Examples */}
             {selectedFabric.usageExamples && selectedFabric.usageExamples.length > 0 && (
               <Card className="p-6">
-                <h2 className="text-lg font-semibold text-foreground mb-4">
-                  Possibilidades de Uso
-                </h2>
-                <div className="grid grid-cols-5 gap-3">
+                <div className="flex items-center gap-2 mb-4">
+                  <Shirt className="h-5 w-5 text-primary" />
+                  <h2 className="text-xl font-semibold text-foreground">
+                    Possibilidades de Uso
+                  </h2>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {selectedFabric.usageExamples.map((example, index) => {
                     const getIcon = (name: string) => {
-                      const iconMap: { [key: string]: string } = {
-                        "Lingerie": iconBiquini,
-                        "Camisolas": iconCamisola,
-                        "Maiôs": iconMaio,
-                        "Biquínis": iconBiquini,
-                        "Vestidos": iconVestido,
-                        "Calcinha": iconBiquini,
-                        "Cuecas": iconCueca,
-                        "Camisas": iconCamisa,
+                      const iconMap: { [key: string]: any } = {
+                        "Lingerie": Heart,
+                        "Camisolas": Sparkles,
+                        "Maiôs": Waves,
+                        "Biquínis": Waves,
+                        "Vestidos": Wind,
+                        "Calcinha": Heart,
+                        "Cuecas": Candy,
+                        "Camisas": Shirt,
                       };
-                      return iconMap[name] || iconCamisa;
+                      const IconComponent = iconMap[name] || Shirt;
+                      return <IconComponent className="h-5 w-5" />;
                     };
 
                     return (
                       <div
                         key={index}
-                        className="flex flex-col items-center gap-2 p-3 border border-border rounded-lg hover:border-primary/50 transition-colors min-w-[80px]"
+                        className="flex flex-col items-center gap-2 p-4 bg-muted/30 hover:bg-muted/50 rounded-lg transition-colors"
                       >
-                        <img 
-                          src={getIcon(example)} 
-                          alt={example}
-                          className="w-12 h-12 object-contain"
-                        />
-                        <span className="text-xs text-muted-foreground text-center">
+                        <div className="text-primary">
+                          {getIcon(example)}
+                        </div>
+                        <span className="text-sm font-medium text-foreground text-center">
                           {example}
                         </span>
                       </div>
