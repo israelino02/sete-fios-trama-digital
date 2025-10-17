@@ -362,7 +362,7 @@ export const fabricsData: FabricsData = {
           category: "POLIAMIDA",
           description: "Poliamida de alta qualidade com toque sedoso e excelente elasticidade.",
           composition: "85% Poliamida, 15% Elastano",
-          recommendedUse: "Indicado para lingerie premium e moda fitness",
+          recommendedUse: "Ideal para moda fitness, praia e íntima",
           mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,50m" },
