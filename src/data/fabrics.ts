@@ -203,7 +203,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra com alto rendimento e variedade de cores",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda praia e moda íntima",
-          mainImage: "/lovable-uploads/madri-branco-novo.jpg",
+          mainImage: "/lovable-uploads/madri-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70" },
             { label: "Gramatura", value: "160" },
