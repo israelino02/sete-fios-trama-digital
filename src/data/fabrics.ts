@@ -336,7 +336,16 @@ export const fabricsData: FabricsData = {
             { name: "Toque Suave", description: "Textura macia ao toque" },
             { name: "Fácil Manutenção", description: "Não amassa facilmente" }
           ],
-          colors: []
+          colors: [
+            { name: "Azul Oceano", code: "RME-001", swatch: "/lovable-uploads/romantik-mescla-azul-oceano.jpg" },
+            { name: "Bic", code: "RME-002", swatch: "/lovable-uploads/romantik-mescla-bic.jpg" },
+            { name: "Major", code: "RME-003", swatch: "/lovable-uploads/romantik-mescla-major.jpg" },
+            { name: "Sensuale", code: "RME-004", swatch: "/lovable-uploads/romantik-mescla-sensuale.jpg" },
+            { name: "Tibeton", code: "RME-005", swatch: "/lovable-uploads/romantik-mescla-tibeton.jpg" },
+            { name: "Tomate", code: "RME-006", swatch: "/lovable-uploads/romantik-mescla-tomate.jpg" },
+            { name: "Turquesa", code: "RME-007", swatch: "/lovable-uploads/romantik-mescla-turquesa.jpg" },
+            { name: "Verde Musgo", code: "RME-008", swatch: "/lovable-uploads/romantik-mescla-verde-musgo.jpg" }
+          ]
         }
       ]
     },
