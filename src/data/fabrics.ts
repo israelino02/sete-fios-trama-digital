@@ -416,7 +416,16 @@ export const fabricsData: FabricsData = {
             { name: "Bubblegum", code: "PP-006", swatch: "/lovable-uploads/poliamida-premium-bubblegum.png" },
             { name: "Cabaret", code: "PP-007", swatch: "/lovable-uploads/poliamida-premium-cabaret.png" },
             { name: "Canela", code: "PP-008", swatch: "/lovable-uploads/poliamida-premium-canela.png" },
-            { name: "Coral", code: "PP-009", swatch: "/lovable-uploads/poliamida-premium-coral.png" }
+            { name: "Coral", code: "PP-009", swatch: "/lovable-uploads/poliamida-premium-coral.png" },
+            { name: "Cronos", code: "PP-010", swatch: "/lovable-uploads/poliamida-premium-cronos.png" },
+            { name: "Herança", code: "PP-011", swatch: "/lovable-uploads/poliamida-premium-heranca.png" },
+            { name: "Hot", code: "PP-012", swatch: "/lovable-uploads/poliamida-premium-hot.png" },
+            { name: "Iceberg", code: "PP-013", swatch: "/lovable-uploads/poliamida-premium-iceberg.png" },
+            { name: "Jaipur", code: "PP-014", swatch: "/lovable-uploads/poliamida-premium-jaipur.png" },
+            { name: "Lavanda", code: "PP-015", swatch: "/lovable-uploads/poliamida-premium-lavanda.png" },
+            { name: "Lichia", code: "PP-016", swatch: "/lovable-uploads/poliamida-premium-lichia.png" },
+            { name: "Louise", code: "PP-017", swatch: "/lovable-uploads/poliamida-premium-louise.png" },
+            { name: "Marinho", code: "PP-018", swatch: "/lovable-uploads/poliamida-premium-marinho.png" }
           ]
         }
       ]
