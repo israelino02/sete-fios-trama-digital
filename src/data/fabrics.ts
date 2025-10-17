@@ -427,9 +427,14 @@ export const fabricsData: FabricsData = {
             { name: "Anti-odor", description: "Controle de bactérias" }
           ],
           colors: [
-            { name: "Preto", code: "DRY-001", swatch: "/lovable-uploads/romantik-preto-novo.jpg" },
-            { name: "Grafite", code: "DRY-002", swatch: "/lovable-uploads/poliside-grafite-novo.jpg" },
-            { name: "Azul Marinho", code: "DRY-003", swatch: "/lovable-uploads/poliside-marinho-novo.jpg" }
+            { name: "Azul", code: "DRY-001", swatch: "/lovable-uploads/dry-fit-azul.png" },
+            { name: "Bic", code: "DRY-002", swatch: "/lovable-uploads/dry-fit-bic.png" },
+            { name: "Bordô", code: "DRY-003", swatch: "/lovable-uploads/dry-fit-bordo.png" },
+            { name: "Branco", code: "DRY-004", swatch: "/lovable-uploads/dry-fit-branco.png" },
+            { name: "Chumbo", code: "DRY-005", swatch: "/lovable-uploads/dry-fit-chumbo.png" },
+            { name: "Laranja", code: "DRY-006", swatch: "/lovable-uploads/dry-fit-laranja.png" },
+            { name: "Lavanda", code: "DRY-007", swatch: "/lovable-uploads/dry-fit-lavanda.png" },
+            { name: "Lipstick", code: "DRY-008", swatch: "/lovable-uploads/dry-fit-lipstick.png" }
           ]
         }
       ]
