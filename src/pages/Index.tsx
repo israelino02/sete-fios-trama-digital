@@ -154,8 +154,8 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center">
-            <Button asChild variant="outline" size="lg" className="hover:bg-primary hover:text-primary-foreground text-lg px-12 py-6 h-auto font-semibold">
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-gradient-primary hover:bg-gradient-primary/90 text-lg px-12 py-6 h-auto font-bold shadow-warm hover:shadow-xl hover:scale-105 transition-all duration-300 text-primary-foreground">
               <Link to="/catalogo">Ver Todos os Produtos</Link>
             </Button>
           </div>
