@@ -33,7 +33,13 @@ const Contato = () => {
   ];
 
   const horarios = [
-    { dia: "Segunda a Sexta", horario: "8h às 18h" }
+    { dia: "Segunda-Feira", horario: "09:00 - 18:00" },
+    { dia: "Terça-Feira", horario: "09:00 - 18:00" },
+    { dia: "Quarta-Feira", horario: "09:00 - 18:00" },
+    { dia: "Quinta-Feira", horario: "09:00 - 18:00" },
+    { dia: "Sexta-Feira", horario: "09:00 - 18:00" },
+    { dia: "Sábado", horario: "09:00 - 13:00" },
+    { dia: "Domingo", horario: "Fechado" }
   ];
 
   return (
@@ -108,64 +114,105 @@ const Contato = () => {
         </div>
       </section>
 
-      {/* Business Hours */}
+      {/* Store Information Section */}
       <section className="mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-display text-3xl font-bold text-foreground mb-6 flex items-center">
-              <Clock className="w-8 h-8 mr-3 text-primary" />
-              Horário de Funcionamento
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Nossa loja física está aberta nos seguintes horários. Para atendimento pelo WhatsApp, 
-              estamos disponíveis durante o horário comercial.
-            </p>
-            
-            <div className="space-y-3">
-              {horarios.map((item, index) => (
-                <div key={index} className="flex justify-between items-center p-3 bg-muted rounded-lg">
-                  <span className="font-medium text-foreground">{item.dia}</span>
-                  <span className="text-muted-foreground">{item.horario}</span>
-                </div>
-              ))}
-            </div>
+        <h2 className="font-display text-3xl font-bold text-foreground text-center mb-12">
+          Nossas Informações
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Map */}
+          <div className="rounded-lg overflow-hidden shadow-soft h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.234567890123!2d-36.20123456789012!3d-7.950123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnMDAuNCJTIDM2wrAxMicwNC40Ilc!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Sete Fios Têxtil"
+            ></iframe>
           </div>
 
-          <Card className="shadow-warm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-foreground text-center">
-                Visite Nossa Loja
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="w-full h-64 overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/ce990ed5-fc42-41d4-87b1-1e5813607933.png" 
-                  alt="Fachada da loja Sete Fios Têxtil"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="text-center space-y-2">
-                <p className="font-medium text-foreground">Av. Pref. Braz de Líra, 760 - Novo</p>
-                <p className="text-muted-foreground">Santa Cruz do Capibaribe - PE</p>
-                <p className="text-muted-foreground">CEP: 55192-460</p>
-              </div>
-              <Button
-                asChild
-                className="w-full hover:scale-105 transition-all duration-300"
-                variant="outline"
-              >
-                <a 
-                  href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Como Chegar
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+          {/* Information Cards */}
+          <div className="space-y-6">
+            {/* Address Card */}
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-2 text-foreground">Endereço</h3>
+                    <p className="text-muted-foreground">
+                      Av. Pref. Braz de Líra, 760 - Novo, Santa Cruz do Capibaribe - PE, 55192-460
+                    </p>
+                    <Button
+                      asChild
+                      variant="link"
+                      className="p-0 h-auto mt-2"
+                    >
+                      <a 
+                        href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        Gerar Rota
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Phone Card */}
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-2 text-foreground">Telefone</h3>
+                    <p className="text-muted-foreground">(81) 99461-6071</p>
+                    <Button
+                      asChild
+                      variant="link"
+                      className="p-0 h-auto mt-2"
+                    >
+                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                        Copiar
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Business Hours Card */}
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-4 text-foreground">Horário</h3>
+                    <div className="space-y-2">
+                      {horarios.map((item, index) => (
+                        <div key={index} className="flex justify-between items-center">
+                          <span className="text-muted-foreground">{item.dia}</span>
+                          <span className="text-foreground font-medium">{item.horario}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
