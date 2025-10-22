@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MessageCircle, MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import StoreLocationMap from "@/components/StoreLocationMap";
 
 const Contato = () => {
@@ -151,14 +151,15 @@ const Contato = () => {
                     </p>
                     <Button
                       asChild
-                      variant="link"
-                      className="p-0 h-auto mt-2"
+                      size="sm"
+                      className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm"
                     >
                       <a 
                         href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
+                        <MapPin className="w-4 h-4 mr-2" />
                         Gerar Rota
                       </a>
                     </Button>
@@ -179,11 +180,16 @@ const Contato = () => {
                     <p className="text-muted-foreground">(81) 99461-6071</p>
                     <Button
                       asChild
-                      variant="link"
-                      className="p-0 h-auto mt-2"
+                      size="sm"
+                      className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigator.clipboard.writeText("81994616071");
+                      }}
                     >
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                        Copiar
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Falar no WhatsApp
                       </a>
                     </Button>
                   </div>
@@ -208,6 +214,38 @@ const Contato = () => {
                         </div>
                       ))}
                     </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Instagram Card */}
+            <Card className="shadow-soft bg-gradient-primary text-primary-foreground">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Instagram className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-2 text-primary-foreground">Siga-nos no Instagram</h3>
+                    <p className="text-primary-foreground/90 mb-4 text-sm">
+                      Acompanhe nossas novidades, lançamentos e inspirações para seus projetos.
+                    </p>
+                    <Button
+                      asChild
+                      variant="secondary"
+                      size="sm"
+                      className="w-full hover:scale-105 transition-transform duration-300"
+                    >
+                      <a 
+                        href="https://www.instagram.com/7fiostextil/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Instagram className="w-4 h-4 mr-2" />
+                        @7fiostextil
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </CardContent>
