@@ -278,31 +278,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl font-bold mb-4">
-            Fique por dentro das novidades
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Assine nossa newsletter e seja o primeiro a saber sobre novos tecidos, 
-            promoções exclusivas e dicas de costura.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Button
-              asChild
-              variant="secondary"
-              size="lg"
-              className="flex-1 hover:scale-105 transition-all duration-300 bg-accent text-primary hover:bg-accent/90"
-            >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Receber Novidades no WhatsApp
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-muted">
