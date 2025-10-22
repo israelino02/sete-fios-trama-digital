@@ -60,6 +60,8 @@ const ProductDetail = () => {
                 src={product.imagens[selectedImage]}
                 alt={`${product.nome} - Imagem ${selectedImage + 1}`}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -142,6 +144,8 @@ const ProductDetail = () => {
                     src={image}
                     alt={`${product.nome} - ${colorName}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-0 left-0 right-0 bg-black/70 text-white text-xs py-1 px-2 text-center font-medium">
                     {colorName}

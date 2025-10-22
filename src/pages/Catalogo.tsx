@@ -38,6 +38,8 @@ const Catalogo = () => {
                   src={category.mainImage}
                   alt={category.name}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
               

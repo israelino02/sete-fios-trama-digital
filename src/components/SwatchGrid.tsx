@@ -48,6 +48,8 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                   src={color.swatch}
                   alt={`${color.name} - ${color.code}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               
@@ -81,6 +83,8 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                   src={selectedSwatch.swatch}
                   alt={`${selectedSwatch.name} - ${selectedSwatch.code}`}
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
 

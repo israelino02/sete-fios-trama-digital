@@ -53,6 +53,8 @@ const CategoryDetail = () => {
                 src={category.mainImage}
                 alt={category.name}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>

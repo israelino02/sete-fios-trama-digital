@@ -47,7 +47,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img src={logo7Fios} alt="7 Fios Têxtil" className="h-20 w-auto" />
+              <img src={logo7Fios} alt="7 Fios Têxtil" className="h-20 w-auto" loading="eager" decoding="async" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -116,7 +116,7 @@ export const Layout = ({ children }: LayoutProps) => {
             {/* 7 Fios - Descrição da empresa */}
             <div>
               <div className="flex items-center mb-4">
-                <img src={logo7Fios} alt="7 Fios Têxtil" className="h-16 w-auto" />
+                <img src={logo7Fios} alt="7 Fios Têxtil" className="h-16 w-auto" loading="lazy" decoding="async" />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Sete Fios Têxtil é uma empresa especializada em tecidos e aviamentos que unem qualidade, inovação e custo-benefício. Nosso compromisso é oferecer soluções inteligentes para o setor têxtil, sempre com ética, agilidade e parceria, ajudando confecções em todo o Brasil a crescerem com segurança e confiança.

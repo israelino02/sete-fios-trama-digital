@@ -85,6 +85,8 @@ const FabricDetail = () => {
                 src={selectedFabric.mainImage}
                 alt={selectedFabric.type}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
