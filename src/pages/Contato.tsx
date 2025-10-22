@@ -122,7 +122,7 @@ const Contato = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Map */}
-          <div className="rounded-lg overflow-hidden shadow-soft h-[500px]">
+          <div className="rounded-lg overflow-hidden shadow-soft h-[500px] lg:h-full lg:min-h-[700px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.234567890123!2d-36.20123456789012!3d-7.950123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnMDAuNCJTIDM2wrAxMicwNC40Ilc!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
               width="100%"
