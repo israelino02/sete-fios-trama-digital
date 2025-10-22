@@ -162,38 +162,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Por que escolher a 7 Fios?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos produtos de qualidade e atendimento especializado para todos os seus projetos de costura.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Missão, Visão e Valores */}
       <section className="py-16 lg:py-24 bg-gradient-subtle">
         <div className="container mx-auto px-4">
@@ -278,31 +246,6 @@ const Index = () => {
         </div>
       </section>
 
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Pronto para começar seu projeto?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Entre em contato conosco pelo WhatsApp e receba atendimento personalizado para encontrar exatamente o que você precisa.
-            </p>
-            
-            <Button 
-              asChild
-              size="lg"
-              className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
-            >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Conversar no WhatsApp
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Quick Links */}
       <section className="py-16">
