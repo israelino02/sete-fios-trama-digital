@@ -248,46 +248,79 @@ const Index = () => {
 
 
       {/* Quick Links */}
-      <section className="py-16">
+      <section className="py-20 lg:py-28 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Navegue por Nossas Categorias
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Encontre rapidamente o que você precisa
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center relative z-10">
+                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
+                  <Scissors className="w-10 h-10 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                   Catálogo de Tecidos
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-6 text-base leading-relaxed">
                   Explore nossa ampla variedade de tecidos para todos os tipos de projeto.
                 </p>
-                <Button asChild variant="outline" className="hover:bg-primary hover:text-primary-foreground">
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="w-full hover:scale-105 transition-transform shadow-soft"
+                >
                   <Link to="/catalogo">Ver Catálogo</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center relative z-10">
+                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
+                  <Palette className="w-10 h-10 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                   Outros Produtos
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-6 text-base leading-relaxed">
                   Zíperes, elásticos, elastano e muito mais para complementar seus projetos.
                 </p>
-                <Button asChild variant="outline" className="hover:bg-primary hover:text-primary-foreground">
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="w-full hover:scale-105 transition-transform shadow-soft"
+                >
                   <Link to="/outros-produtos">Ver Produtos</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center relative z-10">
+                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
+                  <MessageCircle className="w-10 h-10 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                   Entre em Contato
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-6 text-base leading-relaxed">
                   Tire suas dúvidas e receba atendimento personalizado.
                 </p>
-                <Button asChild variant="outline" className="hover:bg-primary hover:text-primary-foreground">
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="w-full hover:scale-105 transition-transform shadow-soft"
+                >
                   <Link to="/contato">Falar Conosco</Link>
                 </Button>
               </CardContent>
