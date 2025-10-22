@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
-import logo from "@/assets/7fios-logo.png";
 
 const Sobre = () => {
   const whatsappNumber = "5511999999999";
@@ -34,22 +33,15 @@ const Sobre = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
-      <section className="mb-16">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
+      <section className="text-center mb-16">
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
           Nossa História
         </h1>
-        <div className="flex flex-col md:flex-row items-center gap-6 max-w-4xl mx-auto">
-          <img 
-            src={logo} 
-            alt="Logo 7 Fios"
-            className="w-24 h-24 md:w-32 md:h-32 object-contain flex-shrink-0"
-          />
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, 
-            os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma 
-            história de superação, gratidão e confiança no futuro.
-          </p>
-        </div>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, 
+          os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma 
+          história de superação, gratidão e confiança no futuro.
+        </p>
       </section>
 
       {/* Story Section */}
