@@ -235,14 +235,14 @@ const Contato = () => {
                       asChild
                       variant="secondary"
                       size="sm"
-                      className="w-full hover:scale-105 transition-transform duration-300"
+                      className="hover:scale-105 transition-transform duration-300 text-sm px-4"
                     >
                       <a 
                         href="https://www.instagram.com/7fiostextil/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
-                        <Instagram className="w-4 h-4 mr-2" />
+                        <Instagram className="w-3 h-3 mr-1.5" />
                         @7fiostextil
                       </a>
                     </Button>
