@@ -4,11 +4,36 @@ import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tecidos.jpg";
+import { fabricsData } from "@/data/fabrics";
 
 const Index = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  // Featured products from fabrics data
+  const featuredProducts = [
+    {
+      fabric: fabricsData.categories.find(c => c.slug === "poliester")?.fabrics.find(f => f.type === "MADRI"),
+      badge: "Mais Vendido",
+      categorySlug: "poliester"
+    },
+    {
+      fabric: fabricsData.categories.find(c => c.slug === "poliamida")?.fabrics.find(f => f.type === "POLIAMIDA PREMIUM"),
+      badge: "Premium",
+      categorySlug: "poliamida"
+    },
+    {
+      fabric: fabricsData.categories.find(c => c.slug === "dry-fit")?.fabrics.find(f => f.type === "DRY FIT PRIME"),
+      badge: "Alta Performance",
+      categorySlug: "dry-fit"
+    },
+    {
+      fabric: fabricsData.categories.find(c => c.slug === "estampados")?.fabrics.find(f => f.type === "ROMANTIK ESTAMPADO"),
+      badge: "Exclusivo",
+      categorySlug: "estampados"
+    }
+  ];
 
   const features = [
     {
@@ -103,54 +128,56 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {[
-              { name: "Malha Liganete Premium", price: "op", description: "Por metro - Alta qualidade", badge: "Mais Vendido", badgeColor: "bg-accent text-primary" },
-              { name: "Suplex Fitness", price: "op", description: "Ideal para roupas esportivas", badge: "Novidade", badgeColor: "bg-primary text-primary-foreground" },
-              { name: "Algodão Percal", price: "op", description: "Macio e respirável", badge: "Oferta", badgeColor: "bg-red-500 text-white" },
-              { name: "Crepe Georgette", price: "op", description: "Elegante e fluido", badge: "Premium", badgeColor: "bg-gradient-accent text-primary" }
-            ].map((product, index) => (
-              <Card key={index} className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-                <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
-                  <Badge className={`absolute top-2 left-2 text-xs ${product.badgeColor}`}>
-                    {product.badge}
-                  </Badge>
-                  <div className="text-center p-4">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-primary text-2xl">🧵</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">Foto do produto</p>
+            {featuredProducts.map((product, index) => (
+              <Link 
+                key={index}
+                to={`/catalogo/${product.categorySlug}/${product.fabric?.type.toLowerCase().replace(/ /g, '-')}`}
+              >
+                <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
+                    <Badge className="absolute top-2 left-2 text-xs z-10 bg-accent text-primary">
+                      {product.badge}
+                    </Badge>
+                    <img 
+                      src={product.fabric?.mainImage}
+                      alt={product.fabric?.type}
+                      className="w-full h-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
                   </div>
-                </div>
-                
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                      {product.name}
-                    </h3>
-                    <div className="flex text-accent">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-current" />
-                      ))}
+                  
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1">
+                        {product.fabric?.type}
+                      </h3>
+                      <div className="flex text-accent">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3 h-3 fill-current" />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {product.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-primary">{product.price}</span>
-                    <Button 
-                      asChild
-                      size="sm" 
-                      className="hover:scale-105 transition-transform"
-                    >
-                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                      {product.fabric?.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-semibold text-primary">Ver Detalhes</span>
+                      <Button 
+                        size="sm" 
+                        className="hover:scale-105 transition-transform"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open(whatsappUrl, '_blank');
+                        }}
+                      >
                         <MessageCircle className="w-4 h-4 mr-1" />
                         Consultar
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
