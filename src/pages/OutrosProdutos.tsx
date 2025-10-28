@@ -9,6 +9,7 @@ const OutrosProdutos = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const vies = [
+    { name: "Viés de poliamida", description: "Viés de poliamida disponível em largura 16mm e 25mm para acabamentos duráveis.", image: "/lovable-uploads/vies-poliamida.jpg" },
     { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras.", image: undefined },
     { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas.", image: undefined },
     { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento.", image: undefined },
