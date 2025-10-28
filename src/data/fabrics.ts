@@ -355,7 +355,7 @@ export const fabricsData: FabricsData = {
       name: "MICROFIBRAS DE POLIAMIDA",
       slug: "poliamida",
       description: "Microfibras de poliamida com alta elasticidade e conforto.",
-      mainImage: "/lovable-uploads/poliamida-coral.jpg",
+      mainImage: "/lovable-uploads/microfibra-poliamida-main.jpg",
       fabrics: [
         {
           type: "DELITEX POLIAMIDA",
