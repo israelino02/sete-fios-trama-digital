@@ -41,6 +41,11 @@ const OutrosProdutos = () => {
       description: "Renda 7 Fios disponível em diversas cores. Composição: Poliamida e Elastano.", 
       image: "/lovable-uploads/renda-7-fios.jpg" 
     },
+    { 
+      name: "Renda Noronha (25mm)", 
+      description: "Renda Noronha largura 25mm disponível em diversas cores para acabamentos delicados.", 
+      image: "/lovable-uploads/renda-noronha.jpg" 
+    },
     { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes.", image: undefined },
     { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos.", image: undefined },
     { name: "Renda Guipir 8cm", description: "Renda larga perfeita para barras e detalhes elegantes.", image: undefined },
