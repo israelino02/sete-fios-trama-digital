@@ -9,29 +9,28 @@ const OutrosProdutos = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const vies = [
-    { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras." },
-    { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas." },
-    { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento." },
-    { name: "Viés Duplo 12mm", description: "Viés duplo para acabamentos mais resistentes." },
-    { name: "Viés Duplo 18mm", description: "Viés duplo médio para acabamentos profissionais." },
-    { name: "Viés Estampado 25mm", description: "Viés com estampas para dar charme especial às suas peças." }
+    { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras.", image: undefined },
+    { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas.", image: undefined },
+    { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento.", image: undefined },
+    { name: "Viés Duplo 12mm", description: "Viés duplo para acabamentos mais resistentes.", image: undefined },
+    { name: "Viés Duplo 18mm", description: "Viés duplo médio para acabamentos profissionais.", image: undefined },
+    { name: "Viés Estampado 25mm", description: "Viés com estampas para dar charme especial às suas peças.", image: undefined }
   ];
 
   const elasticos = [
-    { name: "Elástico 10mm", description: "Elástico fino para acabamentos delicados e roupas íntimas." },
-    { name: "Elástico 15mm", description: "Elástico médio para cintura de shorts e saias." },
-    { name: "Elástico 20mm", description: "Elástico versátil para diversas aplicações em costura." },
-    { name: "Elástico 25mm", description: "Elástico resistente para cintura de calças e bermudas." },
-    { name: "Elástico 30mm", description: "Elástico largo para cintura alta e peças esportivas." },
-    { name: "Elástico 40mm", description: "Elástico extra largo para projetos especiais e cintas." }
+    { 
+      name: "Elásticos personalizados", 
+      description: "Crie elásticos com sua marca",
+      image: "/lovable-uploads/elasticos-personalizados.jpg"
+    }
   ];
 
   const rendas = [
-    { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes." },
-    { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos." },
-    { name: "Renda Guipir 8cm", description: "Renda larga perfeita para barras e detalhes elegantes." },
-    { name: "Renda Chantilly 10cm", description: "Renda sofisticada para peças especiais e festas." },
-    { name: "Renda Chantilly 15cm", description: "Renda ampla para criar peças deslumbrantes." }
+    { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes.", image: undefined },
+    { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos.", image: undefined },
+    { name: "Renda Guipir 8cm", description: "Renda larga perfeita para barras e detalhes elegantes.", image: undefined },
+    { name: "Renda Chantilly 10cm", description: "Renda sofisticada para peças especiais e festas.", image: undefined },
+    { name: "Renda Chantilly 15cm", description: "Renda ampla para criar peças deslumbrantes.", image: undefined }
   ];
 
   const categories = [
@@ -107,6 +106,7 @@ const OutrosProdutos = () => {
                 description={product.description}
                 category={category.title}
                 imagePlaceholder={`Foto do ${product.name}`}
+                imageUrl={product.image}
               />
             ))}
           </div>
