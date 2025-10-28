@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ProductCardProps {
   name: string;
@@ -36,6 +36,34 @@ export const ProductCard = ({
     setCurrentImageIndex((prev) => (prev - 1 + displayImages.length) % displayImages.length);
   };
 
+  // Preload adjacent images to make transitions instant
+  const preloaded = useRef<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (displayImages.length <= 1) return;
+
+    const nextIndex = (currentImageIndex + 1) % displayImages.length;
+    const prevIndex = (currentImageIndex - 1 + displayImages.length) % displayImages.length;
+
+    [displayImages[nextIndex], displayImages[prevIndex]].forEach((url) => {
+      if (!url || preloaded.current.has(url)) return;
+      const img = new Image();
+      (img as any).decoding = "async";
+      img.src = url;
+      img.onload = () => preloaded.current.add(url);
+      img.onerror = () => {};
+      // Try to decode for smoother swaps if supported
+      const anyImg = img as any;
+      if (typeof anyImg.decode === "function") {
+        // Note: We don't await here to avoid blocking UI
+        anyImg
+          .decode()
+          .then(() => preloaded.current.add(url))
+          .catch(() => {});
+      }
+    });
+  }, [currentImageIndex, displayImages]);
+
   return (
     <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
       <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
@@ -44,9 +72,15 @@ export const ProductCard = ({
             <img 
               src={displayImages[currentImageIndex]} 
               alt={`${name} - ${currentImageIndex + 1}`}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              width={800}
+              height={800}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
               loading="lazy"
               decoding="async"
+              fetchPriority="high"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg";
+              }}
             />
             {hasMultipleImages && (
               <>
