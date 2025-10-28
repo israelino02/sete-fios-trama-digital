@@ -11,7 +11,20 @@ const OutrosProdutos = () => {
   const vies = [
     { name: "Viés de poliamida 16mm", description: "Viés de poliamida largura 16mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida.jpg" },
     { name: "Viés de poliamida 25mm", description: "Viés de poliamida largura 25mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida-25mm.jpg" },
-    { name: "Viés de poliamida Paraná", description: "Viés de poliamida Paraná para acabamentos de alta qualidade.", image: "/lovable-uploads/vies-parana-1.jpg" },
+    { 
+      name: "Viés de poliamida Paraná", 
+      description: "Viés de poliamida Paraná disponível em diversas cores para acabamentos de alta qualidade.", 
+      images: [
+        "/lovable-uploads/vies-parana-1.jpg",
+        "/lovable-uploads/vies-parana-2.jpg",
+        "/lovable-uploads/vies-parana-3.jpg",
+        "/lovable-uploads/vies-parana-4.jpg",
+        "/lovable-uploads/vies-parana-5.jpg",
+        "/lovable-uploads/vies-parana-6.jpg",
+        "/lovable-uploads/vies-parana-7.jpg",
+        "/lovable-uploads/vies-parana-8.jpg"
+      ]
+    },
     { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras.", image: undefined },
     { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas.", image: undefined },
     { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento.", image: undefined },
@@ -110,6 +123,7 @@ const OutrosProdutos = () => {
                 category={category.title}
                 imagePlaceholder={`Foto do ${product.name}`}
                 imageUrl={product.image}
+                images={product.images}
               />
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 interface ProductCardProps {
   name: string;
@@ -8,6 +9,7 @@ interface ProductCardProps {
   category?: string;
   imagePlaceholder?: string;
   imageUrl?: string;
+  images?: string[];
 }
 
 export const ProductCard = ({ 
@@ -15,21 +17,66 @@ export const ProductCard = ({
   description, 
   category,
   imagePlaceholder = "Imagem do produto",
-  imageUrl
+  imageUrl,
+  images
 }: ProductCardProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const whatsappNumber = "5511999999999";
   const message = `Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
+  const displayImages = images || (imageUrl ? [imageUrl] : []);
+  const hasMultipleImages = displayImages.length > 1;
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % displayImages.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + displayImages.length) % displayImages.length);
+  };
+
   return (
     <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
       <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
-        {imageUrl ? (
-          <img 
-            src={imageUrl} 
-            alt={name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
+        {displayImages.length > 0 ? (
+          <>
+            <img 
+              src={displayImages[currentImageIndex]} 
+              alt={`${name} - ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            {hasMultipleImages && (
+              <>
+                <button
+                  onClick={previousImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                  aria-label="Imagem anterior"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                  aria-label="Próxima imagem"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                  {displayImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImageIndex ? "bg-white w-4" : "bg-white/50"
+                      }`}
+                      aria-label={`Ver imagem ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </>
         ) : (
           <div className="text-center p-4">
             <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
