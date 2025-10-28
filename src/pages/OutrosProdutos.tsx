@@ -49,7 +49,12 @@ const OutrosProdutos = () => {
     { 
       name: "Renda 7 Mares (17cm)", 
       description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", 
-      image: "/lovable-uploads/renda-7-mares.jpg" 
+      images: [
+        "/lovable-uploads/renda-7-mares.jpg",
+        "/lovable-uploads/renda-7-mares-2.jpg",
+        "/lovable-uploads/renda-7-mares-3.jpg",
+        "/lovable-uploads/renda-7-mares-4.jpg"
+      ]
     },
     { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes.", image: undefined },
     { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos.", image: undefined },
