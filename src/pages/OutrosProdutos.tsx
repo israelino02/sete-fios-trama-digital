@@ -47,6 +47,15 @@ const OutrosProdutos = () => {
         "/lovable-uploads/vies-noronha-3.jpg",
         "/lovable-uploads/vies-noronha-4.jpg"
       ]
+    },
+    { 
+      name: "Viés de poliester rubi", 
+      description: "Viés de poliester rubi disponível nas larguras 16 MM e 25 MM.", 
+      images: [
+        "/lovable-uploads/vies-poliester-rubi-1.jpg",
+        "/lovable-uploads/vies-poliester-rubi-2.jpg",
+        "/lovable-uploads/vies-poliester-rubi-3.jpg"
+      ]
     }
   ];
 
