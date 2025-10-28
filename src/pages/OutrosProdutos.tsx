@@ -24,6 +24,14 @@ const OutrosProdutos = () => {
         "/lovable-uploads/vies-parana-7.jpg",
         "/lovable-uploads/vies-parana-8.jpg"
       ]
+    },
+    { 
+      name: "Elástico Fênix", 
+      description: "Elástico Fênix com largura de 7mm disponível em diversas cores.", 
+      images: [
+        "/lovable-uploads/elastico-fenix-1.jpg",
+        "/lovable-uploads/elastico-fenix-2.jpg"
+      ]
     }
   ];
 
