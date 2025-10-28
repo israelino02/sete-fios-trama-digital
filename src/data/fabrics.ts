@@ -426,7 +426,15 @@ export const fabricsData: FabricsData = {
           usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
           colors: [
             { name: "Branco", code: "PFL-001", swatch: "/lovable-uploads/poliside-branco-novo.jpg" },
-            { name: "Preto", code: "PFL-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" }
+            { name: "Preto", code: "PFL-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" },
+            { name: "Bubblegum", code: "PFL-003", swatch: "/lovable-uploads/darlyng-bubblegum.png" },
+            { name: "Aço", code: "PFL-004", swatch: "/lovable-uploads/darlyng-aco.png" },
+            { name: "Amalia", code: "PFL-005", swatch: "/lovable-uploads/darlyng-amalia.png" },
+            { name: "Amarelo BB", code: "PFL-006", swatch: "/lovable-uploads/darlyng-amarelo-bb.png" },
+            { name: "Aquaril", code: "PFL-007", swatch: "/lovable-uploads/darlyng-aquaril.png" },
+            { name: "Atalaia", code: "PFL-008", swatch: "/lovable-uploads/darlyng-atalaia.png" },
+            { name: "Branco Espuma", code: "PFL-009", swatch: "/lovable-uploads/darlyng-branco-espuma.png" },
+            { name: "Branco 4", code: "PFL-010", swatch: "/lovable-uploads/darlyng-branco-4.png" }
           ]
         },
         {
