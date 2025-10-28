@@ -47,9 +47,14 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                 <img
                   src={color.swatch}
                   alt={`${color.name} - ${color.code}`}
-                  className="w-full h-full object-cover"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover will-change-transform"
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
               </div>
               
@@ -82,9 +87,15 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                 <img
                   src={selectedSwatch.swatch}
                   alt={`${selectedSwatch.name} - ${selectedSwatch.code}`}
+                  width={800}
+                  height={800}
                   className="w-full h-full object-cover"
                   loading="eager"
                   decoding="async"
+                  fetchPriority="high"
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
               </div>
 

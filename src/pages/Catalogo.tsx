@@ -37,9 +37,15 @@ const Catalogo = () => {
                 <img
                   src={category.mainImage}
                   alt={category.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                  width={800}
+                  height={800}
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300 will-change-transform"
                   loading="eager"
                   decoding="async"
+                  fetchPriority="high"
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
               </div>
               

@@ -84,9 +84,15 @@ const FabricDetail = () => {
               <img
                 src={selectedFabric.mainImage}
                 alt={selectedFabric.type}
-                className="w-full h-full object-cover"
+                width={1200}
+                height={675}
+                className="w-full h-full object-cover will-change-transform"
                 loading="eager"
                 decoding="async"
+                fetchPriority="high"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
               />
             </div>
           </div>
