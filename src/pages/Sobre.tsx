@@ -10,11 +10,6 @@ const Sobre = () => {
 
   const valores = [
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Paixão pela Costura",
-      description: "Compartilhamos o amor pela arte de costurar e criamos produtos que inspiram"
-    },
-    {
       icon: <Award className="w-8 h-8" />,
       title: "Qualidade Garantida",
       description: "Selecionamos cuidadosamente cada produto para oferecer sempre o melhor"
