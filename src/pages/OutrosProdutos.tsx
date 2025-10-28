@@ -58,12 +58,7 @@ const OutrosProdutos = () => {
         "/lovable-uploads/renda-7-mares-3.jpg",
         "/lovable-uploads/renda-7-mares-4.jpg"
       ]
-    },
-    { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes.", image: undefined },
-    { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos.", image: undefined },
-    { name: "Renda Guipir 8cm", description: "Renda larga perfeita para barras e detalhes elegantes.", image: undefined },
-    { name: "Renda Chantilly 10cm", description: "Renda sofisticada para peças especiais e festas.", image: undefined },
-    { name: "Renda Chantilly 15cm", description: "Renda ampla para criar peças deslumbrantes.", image: undefined }
+    }
   ];
 
   const categories = [
