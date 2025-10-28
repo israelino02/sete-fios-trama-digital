@@ -440,7 +440,15 @@ export const fabricsData: FabricsData = {
             { name: "Chumbo", code: "PFL-015", swatch: "/lovable-uploads/darlyng-chumbo.png" },
             { name: "Coringa", code: "PFL-016", swatch: "/lovable-uploads/darlyng-coringa.png" },
             { name: "Fantástico", code: "PFL-017", swatch: "/lovable-uploads/darlyng-fantastico.png" },
-            { name: "Frozen", code: "PFL-018", swatch: "/lovable-uploads/darlyng-frozen.png" }
+            { name: "Frozen", code: "PFL-018", swatch: "/lovable-uploads/darlyng-frozen.png" },
+            { name: "Preto", code: "PFL-019", swatch: "/lovable-uploads/darlyng-preto.png" },
+            { name: "Luciana", code: "PFL-020", swatch: "/lovable-uploads/darlyng-luciana.png" },
+            { name: "Marinho", code: "PFL-021", swatch: "/lovable-uploads/darlyng-marinho.png" },
+            { name: "Marrocos", code: "PFL-022", swatch: "/lovable-uploads/darlyng-marrocos.png" },
+            { name: "Mocassim", code: "PFL-023", swatch: "/lovable-uploads/darlyng-mocassim.png" },
+            { name: "Mocha Mousse", code: "PFL-024", swatch: "/lovable-uploads/darlyng-mocha-mousse.png" },
+            { name: "Odalisca", code: "PFL-025", swatch: "/lovable-uploads/darlyng-odalisca.png" },
+            { name: "Pantera", code: "PFL-026", swatch: "/lovable-uploads/darlyng-pantera.png" }
           ]
         },
         {
