@@ -64,6 +64,15 @@ const OutrosProdutos = () => {
         "/lovable-uploads/vies-parana-nova-1.jpg",
         "/lovable-uploads/vies-parana-nova-2.jpg"
       ]
+    },
+    { 
+      name: "Viés de poliamida", 
+      description: "Viés de poliamida disponível nas larguras 16 MM e 25 MM.", 
+      images: [
+        "/lovable-uploads/vies-poliamida-nova-1.jpg",
+        "/lovable-uploads/vies-poliamida-nova-2.jpg",
+        "/lovable-uploads/vies-poliamida-nova-3.jpg"
+      ]
     }
   ];
 
