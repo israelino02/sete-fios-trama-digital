@@ -56,6 +56,14 @@ const OutrosProdutos = () => {
         "/lovable-uploads/vies-poliester-rubi-2.jpg",
         "/lovable-uploads/vies-poliester-rubi-3.jpg"
       ]
+    },
+    { 
+      name: "Viés de poliamida paraná", 
+      description: "Viés de poliamida paraná disponível nas larguras 16 MM e 25 MM.", 
+      images: [
+        "/lovable-uploads/vies-parana-nova-1.jpg",
+        "/lovable-uploads/vies-parana-nova-2.jpg"
+      ]
     }
   ];
 
