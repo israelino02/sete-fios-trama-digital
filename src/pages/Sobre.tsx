@@ -142,13 +142,18 @@ const Sobre = () => {
 
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl text-primary-foreground">👨‍💼</span>
+              <div className="mx-auto mb-4">
+                <img 
+                  src="/lovable-uploads/manasses-ferreira.png" 
+                  alt="Manassés Ferreira - Departamento Comercial"
+                  className="w-32 h-32 rounded-full mx-auto object-cover"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">João Santos</h3>
-              <p className="text-primary font-medium mb-2">Consultor Técnico</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Manassés Ferreira</h3>
+              <p className="text-primary font-medium mb-2">Dep. Comercial</p>
               <p className="text-sm text-muted-foreground">
-                Especialista em tecidos técnicos e industriais, sempre pronto para ajudar com projetos complexos.
+                Especialista em atendimento e soluções comerciais para projetos técnicos e industriais.
               </p>
             </CardContent>
           </Card>
