@@ -87,7 +87,7 @@ const OutrosProdutos = () => {
       ]
     },
     { 
-      name: "Renda 7 Mares (17cm)", 
+      name: "Renda 7 Mares", 
       description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", 
       images: [
         "/lovable-uploads/renda-7-mares.jpg",
