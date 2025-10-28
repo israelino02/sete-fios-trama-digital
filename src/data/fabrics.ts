@@ -448,7 +448,17 @@ export const fabricsData: FabricsData = {
             { name: "Mocassim", code: "PFL-023", swatch: "/lovable-uploads/darlyng-mocassim.png" },
             { name: "Mocha Mousse", code: "PFL-024", swatch: "/lovable-uploads/darlyng-mocha-mousse.png" },
             { name: "Odalisca", code: "PFL-025", swatch: "/lovable-uploads/darlyng-odalisca.png" },
-            { name: "Pantera", code: "PFL-026", swatch: "/lovable-uploads/darlyng-pantera.png" }
+            { name: "Pantera", code: "PFL-026", swatch: "/lovable-uploads/darlyng-pantera.png" },
+            { name: "Vermelho", code: "PFL-027", swatch: "/lovable-uploads/darlyng-vermelho.png" },
+            { name: "Racy", code: "PFL-028", swatch: "/lovable-uploads/darlyng-racy.png" },
+            { name: "Rosa", code: "PFL-029", swatch: "/lovable-uploads/darlyng-rosa.png" },
+            { name: "Rubi", code: "PFL-030", swatch: "/lovable-uploads/darlyng-rubi.png" },
+            { name: "Sandia", code: "PFL-031", swatch: "/lovable-uploads/darlyng-sandia.png" },
+            { name: "Sanremo", code: "PFL-032", swatch: "/lovable-uploads/darlyng-sanremo.png" },
+            { name: "Sensuale", code: "PFL-033", swatch: "/lovable-uploads/darlyng-sensuale.png" },
+            { name: "Teos", code: "PFL-034", swatch: "/lovable-uploads/darlyng-teos.png" },
+            { name: "Tibeton", code: "PFL-035", swatch: "/lovable-uploads/darlyng-tibeton.png" },
+            { name: "Tulipero", code: "PFL-036", swatch: "/lovable-uploads/darlyng-tulipero.png" }
           ]
         },
         {
