@@ -425,8 +425,6 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
           colors: [
-            { name: "Branco", code: "PFL-001", swatch: "/lovable-uploads/poliside-branco-novo.jpg" },
-            { name: "Preto", code: "PFL-002", swatch: "/lovable-uploads/poliside-preto-novo.jpg" },
             { name: "Bubblegum", code: "PFL-003", swatch: "/lovable-uploads/darlyng-bubblegum.png" },
             { name: "Aço", code: "PFL-004", swatch: "/lovable-uploads/darlyng-aco.png" },
             { name: "Amalia", code: "PFL-005", swatch: "/lovable-uploads/darlyng-amalia.png" },
