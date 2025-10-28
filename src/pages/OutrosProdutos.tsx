@@ -8,13 +8,13 @@ const OutrosProdutos = () => {
   const message = "Olá! Gostaria de saber mais sobre os aviamentos e acessórios da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-  const ziperes = [
-    { name: "Zíper Comum 15cm", description: "Zíper tradicional de nylon, ideal para necessaires e bolsas pequenas." },
-    { name: "Zíper Comum 20cm", description: "Zíper resistente para calças, saias e diversos projetos de costura." },
-    { name: "Zíper Comum 30cm", description: "Zíper versátil para vestidos, jaquetas e peças diversas." },
-    { name: "Zíper Comum 40cm", description: "Zíper longo para casacos, moletons e peças maiores." },
-    { name: "Zíper Comum 50cm", description: "Zíper extra longo para jaquetas grandes e projetos especiais." },
-    { name: "Zíper Separador 60cm", description: "Zíper que abre completamente, ideal para casacos e jaquetas." }
+  const vies = [
+    { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras." },
+    { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas." },
+    { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento." },
+    { name: "Viés Duplo 12mm", description: "Viés duplo para acabamentos mais resistentes." },
+    { name: "Viés Duplo 18mm", description: "Viés duplo médio para acabamentos profissionais." },
+    { name: "Viés Estampado 25mm", description: "Viés com estampas para dar charme especial às suas peças." }
   ];
 
   const elasticos = [
@@ -26,32 +26,32 @@ const OutrosProdutos = () => {
     { name: "Elástico 40mm", description: "Elástico extra largo para projetos especiais e cintas." }
   ];
 
-  const elastanos = [
-    { name: "Elastano 10mm", description: "Fita elástica fina com alta elasticidade para acabamentos." },
-    { name: "Elastano 15mm", description: "Elastano médio para aplicações em roupas fitness." },
-    { name: "Elastano 20mm", description: "Elastano versátil para diversas peças de vestuário." },
-    { name: "Elastano 25mm", description: "Elastano resistente para roupas esportivas e fitness." },
-    { name: "Elastano 30mm", description: "Elastano largo para cintas e peças com alta compressão." }
+  const rendas = [
+    { name: "Renda Guipir 3cm", description: "Renda delicada ideal para acabamentos finos e detalhes." },
+    { name: "Renda Guipir 5cm", description: "Renda média versátil para aplicações em diversos tecidos." },
+    { name: "Renda Guipir 8cm", description: "Renda larga perfeita para barras e detalhes elegantes." },
+    { name: "Renda Chantilly 10cm", description: "Renda sofisticada para peças especiais e festas." },
+    { name: "Renda Chantilly 15cm", description: "Renda ampla para criar peças deslumbrantes." }
   ];
 
   const categories = [
     {
-      title: "Zíperes",
-      icon: <Package className="w-6 h-6" />,
-      description: "Zíperes de qualidade em diversos tamanhos e cores",
-      products: ziperes
-    },
-    {
-      title: "Elásticos",
+      title: "Elástico",
       icon: <Package className="w-6 h-6" />,
       description: "Elásticos resistentes para todos os tipos de costura",
       products: elasticos
     },
     {
-      title: "Elastano",
+      title: "Rendas",
       icon: <Package className="w-6 h-6" />,
-      description: "Elastano de alta qualidade para peças que precisam de elasticidade",
-      products: elastanos
+      description: "Rendas delicadas e sofisticadas para acabamentos elegantes",
+      products: rendas
+    },
+    {
+      title: "Viés",
+      icon: <Package className="w-6 h-6" />,
+      description: "Viés de qualidade para acabamentos perfeitos em suas peças",
+      products: vies
     }
   ];
 
