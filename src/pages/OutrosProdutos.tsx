@@ -75,9 +75,9 @@ const OutrosProdutos = () => {
       products: rendas
     },
     {
-      title: "Viés",
+      title: "Aviamentos",
       icon: <Package className="w-6 h-6" />,
-      description: "Viés de qualidade para acabamentos perfeitos em suas peças",
+      description: "Aviamentos de qualidade para acabamentos perfeitos em suas peças",
       products: vies
     }
   ];
