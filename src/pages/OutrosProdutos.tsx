@@ -37,6 +37,16 @@ const OutrosProdutos = () => {
       name: "Elástico Jurere", 
       description: "Elástico Jurere com largura de 12mm disponível em diversas cores.", 
       image: "/lovable-uploads/elastico-jurere.jpg"
+    },
+    { 
+      name: "Viés Noronha", 
+      description: "Viés Noronha disponível em diversas cores para acabamentos de alta qualidade.", 
+      images: [
+        "/lovable-uploads/vies-noronha-1.jpg",
+        "/lovable-uploads/vies-noronha-2.jpg",
+        "/lovable-uploads/vies-noronha-3.jpg",
+        "/lovable-uploads/vies-noronha-4.jpg"
+      ]
     }
   ];
 
