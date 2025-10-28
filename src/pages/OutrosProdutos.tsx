@@ -10,6 +10,7 @@ const OutrosProdutos = () => {
 
   const vies = [
     { name: "Viés de poliamida 16mm", description: "Viés de poliamida largura 16mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida.jpg" },
+    { name: "Viés de poliamida 25mm", description: "Viés de poliamida largura 25mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida-25mm.jpg" },
     { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras.", image: undefined },
     { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas.", image: undefined },
     { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento.", image: undefined },
