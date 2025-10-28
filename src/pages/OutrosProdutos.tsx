@@ -35,7 +35,7 @@ const OutrosProdutos = () => {
     },
     { 
       name: "Elásticos lisos", 
-      description: "Elásticos lisos de alta qualidade disponíveis em diversas cores",
+      description: "Elásticos lisos de alta qualidade disponíveis em diversas cores. Largura 25MM, 30MM e 35MM",
       images: [
         "/lovable-uploads/elasticos-lisos-1.jpg",
         "/lovable-uploads/elasticos-lisos-2.jpg",
