@@ -42,6 +42,17 @@ const OutrosProdutos = () => {
         "/lovable-uploads/elasticos-lisos-3.jpg",
         "/lovable-uploads/elasticos-lisos-4.jpg"
       ]
+    },
+    { 
+      name: "Elásticos de arte pública", 
+      description: "Elásticos de arte pública disponíveis nas larguras 25MM, 30MM e 35MM",
+      images: [
+        "/lovable-uploads/elasticos-arte-publica-1.jpg",
+        "/lovable-uploads/elasticos-arte-publica-2.jpg",
+        "/lovable-uploads/elasticos-arte-publica-3.jpg",
+        "/lovable-uploads/elasticos-arte-publica-4.jpg",
+        "/lovable-uploads/elasticos-arte-publica-5.jpg"
+      ]
     }
   ];
 
