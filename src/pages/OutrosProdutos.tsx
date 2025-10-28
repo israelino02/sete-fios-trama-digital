@@ -71,9 +71,12 @@ const OutrosProdutos = () => {
 
   const rendas = [
     { 
-      name: "Renda 7 Fios (Largura 3,3mm)", 
-      description: "Renda 7 Fios disponível em diversas cores. Composição: Poliamida e Elastano.", 
-      image: "/lovable-uploads/renda-7-fios.jpg" 
+      name: "Renda 7 Fios", 
+      description: "Renda 7 Fios com largura de 3,3 cm disponível em diversas cores. Composição: Poliamida e Elastano.", 
+      images: [
+        "/lovable-uploads/renda-7-fios-1.jpg",
+        "/lovable-uploads/renda-7-fios-2.jpg"
+      ]
     },
     { 
       name: "Renda Noronha (25mm)", 
