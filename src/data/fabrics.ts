@@ -596,9 +596,12 @@ export const fabricsData: FabricsData = {
           ],
           usageExamples: ["Vestidos", "Lingerie", "Blusas", "Camisolas"],
           colors: [
-            { name: "Fucsia", code: "EST-001", swatch: "/lovable-uploads/romantik-fucsia-novo.jpg" },
-            { name: "Tangerina", code: "EST-002", swatch: "/lovable-uploads/romantik-tangerina-nova.jpg" },
-            { name: "Rosa BB", code: "EST-003", swatch: "/lovable-uploads/romantik-rosa-bb.jpg" }
+            { name: "Estampa 1", code: "EST-M-001", swatch: "/lovable-uploads/romantik-estampado-masculino-1.jpg" },
+            { name: "Estampa 2", code: "EST-M-002", swatch: "/lovable-uploads/romantik-estampado-masculino-2.jpg" },
+            { name: "Estampa 3", code: "EST-M-003", swatch: "/lovable-uploads/romantik-estampado-masculino-3.jpg" },
+            { name: "Estampa 4", code: "EST-M-004", swatch: "/lovable-uploads/romantik-estampado-masculino-4.jpg" },
+            { name: "Estampa 5", code: "EST-M-005", swatch: "/lovable-uploads/romantik-estampado-masculino-5.jpg" },
+            { name: "Estampa 6", code: "EST-M-006", swatch: "/lovable-uploads/romantik-estampado-masculino-6.jpg" }
           ]
         }
       ]
