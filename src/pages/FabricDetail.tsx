@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { fabricsData, Fabric } from "@/data/fabrics";
+import { fabricsData, Fabric, getFabricMainImage } from "@/data/fabrics";
 import { ColorModal } from "@/components/ColorModal";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
@@ -82,7 +82,7 @@ const FabricDetail = () => {
           <div>
             <div className="aspect-video rounded-lg overflow-hidden border shadow-lg sticky top-8">
               <img
-                src={selectedFabric.mainImage}
+                src={getFabricMainImage(selectedFabric, gender)}
                 alt={selectedFabric.type}
                 width={1200}
                 height={675}

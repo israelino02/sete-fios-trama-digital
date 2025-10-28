@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tecidos.jpg";
-import { fabricsData } from "@/data/fabrics";
+import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 const Index = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
@@ -114,7 +114,7 @@ const Index = () => {
                     <Badge className="absolute top-2 left-2 text-xs z-10 bg-accent text-primary">
                       {product.badge}
                     </Badge>
-                    <img src={product.fabric?.mainImage} alt={product.fabric?.type} className="w-full h-full object-cover" loading="eager" decoding="async" />
+                    <img src={product.fabric ? getFabricMainImage(product.fabric) : ''} alt={product.fabric?.type} className="w-full h-full object-cover" loading="eager" decoding="async" />
                   </div>
                   
                   <CardContent className="p-4">

@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Fabric } from "@/data/fabrics";
+import { getFabricMainImage } from "@/data/fabrics";
 
 interface FabricModalProps {
   fabric: Fabric | null;
@@ -44,7 +45,7 @@ export const FabricModal = ({
             {/* Main Image */}
             <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
               <img
-                src={fabric.mainImage}
+                src={getFabricMainImage(fabric)}
                 alt={fabric.type}
                 className="w-full h-full object-cover"
               />

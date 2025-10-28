@@ -20,7 +20,7 @@ export interface Fabric {
   description: string;
   composition: string;
   recommendedUse: string;
-  mainImage: string;
+  mainImage: string | { feminino?: string; masculino?: string; default: string };
   colors: ColorSwatch[];
   technicalSpecs?: TechnicalSpec[];
   usageExamples?: string[];
@@ -38,6 +38,19 @@ export interface Category {
 export interface FabricsData {
   categories: Category[];
 }
+
+// Helper function to get the correct main image based on gender
+export const getFabricMainImage = (fabric: Fabric, gender?: string): string => {
+  if (typeof fabric.mainImage === 'string') {
+    return fabric.mainImage;
+  }
+  
+  if (gender && fabric.mainImage[gender as 'feminino' | 'masculino']) {
+    return fabric.mainImage[gender as 'feminino' | 'masculino']!;
+  }
+  
+  return fabric.mainImage.default;
+};
 
 export const fabricsData: FabricsData = {
   categories: [
@@ -571,7 +584,11 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção. 92% Poliéster, 8% Elastano",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda intima, moda praia, moda sleep wear e moda infantil",
-          mainImage: "/lovable-uploads/romantik-estampado-masculino-main.jpg",
+          mainImage: {
+            feminino: "/lovable-uploads/romantik-estampado-feminino-main.jpg",
+            masculino: "/lovable-uploads/romantik-estampado-masculino-main.jpg",
+            default: "/lovable-uploads/romantik-estampado-feminino-main.jpg"
+          },
           technicalSpecs: [
             { label: "Largura", value: "1,60" },
             { label: "Gramatura", value: "150" },
