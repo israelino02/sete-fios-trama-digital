@@ -1,11 +1,35 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
+import logo from "@/assets/sete-fios-logo.png";
 
 const Sobre = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer mais sobre a 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  const valores = [
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Paixão pela Costura",
+      description: "Compartilhamos o amor pela arte de costurar e criamos produtos que inspiram"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Qualidade Garantida",
+      description: "Selecionamos cuidadosamente cada produto para oferecer sempre o melhor"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Atendimento Humano",
+      description: "Nossa equipe está sempre pronta para ajudar com carinho e dedicação"
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Tradição e Inovação",
+      description: "Unimos a experiência tradicional com as tendências mais modernas"
+    }
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -56,6 +80,35 @@ const Sobre = () => {
         </div>
       </section>
 
+      {/* Values Section */}
+      <section className="mb-20">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+            Nossos Valores
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Os princípios que guiam nosso trabalho e relacionamento com nossos clientes.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {valores.map((valor, index) => (
+            <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="pt-6">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
+                  {valor.icon}
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-foreground">
+                  {valor.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {valor.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
 
       {/* Team Section */}
       <section className="mb-20">
