@@ -531,7 +531,7 @@ export const fabricsData: FabricsData = {
       name: "ESTAMPADOS",
       slug: "estampados",
       description: "Tecidos com estampas exclusivas e designs únicos.",
-      mainImage: "/lovable-uploads/romantik-fucsia-novo.jpg",
+      mainImage: "/lovable-uploads/estampados-main.jpg",
       fabrics: [
         {
           type: "ROMANTIK ESTAMPADO",
