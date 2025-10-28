@@ -95,6 +95,11 @@ const OutrosProdutos = () => {
         "/lovable-uploads/renda-7-mares-3.jpg",
         "/lovable-uploads/renda-7-mares-4.jpg"
       ]
+    },
+    { 
+      name: "Renda Belle", 
+      description: "Renda Belle disponível em diversas cores para acabamentos elegantes.", 
+      image: "/lovable-uploads/renda-belle.jpg"
     }
   ];
 
