@@ -142,56 +142,6 @@ const OutrosProdutos = () => {
         </section>
       ))}
 
-      {/* Additional Products Section */}
-      <section className="py-12 bg-muted rounded-lg">
-        <div className="text-center">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-            E muito mais!
-          </h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Além dos produtos listados, temos uma grande variedade de aviamentos, botões, fitas, 
-            viés, entretelas e muito mais. Entre em contato para descobrir tudo que temos disponível.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-2xl">🔘</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Botões</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-2xl">🎀</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Fitas</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-2xl">📏</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Viés</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-2xl">📋</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Entretelas</p>
-            </div>
-          </div>
-
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm"
-          >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Consultar Outros Produtos
-            </a>
-          </Button>
-        </div>
-      </section>
     </div>
   );
 };
