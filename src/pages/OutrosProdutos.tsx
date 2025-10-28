@@ -32,6 +32,16 @@ const OutrosProdutos = () => {
       name: "Elásticos personalizados", 
       description: "Crie elásticos com sua marca",
       image: "/lovable-uploads/elasticos-personalizados.jpg"
+    },
+    { 
+      name: "Elásticos lisos", 
+      description: "Elásticos lisos de alta qualidade disponíveis em diversas cores",
+      images: [
+        "/lovable-uploads/elasticos-lisos-1.jpg",
+        "/lovable-uploads/elasticos-lisos-2.jpg",
+        "/lovable-uploads/elasticos-lisos-3.jpg",
+        "/lovable-uploads/elasticos-lisos-4.jpg"
+      ]
     }
   ];
 
