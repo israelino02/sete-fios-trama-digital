@@ -45,7 +45,7 @@ export const fabricsData: FabricsData = {
       name: "MICROFIBRAS DE POLIESTER",
       slug: "poliester",
       description: "Microfibras de poliéster de alta qualidade, versáteis e duráveis.",
-      mainImage: "/lovable-uploads/romantik-branco-new.jpg",
+      mainImage: "/lovable-uploads/microfibra-poliester-main.jpg",
       fabrics: [
         {
           type: "ROMANTIK LISO",
