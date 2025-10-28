@@ -5,70 +5,54 @@ import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } f
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tecidos.jpg";
 import { fabricsData } from "@/data/fabrics";
-
 const Index = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   // Featured products from fabrics data
-  const featuredProducts = [
-    {
-      fabric: fabricsData.categories.find(c => c.slug === "poliester")?.fabrics.find(f => f.type === "MADRI"),
-      badge: "Mais Vendido",
-      categorySlug: "poliester"
-    },
-    {
-      fabric: fabricsData.categories.find(c => c.slug === "poliamida")?.fabrics.find(f => f.type === "POLIAMIDA PREMIUM"),
-      badge: "Premium",
-      categorySlug: "poliamida"
-    },
-    {
-      fabric: fabricsData.categories.find(c => c.slug === "dry-fit")?.fabrics.find(f => f.type === "DRY FIT PRIME"),
-      badge: "Alta Performance",
-      categorySlug: "dry-fit"
-    },
-    {
-      fabric: fabricsData.categories.find(c => c.slug === "estampados")?.fabrics.find(f => f.type === "ROMANTIK ESTAMPADO"),
-      badge: "Exclusivo",
-      categorySlug: "estampados"
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Scissors className="w-6 h-6" />,
-      title: "Tecidos de Qualidade",
-      description: "Ampla variedade de tecidos para todos os seus projetos de costura"
-    },
-    {
-      icon: <Palette className="w-6 h-6" />,
-      title: "Aviamentos Completos",
-      description: "Zíperes, elásticos, elastano e tudo que você precisa"
-    },
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Atendimento Personalizado",
-      description: "Nossa equipe está pronta para ajudar no seu projeto"
-    }
-  ];
-
-  return (
-    <div className="space-y-0">
+  const featuredProducts = [{
+    fabric: fabricsData.categories.find(c => c.slug === "poliester")?.fabrics.find(f => f.type === "MADRI"),
+    badge: "Mais Vendido",
+    categorySlug: "poliester"
+  }, {
+    fabric: fabricsData.categories.find(c => c.slug === "poliamida")?.fabrics.find(f => f.type === "POLIAMIDA PREMIUM"),
+    badge: "Premium",
+    categorySlug: "poliamida"
+  }, {
+    fabric: fabricsData.categories.find(c => c.slug === "dry-fit")?.fabrics.find(f => f.type === "DRY FIT PRIME"),
+    badge: "Alta Performance",
+    categorySlug: "dry-fit"
+  }, {
+    fabric: fabricsData.categories.find(c => c.slug === "estampados")?.fabrics.find(f => f.type === "ROMANTIK ESTAMPADO"),
+    badge: "Exclusivo",
+    categorySlug: "estampados"
+  }];
+  const features = [{
+    icon: <Scissors className="w-6 h-6" />,
+    title: "Tecidos de Qualidade",
+    description: "Ampla variedade de tecidos para todos os seus projetos de costura"
+  }, {
+    icon: <Palette className="w-6 h-6" />,
+    title: "Aviamentos Completos",
+    description: "Zíperes, elásticos, elastano e tudo que você precisa"
+  }, {
+    icon: <Heart className="w-6 h-6" />,
+    title: "Atendimento Personalizado",
+    description: "Nossa equipe está pronta para ajudar no seu projeto"
+  }];
+  return <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${heroImage})`
+      }}>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
-              ✨ Tecidos de Qualidade Superior
-            </Badge>
+            
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Tecendo ideias, <span>criando</span> possibilidades
             </h1>
@@ -77,11 +61,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button 
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
-              >
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Fale Conosco no WhatsApp
@@ -128,23 +108,13 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {featuredProducts.map((product, index) => (
-              <Link 
-                key={index}
-                to={`/catalogo/${product.categorySlug}/${product.fabric?.type.toLowerCase().replace(/ /g, '-')}`}
-              >
+            {featuredProducts.map((product, index) => <Link key={index} to={`/catalogo/${product.categorySlug}/${product.fabric?.type.toLowerCase().replace(/ /g, '-')}`}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
                     <Badge className="absolute top-2 left-2 text-xs z-10 bg-accent text-primary">
                       {product.badge}
                     </Badge>
-                    <img 
-                      src={product.fabric?.mainImage}
-                      alt={product.fabric?.type}
-                      className="w-full h-full object-cover"
-                      loading="eager"
-                      decoding="async"
-                    />
+                    <img src={product.fabric?.mainImage} alt={product.fabric?.type} className="w-full h-full object-cover" loading="eager" decoding="async" />
                   </div>
                   
                   <CardContent className="p-4">
@@ -153,9 +123,7 @@ const Index = () => {
                         {product.fabric?.type}
                       </h3>
                       <div className="flex text-accent">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3 h-3 fill-current" />
-                        ))}
+                        {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
                       </div>
                     </div>
                     <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
@@ -163,22 +131,17 @@ const Index = () => {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-semibold text-primary">Ver Detalhes</span>
-                      <Button 
-                        size="sm" 
-                        className="hover:scale-105 transition-transform"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.open(whatsappUrl, '_blank');
-                        }}
-                      >
+                      <Button size="sm" className="hover:scale-105 transition-transform" onClick={e => {
+                    e.preventDefault();
+                    window.open(whatsappUrl, '_blank');
+                  }}>
                         <MessageCircle className="w-4 h-4 mr-1" />
                         Consultar
                       </Button>
                     </div>
                   </CardContent>
                 </Card>
-              </Link>
-            ))}
+              </Link>)}
           </div>
 
           <div className="text-center mt-12">
@@ -299,11 +262,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
                   Explore nossa ampla variedade de tecidos para todos os tipos de projeto.
                 </p>
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
-                >
+                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
                   <Link to="/catalogo">Ver Catálogo</Link>
                 </Button>
               </CardContent>
@@ -321,11 +280,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
                   Zíperes, elásticos, elastano e muito mais para complementar seus projetos.
                 </p>
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
-                >
+                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
                   <Link to="/outros-produtos">Ver Produtos</Link>
                 </Button>
               </CardContent>
@@ -343,11 +298,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
                   Tire suas dúvidas e receba atendimento personalizado.
                 </p>
-                <Button 
-                  asChild 
-                  size="lg"
-                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
-                >
+                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
                   <Link to="/contato">Falar Conosco</Link>
                 </Button>
               </CardContent>
@@ -355,8 +306,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
