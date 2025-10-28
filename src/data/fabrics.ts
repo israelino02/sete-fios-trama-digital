@@ -434,7 +434,15 @@ export const fabricsData: FabricsData = {
             { name: "Aquaril", code: "PFL-007", swatch: "/lovable-uploads/darlyng-aquaril.png" },
             { name: "Atalaia", code: "PFL-008", swatch: "/lovable-uploads/darlyng-atalaia.png" },
             { name: "Branco Espuma", code: "PFL-009", swatch: "/lovable-uploads/darlyng-branco-espuma.png" },
-            { name: "Branco 4", code: "PFL-010", swatch: "/lovable-uploads/darlyng-branco-4.png" }
+            { name: "Branco 4", code: "PFL-010", swatch: "/lovable-uploads/darlyng-branco-4.png" },
+            { name: "Herança", code: "PFL-011", swatch: "/lovable-uploads/darlyng-heranca.png" },
+            { name: "Canela", code: "PFL-012", swatch: "/lovable-uploads/darlyng-canela.png" },
+            { name: "Castanho", code: "PFL-013", swatch: "/lovable-uploads/darlyng-castanho.png" },
+            { name: "Chronos", code: "PFL-014", swatch: "/lovable-uploads/darlyng-chronos.png" },
+            { name: "Chumbo", code: "PFL-015", swatch: "/lovable-uploads/darlyng-chumbo.png" },
+            { name: "Coringa", code: "PFL-016", swatch: "/lovable-uploads/darlyng-coringa.png" },
+            { name: "Fantástico", code: "PFL-017", swatch: "/lovable-uploads/darlyng-fantastico.png" },
+            { name: "Frozen", code: "PFL-018", swatch: "/lovable-uploads/darlyng-frozen.png" }
           ]
         },
         {
