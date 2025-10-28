@@ -124,13 +124,18 @@ const Sobre = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl text-primary-foreground">👩‍💼</span>
+              <div className="mx-auto mb-4">
+                <img 
+                  src="/lovable-uploads/raianne-comercial.png" 
+                  alt="Raianne Oliveira - Departamento Comercial"
+                  className="w-32 h-32 rounded-full mx-auto object-cover"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Maria Silva</h3>
-              <p className="text-primary font-medium mb-2">Fundadora</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Raianne Oliveira</h3>
+              <p className="text-primary font-medium mb-2">Dep. Comercial</p>
               <p className="text-sm text-muted-foreground">
-                Costureira há mais de 25 anos, especialista em tecidos finos e aviamentos especiais.
+                Especialista em atendimento e relacionamento com clientes, sempre pronta para ajudar.
               </p>
             </CardContent>
           </Card>
