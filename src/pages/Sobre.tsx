@@ -160,13 +160,18 @@ const Sobre = () => {
 
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl text-primary-foreground">👩‍🎨</span>
+              <div className="mx-auto mb-4">
+                <img 
+                  src="/lovable-uploads/hellen-aragao.png" 
+                  alt="Hellen Aragão - Departamento Financeiro"
+                  className="w-32 h-32 rounded-full mx-auto object-cover"
+                  loading="lazy"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Ana Costa</h3>
-              <p className="text-primary font-medium mb-2">Consultora de Estilo</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Hellen Aragão</h3>
+              <p className="text-primary font-medium mb-2">Dep. Financeiro</p>
               <p className="text-sm text-muted-foreground">
-                Designer de moda com experiência em tendências e combinações de tecidos e cores.
+                Responsável pela gestão financeira e administrativa, garantindo eficiência e organização.
               </p>
             </CardContent>
           </Card>
