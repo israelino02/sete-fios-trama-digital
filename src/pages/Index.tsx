@@ -99,7 +99,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center items-center gap-6 text-accent text-sm font-medium">
               <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
                 <Shield className="w-4 h-4" />
-                <span>Qualidade Garantida</span>
+                <span>Tecidos de alta qualidade</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
                 <Truck className="w-4 h-4" />
