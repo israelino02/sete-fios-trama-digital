@@ -79,15 +79,7 @@ const OutrosProdutos = () => {
       ]
     },
     { 
-      name: "Renda Noronha (25mm)", 
-      description: "Renda Noronha largura 25mm disponível em diversas cores para acabamentos delicados.", 
-      images: [
-        "/lovable-uploads/renda-noronha.jpg",
-        "/lovable-uploads/renda-noronha-2.jpg"
-      ]
-    },
-    { 
-      name: "Renda 7 Mares", 
+      name: "Renda 7 Mares",
       description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", 
       images: [
         "/lovable-uploads/renda-7-mares.jpg",
