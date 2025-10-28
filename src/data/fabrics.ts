@@ -571,7 +571,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção. 92% Poliéster, 8% Elastano",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda intima, moda praia, moda sleep wear e moda infantil",
-          mainImage: "/lovable-uploads/romantik-fucsia-novo.jpg",
+          mainImage: "/lovable-uploads/romantik-estampado-masculino-main.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,60" },
             { label: "Gramatura", value: "150" },
