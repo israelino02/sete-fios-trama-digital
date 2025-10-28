@@ -24,13 +24,7 @@ const OutrosProdutos = () => {
         "/lovable-uploads/vies-parana-7.jpg",
         "/lovable-uploads/vies-parana-8.jpg"
       ]
-    },
-    { name: "Viés Simples 12mm", description: "Viés tradicional para acabamentos básicos em costuras.", image: undefined },
-    { name: "Viés Simples 18mm", description: "Viés médio ideal para acabamento de decotes e cavas.", image: undefined },
-    { name: "Viés Simples 25mm", description: "Viés largo versátil para diversos tipos de acabamento.", image: undefined },
-    { name: "Viés Duplo 12mm", description: "Viés duplo para acabamentos mais resistentes.", image: undefined },
-    { name: "Viés Duplo 18mm", description: "Viés duplo médio para acabamentos profissionais.", image: undefined },
-    { name: "Viés Estampado 25mm", description: "Viés com estampas para dar charme especial às suas peças.", image: undefined }
+    }
   ];
 
   const elasticos = [
