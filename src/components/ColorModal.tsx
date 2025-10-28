@@ -9,10 +9,16 @@ interface ColorModalProps {
   fabric: Fabric | null;
   isOpen: boolean;
   onClose: () => void;
+  gender?: string;
 }
 
-export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
+export const ColorModal = ({ fabric, isOpen, onClose, gender }: ColorModalProps) => {
   if (!fabric) return null;
+
+  // Filter colors by gender if gender is specified
+  const filteredColors = gender 
+    ? fabric.colors.filter(color => color.gender === gender)
+    : fabric.colors;
 
   const handleBudgetRequest = () => {
     const message = `Olá! Gostaria de fazer um orçamento para o tecido ${fabric.type}.`;
@@ -31,7 +37,7 @@ export const ColorModal = ({ fabric, isOpen, onClose }: ColorModalProps) => {
 
         <div className="space-y-6 mt-6">
           {/* Swatches */}
-          <SwatchGrid colors={fabric.colors} fabric={fabric} />
+          <SwatchGrid colors={filteredColors} fabric={fabric} />
 
           {/* Budget button */}
           <div className="flex justify-center pt-4 border-t">

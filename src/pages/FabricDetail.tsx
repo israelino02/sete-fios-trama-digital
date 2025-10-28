@@ -183,6 +183,7 @@ const FabricDetail = () => {
         fabric={selectedFabric}
         isOpen={isColorModalOpen}
         onClose={() => setIsColorModalOpen(false)}
+        gender={gender}
       />
     </div>
   );
