@@ -32,6 +32,11 @@ const OutrosProdutos = () => {
         "/lovable-uploads/elastico-fenix-1.jpg",
         "/lovable-uploads/elastico-fenix-2.jpg"
       ]
+    },
+    { 
+      name: "Elástico Jurere", 
+      description: "Elástico Jurere com largura de 12mm disponível em diversas cores.", 
+      image: "/lovable-uploads/elastico-jurere.jpg"
     }
   ];
 
