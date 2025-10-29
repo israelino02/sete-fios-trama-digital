@@ -98,7 +98,7 @@ const OutrosProdutos = () => {
       images: [
         "/lovable-uploads/elasticos-arte-publica-1.jpg",
         "/lovable-uploads/elasticos-arte-publica-2.jpg",
-        "/lovable-uploads/elasticos-arte-publica-3.jpg",
+        "/lovable-uploads/elastico-arte-publica-3.jpg",
         "/lovable-uploads/elasticos-arte-publica-4.jpg",
         "/lovable-uploads/elasticos-arte-publica-5.jpg"
       ]
