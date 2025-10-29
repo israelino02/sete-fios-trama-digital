@@ -29,6 +29,20 @@ const Index = () => {
     badge: "Exclusivo",
     categorySlug: "estampados"
   }];
+
+  // Helper to check if fabric has gender options
+  const hasGenderOptions = (fabric: any) => {
+    return fabric?.colors?.some((color: any) => color.gender);
+  };
+
+  // Get appropriate link for product
+  const getProductLink = (product: any) => {
+    const fabricType = product.fabric?.type.toLowerCase().replace(/ /g, '-');
+    if (hasGenderOptions(product.fabric)) {
+      return `/catalogo/${product.categorySlug}/${fabricType}/selecionar-genero`;
+    }
+    return `/catalogo/${product.categorySlug}/${fabricType}`;
+  };
   const features = [{
     icon: <Scissors className="w-6 h-6" />,
     title: "Tecidos de Qualidade",
@@ -109,7 +123,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {featuredProducts.map((product, index) => <Link key={index} to={`/catalogo/${product.categorySlug}/${product.fabric?.type.toLowerCase().replace(/ /g, '-')}`}>
+            {featuredProducts.map((product, index) => <Link key={index} to={getProductLink(product)}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative overflow-hidden">
                     <Badge className="absolute top-2 left-2 text-xs z-10 bg-accent text-primary">
