@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { fabricsData } from "@/data/fabrics";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 const Catalogo = () => {
   const navigate = useNavigate();
@@ -33,19 +34,17 @@ const Catalogo = () => {
               aria-label={`Ver tecidos de ${category.name}`}
             >
               {/* Image */}
-              <div className="aspect-square overflow-hidden w-full">
-                <img
+              <div className="w-full">
+                <ImageWithSkeleton
                   src={category.mainImage}
                   alt={category.name}
                   width={800}
                   height={800}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300 will-change-transform"
+                  aspectRatio="aspect-square"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
-                  onError={(e) => {
-                    e.currentTarget.src = "/placeholder.svg";
-                  }}
                 />
               </div>
               

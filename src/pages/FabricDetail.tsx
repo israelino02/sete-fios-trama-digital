@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -80,19 +81,17 @@ const FabricDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column - Main Image */}
           <div>
-            <div className="aspect-video rounded-lg overflow-hidden border shadow-lg sticky top-8">
-              <img
+            <div className="rounded-lg overflow-hidden border shadow-lg sticky top-8">
+              <ImageWithSkeleton
                 src={getFabricMainImage(selectedFabric, gender)}
                 alt={selectedFabric.type}
                 width={1200}
                 height={675}
                 className="w-full h-full object-cover will-change-transform"
+                aspectRatio="aspect-video"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                onError={(e) => {
-                  e.currentTarget.src = "/placeholder.svg";
-                }}
               />
             </div>
           </div>

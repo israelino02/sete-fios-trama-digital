@@ -3,6 +3,7 @@ import { ColorSwatch, Fabric } from "@/data/fabrics";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 interface SwatchGridProps {
   colors: ColorSwatch[];
@@ -44,17 +45,15 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
             >
               {/* Swatch */}
               <div className="aspect-square rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:scale-105">
-                <img
+                <ImageWithSkeleton
                   src={color.swatch}
                   alt={`${color.name} - ${color.code}`}
                   width={400}
                   height={400}
                   className="w-full h-full object-cover will-change-transform"
+                  aspectRatio="aspect-square"
                   loading="lazy"
                   decoding="async"
-                  onError={(e) => {
-                    e.currentTarget.src = "/placeholder.svg";
-                  }}
                 />
               </div>
               

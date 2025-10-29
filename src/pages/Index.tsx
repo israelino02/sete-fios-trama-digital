@@ -5,6 +5,7 @@ import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } f
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tecidos.jpg";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 const Index = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
@@ -110,11 +111,19 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {featuredProducts.map((product, index) => <Link key={index} to={`/catalogo/${product.categorySlug}/${product.fabric?.type.toLowerCase().replace(/ /g, '-')}`}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-                  <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
+                  <div className="relative overflow-hidden">
                     <Badge className="absolute top-2 left-2 text-xs z-10 bg-accent text-primary">
                       {product.badge}
                     </Badge>
-                    <img src={product.fabric ? getFabricMainImage(product.fabric) : ''} alt={product.fabric?.type} className="w-full h-full object-cover" loading="eager" decoding="async" />
+                    <ImageWithSkeleton 
+                      src={product.fabric ? getFabricMainImage(product.fabric) : ''} 
+                      alt={product.fabric?.type || ''} 
+                      className="w-full h-full object-cover" 
+                      aspectRatio="aspect-square"
+                      loading="eager" 
+                      decoding="async" 
+                      fetchPriority="high"
+                    />
                   </div>
                   
                   <CardContent className="p-4">

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fabricsData, Category } from "@/data/fabrics";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 const CategoryDetail = () => {
   const { categorySlug } = useParams();
@@ -48,13 +49,15 @@ const CategoryDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - Image Only */}
           <div>
-            <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
-              <img
+            <div className="rounded-lg overflow-hidden border shadow-lg">
+              <ImageWithSkeleton
                 src={category.mainImage}
                 alt={category.name}
                 className="w-full h-full object-cover"
+                aspectRatio="aspect-video"
                 loading="eager"
                 decoding="async"
+                fetchPriority="high"
               />
             </div>
           </div>
