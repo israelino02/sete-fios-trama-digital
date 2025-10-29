@@ -128,10 +128,7 @@ const Sobre = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Raianne Oliveira</h3>
-              <p className="text-primary font-medium mb-2">Dep. Comercial</p>
-              <p className="text-sm text-muted-foreground">
-                Especialista em atendimento e relacionamento com clientes, sempre pronta para ajudar.
-              </p>
+              <p className="text-primary font-medium">Dep. Comercial</p>
             </CardContent>
           </Card>
 
@@ -146,10 +143,7 @@ const Sobre = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Manassés Ferreira</h3>
-              <p className="text-primary font-medium mb-2">Dep. Comercial</p>
-              <p className="text-sm text-muted-foreground">
-                Especialista em atendimento e soluções comerciais para projetos técnicos e industriais.
-              </p>
+              <p className="text-primary font-medium">Dep. Comercial</p>
             </CardContent>
           </Card>
 
@@ -164,10 +158,7 @@ const Sobre = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Hellen Aragão</h3>
-              <p className="text-primary font-medium mb-2">Dep. Financeiro</p>
-              <p className="text-sm text-muted-foreground">
-                Responsável pela gestão financeira e administrativa, garantindo eficiência e organização.
-              </p>
+              <p className="text-primary font-medium">Dep. Financeiro</p>
             </CardContent>
           </Card>
         </div>
