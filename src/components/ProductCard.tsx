@@ -21,7 +21,7 @@ export const ProductCard = ({
   images
 }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5581994616071";
   const message = `Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

@@ -18,7 +18,7 @@ export const FeaturedProductCard = ({
   badge,
   rating = 5
 }: FeaturedProductCardProps) => {
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5581994616071";
   const message = `Olá! Tenho interesse no produto: ${name} por ${price}. Poderia me dar mais informações?`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

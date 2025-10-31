@@ -13,7 +13,7 @@ import heroSlide3 from "@/assets/hero-slide-3.png";
 import heroSlide4 from "@/assets/hero-slide-4.png";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   

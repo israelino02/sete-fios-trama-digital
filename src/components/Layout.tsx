@@ -19,7 +19,7 @@ const navigation = [
 ];
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "5511999999999"; // Substitua pelo número real
+  const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

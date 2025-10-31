@@ -17,7 +17,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
     if (!selectedSwatch || !fabric) return;
     
     const message = `Olá! Gostaria de fazer um orçamento para:\n\nTecido: ${fabric.type}\nCor: ${selectedSwatch.name}\nCódigo: ${selectedSwatch.code}`;
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

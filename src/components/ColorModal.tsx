@@ -22,7 +22,7 @@ export const ColorModal = ({ fabric, isOpen, onClose, gender }: ColorModalProps)
 
   const handleBudgetRequest = () => {
     const message = `Olá! Gostaria de fazer um orçamento para o tecido ${fabric.type}.`;
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

@@ -43,7 +43,7 @@ const FabricDetail = () => {
       message += ` (Categoria: ${gender})`;
     }
     
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

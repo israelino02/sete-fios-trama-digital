@@ -4,7 +4,7 @@ import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
 import logo from "@/assets/sete-fios-logo.png";
 
 const Sobre = () => {
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer mais sobre a 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

@@ -27,7 +27,7 @@ const ProductDetail = () => {
 
   const handleWhatsAppContact = () => {
     const message = `Olá! Tenho interesse no tecido ${product.nome} - Código: ${product.codigo}. Gostaria de mais informações!`;
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
