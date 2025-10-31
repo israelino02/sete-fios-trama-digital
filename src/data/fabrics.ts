@@ -69,9 +69,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda íntima, sleep wear, vestidos e peças básicas",
           mainImage: "/lovable-uploads/romantik-liso-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,65" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,60MM" }
+            { label: "Largura", value: "1,65m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,60m²/kg" }
           ],
           usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
@@ -118,9 +118,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda íntima e sleep wear",
           mainImage: "/lovable-uploads/poliside-principal-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,70" },
-            { label: "Gramatura", value: "165" },
-            { label: "Rendimento", value: "3,80MM" }
+            { label: "Largura", value: "1,70m" },
+            { label: "Gramatura", value: "165g/m²" },
+            { label: "Rendimento", value: "3,80m²/kg" }
           ],
           usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           technologies: [
@@ -174,9 +174,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda íntima e sleep wear",
           mainImage: "/lovable-uploads/hawai-principal-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "170" },
-            { label: "Gramatura", value: "185" },
-            { label: "Rendimento", value: "3,70" }
+            { label: "Largura", value: "170m" },
+            { label: "Gramatura", value: "185g/m²" },
+            { label: "Rendimento", value: "3,70m²/kg" }
           ],
           usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           colors: [
@@ -219,9 +219,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda praia e moda íntima",
           mainImage: "/lovable-uploads/madri-principal-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,70" },
-            { label: "Gramatura", value: "160" },
-            { label: "Rendimento", value: "4MM" }
+            { label: "Largura", value: "1,70m" },
+            { label: "Gramatura", value: "160g/m²" },
+            { label: "Rendimento", value: "4m²/kg" }
           ],
           usageExamples: ["Camisa UV", "Lingerie", "Baby Dolls", "Moda Infantil", "Cuecas"],
           colors: [
@@ -265,7 +265,7 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/milao-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
-            { label: "Gramatura", value: "165" },
+            { label: "Gramatura", value: "165g/m²" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
           usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
@@ -309,9 +309,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
           mainImage: "/lovable-uploads/romantik-risca-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,65" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,60MM" }
+            { label: "Largura", value: "1,65m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,60m²/kg" }
           ],
           usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
@@ -343,9 +343,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
           mainImage: "/lovable-uploads/romantik-mesclado-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,65" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,60MM" }
+            { label: "Largura", value: "1,65m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,60m²/kg" }
           ],
           usageExamples: ["Fitness", "Cueca", "Blusas", "Peças Básicas", "Camisolas"],
           technologies: [
@@ -380,8 +380,8 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "160m" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,47" }
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,47m²/kg" }
           ],
           usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Calcinha", "Cuecas", "Saias", "Vestidos Leves"],
           colors: [
@@ -434,8 +434,8 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/poliamida-darlyng-principal.jpg",
           technicalSpecs: [
             { label: "Largura", value: "160m" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,47" }
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,47m²/kg" }
           ],
           usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
           colors: [
@@ -484,8 +484,8 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/poliamida-premium-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "160m" },
-            { label: "Gramatura", value: "180" },
-            { label: "Rendimento", value: "3,47" }
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,47m²/kg" }
           ],
           usageExamples: ["Biquínis", "Maiôs", "Tops", "Shorts", "Macacões", "Calcinhas", "Sutiãs", "Cuecas", "Blusas ajustadas", "Vestidos leves", "Saias confortáveis", "Camisetas"],
           colors: [
@@ -542,9 +542,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para quem busca conforto térmico e leveza em roupas esportivas ou casuais.",
           mainImage: "/lovable-uploads/dryfit-main.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,60" },
-            { label: "Gramatura", value: "150" },
-            { label: "Rendimento", value: "4,15" }
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "150g/m²" },
+            { label: "Rendimento", value: "4,15m²/kg" }
           ],
           usageExamples: ["Moda fitness", "Moda esportiva", "Moda casual", "Uniformes profissionais"],
           technologies: [
@@ -591,9 +591,9 @@ export const fabricsData: FabricsData = {
             default: "/lovable-uploads/romantik-estampado-feminino-main.jpg"
           },
           technicalSpecs: [
-            { label: "Largura", value: "1,60" },
-            { label: "Gramatura", value: "150" },
-            { label: "Rendimento", value: "4,15" }
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "150g/m²" },
+            { label: "Rendimento", value: "4,15m²/kg" }
           ],
           usageExamples: ["Vestidos", "Lingerie", "Blusas", "Camisolas"],
           colors: [
