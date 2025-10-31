@@ -75,14 +75,6 @@ const Index = () => {
               Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Fale Conosco no WhatsApp
-                </a>
-              </Button>
-            </div>
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center items-center gap-6 text-accent text-sm font-medium">
