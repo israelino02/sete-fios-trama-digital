@@ -46,9 +46,7 @@ export const HeroCarousel = ({ images, interval = 4000, onSlideChange }: HeroCar
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+        />
       ))}
       
       {/* Navigation Arrows */}
