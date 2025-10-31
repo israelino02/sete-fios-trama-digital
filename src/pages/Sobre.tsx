@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
-import logo from "@/assets/sete-fios-logo.png";
+import logo from "@/assets/logo-7fios.jpg";
 
 const Sobre = () => {
   const whatsappNumber = "5581994616071";

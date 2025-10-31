@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
-import logo7Fios from "@/assets/7fios-logo.png";
+import logo7Fios from "@/assets/logo-7fios.jpg";
 
 interface LayoutProps {
   children: ReactNode;
