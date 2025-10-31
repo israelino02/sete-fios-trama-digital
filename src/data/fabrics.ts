@@ -119,7 +119,7 @@ export const fabricsData: FabricsData = {
           mainImage: "/lovable-uploads/poliside-principal-novo.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70" },
-            { label: "Gramatura", value: "160" },
+            { label: "Gramatura", value: "165" },
             { label: "Rendimento", value: "3,80MM" }
           ],
           usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
