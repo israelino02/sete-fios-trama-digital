@@ -47,7 +47,7 @@ export const HeroCarousel = ({ images, interval = 4000, onSlideChange }: HeroCar
           }`}
           style={{ 
             backgroundImage: `url(${image})`,
-            backgroundPosition: index === 2 ? 'right center' : 'center center'
+            backgroundPosition: index === 2 ? 'left center' : 'center center'
           }}
         />
       ))}
