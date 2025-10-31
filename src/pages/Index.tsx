@@ -3,13 +3,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/loja-7fios.jpg";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { HeroCarousel } from "@/components/HeroCarousel";
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.png";
+import heroSlide3 from "@/assets/hero-slide-3.png";
+import heroSlide4 from "@/assets/hero-slide-4.png";
 const Index = () => {
   const whatsappNumber = "5511999999999";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  
+  const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
   // Featured products from fabrics data
   const featuredProducts = [{
@@ -59,11 +65,7 @@ const Index = () => {
   return <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url(${heroImage})`
-      }}>
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+        <HeroCarousel images={heroImages} interval={4000} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
