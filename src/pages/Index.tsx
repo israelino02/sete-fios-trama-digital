@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-tecidos.jpg";
+import heroImage from "@/assets/loja-7fios.jpg";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 const Index = () => {
