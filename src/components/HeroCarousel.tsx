@@ -42,10 +42,13 @@ export const HeroCarousel = ({ images, interval = 4000, onSlideChange }: HeroCar
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+          className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ 
+            backgroundImage: `url(${image})`,
+            backgroundPosition: index === 2 ? 'right center' : 'center center'
+          }}
         />
       ))}
       
