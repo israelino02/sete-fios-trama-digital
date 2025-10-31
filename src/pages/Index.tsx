@@ -82,12 +82,6 @@ const Index = () => {
                   Fale Conosco no WhatsApp
                 </a>
               </Button>
-              
-              <Button asChild variant="secondary" size="lg" className="text-lg px-8 py-4 h-auto bg-accent text-primary hover:bg-accent/90">
-                <Link to="/catalogo">
-                  Ver Catálogo
-                </Link>
-              </Button>
             </div>
 
             {/* Trust Indicators */}
