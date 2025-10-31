@@ -542,9 +542,9 @@ export const fabricsData: FabricsData = {
           recommendedUse: "Ideal para quem busca conforto térmico e leveza em roupas esportivas ou casuais.",
           mainImage: "/lovable-uploads/dryfit-main.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "1,60m" },
+            { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "150g/m²" },
-            { label: "Rendimento", value: "4,15m²/kg" }
+            { label: "Rendimento", value: "4m²/kg" }
           ],
           usageExamples: ["Moda fitness", "Moda esportiva", "Moda casual", "Uniformes profissionais"],
           technologies: [
