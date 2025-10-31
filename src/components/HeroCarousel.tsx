@@ -3,18 +3,23 @@ import { useEffect, useState } from "react";
 interface HeroCarouselProps {
   images: string[];
   interval?: number;
+  onSlideChange?: (index: number) => void;
 }
 
-export const HeroCarousel = ({ images, interval = 4000 }: HeroCarouselProps) => {
+export const HeroCarousel = ({ images, interval = 4000, onSlideChange }: HeroCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % images.length;
+        onSlideChange?.(newIndex);
+        return newIndex;
+      });
     }, interval);
 
     return () => clearInterval(timer);
-  }, [images.length, interval]);
+  }, [images.length, interval, onSlideChange]);
 
   return (
     <div className="absolute inset-0">
