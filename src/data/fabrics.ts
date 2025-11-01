@@ -606,7 +606,10 @@ export const fabricsData: FabricsData = {
             { name: "Estampa 1", code: "EST-I-001", swatch: "/lovable-uploads/romantik-estampado-feminino-1.jpg", gender: "infantil" },
             { name: "Estampa 2", code: "EST-I-002", swatch: "/lovable-uploads/romantik-estampado-feminino-2.jpg", gender: "infantil" },
             { name: "Estampa 3", code: "EST-I-003", swatch: "/lovable-uploads/romantik-estampado-feminino-3.jpg", gender: "infantil" },
-            { name: "Estampa 4", code: "EST-I-004", swatch: "/lovable-uploads/romantik-estampado-feminino-4.jpg", gender: "infantil" }
+            { name: "Estampa 4", code: "EST-I-004", swatch: "/lovable-uploads/romantik-estampado-feminino-4.jpg", gender: "infantil" },
+            { name: "Estampa 5", code: "EST-I-005", swatch: "/lovable-uploads/romantik-estampado-infantil-5.jpg", gender: "infantil" },
+            { name: "Estampa 6", code: "EST-I-006", swatch: "/lovable-uploads/romantik-estampado-infantil-6.jpg", gender: "infantil" },
+            { name: "Estampa 7", code: "EST-I-007", swatch: "/lovable-uploads/romantik-estampado-infantil-7.jpg", gender: "infantil" }
           ]
         }
       ]
