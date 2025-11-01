@@ -21,7 +21,7 @@ export interface Fabric {
   description: string;
   composition: string;
   recommendedUse: string;
-  mainImage: string | { feminino?: string; masculino?: string; default: string };
+  mainImage: string | { feminino?: string; masculino?: string; infantil?: string; default: string };
   colors: ColorSwatch[];
   technicalSpecs?: TechnicalSpec[];
   usageExamples?: string[];
@@ -46,8 +46,8 @@ export const getFabricMainImage = (fabric: Fabric, gender?: string): string => {
     return fabric.mainImage;
   }
   
-  if (gender && fabric.mainImage[gender as 'feminino' | 'masculino']) {
-    return fabric.mainImage[gender as 'feminino' | 'masculino']!;
+  if (gender && fabric.mainImage[gender as 'feminino' | 'masculino' | 'infantil']) {
+    return fabric.mainImage[gender as 'feminino' | 'masculino' | 'infantil']!;
   }
   
   return fabric.mainImage.default;
@@ -588,6 +588,7 @@ export const fabricsData: FabricsData = {
           mainImage: {
             feminino: "/lovable-uploads/romantik-estampado-feminino-main.jpg",
             masculino: "/lovable-uploads/romantik-estampado-masculino-main.jpg",
+            infantil: "/lovable-uploads/romantik-estampado-feminino-main.jpg",
             default: "/lovable-uploads/romantik-estampado-feminino-main.jpg"
           },
           technicalSpecs: [
@@ -608,7 +609,13 @@ export const fabricsData: FabricsData = {
             { name: "Estampa 3", code: "EST-F-003", swatch: "/lovable-uploads/romantik-estampado-feminino-3.jpg", gender: "feminino" },
             { name: "Estampa 4", code: "EST-F-004", swatch: "/lovable-uploads/romantik-estampado-feminino-4.jpg", gender: "feminino" },
             { name: "Estampa 5", code: "EST-F-005", swatch: "/lovable-uploads/romantik-estampado-feminino-5.jpg", gender: "feminino" },
-            { name: "Estampa 6", code: "EST-F-006", swatch: "/lovable-uploads/romantik-estampado-feminino-6.jpg", gender: "feminino" }
+            { name: "Estampa 6", code: "EST-F-006", swatch: "/lovable-uploads/romantik-estampado-feminino-6.jpg", gender: "feminino" },
+            { name: "Estampa 1", code: "EST-I-001", swatch: "/lovable-uploads/romantik-estampado-feminino-1.jpg", gender: "infantil" },
+            { name: "Estampa 2", code: "EST-I-002", swatch: "/lovable-uploads/romantik-estampado-feminino-2.jpg", gender: "infantil" },
+            { name: "Estampa 3", code: "EST-I-003", swatch: "/lovable-uploads/romantik-estampado-feminino-3.jpg", gender: "infantil" },
+            { name: "Estampa 4", code: "EST-I-004", swatch: "/lovable-uploads/romantik-estampado-feminino-4.jpg", gender: "infantil" },
+            { name: "Estampa 5", code: "EST-I-005", swatch: "/lovable-uploads/romantik-estampado-feminino-5.jpg", gender: "infantil" },
+            { name: "Estampa 6", code: "EST-I-006", swatch: "/lovable-uploads/romantik-estampado-feminino-6.jpg", gender: "infantil" }
           ]
         }
       ]

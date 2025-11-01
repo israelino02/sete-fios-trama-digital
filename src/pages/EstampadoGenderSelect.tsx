@@ -7,7 +7,7 @@ const EstampadoGenderSelect = () => {
   const navigate = useNavigate();
   const { categorySlug, fabricType } = useParams();
 
-  const handleGenderSelect = (gender: "masculino" | "feminino") => {
+  const handleGenderSelect = (gender: "masculino" | "feminino" | "infantil") => {
     navigate(`/catalogo/${categorySlug}/${fabricType}/${gender}`);
   };
 
@@ -35,7 +35,7 @@ const EstampadoGenderSelect = () => {
         </div>
 
         {/* Gender Selection Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <Card
             className="p-8 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
             onClick={() => handleGenderSelect("masculino")}
@@ -62,6 +62,21 @@ const EstampadoGenderSelect = () => {
               </h2>
               <p className="text-muted-foreground">
                 Estampas para o público feminino
+              </p>
+            </div>
+          </Card>
+
+          <Card
+            className="p-8 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+            onClick={() => handleGenderSelect("infantil")}
+          >
+            <div className="text-center space-y-4">
+              <div className="text-6xl mb-4">🧸</div>
+              <h2 className="text-2xl font-display font-bold text-foreground group-hover:text-primary transition-colors">
+                Infantil
+              </h2>
+              <p className="text-muted-foreground">
+                Estampas para o público infantil
               </p>
             </div>
           </Card>
