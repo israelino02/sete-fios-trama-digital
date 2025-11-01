@@ -586,10 +586,10 @@ export const fabricsData: FabricsData = {
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda intima, moda praia, moda sleep wear e moda infantil",
           mainImage: {
-            feminino: "/lovable-uploads/romantik-estampado-feminino-main.jpg",
-            masculino: "/lovable-uploads/romantik-estampado-masculino-main.jpg",
-            infantil: "/lovable-uploads/romantik-estampado-feminino-main.jpg",
-            default: "/lovable-uploads/romantik-estampado-feminino-main.jpg"
+            feminino: "/lovable-uploads/romantik-estampado-main.jpg",
+            masculino: "/lovable-uploads/romantik-estampado-main.jpg",
+            infantil: "/lovable-uploads/romantik-estampado-main.jpg",
+            default: "/lovable-uploads/romantik-estampado-main.jpg"
           },
           technicalSpecs: [
             { label: "Largura", value: "1,60m" },
