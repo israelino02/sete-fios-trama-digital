@@ -122,7 +122,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "165g/m²" },
             { label: "Rendimento", value: "3,80m²/kg" }
           ],
-          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
+          usageExamples: ["Camisa UV", "Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
           technologies: [
             { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
             { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
