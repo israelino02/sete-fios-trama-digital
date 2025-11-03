@@ -283,7 +283,7 @@ const Index = () => {
                   Outros Produtos
                 </h3>
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
-                  Zíperes, elásticos, elastano e muito mais para complementar seus projetos.
+                  Elásticos, Rendas e Aviamentos para complementar seus projetos.
                 </p>
                 <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
                   <Link to="/outros-produtos">Ver Produtos</Link>
