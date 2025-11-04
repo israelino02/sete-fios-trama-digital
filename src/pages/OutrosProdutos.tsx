@@ -9,23 +9,7 @@ const OutrosProdutos = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const vies = [
-    { name: "Viés de poliamida 16mm", description: "Viés de poliamida largura 16mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida.jpg" },
-    { name: "Viés de poliamida 25mm", description: "Viés de poliamida largura 25mm para acabamentos duráveis e resistentes.", image: "/lovable-uploads/vies-poliamida-25mm.jpg" },
-    { 
-      name: "Viés de poliamida Paraná", 
-      description: "Viés de poliamida Paraná disponível em diversas cores para acabamentos de alta qualidade.", 
-      images: [
-        "/lovable-uploads/vies-parana-1.jpg",
-        "/lovable-uploads/vies-parana-2.jpg",
-        "/lovable-uploads/vies-parana-3.jpg",
-        "/lovable-uploads/vies-parana-4.jpg",
-        "/lovable-uploads/vies-parana-5.jpg",
-        "/lovable-uploads/vies-parana-6.jpg",
-        "/lovable-uploads/vies-parana-7.jpg",
-        "/lovable-uploads/vies-parana-8.jpg"
-      ]
-    },
-    { 
+    {
       name: "Elástico Fênix", 
       description: "Elástico Fênix com largura de 7mm disponível em diversas cores.", 
       images: [
