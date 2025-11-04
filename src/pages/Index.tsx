@@ -122,6 +122,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Vídeo Institucional */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary text-primary-foreground">🎥 Vídeo Institucional</Badge>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Conheça Nossa História
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Descubra como a Sete Fios Têxtil transforma ideias em realidade
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-warm aspect-video">
+              <video 
+                controls 
+                className="w-full h-full"
+                poster="/placeholder.svg"
+              >
+                <source src="/videos/video-institucional.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Missão, Visão e Valores */}
       <section className="py-16 lg:py-24 bg-gradient-subtle">
         <div className="container mx-auto px-4">
