@@ -68,30 +68,7 @@ const Index = () => {
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <HeroCarousel images={heroImages} interval={8000} onSlideChange={setCurrentSlide} />
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className={`max-w-4xl mx-auto text-center text-white transition-opacity duration-500 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-            
-            
-            
-            
-
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-6 text-accent text-sm font-medium">
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
-                <Shield className="w-4 h-4" />
-                <span>Tecidos de alta qualidade</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
-                <Truck className="w-4 h-4" />
-                <span>Entrega Rápida</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
-                <Users className="w-4 h-4" />
-                <span>+10 Anos de Experiência</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Featured Products */}
