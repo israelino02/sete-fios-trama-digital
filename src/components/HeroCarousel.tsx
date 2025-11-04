@@ -34,7 +34,7 @@ export const HeroCarousel = ({
     return () => clearInterval(timer);
   }, [images.length, interval, onSlideChange]);
   return <div className="absolute inset-0">
-      {images.map((image, index) => <div key={index} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      {images.map((image, index) => <div key={index} className={`absolute inset-0 bg-contain md:bg-cover bg-no-repeat transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
       backgroundImage: `url(${image})`,
       backgroundPosition: index === 2 ? 'left center' : 'center center'
     }} />)}
