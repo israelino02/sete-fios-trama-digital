@@ -140,7 +140,7 @@ const Index = () => {
               <video 
                 controls 
                 className="w-full h-full"
-                poster="/placeholder.svg"
+                poster="/images/video-poster.jpg"
               >
                 <source src="/videos/video-institucional.mp4" type="video/mp4" />
                 Seu navegador não suporta a reprodução de vídeos.
