@@ -588,7 +588,7 @@ export const fabricsData: FabricsData = {
           mainImage: {
             feminino: "/lovable-uploads/romantik-estampado-feminino-6.jpg",
             masculino: "/lovable-uploads/romantik-estampado-main.jpg",
-            infantil: "/lovable-uploads/romantik-estampado-main.jpg",
+            infantil: "/lovable-uploads/romantik-estampado-infantil-7.jpg",
             default: "/lovable-uploads/romantik-estampado-main.jpg"
           },
           technicalSpecs: [
