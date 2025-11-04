@@ -106,7 +106,10 @@ const OutrosProdutos = () => {
         "/lovable-uploads/renda-7-mares-5.jpg",
         "/lovable-uploads/renda-7-mares-6.jpg",
         "/lovable-uploads/renda-7-mares-7.jpg",
-        "/lovable-uploads/renda-7-mares-8.jpg"
+        "/lovable-uploads/renda-7-mares-8.jpg",
+        "/lovable-uploads/renda-7-mares-9.jpg",
+        "/lovable-uploads/renda-7-mares-10.jpg",
+        "/lovable-uploads/renda-7-mares-11.jpg"
       ]
     },
     { 
