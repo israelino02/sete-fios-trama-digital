@@ -3,12 +3,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface HeroCarouselProps {
   images: string[];
   tabletImages?: string[];
+  mobileImages?: string[];
   interval?: number;
   onSlideChange?: (index: number) => void;
 }
 export const HeroCarousel = ({
   images,
   tabletImages,
+  mobileImages,
   interval = 4000,
   onSlideChange
 }: HeroCarouselProps) => {
@@ -36,14 +38,23 @@ export const HeroCarousel = ({
     return () => clearInterval(timer);
   }, [images.length, interval, onSlideChange]);
   return <div className="absolute inset-0">
-      {/* Desktop/Mobile images */}
-      {images.map((image, index) => <div key={`desktop-${index}`} className={`absolute inset-0 bg-contain lg:bg-cover bg-no-repeat transition-opacity duration-1000 ${tabletImages ? 'hidden lg:block' : ''} ${index === currentIndex ? "opacity-100" : "opacity-0"} ${index === 0 ? 'lg:bg-left-center xl:bg-center' : ''}`} style={{
+      {/* Desktop images */}
+      {images.map((image, index) => <div key={`desktop-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 hidden lg:block ${index === currentIndex ? "opacity-100" : "opacity-0"} ${index === 0 ? 'lg:bg-left-center xl:bg-center' : ''}`} style={{
       backgroundImage: `url(${image})`,
       backgroundPosition: index === 2 ? 'left center' : 'center center'
     }} />)}
 
       {/* Tablet images */}
       {tabletImages && tabletImages.map((image, index) => <div key={`tablet-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 hidden md:block lg:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      backgroundImage: `url(${image})`,
+      backgroundPosition: 'center center'
+    }} />)}
+
+      {/* Mobile images */}
+      {mobileImages ? mobileImages.map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 bg-contain bg-no-repeat transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      backgroundImage: `url(${image})`,
+      backgroundPosition: 'center center'
+    }} />) : images.map((image, index) => <div key={`mobile-fallback-${index}`} className={`absolute inset-0 bg-contain bg-no-repeat transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
       backgroundImage: `url(${image})`,
       backgroundPosition: 'center center'
     }} />)}
