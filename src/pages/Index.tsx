@@ -52,9 +52,13 @@ const Index = () => {
   // Get appropriate link for product
   const getProductLink = (product: any) => {
     const fabricType = product.fabric?.type.toLowerCase().replace(/ /g, '-');
+    
+    // Romantik Estampado deve ir para seleção de gênero
     if (hasGenderOptions(product.fabric)) {
       return `/catalogo/${product.categorySlug}/${fabricType}/selecionar-genero`;
     }
+    
+    // Outros tecidos vão direto para o detalhe
     return `/catalogo/${product.categorySlug}/${fabricType}`;
   };
   const features = [{
