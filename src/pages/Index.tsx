@@ -16,7 +16,6 @@ const Index = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
   // Featured products from fabrics data
@@ -72,9 +71,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className={`max-w-4xl mx-auto text-center text-white transition-opacity duration-500 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
-              Tecendo ideias, <span>criando</span> possibilidades
-            </h1>
+            
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
             </p>
@@ -116,15 +113,7 @@ const Index = () => {
             {featuredProducts.map((product, index) => <Link key={index} to={getProductLink(product)}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <ImageWithSkeleton
-                      src={product.fabric ? getFabricMainImage(product.fabric) : ''} 
-                      alt={product.fabric?.type || ''} 
-                      className="w-full h-full object-cover" 
-                      aspectRatio="aspect-square"
-                      loading="eager" 
-                      decoding="async" 
-                      fetchPriority="high"
-                    />
+                    <ImageWithSkeleton src={product.fabric ? getFabricMainImage(product.fabric) : ''} alt={product.fabric?.type || ''} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="eager" decoding="async" fetchPriority="high" />
                   </div>
                   
                   <CardContent className="p-4">
