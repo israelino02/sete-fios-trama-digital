@@ -12,12 +12,18 @@ import heroSlide2 from "@/assets/hero-slide-2.png";
 import heroSlide3 from "@/assets/hero-slide-3.png";
 import heroSlide4 from "@/assets/hero-slide-4.png";
 import heroSlide5 from "@/assets/hero-slide-5.png";
+import heroTablet1 from "@/assets/hero-tablet-1.png";
+import heroTablet2 from "@/assets/hero-tablet-2.png";
+import heroTablet3 from "@/assets/hero-tablet-3.png";
+import heroTablet4 from "@/assets/hero-tablet-4.png";
+import heroTablet5 from "@/assets/hero-tablet-5.png";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
+  const heroTabletImages = [heroTablet1, heroTablet2, heroTablet3, heroTablet4, heroTablet5];
 
   // Featured products from fabrics data
   const featuredProducts = [{
@@ -67,7 +73,7 @@ const Index = () => {
   return <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <HeroCarousel images={heroImages} interval={8000} onSlideChange={setCurrentSlide} />
+        <HeroCarousel images={heroImages} tabletImages={heroTabletImages} interval={8000} onSlideChange={setCurrentSlide} />
         
         
       </section>
