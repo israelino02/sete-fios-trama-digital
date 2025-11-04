@@ -11,12 +11,13 @@ import heroSlide1 from "@/assets/hero-slide-1.png";
 import heroSlide2 from "@/assets/hero-slide-2.png";
 import heroSlide3 from "@/assets/hero-slide-3.png";
 import heroSlide4 from "@/assets/hero-slide-4.png";
+import heroSlide5 from "@/assets/hero-slide-5.png";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
+  const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
 
   // Featured products from fabrics data
   const featuredProducts = [{
