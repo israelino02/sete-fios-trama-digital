@@ -72,9 +72,7 @@ const Index = () => {
           <div className={`max-w-4xl mx-auto text-center text-white transition-opacity duration-500 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             
             
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Na <strong>7 Fios</strong>, você encontra os melhores tecidos, aviamentos e acessórios para dar vida às suas criações.
-            </p>
+            
             
 
             {/* Trust Indicators */}
