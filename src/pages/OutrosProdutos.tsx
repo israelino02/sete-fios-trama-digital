@@ -50,7 +50,7 @@ const OutrosProdutos = () => {
       ]
     },
     { 
-      name: "Viés de poliamida", 
+      name: "Viés de poliamida 7 fios", 
       description: "Viés de poliamida disponível nas larguras 16 MM e 25 MM.", 
       images: [
         "/lovable-uploads/vies-poliamida-nova-1.jpg",
