@@ -95,18 +95,18 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
             {featuredProducts.map((product, index) => <Link key={index} to={getProductLink(product)}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative overflow-hidden">
                     <ImageWithSkeleton src={product.fabric ? getFabricMainImage(product.fabric) : ''} alt={product.fabric?.type || ''} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="eager" decoding="async" fetchPriority="high" />
                   </div>
                   
-                  <CardContent className="p-4">
-                    <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1 mb-2">
+                  <CardContent className="p-3 md:p-4">
+                    <h3 className="font-semibold text-sm md:text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1 mb-2">
                       {product.fabric?.type}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                    <p className="text-muted-foreground text-xs md:text-sm mb-3 line-clamp-2">
                       {product.fabric?.description}
                     </p>
                     <div className="flex items-center justify-between">
