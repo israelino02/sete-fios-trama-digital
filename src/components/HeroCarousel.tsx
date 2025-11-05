@@ -3,12 +3,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface HeroCarouselProps {
   images: string[];
   tabletImages?: string[];
+  mobileImages?: string[];
   interval?: number;
   onSlideChange?: (index: number) => void;
 }
 export const HeroCarousel = ({
   images,
   tabletImages,
+  mobileImages,
   interval = 4000,
   onSlideChange
 }: HeroCarouselProps) => {
@@ -49,7 +51,7 @@ export const HeroCarousel = ({
     }} />)}
 
       {/* Mobile images */}
-      {images.map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 bg-contain bg-no-repeat transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      {(mobileImages || images).map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 bg-contain bg-no-repeat transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
       backgroundImage: `url(${image})`,
       backgroundPosition: 'center center'
     }} />)}
