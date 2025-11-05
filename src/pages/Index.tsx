@@ -17,7 +17,7 @@ import heroTablet2 from "@/assets/hero-tablet-2.png";
 import heroTablet3 from "@/assets/hero-tablet-3.png";
 import heroTablet4 from "@/assets/hero-tablet-4.png";
 import heroTablet5 from "@/assets/hero-tablet-5.png";
-import heroMobile1 from "@/assets/hero-mobile-1.png";
+import heroMobile1 from "@/assets/hero-mobile-1.jpg";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
