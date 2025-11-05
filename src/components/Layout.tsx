@@ -176,7 +176,7 @@ export const Layout = ({ children }: LayoutProps) => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>7fiosloja@gmail.com</span>
+                  <span>Comercial@setefios.com.br</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="w-4 h-4 text-primary flex-shrink-0" />

@@ -19,9 +19,9 @@ const Contato = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "E-mail",
-      content: "7fiosloja@gmail.com",
+      content: "Comercial@setefios.com.br",
       description: "Para parcerias e orçamentos",
-      action: { label: "Enviar E-mail", url: "mailto:7fiosloja@gmail.com" }
+      action: { label: "Enviar E-mail", url: "mailto:Comercial@setefios.com.br" }
     },
     {
       icon: <MapPin className="w-6 h-6" />,
