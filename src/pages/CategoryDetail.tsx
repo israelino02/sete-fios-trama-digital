@@ -77,12 +77,12 @@ const CategoryDetail = () => {
               <h3 className="font-semibold text-lg text-foreground mb-4">
                 Subtecidos disponíveis:
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
                 {category.fabrics.map((fabric) => (
                   <Button
                     key={fabric.type}
                     variant="outline"
-                    className="h-auto py-3 px-4 font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="h-auto py-3 px-4 font-medium text-xs sm:text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
                     onClick={() => handleFabricClick(fabric.type)}
                   >
                     {fabric.type}
