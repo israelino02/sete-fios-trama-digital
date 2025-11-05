@@ -25,7 +25,7 @@ const Catalogo = () => {
 
       <div className="container mx-auto px-4 py-12">
         {/* Category Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-12 max-w-5xl mx-auto">
           {fabricsData.categories.map((category) => (
             <button
               key={category.slug}
