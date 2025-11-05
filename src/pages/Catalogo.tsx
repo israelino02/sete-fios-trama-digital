@@ -49,8 +49,8 @@ const Catalogo = () => {
               </div>
               
               {/* Name */}
-              <div className="p-6 bg-card border-t flex-shrink-0">
-                <h3 className="font-display font-bold text-xl md:text-2xl text-foreground text-center">
+              <div className="p-3 md:p-6 bg-card border-t flex-shrink-0">
+                <h3 className="font-display font-bold text-base md:text-2xl text-foreground text-center">
                   {category.name}
                 </h3>
               </div>
