@@ -111,7 +111,7 @@ const Index = () => {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-semibold text-primary">Ver Detalhes</span>
-                      <Button size="sm" className="hover:scale-105 transition-transform" onClick={e => {
+                      <Button size="sm" className="hidden md:inline-flex hover:scale-105 transition-transform" onClick={e => {
                     e.preventDefault();
                     window.open(whatsappUrl, '_blank');
                   }}>
