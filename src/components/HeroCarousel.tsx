@@ -15,28 +15,51 @@ export const HeroCarousel = ({
   onSlideChange
 }: HeroCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const getActiveImagesLength = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth < 768) {
+        return mobileImages?.length || images.length;
+      }
+      if (window.innerWidth < 1024) {
+        return tabletImages?.length || images.length;
+      }
+    }
+    return images.length;
+  };
+
+  const [activeImagesLength, setActiveImagesLength] = useState(getActiveImagesLength());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setActiveImagesLength(getActiveImagesLength());
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [images.length, tabletImages?.length, mobileImages?.length]);
+
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     onSlideChange?.(index);
   };
   const goToPrevious = () => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? activeImagesLength - 1 : currentIndex - 1;
     goToSlide(newIndex);
   };
   const goToNext = () => {
-    const newIndex = (currentIndex + 1) % images.length;
+    const newIndex = (currentIndex + 1) % activeImagesLength;
     goToSlide(newIndex);
   };
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex(prevIndex => {
-        const newIndex = (prevIndex + 1) % images.length;
+        const newIndex = (prevIndex + 1) % activeImagesLength;
         onSlideChange?.(newIndex);
         return newIndex;
       });
     }, interval);
     return () => clearInterval(timer);
-  }, [images.length, interval, onSlideChange]);
+  }, [activeImagesLength, interval, onSlideChange]);
   return <div className="absolute inset-0">
       {/* Desktop images */}
       {images.map((image, index) => <div key={`desktop-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 hidden lg:block ${index === currentIndex ? "opacity-100" : "opacity-0"} ${index === 0 ? 'lg:bg-left-center xl:bg-center' : ''}`} style={{
@@ -65,9 +88,19 @@ export const HeroCarousel = ({
       
       
 
-      {/* Dots Navigation */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+      {/* Dots Navigation - Desktop */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden lg:flex gap-2">
         {images.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
+      </div>
+      
+      {/* Dots Navigation - Tablet */}
+      {tabletImages && <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex lg:hidden gap-2">
+        {tabletImages.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
+      </div>}
+      
+      {/* Dots Navigation - Mobile */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex md:hidden gap-2">
+        {(mobileImages || images).map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
       </div>
     </div>;
 };
