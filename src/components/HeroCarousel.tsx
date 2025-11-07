@@ -51,9 +51,13 @@ export const HeroCarousel = ({
     }} />)}
 
       {/* Mobile images */}
-      {(mobileImages || images).map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      {(mobileImages || images).map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
       backgroundImage: `url(${image})`,
-      backgroundPosition: 'center center'
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      width: '100%',
+      height: '100%'
     }} />)}
       
       {/* Navigation Arrows */}
