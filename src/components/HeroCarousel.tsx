@@ -76,7 +76,7 @@ export const HeroCarousel = ({
       {/* Mobile images */}
       {(mobileImages || images).map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
       backgroundImage: `url(${image})`,
-      backgroundPosition: index === 1 || index === 2 ? 'center 25%' : 'center center',
+      backgroundPosition: index === 1 || index === 2 ? 'center 75%' : 'center center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       width: '100%',
