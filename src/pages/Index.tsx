@@ -8,6 +8,7 @@ import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import heroSlide1 from "@/assets/hero-slide-1.png";
+import heroSlide2 from "@/assets/hero-slide-2.png";
 import heroSlide3 from "@/assets/hero-slide-3.png";
 import heroSlide4 from "@/assets/hero-slide-4.png";
 import heroTablet1 from "@/assets/hero-tablet-1.png";
@@ -21,9 +22,9 @@ const Index = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  const heroImages = [heroSlide1, heroSlide3, heroSlide4];
-  const heroTabletImages = [heroTablet1, heroTablet3, heroTablet4];
-  const heroMobileImages = [heroMobile1, heroMobile3, heroMobile4];
+  const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
+  const heroTabletImages = [heroTablet1, heroSlide2, heroTablet3, heroTablet4];
+  const heroMobileImages = [heroMobile1, heroSlide2, heroMobile3, heroMobile4];
 
   // Featured products from fabrics data
   const featuredProducts = [{
