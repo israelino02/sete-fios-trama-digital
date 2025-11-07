@@ -25,7 +25,7 @@ const Index = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
   const heroTabletImages = [heroTablet1, heroSlide2, heroTablet3, heroTablet4, heroSlide5];
-  const heroMobileImages = [heroMobile1, heroSlide2, heroMobile3, heroMobile4, heroSlide5];
+  const heroMobileImages = [heroMobile1, heroMobile3, heroMobile4];
 
   // Featured products from fabrics data
   const featuredProducts = [{
