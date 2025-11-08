@@ -33,12 +33,12 @@ const Contato = () => {
   ];
 
   const horarios = [
-    { dia: "Segunda-Feira", horario: "09:00 - 18:00" },
-    { dia: "Terça-Feira", horario: "09:00 - 18:00" },
-    { dia: "Quarta-Feira", horario: "09:00 - 18:00" },
-    { dia: "Quinta-Feira", horario: "09:00 - 18:00" },
-    { dia: "Sexta-Feira", horario: "09:00 - 18:00" },
-    { dia: "Sábado", horario: "09:00 - 13:00" },
+    { dia: "Segunda-Feira", horario: "08:00 - 18:00" },
+    { dia: "Terça-Feira", horario: "08:00 - 18:00" },
+    { dia: "Quarta-Feira", horario: "08:00 - 18:00" },
+    { dia: "Quinta-Feira", horario: "08:00 - 18:00" },
+    { dia: "Sexta-Feira", horario: "08:00 - 18:00" },
+    { dia: "Sábado", horario: "Fechado" },
     { dia: "Domingo", horario: "Fechado" }
   ];
 
