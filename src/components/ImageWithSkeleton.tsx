@@ -28,6 +28,7 @@ export const ImageWithSkeleton = ({
       <img
         src={src}
         alt={alt}
+        loading="lazy"
         className={cn(
           "transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",

@@ -62,25 +62,18 @@ export const HeroCarousel = ({
   }, [activeImagesLength, interval, onSlideChange]);
   return <div className="absolute inset-0">
       {/* Desktop images */}
-      {images.map((image, index) => <div key={`desktop-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 hidden lg:block ${index === currentIndex ? "opacity-100" : "opacity-0"} ${index === 0 ? 'lg:bg-left-center xl:bg-center' : ''}`} style={{
-      backgroundImage: `url(${image})`,
-      backgroundPosition: index === 2 ? 'left center' : 'center center'
+      {images.map((image, index) => <img key={`desktop-${index}`} src={image} alt={`Hero ${index + 1}`} loading={index === 0 ? "eager" : "lazy"} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 hidden lg:block ${index === currentIndex ? "opacity-100" : "opacity-0"} ${index === 0 ? 'lg:object-left-center xl:object-center' : ''}`} style={{
+      objectPosition: index === 2 ? 'left center' : 'center center'
     }} />)}
 
       {/* Tablet images */}
-      {tabletImages && tabletImages.map((image, index) => <div key={`tablet-${index}`} className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 hidden md:block lg:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
-      backgroundImage: `url(${image})`,
-      backgroundPosition: 'center center'
+      {tabletImages && tabletImages.map((image, index) => <img key={`tablet-${index}`} src={image} alt={`Hero ${index + 1}`} loading={index === 0 ? "eager" : "lazy"} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 hidden md:block lg:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      objectPosition: 'center center'
     }} />)}
 
       {/* Mobile images */}
-      {(mobileImages || images).map((image, index) => <div key={`mobile-${index}`} className={`absolute inset-0 transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
-      backgroundImage: `url(${image})`,
-      backgroundPosition: index === 1 || index === 2 ? 'center 75%' : 'center center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      width: '100%',
-      height: '100%'
+      {(mobileImages || images).map((image, index) => <img key={`mobile-${index}`} src={image} alt={`Hero ${index + 1}`} loading={index === 0 ? "eager" : "lazy"} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 md:hidden ${index === currentIndex ? "opacity-100" : "opacity-0"}`} style={{
+      objectPosition: index === 1 || index === 2 ? 'center 75%' : 'center center'
     }} />)}
       
       {/* Navigation Arrows */}
