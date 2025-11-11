@@ -18,7 +18,7 @@ const Catalogo = () => {
             Catálogo de Tecidos
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Descubra nossa linha completa de tecidos técnicos e premium
+            Descubra nossa linha completa de tecidos
           </p>
         </div>
       </div>
