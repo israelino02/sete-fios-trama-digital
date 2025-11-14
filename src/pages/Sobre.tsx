@@ -37,7 +37,7 @@ const Sobre = () => {
         <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
           Nossa História
         </h1>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-xl">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-base">
           A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro. 
 
 
