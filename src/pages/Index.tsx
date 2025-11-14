@@ -16,8 +16,7 @@ import heroTablet1 from "@/assets/hero-tablet-1.png";
 import heroTablet3 from "@/assets/hero-tablet-3.png";
 import heroTablet4 from "@/assets/hero-tablet-4.png";
 import heroMobile1 from "@/assets/hero-mobile-1.jpg";
-import heroMobile3 from "@/assets/hero-mobile-3.png";
-import heroMobile4 from "@/assets/hero-mobile-4.png";
+import heroMobile2 from "@/assets/hero-mobile-2.png";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
@@ -25,7 +24,7 @@ const Index = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
   const heroTabletImages = [heroTablet1, heroSlide2, heroTablet3, heroTablet4, heroSlide5];
-  const heroMobileImages = [heroMobile1, heroMobile3, heroMobile4];
+  const heroMobileImages = [heroMobile1, heroMobile2];
 
   // Featured products from fabrics data
   const featuredProducts = [{
