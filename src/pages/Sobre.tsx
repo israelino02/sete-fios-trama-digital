@@ -11,18 +11,33 @@ const Sobre = () => {
   const valores = [
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Qualidade Garantida",
-      description: "Selecionamos cuidadosamente cada produto para oferecer sempre o melhor"
+      title: "Qualidade",
+      description: "Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto."
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Atendimento Humano",
-      description: "Nossa equipe está sempre pronta para ajudar com carinho e dedicação"
+      icon: <Heart className="w-8 h-8" />,
+      title: "Custo-Benefício",
+      description: "Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes."
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Inteligência",
+      description: "Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços."
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Tradição e Inovação",
-      description: "Unimos a experiência tradicional com as tendências mais modernas"
+      title: "Agilidade",
+      description: "Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Parceria e Confiança",
+      description: "Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos."
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Ética e Transparência",
+      description: "Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho."
     }
   ];
 
@@ -59,18 +74,33 @@ const Sobre = () => {
           </div>
         </div>
         
-        <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
-          <div className="text-center">
-            <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-4xl">🧵</span>
+        <div className="space-y-8">
+          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">🎯</span>
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                Nossa Missão
+              </h3>
+              <p className="text-muted-foreground">
+                Proporcionar aos nossos clientes tecidos e aviamentos que combinam durabilidade, custo-benefício e inovação. Com compromisso em qualidade e eficiência, buscamos agregar valor ao setor, entregando soluções inteligentes que atendem às necessidades e tendências do mercado têxtil.
+              </p>
             </div>
-            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-              Nossa Missão
-            </h3>
-            <p className="text-muted-foreground">
-              Na Sete Fios Têxtil, oferecemos tecidos que unem durabilidade, inovação e preço justo. 
-              Mais que um produto, entregamos soluções inteligentes ao mercado.
-            </p>
+          </div>
+
+          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">🔭</span>
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                Nossa Visão
+              </h3>
+              <p className="text-muted-foreground">
+                Ser referência nacional em tecidos e aviamentos, reconhecida pela qualidade, inovação e custo-benefício de nossos produtos, proporcionando soluções em matéria-prima para confecções têxtil.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +116,7 @@ const Sobre = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {valores.map((valor, index) => (
             <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
               <CardContent className="pt-6">
