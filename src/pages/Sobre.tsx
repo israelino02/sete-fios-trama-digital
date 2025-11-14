@@ -38,7 +38,7 @@ const Sobre = () => {
           Nossa História
         </h1>
         <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-xl">
-          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro.
+          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro. 
 
 
 Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe e a fidelidade dos clientes que estiveram conosco desde o início. Nesse período, entendemos que a Sete Fios já não era apenas um projeto, mas uma empresa sólida, construída sobre união, fé e dedicação. Muitos clientes deixaram de ser apenas compradores e se tornaram amigos, inspirando inovações e ajudando a moldar novos produtos. Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
