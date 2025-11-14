@@ -186,7 +186,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Missão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Na Sete Fios Têxtil, nossa missão é simples e clara: oferecer tecidos e aviamentos que unem durabilidade, inovação e preço justo. Trabalhamos com excelência e eficiência para entregar muito mais do que produtos — entregamos soluções inteligentes que acompanham as necessidades e tendências do mercado têxtil.
+                  Proporcionar aos nossos clientes tecidos e aviamentos que combinam durabilidade, custo-benefício e inovação. Com compromisso em qualidade e eficiência, buscamos agregar valor ao setor, entregando soluções inteligentes que atendem às necessidades e tendências do mercado têxtil.
                 </p>
               </CardContent>
             </Card>
@@ -215,22 +215,43 @@ const Index = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="font-semibold text-foreground">Qualidade sem concessões:</p>
-                      <p className="text-muted-foreground text-sm">produtos que seguem os mais altos padrões, garantindo durabilidade e conforto.</p>
+                      <p className="font-semibold text-foreground">Qualidade</p>
+                      <p className="text-muted-foreground text-sm">Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="font-semibold text-foreground">Custo-benefício real:</p>
-                      <p className="text-muted-foreground text-sm">excelência e preço justo que agregam valor ao investimento de cada cliente.</p>
+                      <p className="font-semibold text-foreground">Custo-Benefício</p>
+                      <p className="text-muted-foreground text-sm">Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="font-semibold text-foreground">Parceria de verdade:</p>
-                      <p className="text-muted-foreground text-sm">relações de confiança e proximidade que fortalecem projetos e objetivos.</p>
+                      <p className="font-semibold text-foreground">Inteligência</p>
+                      <p className="text-muted-foreground text-sm">Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Agilidade</p>
+                      <p className="text-muted-foreground text-sm">Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Parceria e Confiança</p>
+                      <p className="text-muted-foreground text-sm">Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Ética e Transparência</p>
+                      <p className="text-muted-foreground text-sm">Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho.</p>
                     </div>
                   </div>
                 </div>
