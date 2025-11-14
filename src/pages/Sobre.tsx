@@ -45,8 +45,8 @@ const Sobre = () => {
       </section>
 
       {/* Story Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-        <div>
+      <section className="mb-20">
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">
             Como Tudo Começou
           </h2>
@@ -62,8 +62,11 @@ const Sobre = () => {
             </p>
           </div>
         </div>
-        
-        <div className="space-y-8">
+      </section>
+
+      {/* Mission and Vision Section */}
+      <section className="mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
             <div className="text-center">
               <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -73,12 +76,24 @@ const Sobre = () => {
                 Nossa Missão
               </h3>
               <p className="text-muted-foreground">
-                Proporcionar aos nossos clientes tecidos e aviamentos que combinam durabilidade, custo-benefício e inovação. Com compromisso em qualidade e eficiência, buscamos agregar valor ao setor, entregando soluções inteligentes que atendem às necessidades e tendências do mercado têxtil.
+                Fornecer produtos têxteis e aviamentos de alta qualidade com excelente custo-benefício, atendendo às necessidades do mercado de moda íntima com agilidade, inovação e compromisso com a satisfação do cliente.
               </p>
             </div>
           </div>
 
-          
+          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">👁️</span>
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                Nossa Visão
+              </h3>
+              <p className="text-muted-foreground">
+                Ser reconhecida como referência nacional em distribuição de tecidos e aviamentos para o mercado de moda íntima, expandindo nossa presença e consolidando parcerias estratégicas que impulsionem o crescimento sustentável do setor.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
