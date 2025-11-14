@@ -87,7 +87,7 @@ Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superaç
           <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
             <div className="text-center">
               <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">👁️</span>
+                <span className="text-4xl">🚀</span>
               </div>
               <h3 className="font-display font-bold text-foreground mb-4 text-3xl">
                 Nossa Visão
