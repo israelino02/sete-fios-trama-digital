@@ -37,29 +37,32 @@ const Sobre = () => {
         <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
           Nossa História
         </h1>
-        <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, 
-          os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma 
-          história de superação, gratidão e confiança no futuro.
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-xl">
+          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro.
+
+
+Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe e a fidelidade dos clientes que estiveram conosco desde o início. Nesse período, entendemos que a Sete Fios já não era apenas um projeto, mas uma empresa sólida, construída sobre união, fé e dedicação. Muitos clientes deixaram de ser apenas compradores e se tornaram amigos, inspirando inovações e ajudando a moldar novos produtos. Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
+
+
+
+
+
+
+
+
+
+
+
+
         </p>
       </section>
 
       {/* Story Section */}
       <section className="mb-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-            Como Tudo Começou
-          </h2>
+          
           <div className="text-muted-foreground">
-            <p>
-              Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. 
-              Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe 
-              e a fidelidade dos clientes que estiveram conosco desde o início. Nesse período, 
-              entendemos que a Sete Fios já não era apenas um projeto, mas uma empresa sólida, 
-              construída sobre união, fé e dedicação. Muitos clientes deixaram de ser apenas 
-              compradores e se tornaram amigos, inspirando inovações e ajudando a moldar novos 
-              produtos. Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
-            </p>
+            
           </div>
         </div>
       </section>
@@ -72,7 +75,7 @@ const Sobre = () => {
               <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-4xl">🎯</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+              <h3 className="font-display font-bold text-foreground mb-4 text-3xl">
                 Nossa Missão
               </h3>
               <p className="text-muted-foreground">
@@ -86,7 +89,7 @@ const Sobre = () => {
               <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-4xl">👁️</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+              <h3 className="font-display font-bold text-foreground mb-4 text-3xl">
                 Nossa Visão
               </h3>
               <p className="text-muted-foreground">
