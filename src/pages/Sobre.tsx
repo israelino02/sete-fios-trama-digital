@@ -2,47 +2,36 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-7fios.jpg";
-
 const Sobre = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer mais sobre a 7 Fios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-  const valores = [
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Qualidade",
-      description: "Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto."
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Custo-Benefício",
-      description: "Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Inteligência",
-      description: "Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços."
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Agilidade",
-      description: "Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Parceria e Confiança",
-      description: "Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Ética e Transparência",
-      description: "Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho."
-    }
-  ];
-
-  return (
-    <div className="container mx-auto px-4 py-12">
+  const valores = [{
+    icon: <Award className="w-8 h-8" />,
+    title: "Qualidade",
+    description: "Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto."
+  }, {
+    icon: <Heart className="w-8 h-8" />,
+    title: "Custo-Benefício",
+    description: "Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes."
+  }, {
+    icon: <Award className="w-8 h-8" />,
+    title: "Inteligência",
+    description: "Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços."
+  }, {
+    icon: <Clock className="w-8 h-8" />,
+    title: "Agilidade",
+    description: "Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado."
+  }, {
+    icon: <Users className="w-8 h-8" />,
+    title: "Parceria e Confiança",
+    description: "Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos."
+  }, {
+    icon: <Award className="w-8 h-8" />,
+    title: "Ética e Transparência",
+    description: "Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho."
+  }];
+  return <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
       <section className="mb-16 text-center">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -89,19 +78,7 @@ const Sobre = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🔭</span>
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-                Nossa Visão
-              </h3>
-              <p className="text-muted-foreground">
-                Ser referência nacional em tecidos e aviamentos, reconhecida pela qualidade, inovação e custo-benefício de nossos produtos, proporcionando soluções em matéria-prima para confecções têxtil.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -117,8 +94,7 @@ const Sobre = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {valores.map((valor, index) => (
-            <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
+          {valores.map((valor, index) => <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
               <CardContent className="pt-6">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
                   {valor.icon}
@@ -130,8 +106,7 @@ const Sobre = () => {
                   {valor.description}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </section>
 
@@ -150,12 +125,7 @@ const Sobre = () => {
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img 
-                  src="/lovable-uploads/raianne-comercial.png" 
-                  alt="Raianne Oliveira - Departamento Comercial"
-                  className="w-32 h-32 rounded-full mx-auto object-cover"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/raianne-comercial.png" alt="Raianne Oliveira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Raianne Oliveira</h3>
               <p className="text-primary font-medium">Dep. Comercial</p>
@@ -165,12 +135,7 @@ const Sobre = () => {
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img 
-                  src="/lovable-uploads/manasses-ferreira.png" 
-                  alt="Manassés Ferreira - Departamento Comercial"
-                  className="w-32 h-32 rounded-full mx-auto object-cover"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/manasses-ferreira.png" alt="Manassés Ferreira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Manassés Ferreira</h3>
               <p className="text-primary font-medium">Dep. Comercial</p>
@@ -180,12 +145,7 @@ const Sobre = () => {
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img 
-                  src="/lovable-uploads/hellen-aragao.png" 
-                  alt="Hellen Aragão - Departamento Financeiro"
-                  className="w-32 h-32 rounded-full mx-auto object-cover"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/hellen-aragao.png" alt="Hellen Aragão - Departamento Financeiro" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Hellen Aragão</h3>
               <p className="text-primary font-medium">Dep. Financeiro</p>
@@ -204,19 +164,13 @@ const Sobre = () => {
           e descubra como podemos contribuir para suas criações.
         </p>
         
-        <Button
-          asChild
-          size="lg"
-          className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
-        >
+        <Button asChild size="lg" className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5 mr-2" />
             Conversar Conosco
           </a>
         </Button>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Sobre;
