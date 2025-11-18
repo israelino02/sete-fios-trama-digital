@@ -56,12 +56,12 @@ const Index = () => {
   // Get appropriate link for product
   const getProductLink = (product: any) => {
     const fabricType = product.fabric?.type.toLowerCase().replace(/ /g, '-');
-    
+
     // Romantik Estampado deve ir para seleção de gênero
     if (hasGenderOptions(product.fabric)) {
       return `/catalogo/${product.categorySlug}/${fabricType}/selecionar-genero`;
     }
-    
+
     // Outros tecidos vão direto para o detalhe
     return `/catalogo/${product.categorySlug}/${fabricType}`;
   };
@@ -151,11 +151,7 @@ const Index = () => {
           
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-warm aspect-video">
-              <video 
-                controls 
-                className="w-full h-full"
-                poster="/images/video-poster.jpg"
-              >
+              <video controls className="w-full h-full" poster="/images/video-poster.jpg">
                 <source src="/videos/video-institucional.mp4" type="video/mp4" />
                 Seu navegador não suporta a reprodução de vídeos.
               </video>
@@ -167,97 +163,9 @@ const Index = () => {
       {/* Missão, Visão e Valores */}
       <section className="py-16 lg:py-24 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary text-primary-foreground">🏢 Institucional</Badge>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Conheça a Sete Fios Têxtil
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Uma empresa comprometida com a excelência e inovação no mercado têxtil
-            </p>
-          </div>
+          
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* Missão */}
-            <Card className="shadow-soft hover:shadow-warm transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">🎯</span>
-                </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Missão</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Proporcionar aos nossos clientes tecidos e aviamentos que combinam durabilidade, custo-benefício e inovação. Com compromisso em qualidade e eficiência, buscamos agregar valor ao setor, entregando soluções inteligentes que atendem às necessidades e tendências do mercado têxtil.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Visão */}
-            <Card className="shadow-soft hover:shadow-warm transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">🔭</span>
-                </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Nossa Visão</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Ser referência nacional em tecidos e aviamentos, reconhecida pela qualidade, inovação e custo-benefício de nossos produtos, proporcionando soluções em matéria-prima para confecções têxtil.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Valores */}
-            <Card className="shadow-soft hover:shadow-warm transition-all duration-300 lg:col-span-1">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl">⭐</span>
-                </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">Nossos Valores</h3>
-                <div className="space-y-4 text-left">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Qualidade</p>
-                      <p className="text-muted-foreground text-sm">Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Custo-Benefício</p>
-                      <p className="text-muted-foreground text-sm">Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Inteligência</p>
-                      <p className="text-muted-foreground text-sm">Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Agilidade</p>
-                      <p className="text-muted-foreground text-sm">Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Parceria e Confiança</p>
-                      <p className="text-muted-foreground text-sm">Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-semibold text-foreground">Ética e Transparência</p>
-                      <p className="text-muted-foreground text-sm">Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho.</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          
 
           {/* Frase de Impacto */}
           <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
