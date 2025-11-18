@@ -161,7 +161,21 @@ const Index = () => {
       </section>
 
       {/* Missão, Visão e Valores */}
-      
+      <section className="py-16 lg:py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          
+
+          
+
+          {/* Frase de Impacto */}
+          <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
+            <p className="text-lg md:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
+              "Aqui, cada fio conta uma história: a de uma empresa que cresce lado a lado com você, 
+              oferecendo muito mais do que matéria-prima — oferecemos segurança, confiança e resultados."
+            </p>
+          </div>
+        </div>
+      </section>
 
 
       {/* Quick Links */}
