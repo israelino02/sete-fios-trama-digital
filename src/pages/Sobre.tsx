@@ -5,7 +5,7 @@ import logo from "@/assets/logo-7fios.jpg";
 const Sobre = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer mais sobre a 7 Fios.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
   const valores = [{
     icon: <Award className="w-8 h-8" />,
     title: "Qualidade",

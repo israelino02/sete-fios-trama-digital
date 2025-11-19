@@ -6,7 +6,7 @@ import StoreLocationMap from "@/components/StoreLocationMap";
 const Contato = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de entrar em contato com a Sete Fios Têxtil.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
   const contactInfo = [
     {
