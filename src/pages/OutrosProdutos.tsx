@@ -6,7 +6,7 @@ import { MessageCircle, Package } from "lucide-react";
 const OutrosProdutos = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de saber mais sobre os aviamentos e acessórios da 7 Fios.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
   const vies = [
     {

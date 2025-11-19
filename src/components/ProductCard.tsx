@@ -23,7 +23,7 @@ export const ProductCard = ({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = `Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`;
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
   const displayImages = images || (imageUrl ? [imageUrl] : []);
   const hasMultipleImages = displayImages.length > 1;

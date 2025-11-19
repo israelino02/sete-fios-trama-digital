@@ -20,7 +20,7 @@ export const FeaturedProductCard = ({
 }: FeaturedProductCardProps) => {
   const whatsappNumber = "5581994616071";
   const message = `Olá! Tenho interesse no produto: ${name} por ${price}. Poderia me dar mais informações?`;
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
   return (
     <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">

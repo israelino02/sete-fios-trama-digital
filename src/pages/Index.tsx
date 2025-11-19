@@ -24,7 +24,7 @@ const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
   const heroTabletImages = [heroTablet1, heroSlide2, heroTablet3, heroTablet4, heroSlide5];
   const heroMobileImages = [heroMobile1, heroMobile2, heroMobile3, heroMobile4, heroMobile5];

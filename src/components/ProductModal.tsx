@@ -19,7 +19,7 @@ export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) =>
 
   const handleWhatsAppContact = () => {
     const message = `Olá! Tenho interesse no produto ${product.nome} (Código: ${product.codigo}). Gostaria de mais informações.`;
-    window.open(`https://wa.me/5581994616071?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const handleDownloadCatalog = () => {
