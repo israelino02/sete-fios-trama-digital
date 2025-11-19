@@ -239,8 +239,12 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
                   Tire suas dúvidas e receba atendimento personalizado.
                 </p>
-                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
-                  <Link to="/contato">Falar Conosco</Link>
+                <Button 
+                  size="lg" 
+                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
+                  onClick={() => window.open(whatsappUrl, '_blank')}
+                >
+                  Falar Conosco
                 </Button>
               </CardContent>
             </Card>
