@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Download, MessageCircle, X } from "lucide-react";
 import { Product } from "@/data/products";
 import { useState } from "react";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 interface ProductModalProps {
   product: Product | null;
@@ -16,11 +17,6 @@ export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) =>
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   if (!product) return null;
-
-  const handleWhatsAppContact = () => {
-    const message = `Olá! Tenho interesse no produto ${product.nome} (Código: ${product.codigo}). Gostaria de mais informações.`;
-    window.open(`https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`, '_blank');
-  };
 
   const handleDownloadCatalog = () => {
     // Implementar download do catálogo

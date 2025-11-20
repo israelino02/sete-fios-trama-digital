@@ -134,17 +134,15 @@ export const ProductCard = ({
           {description}
         </p>
         
-        <Button 
+        <WhatsAppButton
+          message={`Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`}
+          variant="outline"
+          size="sm"
           asChild
-          variant="outline" 
-          size="sm" 
           className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
         >
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Consultar no WhatsApp
-          </a>
-        </Button>
+          Consultar no WhatsApp
+        </WhatsAppButton>
       </CardContent>
     </Card>
   );
