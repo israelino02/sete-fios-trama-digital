@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import logo7Fios from "@/assets/logo-7fios.jpg";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,21 +19,21 @@ const navigation = [
   { name: "Contato", href: "/contato" },
 ];
 
-const WhatsAppButton = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de saber mais sobre os produtos da 7 Fios.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-
+const WhatsAppButtonFixed = () => {
   return (
-    <Button
-      asChild
-      className="fixed bottom-6 right-6 rounded-full w-14 h-14 shadow-warm bg-gradient-primary hover:scale-110 transition-all duration-300 z-50"
-    >
-      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-        <MessageCircle className="w-6 h-6" />
-        <span className="sr-only">WhatsApp</span>
-      </a>
-    </Button>
+    <div className="fixed bottom-6 right-6 z-50">
+      <div className="rounded-full w-14 h-14 shadow-warm bg-gradient-primary hover:scale-110 transition-all duration-300">
+        <WhatsAppButton 
+          message="Olá! Gostaria de saber mais sobre os produtos da 7 Fios."
+          asChild
+          className="w-full h-full rounded-full p-0"
+          showIcon={true}
+        >
+          <MessageCircle className="w-6 h-6" />
+          <span className="sr-only">WhatsApp</span>
+        </WhatsAppButton>
+      </div>
+    </div>
   );
 };
 
