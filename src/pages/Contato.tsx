@@ -62,17 +62,15 @@ const Contato = () => {
           Nossa forma mais rápida e prática de atendimento. Tire suas dúvidas, 
           consulte produtos e receba orientações personalizadas.
         </p>
-        <Button
+        <WhatsAppButton
+          message="Olá! Gostaria de entrar em contato com a Sete Fios Têxtil."
           asChild
           size="lg"
           variant="secondary"
           className="hover:scale-105 transition-all duration-300 text-lg px-8 py-4 h-auto"
         >
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Conversar Agora
-          </a>
-        </Button>
+          Conversar Agora
+        </WhatsAppButton>
       </div>
 
       {/* Contact Information */}
@@ -95,16 +93,28 @@ const Contato = () => {
               <CardContent className="text-center">
                 <p className="font-medium text-foreground mb-2">{info.content}</p>
                 <p className="text-sm text-muted-foreground mb-4">{info.description}</p>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <a href={info.action.url} target="_blank" rel="noopener noreferrer">
+                {info.action.url === "whatsapp" ? (
+                  <WhatsAppButton
+                    message="Olá! Gostaria de entrar em contato com a Sete Fios Têxtil."
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     {info.action.label}
-                  </a>
-                </Button>
+                  </WhatsAppButton>
+                ) : (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <a href={info.action.url} target="_blank" rel="noopener noreferrer">
+                      {info.action.label}
+                    </a>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -175,20 +185,14 @@ const Contato = () => {
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg mb-2 text-foreground">Telefone</h3>
                     <p className="text-muted-foreground">(81) 99461-6071</p>
-                    <Button
+                    <WhatsAppButton
+                      message="Olá! Gostaria de entrar em contato com a Sete Fios Têxtil."
                       asChild
                       size="sm"
                       className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigator.clipboard.writeText("81994616071");
-                      }}
                     >
-                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        Falar no WhatsApp
-                      </a>
-                    </Button>
+                      Falar no WhatsApp
+                    </WhatsAppButton>
                   </div>
                 </div>
               </CardContent>
@@ -319,16 +323,14 @@ const Contato = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
+          <WhatsAppButton
+            message="Olá! Gostaria de entrar em contato com a Sete Fios Têxtil."
             asChild
             size="lg"
             className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
           >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp
-            </a>
-          </Button>
+            WhatsApp
+          </WhatsAppButton>
           
           <Button
             asChild
