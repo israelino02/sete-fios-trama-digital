@@ -117,7 +117,8 @@ const Index = () => {
                       <span className="text-sm font-semibold text-primary">Ver Detalhes</span>
                       <Button size="sm" className="hidden md:inline-flex hover:scale-105 transition-transform" onClick={e => {
                     e.preventDefault();
-                    window.open(whatsappUrl, '_blank');
+                    const consultarUrl = `joinchat_button_sendtext?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+                    window.open(consultarUrl, '_blank');
                   }}>
                         <MessageCircle className="w-4 h-4 mr-1" />
                         Consultar
