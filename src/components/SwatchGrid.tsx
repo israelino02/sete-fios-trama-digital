@@ -100,13 +100,14 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                 >
                   Fechar
                 </Button>
-                <Button
+                <WhatsAppButton
+                  message={selectedSwatch && fabric ? `Olá! Gostaria de fazer um orçamento para:\n\nTecido: ${fabric.type}\nCor: ${selectedSwatch.name}\nCódigo: ${selectedSwatch.code}` : ""}
                   size="lg"
-                  onClick={handleBudgetRequest}
                   className="bg-gradient-primary hover:scale-105 transition-all duration-300"
+                  disabled={!selectedSwatch || !fabric}
                 >
                   Fazer orçamento
-                </Button>
+                </WhatsAppButton>
               </div>
             </div>
           )}
