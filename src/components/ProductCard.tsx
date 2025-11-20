@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 interface ProductCardProps {
   name: string;
@@ -21,9 +22,6 @@ export const ProductCard = ({
   images
 }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const whatsappNumber = "5581994616071";
-  const message = `Olá! Tenho interesse no produto: ${name}. Poderia me dar mais informações?`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
   const displayImages = images || (imageUrl ? [imageUrl] : []);
   const hasMultipleImages = displayImages.length > 1;

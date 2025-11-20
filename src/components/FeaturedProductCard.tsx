@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Star } from "lucide-react";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 interface FeaturedProductCardProps {
   name: string;
@@ -18,10 +19,6 @@ export const FeaturedProductCard = ({
   badge,
   rating = 5
 }: FeaturedProductCardProps) => {
-  const whatsappNumber = "5581994616071";
-  const message = `Olá! Tenho interesse no produto: ${name} por ${price}. Poderia me dar mais informações?`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-
   return (
     <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
       <div className="aspect-square bg-gradient-warm flex items-center justify-center relative overflow-hidden">
@@ -52,16 +49,14 @@ export const FeaturedProductCard = ({
         </p>
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-primary">{price}</span>
-          <Button 
+          <WhatsAppButton
+            message={`Olá! Tenho interesse no produto: ${name} por ${price}. Poderia me dar mais informações?`}
+            size="sm"
             asChild
-            size="sm" 
             className="hover:scale-105 transition-transform"
           >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-1" />
-              Consultar
-            </a>
-          </Button>
+            Consultar
+          </WhatsAppButton>
         </div>
       </CardContent>
     </Card>
