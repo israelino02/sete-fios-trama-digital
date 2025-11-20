@@ -2,48 +2,61 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import StoreLocationMap from "@/components/StoreLocationMap";
-
 const Contato = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Gostaria de entrar em contato com a Sete Fios Têxtil.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-
-  const contactInfo = [
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "WhatsApp",
-      content: "(81) 99461-6071",
-      description: "Nossa principal forma de atendimento",
-      action: { label: "Fale Conosco", url: whatsappUrl }
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "E-mail",
-      content: "Comercial@setefios.com.br",
-      description: "Para parcerias e orçamentos",
-      action: { label: "Enviar E-mail", url: "mailto:Comercial@setefios.com.br" }
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Endereço",
-      content: "Av. Pref. Braz de Líra, 760 - Novo",
-      description: "Santa Cruz do Capibaribe - PE, 55192-460",
-      action: { label: "Ver no Mapa", url: "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" }
+  const contactInfo = [{
+    icon: <MessageCircle className="w-6 h-6" />,
+    title: "WhatsApp",
+    content: "(81) 99461-6071",
+    description: "Nossa principal forma de atendimento",
+    action: {
+      label: "Fale Conosco",
+      url: whatsappUrl
     }
-  ];
-
-  const horarios = [
-    { dia: "Segunda-Feira", horario: "08:00 - 18:00" },
-    { dia: "Terça-Feira", horario: "08:00 - 18:00" },
-    { dia: "Quarta-Feira", horario: "08:00 - 18:00" },
-    { dia: "Quinta-Feira", horario: "08:00 - 18:00" },
-    { dia: "Sexta-Feira", horario: "08:00 - 18:00" },
-    { dia: "Sábado", horario: "Fechado" },
-    { dia: "Domingo", horario: "Fechado" }
-  ];
-
-  return (
-    <div className="container mx-auto px-4 py-12">
+  }, {
+    icon: <Mail className="w-6 h-6" />,
+    title: "E-mail",
+    content: "Comercial@setefios.com.br",
+    description: "Para parcerias e orçamentos",
+    action: {
+      label: "Enviar E-mail",
+      url: "mailto:Comercial@setefios.com.br"
+    }
+  }, {
+    icon: <MapPin className="w-6 h-6" />,
+    title: "Endereço",
+    content: "Av. Pref. Braz de Líra, 760 - Novo",
+    description: "Santa Cruz do Capibaribe - PE, 55192-460",
+    action: {
+      label: "Ver no Mapa",
+      url: "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460"
+    }
+  }];
+  const horarios = [{
+    dia: "Segunda-Feira",
+    horario: "08:00 - 18:00"
+  }, {
+    dia: "Terça-Feira",
+    horario: "08:00 - 18:00"
+  }, {
+    dia: "Quarta-Feira",
+    horario: "08:00 - 18:00"
+  }, {
+    dia: "Quinta-Feira",
+    horario: "08:00 - 18:00"
+  }, {
+    dia: "Sexta-Feira",
+    horario: "08:00 - 18:00"
+  }, {
+    dia: "Sábado",
+    horario: "Fechado"
+  }, {
+    dia: "Domingo",
+    horario: "Fechado"
+  }];
+  return <div className="container mx-auto px-4 py-12">
       {/* Header */}
       <div className="text-center mb-16">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -65,12 +78,7 @@ const Contato = () => {
           Nossa forma mais rápida e prática de atendimento. Tire suas dúvidas, 
           consulte produtos e receba orientações personalizadas.
         </p>
-        <Button
-          asChild
-          size="lg"
-          variant="secondary"
-          className="hover:scale-105 transition-all duration-300 text-lg px-8 py-4 h-auto"
-        >
+        <Button asChild size="lg" variant="secondary" className="hover:scale-105 transition-all duration-300 text-lg px-8 py-4 h-auto">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5 mr-2" />
             Conversar Agora
@@ -85,8 +93,7 @@ const Contato = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {contactInfo.map((info, index) => (
-            <Card key={index} className="shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
+          {contactInfo.map((info, index) => <Card key={index} className="shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
                   {info.icon}
@@ -98,19 +105,13 @@ const Contato = () => {
               <CardContent className="text-center">
                 <p className="font-medium text-foreground mb-2">{info.content}</p>
                 <p className="text-sm text-muted-foreground mb-4">{info.description}</p>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
+                <Button asChild variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                   <a href={info.action.url} target="_blank" rel="noopener noreferrer">
                     {info.action.label}
                   </a>
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </section>
 
@@ -123,16 +124,9 @@ const Contato = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Map */}
           <div className="rounded-lg overflow-hidden shadow-soft h-[500px] lg:h-full lg:min-h-[700px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.234567890123!2d-36.20123456789012!3d-7.950123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnMDAuNCJTIDM2wrAxMicwNC40Ilc!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Sete Fios Têxtil"
-            ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.234567890123!2d-36.20123456789012!3d-7.950123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnMDAuNCJTIDM2wrAxMicwNC40Ilc!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr" width="100%" height="100%" style={{
+            border: 0
+          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Localização Sete Fios Têxtil"></iframe>
           </div>
 
           {/* Information Cards */}
@@ -149,16 +143,8 @@ const Contato = () => {
                     <p className="text-muted-foreground">
                       Av. Pref. Braz de Líra, 760 - Novo, Santa Cruz do Capibaribe - PE, 55192-460
                     </p>
-                    <Button
-                      asChild
-                      size="sm"
-                      className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm"
-                    >
-                      <a 
-                        href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
+                    <Button asChild size="sm" className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm">
+                      <a href="https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460" target="_blank" rel="noopener noreferrer">
                         <MapPin className="w-4 h-4 mr-2" />
                         Gerar Rota
                       </a>
@@ -178,15 +164,10 @@ const Contato = () => {
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg mb-2 text-foreground">Telefone</h3>
                     <p className="text-muted-foreground">(81) 99461-6071</p>
-                    <Button
-                      asChild
-                      size="sm"
-                      className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigator.clipboard.writeText("81994616071");
-                      }}
-                    >
+                    <Button asChild size="sm" className="mt-3 bg-gradient-primary hover:bg-gradient-primary/90 hover:scale-105 transition-all duration-300 shadow-warm" onClick={e => {
+                    e.preventDefault();
+                    navigator.clipboard.writeText("81994616071");
+                  }}>
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                         <MessageCircle className="w-4 h-4 mr-2" />
                         Falar no WhatsApp
@@ -207,12 +188,10 @@ const Contato = () => {
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg mb-4 text-foreground">Horário</h3>
                     <div className="space-y-2">
-                      {horarios.map((item, index) => (
-                        <div key={index} className="flex justify-between items-center">
+                      {horarios.map((item, index) => <div key={index} className="flex justify-between items-center">
                           <span className="text-muted-foreground">{item.dia}</span>
                           <span className="text-foreground font-medium">{item.horario}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
                 </div>
@@ -231,17 +210,8 @@ const Contato = () => {
                     <p className="text-primary-foreground/90 mb-4 text-sm">
                       Acompanhe nossas novidades, lançamentos e inspirações para seus projetos.
                     </p>
-                    <Button
-                      asChild
-                      variant="secondary"
-                      size="sm"
-                      className="hover:scale-105 transition-transform duration-300 text-sm px-4"
-                    >
-                      <a 
-                        href="https://www.instagram.com/7fiostextil/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
+                    <Button asChild variant="secondary" size="sm" className="hover:scale-105 transition-transform duration-300 text-sm px-4">
+                      <a href="https://www.instagram.com/7fiostextil/" target="_blank" rel="noopener noreferrer" className="mx-px">
                         <Instagram className="w-3 h-3 mr-1.5" />
                         @7fiostextil
                       </a>
@@ -322,23 +292,14 @@ const Contato = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto"
-          >
+          <Button asChild size="lg" className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp
             </a>
           </Button>
           
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="text-lg px-8 py-4 h-auto hover:bg-primary hover:text-primary-foreground"
-          >
+          <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 h-auto hover:bg-primary hover:text-primary-foreground">
             <a href="tel:+551133334444">
               <Phone className="w-5 h-5 mr-2" />
               Ligar
@@ -346,8 +307,6 @@ const Contato = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Contato;
