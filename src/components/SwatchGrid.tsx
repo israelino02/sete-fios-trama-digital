@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 interface SwatchGridProps {
   colors: ColorSwatch[];
@@ -12,14 +13,6 @@ interface SwatchGridProps {
 
 export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
   const [selectedSwatch, setSelectedSwatch] = React.useState<ColorSwatch | null>(null);
-
-  const handleBudgetRequest = () => {
-    if (!selectedSwatch || !fabric) return;
-    
-    const message = `Olá! Gostaria de fazer um orçamento para:\n\nTecido: ${fabric.type}\nCor: ${selectedSwatch.name}\nCódigo: ${selectedSwatch.code}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
 
   if (colors.length === 0) {
     return (

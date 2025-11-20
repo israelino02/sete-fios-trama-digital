@@ -115,14 +115,14 @@ export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) =>
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <Button 
-                onClick={handleWhatsAppContact}
+              <WhatsAppButton
+                message={`Olá! Tenho interesse no produto ${product.nome} (Código: ${product.codigo}). Gostaria de mais informações.`}
                 className="w-full bg-gradient-primary hover:scale-105 transition-all duration-300"
                 size="lg"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Solicitar Orçamento via WhatsApp
-              </Button>
+              </WhatsAppButton>
               
               <Button 
                 variant="outline" 
