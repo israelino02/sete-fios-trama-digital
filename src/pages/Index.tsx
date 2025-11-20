@@ -228,27 +228,6 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              <CardContent className="p-8 text-center relative z-10 flex flex-col h-full min-h-[400px]">
-                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
-                  <MessageCircle className="w-10 h-10 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                  Entre em Contato
-                </h3>
-                <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
-                  Tire suas dúvidas e receba atendimento personalizado.
-                </p>
-                <Button 
-                  size="lg" 
-                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
-                  onClick={() => window.open(whatsappUrl, '_blank')}
-                >
-                  Falar Conosco
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
