@@ -201,7 +201,7 @@ export const Layout = ({ children }: LayoutProps) => {
         </div>
       </footer>
 
-      <WhatsAppButton />
+      <WhatsAppButtonFixed />
     </div>
   );
 };

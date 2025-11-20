@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Fabric } from "@/data/fabrics";
 import { SwatchGrid } from "./SwatchGrid";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 interface ColorModalProps {
   fabric: Fabric | null;
@@ -20,11 +21,6 @@ export const ColorModal = ({ fabric, isOpen, onClose, gender }: ColorModalProps)
     ? fabric.colors.filter(color => color.gender === gender)
     : fabric.colors;
 
-  const handleBudgetRequest = () => {
-    const message = `Olá! Gostaria de fazer um orçamento para o tecido ${fabric.type}.`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -41,13 +37,13 @@ export const ColorModal = ({ fabric, isOpen, onClose, gender }: ColorModalProps)
 
           {/* Budget button */}
           <div className="flex justify-center pt-4 border-t">
-            <Button
-              onClick={handleBudgetRequest}
+            <WhatsAppButton
+              message={`Olá! Gostaria de fazer um orçamento para o tecido ${fabric.type}.`}
               size="lg"
               className="bg-gradient-primary hover:scale-105 transition-all duration-300"
             >
               Fazer orçamento
-            </Button>
+            </WhatsAppButton>
           </div>
         </div>
       </DialogContent>
