@@ -23,7 +23,7 @@ import heroMobile5 from "@/assets/hero-mobile-5.png";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de conhecer os produtos da 7 Fios.";
+  const message = "Olá! Gostaria de entrar em contato com a Sete Fios Têxtil";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
   const heroImages = [heroSlide1, heroSlide2, heroSlide3, heroSlide4, heroSlide5];
   const heroTabletImages = [heroTablet1, heroSlide2, heroTablet3, heroTablet4, heroSlide5];
