@@ -115,14 +115,7 @@ const Index = () => {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-semibold text-primary">Ver Detalhes</span>
-                      <Button size="sm" className="hidden md:inline-flex hover:scale-105 transition-transform" onClick={e => {
-                    e.preventDefault();
-                    const consultarUrl = `joinchat_button_sendtext?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-                    window.open(consultarUrl, '_blank');
-                  }}>
-                        <MessageCircle className="w-4 h-4 mr-1" />
-                        Consultar
-                      </Button>
+                      
                     </div>
                   </CardContent>
                 </Card>
@@ -240,11 +233,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
                   Tire suas dúvidas e receba atendimento personalizado.
                 </p>
-                <Button 
-                  size="lg" 
-                  className="w-full hover:scale-105 transition-transform shadow-soft mt-auto"
-                  onClick={() => window.open(whatsappUrl, '_blank')}
-                >
+                <Button size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto" onClick={() => window.open(whatsappUrl, '_blank')}>
                   Falar Conosco
                 </Button>
               </CardContent>
