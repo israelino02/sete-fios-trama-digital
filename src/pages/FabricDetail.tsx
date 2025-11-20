@@ -7,6 +7,7 @@ import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -33,19 +34,6 @@ const FabricDetail = () => {
       navigate("/catalogo");
     }
   }, [categorySlug, fabricType, navigate]);
-
-  const handleGeneralBudgetRequest = () => {
-    if (!selectedFabric) return;
-    
-    let message = `Olá! Tenho interesse na malha ${selectedFabric.type} e gostaria de um orçamento.`;
-    
-    if (gender) {
-      message += ` (Categoria: ${gender})`;
-    }
-    
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
 
   if (!selectedFabric) return null;
 
