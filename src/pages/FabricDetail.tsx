@@ -153,13 +153,13 @@ const FabricDetail = () => {
               >
                 Ver Cores
               </Button>
-              <Button
+              <WhatsAppButton
+                message={`Olá! Tenho interesse na malha ${selectedFabric.type} e gostaria de um orçamento.${gender ? ` (Categoria: ${gender})` : ''}`}
                 size="lg"
                 className="w-full text-base py-6 bg-gradient-primary hover:scale-105 transition-all duration-300"
-                onClick={handleGeneralBudgetRequest}
               >
                 Solicitar Orçamento
-              </Button>
+              </WhatsAppButton>
             </div>
           </div>
         </div>
