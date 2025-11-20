@@ -2,10 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-7fios.jpg";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+
 const Sobre = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de conhecer mais sobre a 7 Fios.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
   const valores = [{
     icon: <Award className="w-8 h-8" />,
     title: "Qualidade",

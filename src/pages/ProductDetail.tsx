@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/data/products";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -24,12 +25,6 @@ const ProductDetail = () => {
       </div>
     );
   }
-
-  const handleWhatsAppContact = () => {
-    const message = `Olá! Tenho interesse no tecido ${product.nome} - Código: ${product.codigo}. Gostaria de mais informações!`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
 
 
   return (
