@@ -2,19 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import StoreLocationMap from "@/components/StoreLocationMap";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Contato = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de entrar em contato com a Sete Fios Têxtil.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-
   const contactInfo = [
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "WhatsApp",
       content: "(81) 99461-6071",
       description: "Nossa principal forma de atendimento",
-      action: { label: "Fale Conosco", url: whatsappUrl }
+      action: { label: "Fale Conosco", url: "whatsapp" }
     },
     {
       icon: <Mail className="w-6 h-6" />,
