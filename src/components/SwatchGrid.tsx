@@ -14,10 +14,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
   const [selectedSwatch, setSelectedSwatch] = React.useState<ColorSwatch | null>(null);
 
   const handleBudgetRequest = () => {
-    if (!selectedSwatch || !fabric) return;
-    
-    const message = `Olá! Gostaria de fazer um orçamento para:\n\nTecido: ${fabric.type}\nCor: ${selectedSwatch.name}\nCódigo: ${selectedSwatch.code}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
     window.open(whatsappUrl, "_blank");
   };
 
