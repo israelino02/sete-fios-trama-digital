@@ -38,7 +38,3 @@ jobs:
           dangerous-clean-slate: true
           dry-run: false
           log-level: verbose
-
-FTP_HOST	exemplo: ftp.setefios.com.br
-FTP_USER	u339829261.deploygithub
-FTP_PASS	7Fiostextil_
