@@ -18,8 +18,7 @@ export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) =>
   if (!product) return null;
 
   const handleWhatsAppContact = () => {
-    const message = `Olá! Tenho interesse no produto ${product.nome} (Código: ${product.codigo}). Gostaria de mais informações.`;
-    window.open(`https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`, '_blank');
   };
 
   const handleDownloadCatalog = () => {

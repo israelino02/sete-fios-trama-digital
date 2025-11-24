@@ -35,15 +35,7 @@ const FabricDetail = () => {
   }, [categorySlug, fabricType, navigate]);
 
   const handleGeneralBudgetRequest = () => {
-    if (!selectedFabric) return;
-    
-    let message = `Olá! Tenho interesse na malha ${selectedFabric.type} e gostaria de um orçamento.`;
-    
-    if (gender) {
-      message += ` (Categoria: ${gender})`;
-    }
-    
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
     window.open(whatsappUrl, "_blank");
   };
 
