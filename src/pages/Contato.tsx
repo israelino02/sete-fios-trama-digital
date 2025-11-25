@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import StoreLocationMap from "@/components/StoreLocationMap";
 const Contato = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Gostaria de entrar em contato com a Sete Fios Têxtil.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
   const contactInfo = [{
     icon: <MessageCircle className="w-6 h-6" />,
     title: "WhatsApp",
