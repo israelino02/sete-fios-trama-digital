@@ -21,7 +21,7 @@ export const ProductCard = ({
   images
 }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
+  const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Vim%20do%20SITE%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
 
   const displayImages = images || (imageUrl ? [imageUrl] : []);
   const hasMultipleImages = displayImages.length > 1;

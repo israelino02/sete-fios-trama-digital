@@ -35,7 +35,7 @@ const FabricDetail = () => {
   }, [categorySlug, fabricType, navigate]);
 
   const handleGeneralBudgetRequest = () => {
-    const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
+    const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Vim%20do%20SITE%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
     window.open(whatsappUrl, "_blank");
   };
 
