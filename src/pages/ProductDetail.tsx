@@ -26,7 +26,7 @@ const ProductDetail = () => {
   }
 
   const handleWhatsAppContact = () => {
-    const message = `Olá! Tenho interesse no tecido ${product.nome} - Código: ${product.codigo}. Gostaria de mais informações!`;
+    const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
