@@ -235,8 +235,7 @@ const Contato = () => {
                 Vocês fazem entrega?
               </h3>
               <p className="text-muted-foreground">
-                Sim! Fazemos entregas na região metropolitana de São Paulo. 
-                Entre em contato pelo WhatsApp para consultar prazo e valores.
+                Sim! Fazemos entregas. Entre em contato pelo WhatsApp para consultar prazo e valores.
               </p>
             </CardContent>
           </Card>
