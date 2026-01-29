@@ -26,7 +26,7 @@ const WhatsAppButton = () => {
   return (
     <Button
       asChild
-      className="fixed bottom-6 right-6 rounded-full w-14 h-14 shadow-warm bg-gradient-primary hover:scale-110 transition-all duration-300 z-50"
+      className="fixed bottom-6 right-6 rounded-full w-16 h-16 shadow-warm bg-gradient-primary hover:scale-110 transition-all duration-300 z-50"
     >
       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
         <MessageCircle className="w-6 h-6" />
