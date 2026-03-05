@@ -13,8 +13,13 @@ interface SwatchGridProps {
 export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
   const [selectedSwatch, setSelectedSwatch] = React.useState<ColorSwatch | null>(null);
 
-  const handleBudgetRequest = () => {
-    const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Vim%20do%20SITE%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
+  const handleBudgetRequest = (color?: ColorSwatch) => {
+    const fabricName = fabric?.type || "";
+    const colorName = color?.name || "";
+    const message = colorName
+      ? `Olá! Vim do SITE e gostaria de solicitar um orçamento do subtecido *${fabricName}* na cor *${colorName}*.`
+      : `Olá! Vim do SITE e gostaria de solicitar um orçamento do subtecido *${fabricName}*.`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -106,7 +111,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
                 </Button>
                 <Button
                   size="lg"
-                  onClick={handleBudgetRequest}
+                  onClick={() => handleBudgetRequest(selectedSwatch || undefined)}
                   className="bg-gradient-primary hover:scale-105 transition-all duration-300"
                 >
                   Fazer orçamento
