@@ -21,7 +21,8 @@ export const ProductCard = ({
   images
 }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const whatsappUrl = `https://wa.me/5581994616071?text=Ol%C3%A1!%20Vim%20do%20SITE%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%207%20Fios.`;
+  const whatsappMessage = `Olá! Vim do SITE e gostaria de solicitar um orçamento do produto *${name}*${category ? ` (categoria: ${category})` : ''}.`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(whatsappMessage)}`;
 
   const displayImages = images || (imageUrl ? [imageUrl] : []);
   const hasMultipleImages = displayImages.length > 1;
