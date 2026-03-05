@@ -167,7 +167,7 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "HAWAI",
+          type: "SUMMERSOUL",
           category: "POLIESTER",
           description: "Microfibra de poliéster com excelente caimento",
           composition: "92% Poliéster, 8% Elastano",
