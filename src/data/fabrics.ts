@@ -178,7 +178,7 @@ export const fabricsData: FabricsData = {
             { label: "Gramatura", value: "165g/m²" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
-          usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
+          usageExamples: ["Moda Íntima", "Moda Praia", "Moda Esportiva", "Peças Casuais"],
           colors: [
             { name: "Amarelo BB", code: "HAW-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
             { name: "Azul Oceano", code: "HAW-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
