@@ -125,7 +125,7 @@ export const products: Product[] = [
       "/lovable-uploads/hawai-pimenta-novo.jpg"
     ],
     descricao: "Malha fresca e leve inspirada no verão tropical, ideal para peças casuais. Disponível em 16 cores vibrantes: Turquesa, Coral, Chumbo, Castanho, Verde Musgo, Azul Oceano, Verde Jade, Branco, Tulipero, Canela, Preto, Bic, Terra, Sensuale, Vermelho e Pimenta, perfeitas para peças de praia e roupas de verão.",
-    composicao: "85% Poliéster, 15% Elastano",
+    composicao: "93% Poliéster, 7% Elastano",
     recomendacoes: "Perfeito para peças de praia e roupas casuais de verão.",
     caracteristicas: ["UV Protection", "Respirável", "Quick Dry"],
     categoria: "SUMMERSOUL"
