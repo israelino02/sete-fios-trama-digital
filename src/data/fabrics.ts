@@ -170,12 +170,12 @@ export const fabricsData: FabricsData = {
           type: "SUMMERSOUL",
           category: "POLIESTER",
           description: "Microfibra de poliéster com excelente caimento",
-          composition: "92% Poliéster, 8% Elastano",
+          composition: "93% Poliéster, 7% Elastano",
           recommendedUse: "Ideal para moda íntima e sleep wear",
           mainImage: "/lovable-uploads/hawai-principal-novo.jpg",
           technicalSpecs: [
-            { label: "Largura", value: "170m" },
-            { label: "Gramatura", value: "185g/m²" },
+            { label: "Largura", value: "1,70m" },
+            { label: "Gramatura", value: "165g/m²" },
             { label: "Rendimento", value: "3,70m²/kg" }
           ],
           usageExamples: ["Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
