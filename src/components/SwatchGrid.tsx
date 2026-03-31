@@ -4,6 +4,18 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import estMasc3 from "@/assets/romantik-estampado-masc-3.jpg";
+import estMasc4 from "@/assets/romantik-estampado-masc-4.jpg";
+import estMasc6 from "@/assets/romantik-estampado-masc-6.jpg";
+
+// Override map for swatch images that need static imports
+const swatchImageOverrides: Record<string, string> = {
+  "/lovable-uploads/romantik-estampado-masculino-3.jpg": estMasc3,
+  "/lovable-uploads/romantik-estampado-masculino-4.jpg": estMasc4,
+  "/lovable-uploads/romantik-estampado-masculino-6.jpg": estMasc6,
+};
+
+const getSwatchSrc = (swatch: string) => swatchImageOverrides[swatch] || swatch;
 
 interface SwatchGridProps {
   colors: ColorSwatch[];
@@ -48,7 +60,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
               {/* Swatch */}
               <div className="aspect-square rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:scale-105">
                 <ImageWithSkeleton
-                  src={color.swatch}
+                  src={getSwatchSrc(color.swatch)}
                   alt={`${color.name} - ${color.code}`}
                   width={400}
                   height={400}
@@ -86,7 +98,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
               {/* Enlarged swatch image */}
               <div className="aspect-square w-full max-w-xl mx-auto rounded-lg overflow-hidden border-2 shadow-lg">
                 <img
-                  src={selectedSwatch.swatch}
+                  src={getSwatchSrc(selectedSwatch.swatch)}
                   alt={`${selectedSwatch.name} - ${selectedSwatch.code}`}
                   width={800}
                   height={800}
