@@ -7,6 +7,14 @@ import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import romantikMescladoMain from "@/assets/romantik-mesclado-main.jpg";
+import delitexPoliamidaMain from "@/assets/delitex-poliamida-main.jpg";
+
+// Override map for subfabric main images that need static imports
+const fabricMainImageOverrides: Record<string, string> = {
+  "ROMANTIK MESCLADO": romantikMescladoMain,
+  "DELITEX POLIAMIDA": delitexPoliamidaMain,
+};
 
 const FabricDetail = () => {
   const { categorySlug, fabricType, gender } = useParams();
@@ -77,7 +85,7 @@ const FabricDetail = () => {
           <div>
             <div className="rounded-lg overflow-hidden border shadow-lg sticky top-8">
               <ImageWithSkeleton
-                src={getFabricMainImage(selectedFabric, gender)}
+                src={fabricMainImageOverrides[selectedFabric.type] || getFabricMainImage(selectedFabric, gender)}
                 alt={selectedFabric.type}
                 width={1200}
                 height={675}
