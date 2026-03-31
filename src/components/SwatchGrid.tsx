@@ -60,7 +60,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
               {/* Swatch */}
               <div className="aspect-square rounded-lg overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 hover:scale-105">
                 <ImageWithSkeleton
-                  src={color.swatch}
+                  src={getSwatchSrc(color.swatch)}
                   alt={`${color.name} - ${color.code}`}
                   width={400}
                   height={400}
