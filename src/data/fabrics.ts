@@ -532,7 +532,7 @@ export const fabricsData: FabricsData = {
       name: "DRY-FIT",
       slug: "dry-fit",
       description: "Tecidos técnicos com tecnologia de secagem rápida.",
-      mainImage: "/lovable-uploads/dryfit-main.jpg",
+      mainImage: "/lovable-uploads/dryfit-main-v2.jpg",
       fabrics: [
         {
           type: "DRY FIT PRIME",
@@ -540,7 +540,7 @@ export const fabricsData: FabricsData = {
           description: "É um tecido tecnológico de alta performance, desenvolvido para proporcionar máximo conforto, respirabilidade e liberdade de movimento, tecido soft touch.",
           composition: "90% Poliéster, 10% Elastano",
           recommendedUse: "Ideal para quem busca conforto térmico e leveza em roupas esportivas ou casuais.",
-          mainImage: "/lovable-uploads/dryfit-main.jpg",
+          mainImage: "/lovable-uploads/dryfit-main-v2.jpg",
           technicalSpecs: [
             { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "150g/m²" },
