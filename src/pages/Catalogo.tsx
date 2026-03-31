@@ -1,3 +1,4 @@
+// Catalog page with static image imports for reliable loading
 import { useNavigate } from "react-router-dom";
 import { fabricsData } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
