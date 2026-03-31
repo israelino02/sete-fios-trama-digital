@@ -1,6 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { fabricsData } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import poliesterMain from "@/assets/catalogo-poliester-main.jpg";
+import poliamidaMain from "@/assets/catalogo-poliamida-main.jpg";
+import dryfitMain from "@/assets/catalogo-dryfit-main.jpg";
+import estampadosMain from "@/assets/catalogo-estampados-main.jpg";
+
+const categoryMainImages: Record<string, string> = {
+  poliester: poliesterMain,
+  poliamida: poliamidaMain,
+  "dry-fit": dryfitMain,
+  estampados: estampadosMain,
+};
 
 const Catalogo = () => {
   const navigate = useNavigate();
@@ -36,7 +47,7 @@ const Catalogo = () => {
               {/* Image */}
               <div className="w-full">
                 <ImageWithSkeleton
-                  src={category.mainImage}
+                  src={categoryMainImages[category.slug] ?? category.mainImage}
                   alt={category.name}
                   width={800}
                   height={800}
@@ -47,7 +58,7 @@ const Catalogo = () => {
                   fetchPriority="high"
                 />
               </div>
-              
+
               {/* Name */}
               <div className="p-3 md:p-6 bg-card border-t flex-shrink-0">
                 <h3 className="font-display font-bold text-base md:text-2xl text-foreground text-center">
