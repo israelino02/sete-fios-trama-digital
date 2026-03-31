@@ -4,6 +4,18 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import estMasc3 from "@/assets/romantik-estampado-masc-3.jpg";
+import estMasc4 from "@/assets/romantik-estampado-masc-4.jpg";
+import estMasc6 from "@/assets/romantik-estampado-masc-6.jpg";
+
+// Override map for swatch images that need static imports
+const swatchImageOverrides: Record<string, string> = {
+  "/lovable-uploads/romantik-estampado-masculino-3.jpg": estMasc3,
+  "/lovable-uploads/romantik-estampado-masculino-4.jpg": estMasc4,
+  "/lovable-uploads/romantik-estampado-masculino-6.jpg": estMasc6,
+};
+
+const getSwatchSrc = (swatch: string) => swatchImageOverrides[swatch] || swatch;
 
 interface SwatchGridProps {
   colors: ColorSwatch[];
