@@ -98,7 +98,7 @@ export const SwatchGrid = ({ colors, fabric }: SwatchGridProps) => {
               {/* Enlarged swatch image */}
               <div className="aspect-square w-full max-w-xl mx-auto rounded-lg overflow-hidden border-2 shadow-lg">
                 <img
-                  src={selectedSwatch.swatch}
+                  src={getSwatchSrc(selectedSwatch.swatch)}
                   alt={`${selectedSwatch.name} - ${selectedSwatch.code}`}
                   width={800}
                   height={800}
