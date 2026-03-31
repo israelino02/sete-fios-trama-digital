@@ -7,12 +7,24 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import estMasc3 from "@/assets/romantik-estampado-masc-3.jpg";
 import estMasc4 from "@/assets/romantik-estampado-masc-4.jpg";
 import estMasc6 from "@/assets/romantik-estampado-masc-6.jpg";
+import estFem1 from "@/assets/romantik-estampado-fem-1.jpg";
+import estFem2 from "@/assets/romantik-estampado-fem-2.jpg";
+import estFem3 from "@/assets/romantik-estampado-fem-3.jpg";
+import estInf5 from "@/assets/romantik-estampado-infantil-5.jpg";
+import estInf6 from "@/assets/romantik-estampado-infantil-6.jpg";
+import estInf7 from "@/assets/romantik-estampado-infantil-7.jpg";
 
 // Override map for swatch images that need static imports
 const swatchImageOverrides: Record<string, string> = {
   "/lovable-uploads/romantik-estampado-masculino-3.jpg": estMasc3,
   "/lovable-uploads/romantik-estampado-masculino-4.jpg": estMasc4,
   "/lovable-uploads/romantik-estampado-masculino-6.jpg": estMasc6,
+  "/lovable-uploads/romantik-estampado-fem-1.jpg": estFem1,
+  "/lovable-uploads/romantik-estampado-fem-2.jpg": estFem2,
+  "/lovable-uploads/romantik-estampado-fem-3.jpg": estFem3,
+  "/lovable-uploads/romantik-estampado-infantil-5.jpg": estInf5,
+  "/lovable-uploads/romantik-estampado-infantil-6.jpg": estInf6,
+  "/lovable-uploads/romantik-estampado-infantil-7.jpg": estInf7,
 };
 
 const getSwatchSrc = (swatch: string) => swatchImageOverrides[swatch] || swatch;
