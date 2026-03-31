@@ -9,11 +9,19 @@ import { Badge } from "@/components/ui/badge";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import romantikMescladoMain from "@/assets/romantik-mesclado-main.jpg";
 import delitexPoliamidaMain from "@/assets/delitex-poliamida-main.jpg";
+import polisideMain from "@/assets/poliside-main.jpg";
+import summersoulMain from "@/assets/summersoul-main.jpg";
+import milaoMain from "@/assets/milao-main.jpg";
+import romantikRiscaMain from "@/assets/romantik-risca-main.jpg";
 
 // Override map for subfabric main images that need static imports
 const fabricMainImageOverrides: Record<string, string> = {
   "ROMANTIK MESCLADO": romantikMescladoMain,
   "DELITEX POLIAMIDA": delitexPoliamidaMain,
+  "POLISIDE": polisideMain,
+  "SUMMERSOUL": summersoulMain,
+  "MILÃO": milaoMain,
+  "ROMANTIK RISCA DE GIZ": romantikRiscaMain,
 };
 
 const FabricDetail = () => {
