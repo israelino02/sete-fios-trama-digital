@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-7fios.jpg";
+import { resolveUpload } from "@/lib/uploadAssets";
 const Sobre = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
@@ -143,7 +144,7 @@ Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superaç
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img src="/lovable-uploads/raianne-comercial.png" alt="Raianne Oliveira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
+                <img src={resolveUpload("/lovable-uploads/raianne-comercial.png")} alt="Raianne Oliveira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Raianne Oliveira</h3>
               <p className="text-primary font-medium">Dep. Comercial</p>
@@ -153,7 +154,7 @@ Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superaç
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img src="/lovable-uploads/manasses-ferreira.png" alt="Manassés Ferreira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
+                <img src={resolveUpload("/lovable-uploads/manasses-ferreira.png")} alt="Manassés Ferreira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Manassés Ferreira</h3>
               <p className="text-primary font-medium">Dep. Comercial</p>
@@ -163,7 +164,7 @@ Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superaç
           <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
             <CardContent className="p-6">
               <div className="mx-auto mb-4">
-                <img src="/lovable-uploads/hellen-aragao.png" alt="Hellen Aragão - Departamento Financeiro" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
+                <img src={resolveUpload("/lovable-uploads/hellen-aragao.png")} alt="Hellen Aragão - Departamento Financeiro" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Hellen Aragão</h3>
               <p className="text-primary font-medium">Dep. Financeiro</p>
