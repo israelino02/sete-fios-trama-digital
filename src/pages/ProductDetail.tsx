@@ -58,7 +58,7 @@ const ProductDetail = () => {
           <div>
             <div className="aspect-square mb-4 overflow-hidden rounded-lg border bg-card">
               <img
-                src={product.imagens[selectedImage]}
+                src={resolveUpload(product.imagens[selectedImage])}
                 alt={`${product.nome} - Imagem ${selectedImage + 1}`}
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -142,7 +142,7 @@ const ProductDetail = () => {
                   }`}
                 >
                   <img
-                    src={image}
+                    src={resolveUpload(image)}
                     alt={`${product.nome} - ${colorName}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
