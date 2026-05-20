@@ -1,3 +1,21 @@
+import microfibraPoliesterMain from "@/assets/uploads/microfibra-poliester-main.jpg";
+import romantikLisoMain from "@/assets/uploads/romantik-liso-novo.jpg";
+import polisideMain from "@/assets/uploads/poliside-principal-novo.jpg";
+import summersoulMain from "@/assets/uploads/hawai-principal-novo.jpg";
+import madriMain from "@/assets/uploads/madri-principal-novo.jpg";
+import milaoMain from "@/assets/uploads/milao-principal-novo.jpg";
+import romantikRiscaMain from "@/assets/uploads/romantik-risca-novo.jpg";
+import romantikMescladoMain from "@/assets/uploads/romantik-mesclado-novo.jpg";
+import microfibraPoliamidaMain from "@/assets/uploads/microfibra-poliamida-main.jpg";
+import delitexPoliamidaMain from "@/assets/uploads/poliamida-principal-novo.jpg";
+import poliamidaDarlyngMain from "@/assets/uploads/poliamida-darlyng-principal.jpg";
+import poliamidaPremiumMain from "@/assets/uploads/poliamida-premium-novo.jpg";
+import dryfitMain from "@/assets/uploads/dryfit-main-v2.jpg";
+import estampadosMain from "@/assets/uploads/estampados-main-v2.jpg";
+import romantikEstampadoFemininoMain from "@/assets/uploads/romantik-estampado-feminino-new.jpg";
+import romantikEstampadoMasculinoMain from "@/assets/uploads/romantik-estampado-main.jpg";
+import romantikEstampadoInfantilMain from "@/assets/uploads/romantik-estampado-infantil-7.jpg";
+
 export interface ColorSwatch {
   name: string;
   code: string;
@@ -59,7 +77,7 @@ export const fabricsData: FabricsData = {
       name: "MICROFIBRAS DE POLIESTER",
       slug: "poliester",
       description: "Microfibras de poliéster de alta qualidade, versáteis e duráveis.",
-      mainImage: "/lovable-uploads/microfibra-poliester-main.jpg",
+      mainImage: microfibraPoliesterMain,
       fabrics: [
         {
           type: "ROMANTIK LISO",
@@ -67,7 +85,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção.",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda íntima, sleep wear, vestidos e peças básicas",
-          mainImage: "/lovable-uploads/romantik-liso-novo.jpg",
+          mainImage: romantikLisoMain,
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -116,7 +134,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra de poliéster com excelente caimento e proteção UV 30+",
           composition: "93% Poliéster, 7% Elastano",
           recommendedUse: "Ideal para camisa UV, moda praia, moda intima e sleep wear",
-          mainImage: "/lovable-uploads/poliside-principal-novo.jpg",
+          mainImage: polisideMain,
           technicalSpecs: [
             { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "165g/m²" },
@@ -172,7 +190,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra de poliéster com excelente caimento",
           composition: "93% Poliéster, 7% Elastano",
           recommendedUse: "Ideal para moda íntima e sleep wear",
-          mainImage: "/lovable-uploads/hawai-principal-novo.jpg",
+          mainImage: summersoulMain,
           technicalSpecs: [
             { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "165g/m²" },
@@ -217,7 +235,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra com alto rendimento e variedade de cores",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda praia e moda íntima",
-          mainImage: "/lovable-uploads/madri-principal-novo.jpg",
+          mainImage: madriMain,
           technicalSpecs: [
             { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "160g/m²" },
@@ -262,7 +280,7 @@ export const fabricsData: FabricsData = {
           description: "Microfibra premium com toque sedoso e ótimo caimento",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para peças confortáveis, ideal para o verão",
-          mainImage: "/lovable-uploads/milao-principal-novo.jpg",
+          mainImage: milaoMain,
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "165g/m²" },
@@ -307,7 +325,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
-          mainImage: "/lovable-uploads/romantik-risca-novo.jpg",
+          mainImage: romantikRiscaMain,
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -341,7 +359,7 @@ export const fabricsData: FabricsData = {
           description: "Tecido leve e resistente com toque suave e fácil manutenção",
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda masculina, fitness, íntima, sleep wear e peças básicas",
-          mainImage: "/lovable-uploads/romantik-mesclado-novo.jpg",
+          mainImage: romantikMescladoMain,
           technicalSpecs: [
             { label: "Largura", value: "1,65m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -369,7 +387,7 @@ export const fabricsData: FabricsData = {
       name: "MICROFIBRAS DE POLIAMIDA",
       slug: "poliamida",
       description: "Microfibras de poliamida com alta elasticidade e conforto.",
-      mainImage: "/lovable-uploads/microfibra-poliamida-main.jpg",
+      mainImage: microfibraPoliamidaMain,
       fabrics: [
         {
           type: "DELITEX POLIAMIDA",
@@ -377,7 +395,7 @@ export const fabricsData: FabricsData = {
           description: "Poliamida de alta qualidade com toque sedoso e excelente elasticidade.",
           composition: "91% Poliamida, 9% Elastano",
           recommendedUse: "Ideal para moda fitness, praia e íntima",
-          mainImage: "/lovable-uploads/poliamida-principal-novo.jpg",
+          mainImage: delitexPoliamidaMain,
           technicalSpecs: [
             { label: "Largura", value: "160m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -431,7 +449,7 @@ export const fabricsData: FabricsData = {
           description: "É um tecido de alta qualidade, desenvolvido para quem busca conforto, toque macio e excelente caimento.",
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Ideal para moda casual, íntima, praia e fitness",
-          mainImage: "/lovable-uploads/poliamida-darlyng-principal.jpg",
+          mainImage: poliamidaDarlyngMain,
           technicalSpecs: [
             { label: "Largura", value: "160m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -481,7 +499,7 @@ export const fabricsData: FabricsData = {
           description: "É um tecido de alto padrão, desenvolvido para quem busca qualidade superior, conforto e durabilidade.",
           composition: "90% Poliamida, 10% Elastano",
           recommendedUse: "Linha premium para peças exclusivas",
-          mainImage: "/lovable-uploads/poliamida-premium-novo.jpg",
+          mainImage: poliamidaPremiumMain,
           technicalSpecs: [
             { label: "Largura", value: "160m" },
             { label: "Gramatura", value: "180g/m²" },
@@ -532,7 +550,7 @@ export const fabricsData: FabricsData = {
       name: "DRY-FIT",
       slug: "dry-fit",
       description: "Tecidos técnicos com tecnologia de secagem rápida.",
-      mainImage: "/lovable-uploads/dryfit-main-v2.jpg",
+      mainImage: dryfitMain,
       fabrics: [
         {
           type: "DRY FIT PRIME",
@@ -540,7 +558,7 @@ export const fabricsData: FabricsData = {
           description: "É um tecido tecnológico de alta performance, desenvolvido para proporcionar máximo conforto, respirabilidade e liberdade de movimento, tecido soft touch.",
           composition: "90% Poliéster, 10% Elastano",
           recommendedUse: "Ideal para quem busca conforto térmico e leveza em roupas esportivas ou casuais.",
-          mainImage: "/lovable-uploads/dryfit-main-v2.jpg",
+          mainImage: dryfitMain,
           technicalSpecs: [
             { label: "Largura", value: "1,70m" },
             { label: "Gramatura", value: "150g/m²" },
@@ -577,7 +595,7 @@ export const fabricsData: FabricsData = {
       name: "ESTAMPADOS",
       slug: "estampados",
       description: "Tecidos com estampas exclusivas e designs únicos.",
-      mainImage: "/lovable-uploads/estampados-main-v2.jpg",
+      mainImage: estampadosMain,
       fabrics: [
         {
           type: "ROMANTIK ESTAMPADO",
@@ -586,10 +604,10 @@ export const fabricsData: FabricsData = {
           composition: "92% Poliéster, 8% Elastano",
           recommendedUse: "Ideal para moda intima, moda praia, moda sleep wear e moda infantil",
           mainImage: {
-            feminino: "/lovable-uploads/romantik-estampado-feminino-new.jpg",
-            masculino: "/lovable-uploads/romantik-estampado-main.jpg",
-            infantil: "/lovable-uploads/romantik-estampado-infantil-7.jpg",
-            default: "/lovable-uploads/romantik-estampado-main.jpg"
+            feminino: romantikEstampadoFemininoMain,
+            masculino: romantikEstampadoMasculinoMain,
+            infantil: romantikEstampadoInfantilMain,
+            default: romantikEstampadoMasculinoMain
           },
           technicalSpecs: [
             { label: "Largura", value: "1,60m" },
