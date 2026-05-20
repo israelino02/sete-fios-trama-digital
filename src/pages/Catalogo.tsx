@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { fabricsData } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { resolveUpload } from "@/lib/uploadAssets";
 import poliesterMain from "@/assets/catalogo-poliester-main.jpg";
 import poliamidaMain from "@/assets/catalogo-poliamida-main.jpg";
 import dryfitMain from "@/assets/catalogo-dryfit-main.jpg";
@@ -48,7 +49,7 @@ const Catalogo = () => {
               {/* Image */}
               <div className="w-full">
                 <ImageWithSkeleton
-                  src={categoryMainImages[category.slug] ?? category.mainImage}
+                  src={categoryMainImages[category.slug] ?? resolveUpload(category.mainImage)}
                   alt={category.name}
                   width={800}
                   height={800}

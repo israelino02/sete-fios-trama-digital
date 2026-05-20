@@ -4,6 +4,7 @@ import { fabricsData, Category } from "@/data/fabrics";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { resolveUpload } from "@/lib/uploadAssets";
 
 const CategoryDetail = () => {
   const { categorySlug } = useParams();
@@ -51,7 +52,7 @@ const CategoryDetail = () => {
           <div>
             <div className="rounded-lg overflow-hidden border shadow-lg">
               <ImageWithSkeleton
-                src={category.mainImage}
+                src={resolveUpload(category.mainImage)}
                 alt={category.name}
                 className="w-full h-full object-cover"
                 aspectRatio="aspect-video"

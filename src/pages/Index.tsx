@@ -6,6 +6,7 @@ import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Ph
 import { Link } from "react-router-dom";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { resolveUpload } from "@/lib/uploadAssets";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import heroSlide1 from "@/assets/hero-slide-1.png";
 import heroSlide2 from "@/assets/hero-slide-2.png";
@@ -126,7 +127,7 @@ const Index = () => {
             {featuredProducts.map((product, index) => <Link key={index} to={getProductLink(product)}>
                 <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <ImageWithSkeleton src={product.fabric ? getFabricMainImage(product.fabric) : ''} alt={product.fabric?.type || ''} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="eager" decoding="async" fetchPriority="high" />
+                    <ImageWithSkeleton src={product.fabric ? resolveUpload(getFabricMainImage(product.fabric)) : ''} alt={product.fabric?.type || ''} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="eager" decoding="async" fetchPriority="high" />
                   </div>
                   
                   <CardContent className="p-3 md:p-4">
