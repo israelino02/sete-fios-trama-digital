@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/data/products";
+import { resolveUpload } from "@/lib/uploadAssets";
 
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
