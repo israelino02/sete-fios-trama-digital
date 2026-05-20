@@ -1,3 +1,21 @@
+import microfibraPoliesterMain from "@/assets/uploads/microfibra-poliester-main.jpg";
+import romantikLisoMain from "@/assets/uploads/romantik-liso-novo.jpg";
+import polisideMain from "@/assets/uploads/poliside-principal-novo.jpg";
+import summersoulMain from "@/assets/uploads/hawai-principal-novo.jpg";
+import madriMain from "@/assets/uploads/madri-principal-novo.jpg";
+import milaoMain from "@/assets/uploads/milao-principal-novo.jpg";
+import romantikRiscaMain from "@/assets/uploads/romantik-risca-novo.jpg";
+import romantikMescladoMain from "@/assets/uploads/romantik-mesclado-novo.jpg";
+import microfibraPoliamidaMain from "@/assets/uploads/microfibra-poliamida-main.jpg";
+import delitexPoliamidaMain from "@/assets/uploads/poliamida-principal-novo.jpg";
+import poliamidaDarlyngMain from "@/assets/uploads/poliamida-darlyng-principal.jpg";
+import poliamidaPremiumMain from "@/assets/uploads/poliamida-premium-novo.jpg";
+import dryfitMain from "@/assets/uploads/dryfit-main-v2.jpg";
+import estampadosMain from "@/assets/uploads/estampados-main-v2.jpg";
+import romantikEstampadoFemininoMain from "@/assets/uploads/romantik-estampado-feminino-new.jpg";
+import romantikEstampadoMasculinoMain from "@/assets/uploads/romantik-estampado-main.jpg";
+import romantikEstampadoInfantilMain from "@/assets/uploads/romantik-estampado-infantil-7.jpg";
+
 export interface ColorSwatch {
   name: string;
   code: string;
