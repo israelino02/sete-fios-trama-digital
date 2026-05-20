@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { resolveUploads } from "@/lib/uploadAssets";
+
 
 interface ProductCardProps {
   name: string;
@@ -24,7 +26,10 @@ export const ProductCard = ({
   const whatsappMessage = `Olá! Vim do SITE e gostaria de solicitar um orçamento do produto *${name}*${category ? ` (categoria: ${category})` : ''}.`;
   const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(whatsappMessage)}`;
 
-  const displayImages = images || (imageUrl ? [imageUrl] : []);
+  const displayImages = useMemo(
+    () => resolveUploads(images || (imageUrl ? [imageUrl] : [])) || [],
+    [images, imageUrl]
+  );
   const hasMultipleImages = displayImages.length > 1;
 
   const nextImage = () => {

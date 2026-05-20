@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/data/products";
+import { resolveUpload } from "@/lib/uploadAssets";
 
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
@@ -57,7 +58,7 @@ const ProductDetail = () => {
           <div>
             <div className="aspect-square mb-4 overflow-hidden rounded-lg border bg-card">
               <img
-                src={product.imagens[selectedImage]}
+                src={resolveUpload(product.imagens[selectedImage])}
                 alt={`${product.nome} - Imagem ${selectedImage + 1}`}
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -141,7 +142,7 @@ const ProductDetail = () => {
                   }`}
                 >
                   <img
-                    src={image}
+                    src={resolveUpload(image)}
                     alt={`${product.nome} - ${colorName}`}
                     className="w-full h-full object-cover"
                     loading="lazy"

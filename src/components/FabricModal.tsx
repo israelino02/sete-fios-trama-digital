@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Fabric } from "@/data/fabrics";
 import { getFabricMainImage } from "@/data/fabrics";
+import { resolveUpload } from "@/lib/uploadAssets";
 
 interface FabricModalProps {
   fabric: Fabric | null;
@@ -45,7 +46,7 @@ export const FabricModal = ({
             {/* Main Image */}
             <div className="aspect-video rounded-lg overflow-hidden border shadow-lg">
               <img
-                src={getFabricMainImage(fabric)}
+                src={resolveUpload(getFabricMainImage(fabric))}
                 alt={fabric.type}
                 className="w-full h-full object-cover"
               />

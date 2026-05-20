@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Download, MessageCircle, X } from "lucide-react";
 import { Product } from "@/data/products";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { resolveUploads } from "@/lib/uploadAssets";
 
 interface ProductModalProps {
   product: Product | null;
@@ -14,6 +15,11 @@ interface ProductModalProps {
 
 export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const imagens = useMemo(
+    () => (product ? resolveUploads(product.imagens) || product.imagens : []),
+    [product]
+  );
 
   if (!product) return null;
 
@@ -46,16 +52,16 @@ export const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) =>
             {/* Main Image */}
             <div className="aspect-square overflow-hidden rounded-lg border border-border">
               <img
-                src={product.imagens[selectedImageIndex]}
+                src={imagens[selectedImageIndex]}
                 alt={`${product.nome} - Imagem ${selectedImageIndex + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>
             
             {/* Thumbnail Gallery */}
-            {product.imagens.length > 1 && (
+            {imagens.length > 1 && (
               <div className="flex gap-2 overflow-x-auto">
-                {product.imagens.map((imagem, index) => (
+                {imagens.map((imagem, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedImageIndex(index)}

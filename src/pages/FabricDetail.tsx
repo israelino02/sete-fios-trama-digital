@@ -7,6 +7,7 @@ import { ArrowLeft, FileText, Lightbulb, Shirt } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
+import { resolveUpload } from "@/lib/uploadAssets";
 import romantikMescladoMain from "@/assets/romantik-mesclado-main.jpg";
 import delitexPoliamidaMain from "@/assets/delitex-poliamida-main.jpg";
 import polisideMain from "@/assets/poliside-main.jpg";
@@ -93,7 +94,7 @@ const FabricDetail = () => {
           <div>
             <div className="rounded-lg overflow-hidden border shadow-lg sticky top-8">
               <ImageWithSkeleton
-                src={fabricMainImageOverrides[selectedFabric.type] || getFabricMainImage(selectedFabric, gender)}
+                src={fabricMainImageOverrides[selectedFabric.type] || resolveUpload(getFabricMainImage(selectedFabric, gender))}
                 alt={selectedFabric.type}
                 width={1200}
                 height={675}
