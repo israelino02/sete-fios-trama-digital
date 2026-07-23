@@ -40,6 +40,12 @@ export const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (location.hash) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
+
+
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
