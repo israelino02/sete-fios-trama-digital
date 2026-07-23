@@ -9,7 +9,7 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import heroMain from "@/assets/hero-main.png.asset.json";
-import heroTablet from "@/assets/hero-tablet.png.asset.json";
+import heroTablet from "@/assets/hero-tablet-v2.png.asset.json";
 import heroMobile from "@/assets/hero-mobile-v33.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
