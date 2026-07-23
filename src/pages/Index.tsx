@@ -108,6 +108,33 @@ const Index = () => {
               style={{ aspectRatio: "auto" }}
             />
           ))}
+          <button
+            type="button"
+            aria-label="Imagem anterior"
+            onClick={() => setMobileSlide(prev => (prev - 1 + heroMobileImages.length) % heroMobileImages.length)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="Próxima imagem"
+            onClick={() => setMobileSlide(prev => (prev + 1) % heroMobileImages.length)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
+            {heroMobileImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Ir para imagem ${i + 1}`}
+                onClick={() => setMobileSlide(i)}
+                className={`h-1.5 rounded-full transition-all ${i === mobileSlide ? 'w-6 bg-white' : 'w-1.5 bg-white/50'}`}
+              />
+            ))}
+          </div>
         </div>
         {/* Tablet/Desktop: carousel */}
         <div className="hidden md:block absolute inset-0">
