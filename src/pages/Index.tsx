@@ -10,7 +10,7 @@ import { resolveUpload } from "@/lib/uploadAssets";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import heroMain from "@/assets/hero-main.png.asset.json";
 import heroTablet from "@/assets/hero-tablet-v2.png.asset.json";
-import heroMobile from "@/assets/hero-mobile-v33.png.asset.json";
+import heroMobile from "@/assets/hero-mobile-v34.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
@@ -77,7 +77,7 @@ const Index = () => {
         <img
           src={heroMobile.url}
           alt="Sete Fios Têxtil"
-          className="block md:hidden w-full h-auto"
+          className="block md:hidden w-full h-auto object-contain"
           style={{ aspectRatio: "auto" }}
         />
         {/* Tablet/Desktop: carousel */}
