@@ -31,9 +31,9 @@ const Index = () => {
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url, heroLogoDesktop.url];
-  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url, heroLogoTablet.url];
-  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url, heroLogoMobile.url];
+  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url];
+  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url];
+  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url];
 
   useEffect(() => {
     const timer = setInterval(() => {
