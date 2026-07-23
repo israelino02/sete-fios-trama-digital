@@ -24,6 +24,7 @@ import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
 import heroStripLogo from "@/assets/hero-strip-logo.png.asset.json";
+import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.png.asset.json";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -230,7 +231,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
             {[
               { name: "Viés Noronha", description: "Viés Noronha disponível em diversas cores para acabamentos de alta qualidade.", image: "/lovable-uploads/vies-noronha-1.jpg" },
-              { name: "Elástico liso", description: "Elásticos lisos de alta qualidade disponíveis em diversas cores. Largura 25MM, 30MM e 35MM.", image: "/lovable-uploads/elasticos-lisos-1.jpg" },
+              { name: "Elástico liso", description: "Elásticos lisos de alta qualidade disponíveis em diversas cores. Largura 25MM, 30MM e 35MM.", image: elasticosPersonalizados.url },
               { name: "Renda 7 Mares", description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", image: "/lovable-uploads/renda-7-mares-1.jpg" },
               { name: "Renda 7 Fios", description: "Renda 7 Fios com largura de 3,3 cm disponível em diversas cores. Composição: Poliamida e Elastano.", image: "/lovable-uploads/renda-7-fios-1.jpg" },
             ].map((item, index) => (
