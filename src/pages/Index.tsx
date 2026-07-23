@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Phone } from "lucide-react";
+import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
@@ -23,15 +23,18 @@ import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json
 import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json";
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
+import heroLogoDesktop from "@/assets/hero-logo-desktop.png.asset.json";
+import heroLogoTablet from "@/assets/hero-logo-tablet.png.asset.json";
+import heroLogoMobile from "@/assets/hero-logo-mobile.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileSlide, setMobileSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url];
-  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url];
-  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url];
+  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url, heroLogoDesktop.url];
+  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url, heroLogoTablet.url];
+  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url, heroLogoMobile.url];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -105,6 +108,33 @@ const Index = () => {
               style={{ aspectRatio: "auto" }}
             />
           ))}
+          <button
+            type="button"
+            aria-label="Imagem anterior"
+            onClick={() => setMobileSlide(prev => (prev - 1 + heroMobileImages.length) % heroMobileImages.length)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="Próxima imagem"
+            onClick={() => setMobileSlide(prev => (prev + 1) % heroMobileImages.length)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
+            {heroMobileImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Ir para imagem ${i + 1}`}
+                onClick={() => setMobileSlide(i)}
+                className={`h-1.5 rounded-full transition-all ${i === mobileSlide ? 'w-6 bg-white' : 'w-1.5 bg-white/50'}`}
+              />
+            ))}
+          </div>
         </div>
         {/* Tablet/Desktop: carousel */}
         <div className="hidden md:block absolute inset-0">
