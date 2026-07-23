@@ -205,6 +205,64 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Viés, Elásticos e Rendas */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary text-primary-foreground">✨ Aviamentos</Badge>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Viés, Elásticos e Rendas
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Complete seus projetos com nossos aviamentos de qualidade
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {[
+              { name: "Viés Noronha", description: "Viés Noronha disponível em diversas cores para acabamentos de alta qualidade.", image: "/lovable-uploads/vies-noronha-1.jpg" },
+              { name: "Elástico liso", description: "Elásticos lisos de alta qualidade disponíveis em diversas cores. Largura 25MM, 30MM e 35MM.", image: "/lovable-uploads/elasticos-lisos-1.jpg" },
+              { name: "Renda 7 Mares", description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", image: "/lovable-uploads/renda-7-mares-1.jpg" },
+              { name: "Renda 7 Fios", description: "Renda 7 Fios com largura de 3,3 cm disponível em diversas cores. Composição: Poliamida e Elastano.", image: "/lovable-uploads/renda-7-fios-1.jpg" },
+            ].map((item, index) => (
+              <Link key={index} to="/outros-produtos">
+                <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <ImageWithSkeleton src={resolveUpload(item.image)} alt={item.name} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="lazy" decoding="async" />
+                  </div>
+                  <CardContent className="p-3 md:p-4">
+                    <h3 className="font-semibold text-sm md:text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1 mb-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-muted-foreground text-xs md:text-sm line-clamp-2">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-gradient-primary hover:bg-gradient-primary/90 text-lg px-12 py-6 h-auto font-bold shadow-warm hover:shadow-xl hover:scale-105 transition-all duration-300 text-primary-foreground">
+              <Link to="/outros-produtos">Ver Todos os Aviamentos</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Frase de Impacto */}
+      <section className="py-16 lg:py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
+            <p className="text-lg md:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
+              "Aqui, cada fio conta uma história: a de uma empresa que cresce lado a lado com você, 
+              oferecendo muito mais do que matéria-prima — oferecemos segurança, confiança e resultados."
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Vídeo Institucional */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -229,22 +287,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Missão, Visão e Valores */}
-      <section className="py-16 lg:py-24 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
-          
 
-          
-
-          {/* Frase de Impacto */}
-          <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
-            <p className="text-lg md:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
-              "Aqui, cada fio conta uma história: a de uma empresa que cresce lado a lado com você, 
-              oferecendo muito mais do que matéria-prima — oferecemos segurança, confiança e resultados."
-            </p>
-          </div>
-        </div>
-      </section>
 
 
       {/* Quick Links */}
