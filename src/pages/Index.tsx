@@ -14,15 +14,18 @@ import heroMobile from "@/assets/hero-mobile-v34.png.asset.json";
 import heroMicroDesktop from "@/assets/hero-microfibras-desktop.png.asset.json";
 import heroMicroTablet from "@/assets/hero-microfibras-tablet.png.asset.json";
 import heroMicroMobile from "@/assets/hero-microfibras-mobile.png.asset.json";
+import heroPoliDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
+import heroPoliTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
+import heroPoliMobile from "@/assets/hero-poliamida-mobile.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileSlide, setMobileSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url, heroMicroDesktop.url];
-  const heroTabletImages = [heroTablet.url, heroMicroTablet.url];
-  const heroMobileImages = [heroMobile.url, heroMicroMobile.url];
+  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url];
+  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url];
+  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url];
 
   useEffect(() => {
     const timer = setInterval(() => {
