@@ -9,14 +9,16 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import heroMain from "@/assets/hero-main.png.asset.json";
+import heroTablet from "@/assets/hero-tablet.png.asset.json";
+import heroMobile from "@/assets/hero-mobile.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
   const heroImages = [heroMain.url];
-  const heroTabletImages = [heroMain.url];
-  const heroMobileImages = [heroMain.url];
+  const heroTabletImages = [heroTablet.url];
+  const heroMobileImages = [heroMobile.url];
 
 
   // Featured products from fabrics data
