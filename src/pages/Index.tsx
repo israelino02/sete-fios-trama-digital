@@ -72,10 +72,18 @@ const Index = () => {
   }];
   return <div className="space-y-0">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <HeroCarousel images={heroImages} tabletImages={heroTabletImages} mobileImages={heroMobileImages} interval={8000} onSlideChange={setCurrentSlide} />
-        
-        
+      <section className="relative md:min-h-[80vh] md:flex md:items-center md:justify-center overflow-hidden">
+        {/* Mobile: full image, no crop */}
+        <img
+          src={heroMobile.url}
+          alt="Sete Fios Têxtil"
+          className="block md:hidden w-full h-auto"
+          style={{ aspectRatio: "auto" }}
+        />
+        {/* Tablet/Desktop: carousel */}
+        <div className="hidden md:block absolute inset-0">
+          <HeroCarousel images={heroImages} tabletImages={heroTabletImages} mobileImages={heroMobileImages} interval={8000} onSlideChange={setCurrentSlide} />
+        </div>
       </section>
 
       {/* CTA Buttons */}
