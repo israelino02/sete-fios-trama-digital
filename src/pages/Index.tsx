@@ -24,7 +24,7 @@ import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
 import heroStripLogo from "@/assets/hero-strip-logo.png.asset.json";
-import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.png.asset.json";
+import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
