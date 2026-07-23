@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,14 +11,25 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import heroMain from "@/assets/hero-main.png.asset.json";
 import heroTablet from "@/assets/hero-tablet-v2.png.asset.json";
 import heroMobile from "@/assets/hero-mobile-v34.png.asset.json";
+import heroMicroDesktop from "@/assets/hero-microfibras-desktop.png.asset.json";
+import heroMicroTablet from "@/assets/hero-microfibras-tablet.png.asset.json";
+import heroMicroMobile from "@/assets/hero-microfibras-mobile.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mobileSlide, setMobileSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url];
-  const heroTabletImages = [heroTablet.url];
-  const heroMobileImages = [heroMobile.url];
+  const heroImages = [heroMain.url, heroMicroDesktop.url];
+  const heroTabletImages = [heroTablet.url, heroMicroTablet.url];
+  const heroMobileImages = [heroMobile.url, heroMicroMobile.url];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setMobileSlide(prev => (prev + 1) % heroMobileImages.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [heroMobileImages.length]);
 
 
   // Featured products from fabrics data
@@ -73,13 +84,19 @@ const Index = () => {
   return <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative md:min-h-[80vh] md:flex md:items-center md:justify-center overflow-hidden">
-        {/* Mobile: full image, no crop */}
-        <img
-          src={heroMobile.url}
-          alt="Sete Fios Têxtil"
-          className="block md:hidden w-full h-auto object-contain"
-          style={{ aspectRatio: "auto" }}
-        />
+        {/* Mobile: full image, no crop, cycling */}
+        <div className="block md:hidden relative w-full">
+          {heroMobileImages.map((url, i) => (
+            <img
+              key={i}
+              src={url}
+              alt="Sete Fios Têxtil"
+              loading={i === 0 ? "eager" : "lazy"}
+              className={`w-full h-auto object-contain transition-opacity duration-1000 ${i === 0 ? 'relative' : 'absolute inset-0'} ${i === mobileSlide ? 'opacity-100' : 'opacity-0'}`}
+              style={{ aspectRatio: "auto" }}
+            />
+          ))}
+        </div>
         {/* Tablet/Desktop: carousel */}
         <div className="hidden md:block absolute inset-0">
           <HeroCarousel images={heroImages} tabletImages={heroTabletImages} mobileImages={heroMobileImages} interval={8000} onSlideChange={setCurrentSlide} />
