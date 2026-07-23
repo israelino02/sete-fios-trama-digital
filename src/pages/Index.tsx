@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Phone } from "lucide-react";
+import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
