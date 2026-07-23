@@ -23,15 +23,18 @@ import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json
 import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json";
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
+import heroLogoDesktop from "@/assets/hero-logo-desktop.png.asset.json";
+import heroLogoTablet from "@/assets/hero-logo-tablet.png.asset.json";
+import heroLogoMobile from "@/assets/hero-logo-mobile.png.asset.json";
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileSlide, setMobileSlide] = useState(0);
   const whatsappNumber = "5581994616071";
   const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url];
-  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url];
-  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url];
+  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url, heroLogoDesktop.url];
+  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url, heroLogoTablet.url];
+  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url, heroLogoMobile.url];
 
   useEffect(() => {
     const timer = setInterval(() => {
