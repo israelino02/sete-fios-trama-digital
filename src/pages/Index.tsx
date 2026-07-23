@@ -204,6 +204,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Faixa Logo */}
+      <section className="w-full overflow-hidden bg-[#181341]">
+        <img
+          src={heroStripLogo.url}
+          alt="Sete Fios Têxtil"
+          loading="lazy"
+          className="w-full h-16 md:h-24 lg:h-28 object-cover object-center"
+        />
+      </section>
+
       {/* Viés, Elásticos e Rendas */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
