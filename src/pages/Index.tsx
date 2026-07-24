@@ -40,6 +40,11 @@ const trustItems = [
   { icon: Sparkles, value: "Alta", label: "qualidade" },
 ];
 
+import catMicrofibras from "@/assets/cat-microfibras.png.asset.json";
+import catDryfit from "@/assets/cat-dryfit.jpg.asset.json";
+import catEstampados from "@/assets/cat-estampados.jpg.asset.json";
+import catAviamentos from "@/assets/cat-aviamentos.jpg.asset.json";
+
 const categories = [
   {
     name: "Microfibras",
@@ -47,6 +52,7 @@ const categories = [
     href: "/catalogo/poliamida",
     gradient: "bg-gradient-cat-blue",
     icon: Layers,
+    image: catMicrofibras.url,
   },
   {
     name: "Dry-fit",
@@ -54,6 +60,7 @@ const categories = [
     href: "/catalogo/dry-fit",
     gradient: "bg-gradient-cat-amber",
     icon: Scissors,
+    image: catDryfit.url,
   },
   {
     name: "Estampados",
@@ -61,6 +68,7 @@ const categories = [
     href: "/catalogo/estampados",
     gradient: "bg-gradient-cat-green",
     icon: Palette,
+    image: catEstampados.url,
   },
   {
     name: "Aviamentos",
@@ -68,6 +76,7 @@ const categories = [
     href: "/outros-produtos",
     gradient: "bg-gradient-cat-purple",
     icon: Sparkles,
+    image: catAviamentos.url,
   },
 ];
 
