@@ -219,7 +219,7 @@ const MobileTabletView = () => {
                       href={waLink(p.name)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full text-center text-xs font-semibold py-2 rounded transition-colors"
+                      className="block w-full text-center text-xs md:text-sm font-semibold py-2 md:py-2.5 rounded transition-colors"
                       style={{ backgroundColor: "#1B2A6B", color: "#fff" }}
                     >
                       Consultar
