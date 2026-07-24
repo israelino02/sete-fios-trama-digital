@@ -124,10 +124,40 @@ const MobileTabletView = () => {
   return (
     <div className="lg:hidden">
       <style>{`
-        .op-scroll::-webkit-scrollbar { display: none; }
-        .op-scroll { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
-        .op-snap { scroll-snap-align: start; }
+        .op-carousel {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          gap: 10px;
+          padding: 0 16px 4px;
+        }
+        .op-carousel::-webkit-scrollbar { display: none; }
+        .op-prod-card {
+          min-width: 150px;
+          max-width: 150px;
+          scroll-snap-align: start;
+          flex-shrink: 0;
+        }
+        @media (min-width: 768px) {
+          .op-carousel {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            overflow-x: visible;
+            scroll-snap-type: none;
+            gap: 16px;
+            padding: 0 40px;
+          }
+          .op-prod-card {
+            min-width: unset;
+            max-width: unset;
+            width: 100%;
+          }
+        }
       `}</style>
+
 
       {/* 1. Header */}
       <section style={{ backgroundColor: "#1B2A6B" }} className="px-4 py-5 md:px-10 md:py-8">
