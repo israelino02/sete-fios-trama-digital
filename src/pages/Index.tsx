@@ -159,10 +159,8 @@ const Index = () => {
   return (
     <div>
       {/* 2. HERO */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-14 md:py-20">
-          {/* Imagens do hero serão adicionadas em breve */}
-        </div>
+      <section className="relative w-full min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] overflow-hidden bg-primary">
+        <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} />
       </section>
 
 
