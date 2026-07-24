@@ -44,7 +44,7 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* NAVBAR - navy background */}
-      <header className="sticky top-0 z-40 bg-primary border-b border-primary/40">
+      <header className="sticky top-0 z-40 border-b border-primary/40" style={{ backgroundColor: "#1E1B5E" }}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center" aria-label="Sete Fios Têxtil">
