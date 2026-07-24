@@ -6,6 +6,26 @@ import { resolveUpload } from "@/lib/uploadAssets";
 import { useState } from "react";
 import heroBanner from "@/assets/hero-banner-fabrics.png.asset.json";
 import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
+import { HeroCarousel } from "@/components/HeroCarousel";
+import heroMainDesktop from "@/assets/hero-main.png.asset.json";
+import heroMainTablet from "@/assets/hero-tablet-v2.png.asset.json";
+import heroMainMobile from "@/assets/hero-mobile-v34.png.asset.json";
+import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop.png.asset.json";
+import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet.png.asset.json";
+import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile.png.asset.json";
+import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.png.asset.json";
+import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.png.asset.json";
+import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json";
+import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
+import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
+import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile.png.asset.json";
+import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json";
+import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
+import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
+
+const heroDesktop = [heroMainDesktop.url, heroMicrofibrasDesktop.url, heroMicrofibraDesktop.url, heroPoliamidaDesktop.url, heroPoliesterDesktop.url];
+const heroTablet = [heroMainTablet.url, heroMicrofibrasTablet.url, heroMicrofibraTablet.url, heroPoliamidaTablet.url, heroPoliesterTablet.url];
+const heroMobile = [heroMainMobile.url, heroMicrofibrasMobile.url, heroMicrofibraMobile.url, heroPoliamidaMobile.url, heroPoliesterMobile.url];
 
 const WHATSAPP_PHONE = "5581994616071";
 const buildWa = (msg: string) =>
@@ -139,10 +159,8 @@ const Index = () => {
   return (
     <div>
       {/* 2. HERO */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-14 md:py-20">
-          {/* Imagens do hero serão adicionadas em breve */}
-        </div>
+      <section className="relative w-full min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] overflow-hidden bg-primary">
+        <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} />
       </section>
 
 
