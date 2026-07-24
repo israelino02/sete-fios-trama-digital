@@ -156,7 +156,10 @@ const MobileTabletView = () => {
             width: 100%;
           }
         }
+        .op-tabs { scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; }
+        .op-tabs::-webkit-scrollbar { display: none; }
       `}</style>
+
 
 
       {/* 1. Header */}
