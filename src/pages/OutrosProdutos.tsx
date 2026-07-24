@@ -130,7 +130,7 @@ const MobileTabletView = () => {
       `}</style>
 
       {/* 1. Header */}
-      <section style={{ backgroundColor: "#1B2A6B" }} className="px-5 py-8 md:py-12">
+      <section style={{ backgroundColor: "#1B2A6B" }} className="px-4 py-5 md:px-10 md:py-8">
         <p className="text-[11px] md:text-xs font-semibold tracking-[0.2em] mb-2" style={{ color: "#FBBF24" }}>
           AVIAMENTOS
         </p>
