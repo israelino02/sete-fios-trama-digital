@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X, Search, Phone, MapPin, Clock } from "lucide-react";
+import logoSeteFios from "@/assets/logo-sete-fios.jpg.asset.json";
 
 interface LayoutProps {
   children: ReactNode;
@@ -119,40 +120,43 @@ export const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-display text-2xl font-extrabold text-accent mb-3">
-                7 Fios Têxtil
-              </h3>
-              <p className="text-sm text-primary-foreground/80 leading-relaxed">
+              <img
+                src={logoSeteFios.url}
+                alt="Sete Fios Têxtil"
+                className="w-32 h-auto mb-3 rounded"
+                loading="lazy"
+              />
+              <p className="text-sm text-white/80 leading-relaxed">
                 Tecidos e aviamentos de alta qualidade no Polo de Confecções de PE.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Contato</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/85">
+              <h4 className="font-semibold mb-3 text-white">Contato</h4>
+              <ul className="space-y-2 text-sm text-white/85">
                 <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
+                  <MapPin className="w-4 h-4 mt-0.5 text-white flex-shrink-0" />
                   <span>Av. Pref. Braz de Líra, 760 — Santa Cruz do Capibaribe — PE</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-accent flex-shrink-0" />
+                  <Phone className="w-4 h-4 text-white flex-shrink-0" />
                   <a href="tel:+5581994616071" className="hover:text-accent transition-colors">
                     (81) 99461-6071
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-accent flex-shrink-0" />
+                  <Clock className="w-4 h-4 text-white flex-shrink-0" />
                   <span>Seg–Sex, 8h às 18h</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Navegação</h4>
+              <h4 className="font-semibold mb-3 text-white">Navegação</h4>
               <ul className="space-y-2 text-sm">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.href}
-                      className="text-primary-foreground/85 hover:text-accent transition-colors"
+                      className="text-white/85 hover:text-accent transition-colors"
                     >
                       {item.name}
                     </Link>
