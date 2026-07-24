@@ -104,7 +104,7 @@ export const products: Product[] = [
   },
   {
     id: "hawai-003",
-    nome: "SUMMERSOUL",
+    nome: "SUMMERSOL",
     codigo: "9012",
     imagens: [
       "/lovable-uploads/hawai-turquesa-novo.jpg",
@@ -128,7 +128,7 @@ export const products: Product[] = [
     composicao: "93% Poliéster, 7% Elastano",
     recomendacoes: "Perfeito para peças de praia e roupas casuais de verão.",
     caracteristicas: ["UV Protection", "Respirável", "Quick Dry"],
-    categoria: "SUMMERSOUL"
+    categoria: "SUMMERSOL"
   },
   {
     id: "madri-004",

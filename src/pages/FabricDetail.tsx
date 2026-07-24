@@ -20,7 +20,7 @@ const fabricMainImageOverrides: Record<string, string> = {
   "ROMANTIK MESCLADO": romantikMescladoMain,
   "DELITEX POLIAMIDA": delitexPoliamidaMain,
   "POLISIDE": polisideMain,
-  "SUMMERSOUL": summersoulMain,
+  "SUMMERSOL": summersoulMain,
   "MILÃO": milaoMain,
   "ROMANTIK RISCA DE GIZ": romantikRiscaMain,
 };
