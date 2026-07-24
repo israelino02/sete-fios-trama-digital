@@ -4,6 +4,7 @@ import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import heroBanner from "@/assets/hero-banner-fabrics.png.asset.json";
 import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
 import { HeroCarousel } from "@/components/HeroCarousel";
