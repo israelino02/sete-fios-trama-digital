@@ -119,7 +119,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-display text-2xl font-extrabold text-accent mb-3">
+              <h3 className="font-display text-2xl font-extrabold text-primary-foreground mb-3">
                 7 Fios Têxtil
               </h3>
               <p className="text-sm text-primary-foreground/80 leading-relaxed">
