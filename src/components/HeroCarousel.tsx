@@ -77,23 +77,20 @@ export const HeroCarousel = ({
     }} />)}
       
       {/* Navigation Arrows */}
-      
-      
-      
-
-      {/* Dots Navigation - Desktop */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden lg:flex gap-2">
-        {images.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
-      </div>
-      
-      {/* Dots Navigation - Tablet */}
-      {tabletImages && <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex lg:hidden gap-2">
-        {tabletImages.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
-      </div>}
-      
-      {/* Dots Navigation - Mobile */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex md:hidden gap-2">
-        {(mobileImages || images).map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Ir para imagem ${index + 1}`} />)}
-      </div>
+      <button
+        onClick={goToPrevious}
+        aria-label="Imagem anterior"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white/80 hover:text-white transition-all backdrop-blur-sm"
+      >
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+      </button>
+      <button
+        onClick={goToNext}
+        aria-label="Próxima imagem"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white/80 hover:text-white transition-all backdrop-blur-sm"
+      >
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+      </button>
     </div>;
+
 };
