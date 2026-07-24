@@ -172,6 +172,18 @@ const Index = () => {
       {/* 2. HERO */}
       <section className="relative w-full min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] overflow-hidden bg-primary">
         <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} />
+        <div className="pointer-events-none absolute inset-x-0 bottom-6 md:bottom-10 z-20 flex justify-center px-4">
+          <div className="pointer-events-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Button asChild size="lg" className="bg-accent text-primary hover:bg-accent/90 font-semibold">
+              <Link to="/catalogo">Ver Catálogo</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur border-white text-white hover:bg-white hover:text-primary font-semibold">
+              <a href={buildWhatsappUrl("Olá! Vim pelo site e gostaria de mais informações.")} target="_blank" rel="noopener noreferrer">
+                Falar no WhatsApp
+              </a>
+            </Button>
+          </div>
+        </div>
       </section>
 
 
