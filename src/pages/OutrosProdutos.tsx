@@ -182,11 +182,12 @@ const MobileTabletView = () => {
               <span className="flex-1 h-px bg-gray-300" />
             </div>
 
-            <div className="op-scroll flex overflow-x-auto gap-3 px-5 pb-2">
+            <div className="op-scroll flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible gap-3 md:gap-5 px-5 pb-2">
               {group.products.map((p) => (
                 <article
                   key={p.name}
-                  className="op-snap flex-shrink-0 w-[150px] md:w-[230px] bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
+                  className="op-snap flex-shrink-0 w-[150px] md:w-auto bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
+
                 >
                   <div
                     className="relative h-[110px] md:h-[180px]"
