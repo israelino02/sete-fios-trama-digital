@@ -20,9 +20,9 @@ import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json
 import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
 import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
 import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile.png.asset.json";
-import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json";
-import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
-import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
+import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.png.asset.json";
+import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.png.asset.json";
+import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v2.png.asset.json";
 
 const heroDesktop = [heroMainDesktop.url, heroMicrofibrasDesktop.url, heroMicrofibraDesktop.url, heroPoliamidaDesktop.url, heroPoliesterDesktop.url];
 const heroTablet = [heroMainTablet.url, heroMicrofibrasTablet.url, heroMicrofibraTablet.url, heroPoliamidaTablet.url, heroPoliesterTablet.url];
