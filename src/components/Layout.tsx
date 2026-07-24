@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X, Search, Phone, MapPin, Clock } from "lucide-react";
+import logo7Fios from "@/assets/logo-7fios.jpg.asset.json";
 
 interface LayoutProps {
   children: ReactNode;
@@ -46,11 +47,14 @@ export const Layout = ({ children }: LayoutProps) => {
       <header className="sticky top-0 z-40 bg-primary border-b border-primary/40">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center">
-              <span className="font-display text-xl md:text-2xl font-extrabold tracking-wide text-accent">
-                7 FIOS TÊXTIL
-              </span>
+            <Link to="/" className="flex items-center" aria-label="Sete Fios Têxtil">
+              <img
+                src={logo7Fios.url}
+                alt="Sete Fios Têxtil"
+                className="h-12 md:h-14 w-auto object-contain"
+              />
             </Link>
+
 
             <nav className="hidden md:flex items-center space-x-6">
               {navigation.map((item) => (
