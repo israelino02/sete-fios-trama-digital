@@ -341,7 +341,7 @@ const Index = () => {
             {videoOpen ? (
               <div className="aspect-video rounded-xl overflow-hidden shadow-soft">
                 <video controls autoPlay className="w-full h-full">
-                  <source src="/videos/video-institucional.mp4" type="video/mp4" />
+                  <source src={historiaVideo.url} type="video/mp4" />
                 </video>
               </div>
             ) : (
@@ -360,9 +360,6 @@ const Index = () => {
               </button>
             )}
           </div>
-          <p className="italic text-sm md:text-base text-muted-foreground mt-4">
-            Descubra como a Sete Fios Têxtil transforma ideias em realidade.
-          </p>
         </div>
       </section>
 
