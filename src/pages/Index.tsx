@@ -352,7 +352,13 @@ const Index = () => {
                 className="relative w-full aspect-video rounded-xl overflow-hidden bg-primary shadow-soft group"
                 aria-label="Reproduzir vídeo institucional"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70" />
+                <img
+                  src={historiaPoster.url}
+                  alt="Prévia do vídeo institucional Sete Fios Têxtil"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="w-20 h-20 rounded-full bg-accent flex items-center justify-center shadow-warm group-hover:scale-110 transition-transform">
                     <Play className="w-9 h-9 text-primary ml-1" fill="currentColor" />
