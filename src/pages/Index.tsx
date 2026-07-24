@@ -143,7 +143,7 @@ const Index = () => {
       </section>
 
       {/* CTA Buttons */}
-      <section className="py-6 bg-background">
+      <section className="py-6 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <Button asChild size="default" className="bg-primary hover:bg-primary/90 transition-colors duration-200 text-sm md:text-base px-6 md:px-8 py-2.5 md:py-4 h-auto font-medium w-full sm:w-auto rounded-md">
