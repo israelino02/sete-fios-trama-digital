@@ -20,7 +20,7 @@ All colors MUST be HSL.
 
     /* Primary: Navy Blue #1B2A6B */
     --primary: 230 60% 26%;
-    --primary-foreground: 43 96% 56%;
+    --primary-foreground: 0 0% 100%;
 
     /* Navy dark for footer #0f1e52 */
     --navy-deep: 228 69% 19%;

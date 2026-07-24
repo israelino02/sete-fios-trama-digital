@@ -119,7 +119,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-display text-2xl font-extrabold text-accent mb-3">
+              <h3 className="font-display text-2xl font-extrabold text-primary-foreground mb-3">
                 7 Fios Têxtil
               </h3>
               <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -127,7 +127,7 @@ export const Layout = ({ children }: LayoutProps) => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Contato</h4>
+              <h4 className="font-semibold mb-3 text-primary-foreground">Contato</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/85">
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
@@ -146,7 +146,7 @@ export const Layout = ({ children }: LayoutProps) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Navegação</h4>
+              <h4 className="font-semibold mb-3 text-primary-foreground">Navegação</h4>
               <ul className="space-y-2 text-sm">
                 {navigation.map((item) => (
                   <li key={item.name}>
