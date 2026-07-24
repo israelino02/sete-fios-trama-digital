@@ -8,58 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* 7 Fios Brand Colors - Navy Blue & Yellow */
-    --background: 220 30% 98%;
-    --foreground: 220 40% 15%;
+    /* 7 Fios Brand Colors - Navy #1B2A6B & Yellow #FBBF24, bg #f5f5f5 */
+    --background: 0 0% 96%;
+    --foreground: 230 60% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 15%;
+    --card-foreground: 230 60% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 15%;
+    --popover-foreground: 230 60% 15%;
 
-    /* Primary: Navy Blue */
-    --primary: 220 85% 25%;
-    --primary-foreground: 45 95% 95%;
+    /* Primary: Navy Blue #1B2A6B */
+    --primary: 230 60% 26%;
+    --primary-foreground: 43 96% 56%;
 
-    /* Secondary: Warm Yellow */
-    --secondary: 45 95% 85%;
-    --secondary-foreground: 220 40% 15%;
+    /* Navy dark for footer #0f1e52 */
+    --navy-deep: 228 69% 19%;
 
-    /* Muted: Light Blue Gray */
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 25% 45%;
+    /* Secondary: soft yellow */
+    --secondary: 43 96% 90%;
+    --secondary-foreground: 230 60% 15%;
 
-    /* Accent: Golden Yellow */
-    --accent: 45 95% 55%;
-    --accent-foreground: 220 40% 15%;
+    /* Muted: neutral gray */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    /* Accent: Amber Yellow #FBBF24 */
+    --accent: 43 96% 56%;
+    --accent-foreground: 230 60% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 220 85% 25%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 230 60% 26%;
 
     --radius: 0.75rem;
 
-    /* Custom Design Tokens */
-    --navy-blue: 220 85% 25%;
-    --navy-light: 220 60% 35%;
-    --golden-yellow: 45 95% 55%;
-    --warm-yellow: 45 90% 75%;
-    --cream-white: 45 40% 97%;
-    
-    /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(45 90% 75%), hsl(45 40% 97%));
-    --gradient-primary: linear-gradient(135deg, hsl(220 85% 25%), hsl(220 60% 35%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 95% 55%), hsl(45 90% 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 85% 25%), hsl(220 60% 35%), hsl(45 95% 55%));
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(220 85% 25% / 0.15);
-    --shadow-warm: 0 8px 30px -12px hsl(45 95% 55% / 0.25);
-    
+    /* Trust bar / section alt bg #f8f9fb */
+    --surface-alt: 220 20% 98%;
+
+    /* WhatsApp green */
+    --whatsapp: 142 70% 49%;
+
+    /* Category card gradients */
+    --gradient-cat-blue: linear-gradient(135deg, hsl(230 60% 26%), hsl(220 70% 45%));
+    --gradient-cat-amber: linear-gradient(135deg, hsl(28 90% 45%), hsl(43 96% 56%));
+    --gradient-cat-green: linear-gradient(135deg, hsl(155 55% 28%), hsl(155 55% 42%));
+    --gradient-cat-purple: linear-gradient(135deg, hsl(265 45% 32%), hsl(265 55% 50%));
+
+    --gradient-primary: linear-gradient(135deg, hsl(230 60% 26%), hsl(230 55% 34%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(38 95% 62%));
+
+    --shadow-soft: 0 4px 20px -8px hsl(230 60% 26% / 0.15);
+    --shadow-warm: 0 8px 30px -12px hsl(43 96% 56% / 0.35);
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
