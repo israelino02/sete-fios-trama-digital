@@ -179,7 +179,7 @@ const Index = () => {
               <Link to="/catalogo">Ver Catálogo</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur border-white text-white hover:bg-white hover:text-primary font-semibold">
-              <a href={buildWhatsappUrl("Olá! Vim pelo site e gostaria de mais informações.")} target="_blank" rel="noopener noreferrer">
+              <a href={buildWa("Olá! Vim pelo site e gostaria de mais informações.")} target="_blank" rel="noopener noreferrer">
                 Falar no WhatsApp
               </a>
             </Button>
