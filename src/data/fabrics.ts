@@ -185,7 +185,7 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "SUMMERSOUL",
+          type: "SUMMERSOL",
           category: "POLIESTER",
           description: "Microfibra de poliéster com excelente caimento",
           composition: "93% Poliéster, 7% Elastano",
