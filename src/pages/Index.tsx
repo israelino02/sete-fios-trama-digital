@@ -156,7 +156,7 @@ const whyItems = [
   {
     icon: MapPin,
     title: "No Polo de PE",
-    description: "Santa Cruz do Capibaribe — perto de você.",
+    description: "Santa Cruz do Capibaribe",
   },
   {
     icon: MessageCircle,
