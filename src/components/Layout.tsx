@@ -76,13 +76,6 @@ export const Layout = ({ children }: LayoutProps) => {
             <div className="flex items-center gap-2 text-primary-foreground">
               <button
                 type="button"
-                aria-label="Buscar"
-                className="p-2 hover:text-accent transition-colors hidden sm:inline-flex"
-              >
-                <Search className="h-5 w-5" />
-              </button>
-              <button
-                type="button"
                 aria-label="Abrir menu"
                 className="md:hidden p-2 hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
