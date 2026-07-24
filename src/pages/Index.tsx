@@ -40,6 +40,11 @@ const trustItems = [
   { icon: Sparkles, value: "Alta", label: "qualidade" },
 ];
 
+import catMicrofibras from "@/assets/cat-microfibras.png.asset.json";
+import catDryfit from "@/assets/cat-dryfit.jpg.asset.json";
+import catEstampados from "@/assets/cat-estampados.jpg.asset.json";
+import catAviamentos from "@/assets/cat-aviamentos.jpg.asset.json";
+
 const categories = [
   {
     name: "Microfibras",
@@ -47,6 +52,7 @@ const categories = [
     href: "/catalogo/poliamida",
     gradient: "bg-gradient-cat-blue",
     icon: Layers,
+    image: catMicrofibras.url,
   },
   {
     name: "Dry-fit",
@@ -54,6 +60,7 @@ const categories = [
     href: "/catalogo/dry-fit",
     gradient: "bg-gradient-cat-amber",
     icon: Scissors,
+    image: catDryfit.url,
   },
   {
     name: "Estampados",
@@ -61,6 +68,7 @@ const categories = [
     href: "/catalogo/estampados",
     gradient: "bg-gradient-cat-green",
     icon: Palette,
+    image: catEstampados.url,
   },
   {
     name: "Aviamentos",
@@ -68,6 +76,7 @@ const categories = [
     href: "/outros-produtos",
     gradient: "bg-gradient-cat-purple",
     icon: Sparkles,
+    image: catAviamentos.url,
   },
 ];
 
@@ -202,12 +211,19 @@ const Index = () => {
                 <Link
                   key={cat.name}
                   to={cat.href}
-                  className={`${cat.gradient} relative overflow-hidden rounded-xl p-5 md:p-8 min-h-[140px] md:min-h-[180px] flex flex-col justify-end text-primary-foreground shadow-soft hover:shadow-warm hover:-translate-y-0.5 transition-all group`}
+                  className={`${cat.gradient} relative overflow-hidden rounded-xl min-h-[140px] md:min-h-[180px] flex flex-col justify-end text-primary-foreground shadow-soft hover:shadow-warm hover:-translate-y-0.5 transition-all group`}
                 >
-                  <Icon className="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10 text-primary-foreground/30 group-hover:text-primary-foreground/50 transition-colors" />
-                  <div>
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+                  <Icon className="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10 text-primary-foreground/80 group-hover:text-primary-foreground transition-colors z-10" />
+                  <div className="relative z-10 p-5 md:p-8">
                     <h3 className="font-display font-bold text-lg md:text-2xl leading-tight">{cat.name}</h3>
-                    <p className="text-xs md:text-sm text-primary-foreground/85 mt-1">{cat.subtitle}</p>
+                    <p className="text-xs md:text-sm text-primary-foreground/90 mt-1">{cat.subtitle}</p>
                   </div>
                 </Link>
               );
