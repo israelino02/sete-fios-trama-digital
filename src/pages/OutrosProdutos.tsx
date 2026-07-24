@@ -175,7 +175,7 @@ const MobileTabletView = () => {
 
       {/* 2. Tabs */}
       <nav className="sticky top-16 z-30 bg-white border-b border-gray-200">
-        <div className="op-scroll flex overflow-x-auto px-3 md:px-10">
+        <div className="op-tabs flex overflow-x-auto px-3 md:px-10">
           {TABS.map((t) => {
             const active = activeTab === t.key;
             return (
