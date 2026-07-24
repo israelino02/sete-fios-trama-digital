@@ -141,36 +141,10 @@ const Index = () => {
       {/* 2. HERO */}
       <section className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-14 md:py-20">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <span className="inline-block text-xs md:text-sm px-4 py-1.5 rounded-full border border-accent/60 text-accent font-medium">
-              + de 10 anos no Polo de Confecções — PE
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Tecidos e aviamentos de{" "}
-              <span className="text-accent">alta qualidade</span>
-            </h1>
-            <p className="text-base md:text-lg text-primary-foreground/85 max-w-2xl mx-auto">
-              Atacado e varejo na mesma loja. Estoque disponível. Atendimento direto com o vendedor.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Link
-                to="/catalogo"
-                className="inline-flex items-center justify-center rounded-md bg-accent text-accent-foreground font-semibold px-6 py-3 hover:brightness-95 transition"
-              >
-                Ver catálogo
-              </Link>
-              <a
-                href={catalogWa}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-primary-foreground/70 text-primary-foreground font-semibold px-6 py-3 hover:bg-primary-foreground/10 transition"
-              >
-                Falar com vendedor
-              </a>
-            </div>
-          </div>
+          {/* Imagens do hero serão adicionadas em breve */}
         </div>
       </section>
+
 
       {/* 3. BARRA DE CONFIANÇA */}
       <section className="bg-card border-b border-border">
