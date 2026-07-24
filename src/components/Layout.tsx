@@ -127,7 +127,7 @@ export const Layout = ({ children }: LayoutProps) => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Contato</h4>
+              <h4 className="font-semibold mb-3 text-primary-foreground">Contato</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/85">
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
@@ -146,7 +146,7 @@ export const Layout = ({ children }: LayoutProps) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-accent">Navegação</h4>
+              <h4 className="font-semibold mb-3 text-primary-foreground">Navegação</h4>
               <ul className="space-y-2 text-sm">
                 {navigation.map((item) => (
                   <li key={item.name}>
