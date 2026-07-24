@@ -45,6 +45,7 @@ import catDryfit from "@/assets/cat-microfibras.png.asset.json";
 import catEstampados from "@/assets/cat-estampados.jpg.asset.json";
 import catAviamentos from "@/assets/cat-aviamentos.jpg.asset.json";
 import historiaVideo from "@/assets/historia-7fios.mp4.asset.json";
+import historiaPoster from "@/assets/historia-poster.jpg.asset.json";
 
 const categories = [
   {
