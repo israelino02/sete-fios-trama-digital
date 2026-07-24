@@ -4,7 +4,7 @@ import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { useState } from "react";
-import heroBanner from "@/assets/hero-microfibras-desktop.png.asset.json";
+import heroBanner from "@/assets/hero-banner-fabrics.png.asset.json";
 import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
 
 const WHATSAPP_PHONE = "5581994616071";
