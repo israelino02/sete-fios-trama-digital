@@ -130,7 +130,7 @@ const MobileTabletView = () => {
       `}</style>
 
       {/* 1. Header */}
-      <section style={{ backgroundColor: "#1B2A6B" }} className="px-5 py-8 md:py-12">
+      <section style={{ backgroundColor: "#1B2A6B" }} className="px-4 py-5 md:px-10 md:py-8">
         <p className="text-[11px] md:text-xs font-semibold tracking-[0.2em] mb-2" style={{ color: "#FBBF24" }}>
           AVIAMENTOS
         </p>
@@ -142,7 +142,7 @@ const MobileTabletView = () => {
 
       {/* 2. Tabs */}
       <nav className="sticky top-16 z-30 bg-white border-b border-gray-200">
-        <div className="op-scroll flex overflow-x-auto px-3">
+        <div className="op-scroll flex overflow-x-auto px-3 md:px-10">
           {TABS.map((t) => {
             const active = activeTab === t.key;
             return (
@@ -171,7 +171,7 @@ const MobileTabletView = () => {
         {visibleGroups.map((group) => (
           <section key={group.key} className="mb-5 last:mb-0">
             {/* label separator */}
-            <div className="flex items-center gap-3 px-5 mb-3">
+            <div className="flex items-center gap-3 px-4 md:px-10 mb-3">
               <span style={{ color: "#1B2A6B" }}>{group.icon}</span>
               <span
                 className="text-xs font-bold tracking-[0.15em]"
@@ -182,7 +182,7 @@ const MobileTabletView = () => {
               <span className="flex-1 h-px bg-gray-300" />
             </div>
 
-            <div className="op-scroll flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible gap-3 md:gap-5 px-5 pb-2">
+            <div className="op-scroll flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible gap-3 md:gap-4 px-4 md:px-10 pb-2">
               {group.products.map((p) => (
                 <article
                   key={p.name}
@@ -190,7 +190,8 @@ const MobileTabletView = () => {
 
                 >
                   <div
-                    className="relative h-[110px] md:h-[180px]"
+                    className="relative h-[110px] md:h-[140px]"
+
                     style={{ backgroundColor: p.bg }}
                   >
                     {p.image && (
