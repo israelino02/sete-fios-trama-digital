@@ -212,13 +212,13 @@ const MobileTabletView = () => {
               <span className="flex-1 h-px bg-gray-300" />
             </div>
 
-            <div className="op-scroll flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible gap-3 md:gap-4 px-4 md:px-10 pb-2">
+            <div className="op-carousel">
               {group.products.map((p) => (
                 <article
                   key={p.name}
-                  className="op-snap flex-shrink-0 w-[150px] md:w-auto bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
-
+                  className="op-prod-card bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
                 >
+
                   <div
                     className="relative h-[110px] md:h-[140px]"
 
