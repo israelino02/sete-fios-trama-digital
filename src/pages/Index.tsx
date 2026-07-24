@@ -40,10 +40,11 @@ const trustItems = [
   { icon: Sparkles, value: "Alta", label: "qualidade" },
 ];
 
-import catMicrofibras from "@/assets/cat-microfibras.png.asset.json";
-import catDryfit from "@/assets/cat-dryfit.jpg.asset.json";
+import catMicrofibras from "@/assets/cat-dryfit.jpg.asset.json";
+import catDryfit from "@/assets/cat-microfibras.png.asset.json";
 import catEstampados from "@/assets/cat-estampados.jpg.asset.json";
 import catAviamentos from "@/assets/cat-aviamentos.jpg.asset.json";
+import historiaVideo from "@/assets/historia-7fios.mp4.asset.json";
 
 const categories = [
   {
