@@ -1,365 +1,460 @@
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MessageCircle, Scissors, Palette, Heart, Star, Truck, Shield, Users, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Play, Truck, Award, Store, Clock, Package, MapPin, MessageCircle, ChevronRight, Scissors, Palette, Sparkles, Layers } from "lucide-react";
 import { fabricsData, getFabricMainImage } from "@/data/fabrics";
 import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
-import { HeroCarousel } from "@/components/HeroCarousel";
-import heroMain from "@/assets/hero-main.png.asset.json";
-import heroTablet from "@/assets/hero-tablet-v2.png.asset.json";
-import heroMobile from "@/assets/hero-mobile-v34.png.asset.json";
-import heroMicroDesktop from "@/assets/hero-microfibras-desktop.png.asset.json";
-import heroMicroTablet from "@/assets/hero-microfibras-tablet.png.asset.json";
-import heroMicroMobile from "@/assets/hero-microfibras-mobile.png.asset.json";
-import heroPoliDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
-import heroPoliTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
-import heroPoliMobile from "@/assets/hero-poliamida-mobile.png.asset.json";
-import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.png.asset.json";
-import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.png.asset.json";
-import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json";
-import heroPoliesterDesktop from "@/assets/hero-poliester-desktop.png.asset.json";
-import heroPoliesterTablet from "@/assets/hero-poliester-tablet.png.asset.json";
-import heroPoliesterMobile from "@/assets/hero-poliester-mobile.png.asset.json";
-import heroStripLogo from "@/assets/hero-strip-logo.png.asset.json";
+import { useState } from "react";
+import heroBanner from "@/assets/hero-microfibras-desktop.png.asset.json";
 import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
 
+const WHATSAPP_PHONE = "5581994616071";
+const buildWa = (msg: string) =>
+  `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(msg)}`;
+
+const catalogWa = buildWa("Olá! Vim do SITE e gostaria de falar com um vendedor.");
+
+const trustItems = [
+  { icon: Award, value: "+10 anos", label: "no mercado" },
+  { icon: Truck, value: "Entrega", label: "rápida" },
+  { icon: Store, value: "Atacado", label: "e varejo" },
+  { icon: Sparkles, value: "Alta", label: "qualidade" },
+];
+
+const categories = [
+  {
+    name: "Microfibras",
+    subtitle: "Poliamida e Poliéster",
+    href: "/catalogo/poliamida",
+    gradient: "bg-gradient-cat-blue",
+    icon: Layers,
+  },
+  {
+    name: "Dry-fit",
+    subtitle: "Alta performance",
+    href: "/catalogo/dry-fit",
+    gradient: "bg-gradient-cat-amber",
+    icon: Scissors,
+  },
+  {
+    name: "Estampados",
+    subtitle: "Exclusivos e modernos",
+    href: "/catalogo/estampados",
+    gradient: "bg-gradient-cat-green",
+    icon: Palette,
+  },
+  {
+    name: "Aviamentos",
+    subtitle: "Elásticos, viés, rendas",
+    href: "/outros-produtos",
+    gradient: "bg-gradient-cat-purple",
+    icon: Sparkles,
+  },
+];
+
+const findFabric = (categorySlug: string, type: string) => {
+  const cat = fabricsData.categories.find((c) => c.slug === categorySlug);
+  return cat?.fabrics.find((f) => f.type === type);
+};
+
+const featuredFabrics = [
+  {
+    name: "Microfibra Poliamida",
+    tag: "+30 cores disponíveis",
+    image: (() => {
+      const f = findFabric("poliamida", "POLIAMIDA PREMIUM");
+      return f ? resolveUpload(getFabricMainImage(f)) : "";
+    })(),
+    link: "/catalogo/poliamida",
+    waMsg: "Olá! Tenho interesse em Microfibra Poliamida. Podem me ajudar?",
+  },
+  {
+    name: "Dry-fit Prime",
+    tag: "Alta performance",
+    image: (() => {
+      const f = findFabric("dry-fit", "DRY FIT PRIME");
+      return f ? resolveUpload(getFabricMainImage(f)) : "";
+    })(),
+    link: "/catalogo/dry-fit",
+    waMsg: "Olá! Tenho interesse em Dry-fit Prime. Podem me ajudar?",
+  },
+  {
+    name: "Estampados",
+    tag: "Moda casual",
+    image: (() => {
+      const f = findFabric("estampados", "ROMANTIK ESTAMPADO");
+      return f ? resolveUpload(getFabricMainImage(f)) : "";
+    })(),
+    link: "/catalogo/estampados",
+    waMsg: "Olá! Tenho interesse em tecidos Estampados. Podem me ajudar?",
+  },
+];
+
+const aviamentos = [
+  {
+    name: "Elástico",
+    tag: "Vários tamanhos",
+    image: elasticosPersonalizados.url,
+    waMsg: "Olá! Tenho interesse em Elásticos. Podem me ajudar?",
+  },
+  {
+    name: "Viés",
+    tag: "Acabamento perfeito",
+    image: resolveUpload("/lovable-uploads/vies-noronha-1.jpg"),
+    waMsg: "Olá! Tenho interesse em Viés. Podem me ajudar?",
+  },
+  {
+    name: "Rendas",
+    tag: "Modelos variados",
+    image: resolveUpload("/lovable-uploads/renda-7-mares-1.jpg"),
+    waMsg: "Olá! Tenho interesse em Rendas. Podem me ajudar?",
+  },
+];
+
+const whyItems = [
+  {
+    icon: Package,
+    title: "Estoque disponível",
+    description: "Sem esperar. Tecido na hora que você precisa.",
+  },
+  {
+    icon: Award,
+    title: "Alta qualidade",
+    description: "Tecidos premium para confecções exigentes.",
+  },
+  {
+    icon: MapPin,
+    title: "No Polo de PE",
+    description: "Santa Cruz do Capibaribe — perto de você.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Atendimento rápido",
+    description: "Fale direto com o vendedor pelo WhatsApp.",
+  },
+];
+
 const Index = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [mobileSlide, setMobileSlide] = useState(0);
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const heroImages = [heroMain.url, heroMicroDesktop.url, heroPoliDesktop.url, heroMicrofibraDesktop.url, heroPoliesterDesktop.url];
-  const heroTabletImages = [heroTablet.url, heroMicroTablet.url, heroPoliTablet.url, heroMicrofibraTablet.url, heroPoliesterTablet.url];
-  const heroMobileImages = [heroMobile.url, heroMicroMobile.url, heroPoliMobile.url, heroMicrofibraMobile.url, heroPoliesterMobile.url];
+  const [videoOpen, setVideoOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setMobileSlide(prev => (prev + 1) % heroMobileImages.length);
-    }, 8000);
-    return () => clearInterval(timer);
-  }, [heroMobileImages.length]);
-
-
-  // Featured products from fabrics data
-  const featuredProducts = [{
-    fabric: fabricsData.categories.find(c => c.slug === "poliester")?.fabrics.find(f => f.type === "MADRI"),
-    badge: "Mais Vendido",
-    categorySlug: "poliester"
-  }, {
-    fabric: fabricsData.categories.find(c => c.slug === "poliamida")?.fabrics.find(f => f.type === "POLIAMIDA PREMIUM"),
-    badge: "Premium",
-    categorySlug: "poliamida"
-  }, {
-    fabric: fabricsData.categories.find(c => c.slug === "dry-fit")?.fabrics.find(f => f.type === "DRY FIT PRIME"),
-    badge: "Alta Performance",
-    categorySlug: "dry-fit"
-  }, {
-    fabric: fabricsData.categories.find(c => c.slug === "estampados")?.fabrics.find(f => f.type === "ROMANTIK ESTAMPADO"),
-    badge: "Exclusivo",
-    categorySlug: "estampados"
-  }];
-
-  // Helper to check if fabric has gender options
-  const hasGenderOptions = (fabric: any) => {
-    return fabric?.colors?.some((color: any) => color.gender);
-  };
-
-  // Get appropriate link for product
-  const getProductLink = (product: any) => {
-    const fabricType = product.fabric?.type.toLowerCase().replace(/ /g, '-');
-
-    // Romantik Estampado deve ir para seleção de gênero
-    if (hasGenderOptions(product.fabric)) {
-      return `/catalogo/${product.categorySlug}/${fabricType}/selecionar-genero`;
-    }
-
-    // Outros tecidos vão direto para o detalhe
-    return `/catalogo/${product.categorySlug}/${fabricType}`;
-  };
-  const features = [{
-    icon: <Scissors className="w-6 h-6" />,
-    title: "Tecidos de Qualidade",
-    description: "Ampla variedade de tecidos para todos os seus projetos de costura"
-  }, {
-    icon: <Palette className="w-6 h-6" />,
-    title: "Aviamentos Completos",
-    description: "Zíperes, elásticos, elastano e tudo que você precisa"
-  }, {
-    icon: <Heart className="w-6 h-6" />,
-    title: "Atendimento Personalizado",
-    description: "Nossa equipe está pronta para ajudar no seu projeto"
-  }];
-  return <div className="space-y-0">
-      {/* Hero Section */}
-      <section className="relative md:min-h-[80vh] md:flex md:items-center md:justify-center overflow-hidden">
-        {/* Mobile: full image, no crop, cycling */}
-        <div className="block md:hidden relative w-full">
-          {heroMobileImages.map((url, i) => (
-            <img
-              key={i}
-              src={url}
-              alt="Sete Fios Têxtil"
-              loading={i === 0 ? "eager" : "lazy"}
-              className={`w-full h-auto object-contain transition-opacity duration-1000 ${i === 0 ? 'relative' : 'absolute inset-0'} ${i === mobileSlide ? 'opacity-100' : 'opacity-0'}`}
-              style={{ aspectRatio: "auto" }}
-            />
-          ))}
-          <button
-            type="button"
-            aria-label="Imagem anterior"
-            onClick={() => setMobileSlide(prev => (prev - 1 + heroMobileImages.length) % heroMobileImages.length)}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            type="button"
-            aria-label="Próxima imagem"
-            onClick={() => setMobileSlide(prev => (prev + 1) % heroMobileImages.length)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 backdrop-blur-sm transition-colors"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
-            {heroMobileImages.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-label={`Ir para imagem ${i + 1}`}
-                onClick={() => setMobileSlide(i)}
-                className={`h-1.5 rounded-full transition-all ${i === mobileSlide ? 'w-6 bg-white' : 'w-1.5 bg-white/50'}`}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Tablet/Desktop: carousel */}
-        <div className="hidden md:block absolute inset-0">
-          <HeroCarousel images={heroImages} tabletImages={heroTabletImages} mobileImages={heroMobileImages} interval={8000} onSlideChange={setCurrentSlide} />
-        </div>
-      </section>
-
-      {/* CTA Buttons */}
-      <section className="py-6 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-            <Button asChild size="default" className="bg-primary hover:bg-primary/90 transition-colors duration-200 text-sm md:text-base px-6 md:px-8 py-2.5 md:py-4 h-auto font-medium w-full sm:w-auto rounded-md">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <svg className="w-4 h-4 md:w-5 md:h-5 mr-2 text-green-400" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                Fale Conosco Agora
-              </a>
-            </Button>
-            
-            <Button asChild variant="outline" size="default" className="text-sm md:text-base px-6 md:px-8 py-2.5 md:py-4 h-auto font-medium border-border hover:bg-muted transition-colors duration-200 w-full sm:w-auto rounded-md">
-              <a href="tel:+5581994616071">
-                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                Ligue para nós Agora
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-16 lg:py-24 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-primary text-primary-foreground">🔥 Bombando no momento</Badge>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Produtos em Destaque
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Os tecidos mais procurados pelos nossos clientes
+  return (
+    <div>
+      {/* 2. HERO */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 py-14 md:py-20">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <span className="inline-block text-xs md:text-sm px-4 py-1.5 rounded-full border border-accent/60 text-accent font-medium">
+              + de 10 anos no Polo de Confecções — PE
+            </span>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Tecidos e aviamentos de{" "}
+              <span className="text-accent">alta qualidade</span>
+            </h1>
+            <p className="text-base md:text-lg text-primary-foreground/85 max-w-2xl mx-auto">
+              Atacado e varejo na mesma loja. Estoque disponível. Atendimento direto com o vendedor.
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-            {featuredProducts.map((product, index) => <Link key={index} to={getProductLink(product)}>
-                <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-                  <div className="relative overflow-hidden">
-                    <ImageWithSkeleton src={product.fabric ? resolveUpload(getFabricMainImage(product.fabric)) : ''} alt={product.fabric?.type || ''} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="eager" decoding="async" fetchPriority="high" />
-                  </div>
-                  
-                  <CardContent className="p-3 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1 mb-2">
-                      {product.fabric?.type}
-                    </h3>
-                    <p className="text-muted-foreground text-xs md:text-sm line-clamp-2">
-                      {product.fabric?.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>)}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-gradient-primary hover:bg-gradient-primary/90 text-lg px-12 py-6 h-auto font-bold shadow-warm hover:shadow-xl hover:scale-105 transition-all duration-300 text-primary-foreground">
-              <Link to="/catalogo">Ver Todos os Produtos</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Viés, Elásticos e Rendas */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-primary text-primary-foreground">✨ Aviamentos</Badge>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Viés, Elásticos e Rendas
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Complete seus projetos com nossos aviamentos de qualidade
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-            {[
-              { name: "Viés Noronha", description: "Viés Noronha disponível em diversas cores para acabamentos de alta qualidade.", image: "/lovable-uploads/vies-noronha-1.jpg" },
-              { name: "Elástico liso", description: "Elásticos lisos de alta qualidade disponíveis em diversas cores. Largura 25MM, 30MM e 35MM.", image: elasticosPersonalizados.url },
-              { name: "Renda 7 Mares", description: "Renda 7 Mares largura 17cm disponível em diversas cores para acabamentos sofisticados.", image: "/lovable-uploads/renda-7-mares-1.jpg" },
-              { name: "Renda 7 Fios", description: "Renda 7 Fios com largura de 3,3 cm disponível em diversas cores. Composição: Poliamida e Elastano.", image: "/lovable-uploads/renda-7-fios-1.jpg" },
-            ].map((item, index) => (
-              <Link key={index} to="/outros-produtos">
-                <Card className="group overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-                  <div className="relative overflow-hidden">
-                    <ImageWithSkeleton src={resolveUpload(item.image)} alt={item.name} className="w-full h-full object-cover" aspectRatio="aspect-square" loading="lazy" decoding="async" />
-                  </div>
-                  <CardContent className="p-3 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg text-foreground group-hover:text-primary transition-colors line-clamp-1 mb-2">
-                      {item.name}
-                    </h3>
-                    <p className="text-muted-foreground text-xs md:text-sm line-clamp-2">
-                      {item.description}
-                    </p>
-                  </CardContent>
-                </Card>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+              <Link
+                to="/catalogo"
+                className="inline-flex items-center justify-center rounded-md bg-accent text-accent-foreground font-semibold px-6 py-3 hover:brightness-95 transition"
+              >
+                Ver catálogo
               </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-gradient-primary hover:bg-gradient-primary/90 text-lg px-12 py-6 h-auto font-bold shadow-warm hover:shadow-xl hover:scale-105 transition-all duration-300 text-primary-foreground">
-              <Link to="/outros-produtos">Ver Todos os Aviamentos</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Frase de Impacto */}
-      <section className="py-16 lg:py-24 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-primary p-8 rounded-2xl text-primary-foreground">
-            <p className="text-lg md:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
-              "Aqui, cada fio conta uma história: a de uma empresa que cresce lado a lado com você, 
-              oferecendo muito mais do que matéria-prima — oferecemos segurança, confiança e resultados."
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Vídeo Institucional */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-primary text-primary-foreground">🎥 Vídeo Institucional</Badge>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Conheça Nossa História
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Descubra como a Sete Fios Têxtil transforma ideias em realidade
-            </p>
-          </div>
-          
-          <div className="max-w-5xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden shadow-warm aspect-video">
-              <video controls className="w-full h-full" poster="/images/video-poster.jpg">
-                <source src="/videos/video-institucional.mp4" type="video/mp4" />
-                Seu navegador não suporta a reprodução de vídeos.
-              </video>
+              <a
+                href={catalogWa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md border border-primary-foreground/70 text-primary-foreground font-semibold px-6 py-3 hover:bg-primary-foreground/10 transition"
+              >
+                Falar com vendedor
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-
-
-
-      {/* Quick Links */}
-      <section className="py-20 lg:py-28 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Navegue por Nossas Categorias
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Encontre rapidamente o que você precisa
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              <CardContent className="p-8 text-center relative z-10 flex flex-col h-full min-h-[400px]">
-                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
-                  <Scissors className="w-10 h-10 text-primary-foreground" />
+      {/* 3. BARRA DE CONFIANÇA */}
+      <section className="bg-card border-b border-border">
+        <div className="container mx-auto px-4 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {trustItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.label} className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="leading-tight">
+                    <div className="font-bold text-foreground text-sm md:text-base">{item.value}</div>
+                    <div className="text-xs text-muted-foreground">{item.label}</div>
+                  </div>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                  Catálogo de Tecidos
-                </h3>
-                <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
-                  Explore nossa ampla variedade de tecidos para todos os tipos de projeto.
-                </p>
-                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
-                  <Link to="/catalogo">Ver Catálogo</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              <CardContent className="p-8 text-center relative z-10 flex flex-col h-full min-h-[400px]">
-                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
-                  <Palette className="w-10 h-10 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                  Outros Produtos
-                </h3>
-                <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
-                  Elásticos, Rendas e Aviamentos para complementar seus projetos.
-                </p>
-                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
-                  <Link to="/outros-produtos">Ver Produtos</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group relative overflow-hidden shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              <CardContent className="p-8 text-center relative z-10 flex flex-col h-full min-h-[400px]">
-                <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-warm">
-                  <MessageCircle className="w-10 h-10 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                  Entre em Contato
-                </h3>
-                <p className="text-muted-foreground mb-6 text-base leading-relaxed flex-grow">
-                  Tire suas dúvidas e receba atendimento personalizado.
-                </p>
-                <Button asChild size="lg" className="w-full hover:scale-105 transition-transform shadow-soft mt-auto">
-                  <Link to="/contato">Falar Conosco</Link>
-                </Button>
-              </CardContent>
-            </Card>
+              );
+            })}
           </div>
         </div>
       </section>
-    </div>;
+
+      {/* 4. NOSSAS CATEGORIAS */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Nossas categorias</h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2">
+              Escolha a categoria e fale com o vendedor
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 md:gap-5 max-w-4xl mx-auto">
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              return (
+                <Link
+                  key={cat.name}
+                  to={cat.href}
+                  className={`${cat.gradient} relative overflow-hidden rounded-xl p-5 md:p-8 min-h-[140px] md:min-h-[180px] flex flex-col justify-end text-primary-foreground shadow-soft hover:shadow-warm hover:-translate-y-0.5 transition-all group`}
+                >
+                  <Icon className="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10 text-primary-foreground/30 group-hover:text-primary-foreground/50 transition-colors" />
+                  <div>
+                    <h3 className="font-display font-bold text-lg md:text-2xl leading-tight">{cat.name}</h3>
+                    <p className="text-xs md:text-sm text-primary-foreground/85 mt-1">{cat.subtitle}</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. TECIDOS MAIS PROCURADOS */}
+      <section className="py-12 md:py-16 bg-surface-alt">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Tecidos mais procurados</h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2">Os favoritos das confecções de PE</p>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible">
+            {featuredFabrics.map((p) => (
+              <article
+                key={p.name}
+                className="snap-center flex-shrink-0 w-[80%] sm:w-[45%] md:w-auto bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-warm transition-shadow"
+              >
+                <Link to={p.link} className="block">
+                  <ImageWithSkeleton
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-full object-cover"
+                    aspectRatio="aspect-[4/3]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground text-base md:text-lg">{p.name}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1">{p.tag}</p>
+                  <a
+                    href={buildWa(p.waMsg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold px-4 py-2.5 hover:bg-primary/90 transition"
+                  >
+                    Consultar
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. BANNER IMAGEM TECIDOS */}
+      <section className="relative w-full h-[140px] md:h-[180px] overflow-hidden">
+        <img
+          src={heroBanner.url}
+          alt="Microfibras 7 Fios"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-primary/40" />
+        <div className="relative z-10 h-full container mx-auto px-4 flex flex-col items-center justify-center text-center">
+          <p className="text-xs md:text-sm tracking-widest uppercase text-primary-foreground/90">
+            Qualidade em cada detalhe
+          </p>
+          <h3 className="font-display text-2xl md:text-4xl font-extrabold text-accent">
+            Microfibras 7 Fios
+          </h3>
+        </div>
+      </section>
+
+      {/* 7. OUTROS MAIS PROCURADOS */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Outros mais procurados</h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2">Complemente seus projetos com qualidade</p>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible">
+            {aviamentos.map((p) => (
+              <article
+                key={p.name}
+                className="snap-center flex-shrink-0 w-[80%] sm:w-[45%] md:w-auto bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-warm transition-shadow"
+              >
+                <Link to="/outros-produtos" className="block">
+                  <ImageWithSkeleton
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-full object-cover"
+                    aspectRatio="aspect-[4/3]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </Link>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground text-base md:text-lg">{p.name}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1">{p.tag}</p>
+                  <a
+                    href={buildWa(p.waMsg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold px-4 py-2.5 hover:bg-primary/90 transition"
+                  >
+                    Consultar
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. VÍDEO INSTITUCIONAL */}
+      <section className="py-12 md:py-16 bg-surface-alt">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Conheça nossa história</h2>
+          <div className="max-w-3xl mx-auto mt-8">
+            {videoOpen ? (
+              <div className="aspect-video rounded-xl overflow-hidden shadow-soft">
+                <video controls autoPlay className="w-full h-full">
+                  <source src="/videos/video-institucional.mp4" type="video/mp4" />
+                </video>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setVideoOpen(true)}
+                className="relative w-full aspect-video rounded-xl overflow-hidden bg-primary shadow-soft group"
+                aria-label="Reproduzir vídeo institucional"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="w-20 h-20 rounded-full bg-accent flex items-center justify-center shadow-warm group-hover:scale-110 transition-transform">
+                    <Play className="w-9 h-9 text-primary ml-1" fill="currentColor" />
+                  </span>
+                </div>
+              </button>
+            )}
+          </div>
+          <p className="italic text-sm md:text-base text-muted-foreground mt-4">
+            Descubra como a Sete Fios Têxtil transforma ideias em realidade.
+          </p>
+        </div>
+      </section>
+
+      {/* 9. POR QUE A 7 FIOS */}
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl md:text-3xl font-bold">Seu fornecedor no Polo de Confecções</h2>
+            <p className="text-sm md:text-base text-primary-foreground/80 mt-2">
+              Aqui você encontra tudo em um só lugar
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+            {whyItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-xl p-6 bg-primary-foreground/5 border border-primary-foreground/10"
+                >
+                  <Icon className="w-8 h-8 text-accent mb-3" />
+                  <h3 className="font-semibold text-base md:text-lg mb-1">{item.title}</h3>
+                  <p className="text-sm text-primary-foreground/80">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. NAVEGUE POR NOSSAS CATEGORIAS */}
+      <section className="py-12 md:py-16 bg-surface-alt">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">Por nossas categorias</h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2">
+              Encontre rapidamente o que você precisa
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto space-y-4">
+            <div className="bg-card rounded-xl p-6 border border-border flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-soft">
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                <Scissors className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg text-foreground">Catálogo de Tecidos</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Explore nossa ampla variedade de tecidos para todos os tipos de projeto.
+                </p>
+              </div>
+              <Link
+                to="/catalogo"
+                className="inline-flex items-center gap-1 rounded-md bg-primary text-primary-foreground font-semibold px-4 py-2.5 hover:bg-primary/90 transition w-full sm:w-auto justify-center"
+              >
+                Ver Catálogo <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="bg-card rounded-xl p-6 border-2 border-primary flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-soft">
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                <Sparkles className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-lg text-foreground">Outros Produtos</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Elásticos, Rendas e Aviamentos para complementar seus projetos.
+                </p>
+              </div>
+              <Link
+                to="/outros-produtos"
+                className="inline-flex items-center gap-1 rounded-md bg-primary text-primary-foreground font-semibold px-4 py-2.5 hover:bg-primary/90 transition w-full sm:w-auto justify-center"
+              >
+                Ver Produtos <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 11. CTA FINAL */}
+      <section className="bg-accent py-12 md:py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-extrabold text-accent-foreground">
+            Encontrou o que procura?
+          </h2>
+          <p className="text-sm md:text-base text-accent-foreground/85 mt-3 max-w-xl mx-auto">
+            Fale com nosso vendedor agora e receba atendimento personalizado.
+          </p>
+          <a
+            href="https://wa.me/5581994616071"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex w-full max-w-md items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground font-semibold px-6 py-4 hover:bg-primary/90 transition"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Conversar no WhatsApp
+          </a>
+        </div>
+      </section>
+    </div>
+  );
 };
+
 export default Index;
