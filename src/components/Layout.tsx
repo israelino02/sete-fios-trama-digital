@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X, Search, Phone, MapPin, Clock } from "lucide-react";
+import logo7Fios from "@/assets/logo-7fios.jpg.asset.json";
 
 interface LayoutProps {
   children: ReactNode;
