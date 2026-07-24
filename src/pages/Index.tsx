@@ -11,7 +11,7 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import heroMainDesktop from "@/assets/hero-main-v2.png.asset.json";
 import heroMainTablet from "@/assets/hero-tablet-v3.png.asset.json";
 import heroMainMobile from "@/assets/hero-mobile-v35.png.asset.json";
-import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v2.png.asset.json";
+import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v3.png.asset.json";
 import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet-v2.png.asset.json";
 import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile-v2.png.asset.json";
 import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.png.asset.json";
