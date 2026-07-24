@@ -114,7 +114,7 @@ export const Layout = ({ children }: LayoutProps) => {
       {/* FOOTER - deep navy */}
       <footer className="bg-warm-deep text-primary-foreground mt-16">
         <div className="container mx-auto px-4 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:[grid-template-columns:1.4fr_1fr_1fr] gap-8">
             <div>
               <h3 className="font-display text-2xl font-extrabold text-primary-foreground mb-3">
                 7 Fios Têxtil
