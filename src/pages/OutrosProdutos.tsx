@@ -186,10 +186,10 @@ const MobileTabletView = () => {
               {group.products.map((p) => (
                 <article
                   key={p.name}
-                  className="op-snap flex-shrink-0 w-[150px] bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
+                  className="op-snap flex-shrink-0 w-[150px] md:w-[230px] bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
                 >
                   <div
-                    className="relative h-[110px]"
+                    className="relative h-[110px] md:h-[180px]"
                     style={{ backgroundColor: p.bg }}
                   >
                     {p.image && (
@@ -201,24 +201,25 @@ const MobileTabletView = () => {
                       />
                     )}
                     <span
-                      className="absolute top-1.5 left-1.5 text-[9px] font-semibold px-1.5 py-0.5 rounded"
+                      className="absolute top-1.5 left-1.5 md:top-2.5 md:left-2.5 text-[9px] md:text-[11px] font-semibold px-1.5 py-0.5 md:px-2 md:py-1 rounded"
                       style={{ backgroundColor: "#1B2A6B", color: "#fff" }}
                     >
                       {group.badge}
                     </span>
                   </div>
-                  <div className="p-2.5 flex-1 flex flex-col">
-                    <h3 className="text-sm font-bold leading-tight mb-1" style={{ color: "#1B2A6B" }}>
+                  <div className="p-2.5 md:p-4 flex-1 flex flex-col">
+                    <h3 className="text-sm md:text-base font-bold leading-tight mb-1 md:mb-1.5" style={{ color: "#1B2A6B" }}>
                       {p.name}
                     </h3>
-                    <p className="text-[11px] text-gray-500 leading-tight mb-2.5 flex-1">
+                    <p className="text-[11px] md:text-[13px] text-gray-500 leading-tight mb-2.5 md:mb-3 flex-1">
                       {p.description}
                     </p>
+
                     <a
                       href={waLink(p.name)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full text-center text-xs font-semibold py-2 rounded transition-colors"
+                      className="block w-full text-center text-xs md:text-sm font-semibold py-2 md:py-2.5 rounded transition-colors"
                       style={{ backgroundColor: "#1B2A6B", color: "#fff" }}
                     >
                       Consultar
