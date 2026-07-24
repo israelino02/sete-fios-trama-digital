@@ -171,7 +171,7 @@ const MobileTabletView = () => {
         {visibleGroups.map((group) => (
           <section key={group.key} className="mb-5 last:mb-0">
             {/* label separator */}
-            <div className="flex items-center gap-3 px-5 mb-3">
+            <div className="flex items-center gap-3 px-4 md:px-10 mb-3">
               <span style={{ color: "#1B2A6B" }}>{group.icon}</span>
               <span
                 className="text-xs font-bold tracking-[0.15em]"
