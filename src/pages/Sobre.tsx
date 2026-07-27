@@ -1,195 +1,157 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Heart, Users, Clock, Award, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo-7fios.jpg";
+import { Award, Heart, Clock, Users, ShieldCheck, Lightbulb, Target, Rocket, MessageCircle } from "lucide-react";
 import { resolveUpload } from "@/lib/uploadAssets";
+
+const WHATSAPP_URL = "https://wa.me/5581994616071";
+
+const valores = [
+  { icon: Award, title: "Qualidade", description: "Produtos que atendem aos mais altos padrões de durabilidade e conforto." },
+  { icon: Heart, title: "Custo-benefício", description: "Excelência e preço justo, agregando valor ao seu investimento." },
+  { icon: Lightbulb, title: "Inteligência", description: "Conhecimento e tecnologia aplicados para inovar em cada processo." },
+  { icon: Clock, title: "Agilidade", description: "Rapidez e eficiência para responder às demandas do mercado." },
+  { icon: Users, title: "Parceria e Confiança", description: "Relações duradouras, lado a lado com nossos clientes." },
+  { icon: ShieldCheck, title: "Ética e Transparência", description: "Conduta íntegra e responsável em todas as negociações." },
+];
+
+const equipe = [
+  { nome: "Raianne Oliveira", cargo: "Dep. Comercial", img: "/lovable-uploads/raianne-comercial.png" },
+  { nome: "Manassés Ferreira", cargo: "Dep. Comercial", img: "/lovable-uploads/manasses-ferreira.png" },
+  { nome: "Hellen Aragão", cargo: "Dep. Financeiro", img: "/lovable-uploads/hellen-aragao.png" },
+];
+
+const Tag = ({ children }: { children: React.ReactNode }) => (
+  <span className="inline-block text-[11px] font-bold tracking-[0.18em] text-accent uppercase mb-2">
+    {children}
+  </span>
+);
+
 const Sobre = () => {
-  const whatsappNumber = "5581994616071";
-  const message = "Olá! Vim do SITE e gostaria de saber mais sobre os produtos da 7 Fios.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-  const valores = [{
-    icon: <Award className="w-8 h-8" />,
-    title: "Qualidade",
-    description: "Garantimos produtos que atendem aos mais altos padrões do mercado, com foco na durabilidade e conforto."
-  }, {
-    icon: <Heart className="w-8 h-8" />,
-    title: "Custo-Benefício",
-    description: "Oferecemos soluções que combinam excelência e preço justo, agregando valor ao investimento dos nossos clientes."
-  }, {
-    icon: <Award className="w-8 h-8" />,
-    title: "Inteligência",
-    description: "Aplicamos conhecimento e tecnologia em nossos processos, buscando sempre inovar e otimizar nossos produtos e serviços."
-  }, {
-    icon: <Clock className="w-8 h-8" />,
-    title: "Agilidade",
-    description: "Atuamos com rapidez e eficiência, sempre prontos para responder às demandas e necessidades do mercado."
-  }, {
-    icon: <Users className="w-8 h-8" />,
-    title: "Parceria e Confiança",
-    description: "Valorizamos relações duradouras e de confiança, trabalhando lado a lado com nossos clientes para fortalecer seus projetos e objetivos."
-  }, {
-    icon: <Award className="w-8 h-8" />,
-    title: "Ética e Transparência",
-    description: "Priorizamos uma conduta ética e transparente em todas as nossas negociações, cultivando integridade e responsabilidade em cada etapa do nosso trabalho."
-  }];
-  return <div className="container mx-auto px-4 py-12">
-      {/* Hero Section */}
-      <section className="mb-16 text-center">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Nossa História
-        </h1>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-base">
-          A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples se tornou uma história de superação, gratidão e confiança no futuro. 
+  return (
+    <div className="bg-background">
+      <style>{`
+        .sb-team { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 12px; padding: 0 16px 4px; }
+        .sb-team::-webkit-scrollbar { display: none; }
+        .sb-team-card { min-width: 140px; max-width: 140px; scroll-snap-align: start; flex-shrink: 0; }
+        @media (min-width: 768px) {
+          .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; overflow-x: visible; scroll-snap-type: none; padding: 0 40px; }
+          .sb-team-card { min-width: unset; max-width: unset; width: 100%; }
+        }
+      `}</style>
 
-
-Desde os primeiros passos, nossa jornada foi marcada por aprendizados e superações. Durante a pandemia, vivemos momentos desafiadores, mas descobrimos a força da equipe e a fidelidade dos clientes que estiveram conosco desde o início. Nesse período, entendemos que a Sete Fios já não era apenas um projeto, mas uma empresa sólida, construída sobre união, fé e dedicação. Muitos clientes deixaram de ser apenas compradores e se tornaram amigos, inspirando inovações e ajudando a moldar novos produtos. Hoje, seguimos confiantes de que, juntos, podemos alcançar ainda mais patamares.
-
-
-
-
-
-
-
-
-
-
-
-
+      {/* 1. HERO */}
+      <section className="bg-primary text-primary-foreground px-4 py-10 md:px-10 md:py-14 text-center">
+        <span className="inline-block text-[11px] font-bold tracking-[0.18em] text-accent uppercase mb-2">
+          Quem somos
+        </span>
+        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Nossa História</h1>
+        <p className="text-primary-foreground/85 text-sm md:text-base max-w-2xl mx-auto">
+          Conheça a trajetória da Sete Fios Têxtil no Polo de Confecções de PE
         </p>
       </section>
 
-      {/* Story Section */}
-      <section className="mb-20">
-        <div className="max-w-4xl mx-auto">
-          
-          <div className="text-muted-foreground">
-            
-          </div>
-        </div>
-      </section>
-
-      {/* Mission and Vision Section */}
-      <section className="mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🎯</span>
-              </div>
-              <h3 className="font-display font-bold text-foreground mb-4 text-3xl">
-                Nossa Missão
-              </h3>
-              <p className="text-muted-foreground">
-                Fornecer produtos têxteis e aviamentos de alta qualidade com excelente custo-benefício, atendendo às necessidades do mercado de moda íntima com agilidade, inovação e compromisso com a satisfação do cliente.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-warm rounded-lg p-8 lg:p-12 shadow-warm">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🚀</span>
-              </div>
-              <h3 className="font-display font-bold text-foreground mb-4 text-3xl">
-                Nossa Visão
-              </h3>
-              <p className="text-muted-foreground">
-                Ser reconhecida como referência nacional em distribuição de tecidos e aviamentos para o mercado de moda íntima, expandindo nossa presença e consolidando parcerias estratégicas que impulsionem o crescimento sustentável do setor.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-            Nossos Valores
+      {/* 2. TEXTO DA HISTÓRIA */}
+      <section className="bg-card px-4 py-6 md:px-10 md:py-12">
+        <div className="md:max-w-[700px] md:mx-auto">
+          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3">
+            Uma história de dedicação
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Os princípios que guiam nosso trabalho e relacionamento com nossos clientes.
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            A Sete Fios nasceu da fé e da determinação. Com apenas um computador, um birô e uma mala de
+            mostruário, os primeiros clientes surgiram entre idas e vindas em uma moto. O que parecia simples
+            se tornou uma história de superação, gratidão e confiança no futuro. Durante a pandemia, vivemos
+            momentos desafiadores, mas descobrimos a força da equipe e a fidelidade dos clientes que estiveram
+            conosco desde o início. Hoje, muitos clientes deixaram de ser apenas compradores e se tornaram
+            amigos, inspirando inovações e ajudando a moldar novos produtos.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {valores.map((valor, index) => <Card key={index} className="text-center p-6 shadow-soft hover:shadow-warm transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
-                  {valor.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-3 text-foreground">
-                  {valor.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {valor.description}
-                </p>
-              </CardContent>
-            </Card>)}
+      {/* 3. MISSÃO E VISÃO */}
+      <section className="bg-muted px-4 py-8 md:px-10 md:py-12">
+        <div className="grid grid-cols-2 gap-3 md:gap-6 max-w-5xl mx-auto">
+          {[
+            {
+              Icon: Target,
+              title: "Nossa Missão",
+              text: "Fornecer produtos têxteis e aviamentos de alta qualidade com excelente custo-benefício, atendendo o mercado de moda íntima com agilidade e inovação.",
+            },
+            {
+              Icon: Rocket,
+              title: "Nossa Visão",
+              text: "Ser referência nacional em distribuição de tecidos e aviamentos para o mercado de moda íntima, com parcerias estratégicas e crescimento sustentável.",
+            },
+          ].map(({ Icon, title, text }) => (
+            <div key={title} className="bg-card rounded-xl p-4 md:p-10 border border-border">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg bg-primary flex items-center justify-center mb-3">
+                <Icon className="w-5 h-5 md:w-7 md:h-7 text-accent" />
+              </div>
+              <h3 className="font-display text-base md:text-xl font-bold text-foreground mb-2">{title}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-            Nossa Equipe
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Profissionais dedicados que compartilham a paixão pela costura e pelo atendimento de excelência.
-          </p>
+      {/* 4. VALORES */}
+      <section className="bg-card px-4 py-8 md:px-10 md:py-12">
+        <div className="text-center mb-6">
+          <Tag>Princípios</Tag>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">Nossos Valores</h2>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
-            <CardContent className="p-6">
-              <div className="mx-auto mb-4">
-                <img src={resolveUpload("/lovable-uploads/raianne-comercial.png")} alt="Raianne Oliveira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
+          {valores.map(({ icon: Icon, title, description }) => (
+            <div key={title} className="bg-muted rounded-xl p-4 text-center border border-border">
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mx-auto mb-3">
+                <Icon className="w-5 h-5 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Raianne Oliveira</h3>
-              <p className="text-primary font-medium">Dep. Comercial</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
-            <CardContent className="p-6">
-              <div className="mx-auto mb-4">
-                <img src={resolveUpload("/lovable-uploads/manasses-ferreira.png")} alt="Manassés Ferreira - Departamento Comercial" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Manassés Ferreira</h3>
-              <p className="text-primary font-medium">Dep. Comercial</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center shadow-soft hover:shadow-warm transition-all duration-300">
-            <CardContent className="p-6">
-              <div className="mx-auto mb-4">
-                <img src={resolveUpload("/lovable-uploads/hellen-aragao.png")} alt="Hellen Aragão - Departamento Financeiro" className="w-32 h-32 rounded-full mx-auto object-cover" loading="lazy" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Hellen Aragão</h3>
-              <p className="text-primary font-medium">Dep. Financeiro</p>
-            </CardContent>
-          </Card>
+              <h3 className="text-sm md:text-base font-semibold text-foreground mb-1">{title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="text-center py-16 bg-muted rounded-lg">
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Faça Parte da Nossa História
+      {/* 5. EQUIPE */}
+      <section className="bg-muted py-8 md:py-12">
+        <div className="text-center mb-6 px-4">
+          <Tag>Time</Tag>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">Nossa Equipe</h2>
+        </div>
+        <div className="sb-team">
+          {equipe.map((m) => (
+            <div key={m.nome} className="sb-team-card bg-card rounded-xl p-4 text-center border border-border">
+              <img
+                src={resolveUpload(m.img)}
+                alt={`${m.nome} — ${m.cargo}`}
+                loading="lazy"
+                className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover mx-auto mb-3 bg-primary"
+              />
+              <h3 className="text-sm md:text-base font-semibold text-foreground">{m.nome}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{m.cargo}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 6. CTA FINAL */}
+      <section className="bg-accent px-4 py-10 md:px-10 md:py-14 text-center">
+        <h2 className="font-display text-xl md:text-3xl font-bold text-accent-foreground mb-2">
+          Faça parte da nossa história
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Queremos conhecer você e ajudar a realizar seus projetos. Entre em contato conosco 
-          e descubra como podemos contribuir para suas criações.
+        <p className="text-sm md:text-base text-accent-foreground/80 mb-6 max-w-xl mx-auto">
+          Queremos conhecer você e ajudar a realizar seus projetos.
         </p>
-        
-        <Button asChild size="lg" className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-warm text-lg px-8 py-4 h-auto">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Conversar Conosco
-          </a>
-        </Button>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex md:inline-flex items-center justify-center gap-2 w-full md:w-auto md:px-10 h-12 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Conversar Conosco
+        </a>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Sobre;
