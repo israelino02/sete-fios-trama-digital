@@ -127,13 +127,32 @@ const Contato = () => {
           <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">Nossas Informações</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl p-5 border border-border">
+          <div className="bg-card rounded-xl p-5 border border-border md:col-span-3">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center mb-3">
               <MapPin className="w-5 h-5 text-accent" />
             </div>
             <h3 className="text-base font-semibold text-foreground mb-1">Endereço</h3>
-            <p className="text-sm text-muted-foreground">{ADDRESS}</p>
+            <p className="text-sm text-muted-foreground mb-4">{ADDRESS}</p>
+            <div className="rounded-lg overflow-hidden border border-border">
+              <iframe
+                title="Mapa da loja Sete Fios Têxtil"
+                src="https://www.google.com/maps?q=Av.%20Pref.%20Braz%20de%20L%C3%ADra%2C%20760%20-%20Novo%2C%20Santa%20Cruz%20do%20Capibaribe%20-%20PE%2C%2055192-460&output=embed"
+                className="w-full h-[220px] md:h-[300px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center justify-center h-9 px-4 rounded-lg border border-primary text-primary text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              Abrir no Google Maps
+            </a>
           </div>
+
 
           <div className="bg-card rounded-xl p-5 border border-border">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center mb-3">
