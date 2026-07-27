@@ -28,13 +28,14 @@ const Sobre = () => {
   return (
     <div className="bg-background">
       <style>{`
-        .sb-team { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 12px; padding: 0 16px 4px; }
+        .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 16px 4px; }
         .sb-team::-webkit-scrollbar { display: none; }
-        .sb-team-card { min-width: 140px; max-width: 140px; scroll-snap-align: start; flex-shrink: 0; }
+        .sb-team-card { width: 100%; }
+
         @media (min-width: 768px) {
-          .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; overflow-x: visible; scroll-snap-type: none; padding: 0 40px; }
-          .sb-team-card { min-width: unset; max-width: unset; width: 100%; }
+          .sb-team { gap: 16px; padding: 0 40px; }
         }
+
       `}</style>
 
       {/* 1. HERO */}
@@ -118,15 +119,16 @@ const Sobre = () => {
         </div>
         <div className="sb-team">
           {equipe.map((m) => (
-            <div key={m.nome} className="sb-team-card bg-card rounded-xl p-4 text-center border border-border">
+            <div key={m.nome} className="sb-team-card bg-card rounded-xl p-2 md:p-4 text-center border border-border">
               <img
                 src={resolveUpload(m.img)}
                 alt={`${m.nome} — ${m.cargo}`}
                 loading="lazy"
-                className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover mx-auto mb-3 bg-primary"
+                className="w-16 h-16 md:w-28 md:h-28 rounded-full object-cover mx-auto mb-2 md:mb-3 bg-primary"
               />
-              <h3 className="text-sm md:text-base font-semibold text-foreground">{m.nome}</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">{m.cargo}</p>
+              <h3 className="text-[11px] leading-tight md:text-base font-semibold text-foreground">{m.nome}</h3>
+              <p className="text-[10px] md:text-sm text-muted-foreground">{m.cargo}</p>
+
             </div>
           ))}
         </div>
