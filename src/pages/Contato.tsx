@@ -1,4 +1,6 @@
 import { MessageCircle, Mail, MapPin, Phone, Clock, Instagram, ChevronDown } from "lucide-react";
+import mapaSeteFios from "@/assets/mapa-sete-fios.png.asset.json";
+
 
 const WHATSAPP_URL = "https://wa.me/5581994616071";
 const ADDRESS = "Av. Pref. Braz de Líra, 760 — Novo, Santa Cruz do Capibaribe — PE, 55192-460";
@@ -133,17 +135,19 @@ const Contato = () => {
             </div>
             <h3 className="text-base font-semibold text-foreground mb-1">Endereço</h3>
             <p className="text-sm text-muted-foreground mb-4">{ADDRESS}</p>
-            <div className="rounded-lg overflow-hidden border border-border">
-              <iframe
-                title="Mapa da loja Sete Fios Têxtil"
-                src="https://www.google.com/maps?q=Sete+Fios+T%C3%AAxtil,+Av.+Pref.+Braz+de+L%C3%ADra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460&z=18&output=embed"
-                className="w-full h-[220px] md:h-[320px] border-0"
-
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg overflow-hidden border border-border"
+            >
+              <img
+                src={mapaSeteFios.url}
+                alt="Mapa com a localização da Sete Fios Têxtil em Santa Cruz do Capibaribe"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
+                className="w-full h-auto"
               />
-            </div>
+            </a>
             <a
               href={MAPS_URL}
               target="_blank"
@@ -153,6 +157,7 @@ const Contato = () => {
               Abrir no Google Maps
             </a>
           </div>
+
 
 
           <div className="bg-card rounded-xl p-5 border border-border">
