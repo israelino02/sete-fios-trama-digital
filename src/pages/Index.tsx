@@ -19,7 +19,7 @@ import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.png.asset.json
 import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile.png.asset.json";
 import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
 import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
-import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v2.png.asset.json";
+import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v3.png.asset.json";
 import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.png.asset.json";
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.png.asset.json";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.png.asset.json";
