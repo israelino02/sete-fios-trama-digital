@@ -1,4 +1,6 @@
 import { MessageCircle, Mail, MapPin, Phone, Clock, Instagram, ChevronDown } from "lucide-react";
+import mapaSeteFios from "@/assets/mapa-sete-fios.png.asset.json";
+
 
 const WHATSAPP_URL = "https://wa.me/5581994616071";
 const ADDRESS = "Av. Pref. Braz de Líra, 760 — Novo, Santa Cruz do Capibaribe — PE, 55192-460";
