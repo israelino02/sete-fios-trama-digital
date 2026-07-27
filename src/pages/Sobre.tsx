@@ -33,9 +33,9 @@ const Sobre = () => {
         .sb-team-card { width: 100%; }
 
         @media (min-width: 768px) {
-          .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; overflow-x: visible; scroll-snap-type: none; padding: 0 40px; }
-          .sb-team-card { min-width: unset; max-width: unset; width: 100%; }
+          .sb-team { gap: 16px; padding: 0 40px; }
         }
+
       `}</style>
 
       {/* 1. HERO */}
