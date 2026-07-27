@@ -28,9 +28,10 @@ const Sobre = () => {
   return (
     <div className="bg-background">
       <style>{`
-        .sb-team { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 12px; padding: 0 16px 4px; }
+        .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 16px 4px; }
         .sb-team::-webkit-scrollbar { display: none; }
-        .sb-team-card { min-width: 140px; max-width: 140px; scroll-snap-align: start; flex-shrink: 0; }
+        .sb-team-card { width: 100%; }
+
         @media (min-width: 768px) {
           .sb-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; overflow-x: visible; scroll-snap-type: none; padding: 0 40px; }
           .sb-team-card { min-width: unset; max-width: unset; width: 100%; }
