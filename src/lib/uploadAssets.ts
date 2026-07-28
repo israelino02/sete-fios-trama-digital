@@ -8,7 +8,10 @@ const modules = import.meta.glob('/src/assets/uploads/*', {
 const map: Record<string, string> = {};
 for (const [key, value] of Object.entries(modules)) {
   const name = key.split('/').pop();
-  if (name) map[name] = value;
+  if (!name) continue;
+  map[name] = value;
+  const stem = name.replace(/\.[^.]+$/, '');
+  if (!(stem in map)) map[stem] = value;
 }
 
 export function resolveUpload(path?: string): string | undefined {
@@ -16,7 +19,8 @@ export function resolveUpload(path?: string): string | undefined {
   const prefix = '/lovable-uploads/';
   if (path.startsWith(prefix)) {
     const name = path.substring(prefix.length);
-    return map[name] ?? path;
+    const stem = name.replace(/\.[^.]+$/, '');
+    return map[name] ?? map[stem] ?? path;
   }
   return path;
 }
