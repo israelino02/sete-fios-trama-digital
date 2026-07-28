@@ -5,24 +5,24 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/hero-banner-fabrics.png.asset.json";
-import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.jpg.asset.json";
+import heroBanner from "@/assets/hero-banner-fabrics.webp.asset.json";
+import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.webp.asset.json";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import heroMainDesktop from "@/assets/hero-main-v2.png.asset.json";
-import heroMainTablet from "@/assets/hero-tablet-v3.png.asset.json";
-import heroMainMobile from "@/assets/hero-mobile-v9.png.asset.json";
-import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v3.png.asset.json";
-import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet-v2.png.asset.json";
-import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile-v2.png.asset.json";
-import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.png.asset.json";
-import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.png.asset.json";
-import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile-v2.png.asset.json";
-import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.png.asset.json";
-import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.png.asset.json";
-import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v3.png.asset.json";
-import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.png.asset.json";
-import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.png.asset.json";
-import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.png.asset.json";
+import heroMainDesktop from "@/assets/hero-main-v2.webp.asset.json";
+import heroMainTablet from "@/assets/hero-tablet-v3.webp.asset.json";
+import heroMainMobile from "@/assets/hero-mobile-v9.webp.asset.json";
+import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v3.webp.asset.json";
+import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet-v2.webp.asset.json";
+import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile-v2.webp.asset.json";
+import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.webp.asset.json";
+import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.webp.asset.json";
+import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile-v2.webp.asset.json";
+import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.webp.asset.json";
+import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.webp.asset.json";
+import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v3.webp.asset.json";
+import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.webp.asset.json";
+import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.webp.asset.json";
+import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.webp.asset.json";
 
 const heroDesktop = [heroMainDesktop.url, heroMicrofibrasDesktop.url, heroMicrofibraDesktop.url, heroPoliamidaDesktop.url, heroPoliesterDesktop.url];
 const heroTablet = [heroMainTablet.url, heroMicrofibrasTablet.url, heroMicrofibraTablet.url, heroPoliamidaTablet.url, heroPoliesterTablet.url];
@@ -41,12 +41,12 @@ const trustItems = [
   { icon: Sparkles, value: "Alta", label: "qualidade" },
 ];
 
-import catMicrofibras from "@/assets/cat-dryfit.jpg.asset.json";
-import catDryfit from "@/assets/cat-microfibras.png.asset.json";
-import catEstampados from "@/assets/cat-estampados.jpg.asset.json";
-import catAviamentos from "@/assets/cat-aviamentos.jpg.asset.json";
+import catMicrofibras from "@/assets/cat-dryfit.webp.asset.json";
+import catDryfit from "@/assets/cat-microfibras.webp.asset.json";
+import catEstampados from "@/assets/cat-estampados.webp.asset.json";
+import catAviamentos from "@/assets/cat-aviamentos.webp.asset.json";
 import historiaVideo from "@/assets/historia-7fios.mp4.asset.json";
-import historiaPoster from "@/assets/historia-poster.jpg.asset.json";
+import historiaPoster from "@/assets/historia-poster.webp.asset.json";
 
 const categories = [
   {
