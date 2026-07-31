@@ -1,5 +1,5 @@
 import { MessageCircle, Mail, MapPin, Phone, Clock, Instagram, ChevronDown } from "lucide-react";
-import mapaSeteFios from "@/assets/mapa-sete-fios.png.asset.json";
+import mapaSeteFios from "@/assets/mapa-sete-fios.png";
 
 
 const WHATSAPP_URL = "https://wa.me/5581994616071";
@@ -142,7 +142,7 @@ const Contato = () => {
               className="block rounded-lg overflow-hidden border border-border"
             >
               <img
-                src={mapaSeteFios.url}
+                src={mapaSeteFios}
                 alt="Mapa com a localização da Sete Fios Têxtil em Santa Cruz do Capibaribe"
                 loading="lazy"
                 className="w-full h-auto"

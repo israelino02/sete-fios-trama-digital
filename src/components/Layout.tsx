@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
-import logo7Fios from "@/assets/logo-7fios.jpg.asset.json";
+import logo7Fios from "@/assets/logo-7fios.jpg";
 
 interface LayoutProps {
   children: ReactNode;
@@ -49,7 +49,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center" aria-label="Sete Fios Têxtil">
               <img
-                src={logo7Fios.url}
+                src={logo7Fios}
                 alt="Sete Fios Têxtil"
                 className="h-12 md:h-14 w-auto object-contain"
               />
