@@ -49,7 +49,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center" aria-label="Sete Fios Têxtil">
               <img
-                src={logo7Fios.url}
+                src={logo7Fios}
                 alt="Sete Fios Têxtil"
                 className="h-12 md:h-14 w-auto object-contain"
               />

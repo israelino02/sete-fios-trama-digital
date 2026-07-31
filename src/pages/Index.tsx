@@ -5,28 +5,28 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/hero-banner-fabrics.webp.asset.json";
-import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.webp.asset.json";
+import heroBanner from "@/assets/hero-banner-fabrics.webp";
+import elasticosPersonalizados from "@/assets/elasticos-personalizados-home.webp";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import heroMainDesktop from "@/assets/hero-main-v2.webp.asset.json";
-import heroMainTablet from "@/assets/hero-tablet-v3.webp.asset.json";
-import heroMainMobile from "@/assets/hero-mobile-v9.webp.asset.json";
-import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v3.webp.asset.json";
-import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet-v2.webp.asset.json";
-import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile-v2.webp.asset.json";
-import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.webp.asset.json";
-import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.webp.asset.json";
-import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile-v2.webp.asset.json";
-import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.webp.asset.json";
-import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.webp.asset.json";
-import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v3.webp.asset.json";
-import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.webp.asset.json";
-import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.webp.asset.json";
-import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.webp.asset.json";
+const heroMainDesktop = "/media/hero-main-v2.webp";
+const heroMainTablet = "/media/hero-tablet-v3.webp";
+const heroMainMobile = "/media/hero-mobile-v9.webp";
+import heroMicrofibrasDesktop from "@/assets/hero-microfibras-desktop-v3.webp";
+import heroMicrofibrasTablet from "@/assets/hero-microfibras-tablet-v2.webp";
+import heroMicrofibrasMobile from "@/assets/hero-microfibras-mobile-v2.webp";
+import heroMicrofibraDesktop from "@/assets/hero-microfibra-desktop.webp";
+import heroMicrofibraTablet from "@/assets/hero-microfibra-tablet.webp";
+import heroMicrofibraMobile from "@/assets/hero-microfibra-mobile-v2.webp";
+import heroPoliamidaDesktop from "@/assets/hero-poliamida-desktop.webp";
+import heroPoliamidaTablet from "@/assets/hero-poliamida-tablet.webp";
+import heroPoliamidaMobile from "@/assets/hero-poliamida-mobile-v3.webp";
+import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.webp";
+import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.webp";
+import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.webp";
 
-const heroDesktop = [heroMainDesktop.url, heroMicrofibrasDesktop.url, heroMicrofibraDesktop.url, heroPoliamidaDesktop.url, heroPoliesterDesktop.url];
-const heroTablet = [heroMainTablet.url, heroMicrofibrasTablet.url, heroMicrofibraTablet.url, heroPoliamidaTablet.url, heroPoliesterTablet.url];
-const heroMobile = [heroMainMobile.url, heroMicrofibrasMobile.url, heroMicrofibraMobile.url, heroPoliamidaMobile.url, heroPoliesterMobile.url];
+const heroDesktop = [heroMainDesktop, heroMicrofibrasDesktop, heroMicrofibraDesktop, heroPoliamidaDesktop, heroPoliesterDesktop];
+const heroTablet = [heroMainTablet, heroMicrofibrasTablet, heroMicrofibraTablet, heroPoliamidaTablet, heroPoliesterTablet];
+const heroMobile = [heroMainMobile, heroMicrofibrasMobile, heroMicrofibraMobile, heroPoliamidaMobile, heroPoliesterMobile];
 
 const WHATSAPP_PHONE = "5581994616071";
 const buildWa = (msg: string) =>
@@ -41,12 +41,12 @@ const trustItems = [
   { icon: Sparkles, value: "Alta", label: "qualidade" },
 ];
 
-import catMicrofibras from "@/assets/cat-dryfit.webp.asset.json";
-import catDryfit from "@/assets/cat-microfibras.webp.asset.json";
-import catEstampados from "@/assets/cat-estampados.webp.asset.json";
-import catAviamentos from "@/assets/cat-aviamentos.webp.asset.json";
+import catMicrofibras from "@/assets/cat-dryfit.webp";
+import catDryfit from "@/assets/cat-microfibras.webp";
+import catEstampados from "@/assets/cat-estampados.webp";
+import catAviamentos from "@/assets/cat-aviamentos.webp";
 import historiaVideo from "@/assets/historia-7fios.mp4.asset.json";
-import historiaPoster from "@/assets/historia-poster.webp.asset.json";
+import historiaPoster from "@/assets/historia-poster.webp";
 
 const categories = [
   {
@@ -55,7 +55,7 @@ const categories = [
     href: "/catalogo/poliamida",
     gradient: "bg-gradient-cat-blue",
     icon: Layers,
-    image: catMicrofibras.url,
+    image: catMicrofibras,
   },
   {
     name: "Dry-fit",
@@ -63,7 +63,7 @@ const categories = [
     href: "/catalogo/dry-fit",
     gradient: "bg-gradient-cat-amber",
     icon: Scissors,
-    image: catDryfit.url,
+    image: catDryfit,
   },
   {
     name: "Estampados",
@@ -71,7 +71,7 @@ const categories = [
     href: "/catalogo/estampados",
     gradient: "bg-gradient-cat-green",
     icon: Palette,
-    image: catEstampados.url,
+    image: catEstampados,
   },
   {
     name: "Aviamentos",
@@ -79,7 +79,7 @@ const categories = [
     href: "/outros-produtos",
     gradient: "bg-gradient-cat-purple",
     icon: Sparkles,
-    image: catAviamentos.url,
+    image: catAviamentos,
   },
 ];
 
@@ -125,7 +125,7 @@ const aviamentos = [
   {
     name: "Elástico",
     tag: "Vários tamanhos",
-    image: elasticosPersonalizados.url,
+    image: elasticosPersonalizados,
     waMsg: "Olá! Tenho interesse em Elásticos. Podem me ajudar?",
   },
   {
@@ -291,7 +291,7 @@ const Index = () => {
       {/* 6. BANNER IMAGEM TECIDOS */}
       <section className="relative w-full h-[140px] md:h-[180px] overflow-hidden">
         <img
-          src={heroBanner.url}
+          src={heroBanner}
           alt="Microfibras 7 Fios"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -356,7 +356,7 @@ const Index = () => {
             {videoOpen ? (
               <div className="aspect-video rounded-xl overflow-hidden shadow-soft">
                 <video controls autoPlay className="w-full h-full">
-                  <source src={historiaVideo.url} type="video/mp4" />
+                  <source src={`https://sete-fios-trama-digital.lovable.app${historiaVideo.url}`} type="video/mp4" />
                 </video>
               </div>
             ) : (
@@ -367,7 +367,7 @@ const Index = () => {
                 aria-label="Reproduzir vídeo institucional"
               >
                 <img
-                  src={historiaPoster.url}
+                  src={historiaPoster}
                   alt="Prévia do vídeo institucional Sete Fios Têxtil"
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover"
