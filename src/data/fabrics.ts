@@ -1,14 +1,11 @@
 import microfibraPoliesterMain from "@/assets/uploads/microfibra-poliester-main.webp";
 import romantikLisoMain from "@/assets/uploads/romantik-liso-novo.webp";
-import polisideMain from "@/assets/uploads/poliside-principal-novo.webp";
 import summersoulMain from "@/assets/uploads/hawai-principal-novo.webp";
 import madriMain from "@/assets/uploads/madri-principal-novo.webp";
-import milaoMain from "@/assets/uploads/milao-principal-novo.webp";
 import romantikRiscaMain from "@/assets/uploads/romantik-risca-novo.webp";
 import romantikMescladoMain from "@/assets/uploads/romantik-mesclado-novo.webp";
 import microfibraPoliamidaMain from "@/assets/uploads/microfibra-poliamida-main.webp";
 import delitexPoliamidaMain from "@/assets/uploads/poliamida-principal-novo.webp";
-import poliamidaDarlyngMain from "@/assets/uploads/poliamida-darlyng-principal.webp";
 import poliamidaPremiumMain from "@/assets/uploads/poliamida-premium-novo.webp";
 import dryfitMain from "@/assets/uploads/dryfit-main-v2.webp";
 import estampadosMain from "@/assets/uploads/estampados-main-v2.webp";
@@ -129,62 +126,6 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "POLISIDE",
-          category: "POLIESTER",
-          description: "Microfibra de poliéster com excelente caimento e proteção UV 30+",
-          composition: "93% Poliéster, 7% Elastano",
-          recommendedUse: "Ideal para camisa UV, moda praia, moda intima e sleep wear",
-          mainImage: polisideMain,
-          technicalSpecs: [
-            { label: "Largura", value: "1,70m" },
-            { label: "Gramatura", value: "165g/m²" },
-            { label: "Rendimento", value: "3,80m²/kg" }
-          ],
-          usageExamples: ["Camisa UV", "Lingerie", "Moda Praia", "Peças Confortáveis", "Camisolas"],
-          technologies: [
-            { name: "Excelente Caimento", description: "Molda ao corpo perfeitamente" },
-            { name: "Alta Elasticidade", description: "Movimentação livre e confortável" }
-          ],
-          colors: [
-            { name: "Amarelo BB", code: "POL-001", swatch: "/lovable-uploads/hawai-amarelo-bb-novo.jpg" },
-            { name: "Azul Oceano", code: "POL-002", swatch: "/lovable-uploads/hawai-azul-oceano-novo.jpg" },
-            { name: "Bic", code: "POL-003", swatch: "/lovable-uploads/hawai-bic-novo.jpg" },
-            { name: "Branco", code: "POL-004", swatch: "/lovable-uploads/hawai-branco-novo.jpg" },
-            { name: "Canela", code: "POL-005", swatch: "/lovable-uploads/hawai-canela-novo.jpg" },
-            { name: "Castanho", code: "POL-006", swatch: "/lovable-uploads/hawai-castanho-novo.jpg" },
-            { name: "Chumbo", code: "POL-007", swatch: "/lovable-uploads/hawai-chumbo-novo.jpg" },
-            { name: "Coral", code: "POL-008", swatch: "/lovable-uploads/hawai-coral-novo2.jpg" },
-            { name: "Frozen", code: "POL-009", swatch: "/lovable-uploads/hawai-frozen-novo.jpg" },
-            { name: "Fucsia", code: "POL-010", swatch: "/lovable-uploads/hawai-fucsia-novo.jpg" },
-            { name: "Ires", code: "POL-011", swatch: "/lovable-uploads/hawai-ires-novo.jpg" },
-            { name: "Pimenta", code: "POL-012", swatch: "/lovable-uploads/hawai-pimenta-novo2.jpg" },
-            { name: "Preto", code: "POL-013", swatch: "/lovable-uploads/hawai-preto-novo2.jpg" },
-            { name: "Sensuale", code: "POL-014", swatch: "/lovable-uploads/hawai-sensuale-novo2.jpg" },
-            { name: "Terra", code: "POL-015", swatch: "/lovable-uploads/hawai-terra-novo2.jpg" },
-            { name: "Tulipero", code: "POL-016", swatch: "/lovable-uploads/hawai-tulipero-novo2.jpg" },
-            { name: "Turquesa", code: "POL-017", swatch: "/lovable-uploads/hawai-turquesa-novo2.jpg" },
-            { name: "Verde Jade", code: "POL-018", swatch: "/lovable-uploads/hawai-verde-jade-novo2.jpg" },
-            { name: "Verde Musgo", code: "POL-019", swatch: "/lovable-uploads/hawai-verde-musgo-novo2.jpg" },
-            { name: "Vermelho", code: "POL-020", swatch: "/lovable-uploads/hawai-vermelho-novo2.jpg" },
-            { name: "Lavanda", code: "POL-021", swatch: "/lovable-uploads/hawai-lavanda-novo.jpg" },
-            { name: "Marrom", code: "POL-022", swatch: "/lovable-uploads/hawai-marrom-novo.jpg" },
-            { name: "Pink", code: "POL-023", swatch: "/lovable-uploads/hawai-pink-novo.jpg" },
-            { name: "Romance", code: "POL-024", swatch: "/lovable-uploads/hawai-romance-novo.jpg" },
-            { name: "Rosa BB", code: "POL-025", swatch: "/lovable-uploads/hawai-rosa-bb-novo.jpg" },
-            { name: "Tangerina", code: "POL-026", swatch: "/lovable-uploads/hawai-tangerina-novo.jpg" },
-            { name: "Teos", code: "POL-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
-            { name: "Tibeton", code: "POL-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
-            { name: "Verde Pavão", code: "POL-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" },
-            { name: "Azul BB", code: "POL-030", swatch: "/lovable-uploads/poliside-azul-bb-novo2.jpg" },
-            { name: "Denim", code: "POL-031", swatch: "/lovable-uploads/poliside-denim-novo2.jpg" },
-            { name: "Erva Doce", code: "POL-032", swatch: "/lovable-uploads/poliside-erva-doce-novo.jpg" },
-            { name: "Grafite", code: "POL-033", swatch: "/lovable-uploads/poliside-grafite-novo2.jpg" },
-            { name: "Marfim", code: "POL-034", swatch: "/lovable-uploads/poliside-marfim-novo2.jpg" },
-            { name: "Salmão", code: "POL-035", swatch: "/lovable-uploads/poliside-salmao-novo2.jpg" },
-            { name: "Tame", code: "POL-036", swatch: "/lovable-uploads/poliside-tame-novo2.jpg" }
-          ]
-        },
-        {
           type: "SUMMERSOL",
           category: "POLIESTER",
           description: "Microfibra de poliéster com excelente caimento",
@@ -272,51 +213,6 @@ export const fabricsData: FabricsData = {
             { name: "Teos", code: "MAD-027", swatch: "/lovable-uploads/hawai-teos-novo.jpg" },
             { name: "Tibeton", code: "MAD-028", swatch: "/lovable-uploads/hawai-tibeton-novo.jpg" },
             { name: "Verde Pavão", code: "MAD-029", swatch: "/lovable-uploads/hawai-verde-pavao-novo.jpg" }
-          ]
-        },
-        {
-          type: "MILÃO",
-          category: "POLIESTER",
-          description: "Microfibra premium com toque sedoso e ótimo caimento",
-          composition: "92% Poliéster, 8% Elastano",
-          recommendedUse: "Ideal para peças confortáveis, ideal para o verão",
-          mainImage: milaoMain,
-          technicalSpecs: [
-            { label: "Largura", value: "1,65m" },
-            { label: "Gramatura", value: "165g/m²" },
-            { label: "Rendimento", value: "3,70m²/kg" }
-          ],
-          usageExamples: ["Vestidos", "Lingerie", "Blusas", "Peças Básicas", "Camisolas"],
-          colors: [
-            { name: "Amarelo BB", code: "MIL-001", swatch: "/lovable-uploads/milao-amarelo-bb-novo2.jpg" },
-            { name: "Azul Oceano", code: "MIL-002", swatch: "/lovable-uploads/milao-azul-oceano-novo.jpg" },
-            { name: "Bic", code: "MIL-003", swatch: "/lovable-uploads/milao-bic-novo2.jpg" },
-            { name: "Branco", code: "MIL-004", swatch: "/lovable-uploads/milao-branco-novo.jpg" },
-            { name: "Canela", code: "MIL-005", swatch: "/lovable-uploads/milao-canela-novo2.jpg" },
-            { name: "Castanho", code: "MIL-006", swatch: "/lovable-uploads/milao-castanho-novo2.jpg" },
-            { name: "Chumbo", code: "MIL-007", swatch: "/lovable-uploads/milao-chumbo-novo.jpg" },
-            { name: "Coral", code: "MIL-008", swatch: "/lovable-uploads/milao-coral-novo2.jpg" },
-            { name: "Frozen", code: "MIL-009", swatch: "/lovable-uploads/milao-frozen-novo2.jpg" },
-            { name: "Fucsia", code: "MIL-010", swatch: "/lovable-uploads/milao-fuscia-novo2.jpg" },
-            { name: "Ires", code: "MIL-011", swatch: "/lovable-uploads/milao-ires-novo2.jpg" },
-            { name: "Lavanda", code: "MIL-012", swatch: "/lovable-uploads/milao-lavanda-novo2.jpg" },
-            { name: "Marrom", code: "MIL-013", swatch: "/lovable-uploads/milao-marrom-novo.jpg" },
-            { name: "Pimenta", code: "MIL-014", swatch: "/lovable-uploads/milao-pimenta-novo3.jpg" },
-            { name: "Pink", code: "MIL-015", swatch: "/lovable-uploads/milao-pink-novo.jpg" },
-            { name: "Preto", code: "MIL-016", swatch: "/lovable-uploads/milao-preto-novo.jpg" },
-            { name: "Romance", code: "MIL-017", swatch: "/lovable-uploads/milao-romance-novo2.jpg" },
-            { name: "Rosa BB", code: "MIL-018", swatch: "/lovable-uploads/milao-rosa-bb-novo.jpg" },
-            { name: "Sanremo", code: "MIL-019", swatch: "/lovable-uploads/milao-sanremo-novo3.jpg" },
-            { name: "Sensuale", code: "MIL-020", swatch: "/lovable-uploads/milao-sensuale-novo.jpg" },
-            { name: "Teos", code: "MIL-021", swatch: "/lovable-uploads/milao-teos-novo.jpg" },
-            { name: "Terra", code: "MIL-022", swatch: "/lovable-uploads/milao-terra-novo2.jpg" },
-            { name: "Tibeton", code: "MIL-023", swatch: "/lovable-uploads/milao-tibeton-novo3.jpg" },
-            { name: "Tulipero", code: "MIL-024", swatch: "/lovable-uploads/milao-tulipero-novo2.jpg" },
-            { name: "Turquesa", code: "MIL-025", swatch: "/lovable-uploads/milao-turquesa-novo.jpg" },
-            { name: "Verde Jade", code: "MIL-026", swatch: "/lovable-uploads/milao-verde-jade-novo.jpg" },
-            { name: "Verde Musgo", code: "MIL-027", swatch: "/lovable-uploads/milao-verde-musgo-novo.jpg" },
-            { name: "Verde Pavão", code: "MIL-028", swatch: "/lovable-uploads/milao-verde-pavao-novo.jpg" },
-            { name: "Vermelho", code: "MIL-029", swatch: "/lovable-uploads/milao-vermelho-novo3.jpg" }
           ]
         },
         {
@@ -444,56 +340,6 @@ export const fabricsData: FabricsData = {
           ]
         },
         {
-          type: "POLIAMIDA DARLYNG",
-          category: "POLIAMIDA",
-          description: "É um tecido de alta qualidade, desenvolvido para quem busca conforto, toque macio e excelente caimento.",
-          composition: "90% Poliamida, 10% Elastano",
-          recommendedUse: "Ideal para moda casual, íntima, praia e fitness",
-          mainImage: poliamidaDarlyngMain,
-          technicalSpecs: [
-            { label: "Largura", value: "160m" },
-            { label: "Gramatura", value: "180g/m²" },
-            { label: "Rendimento", value: "3,47m²/kg" }
-          ],
-          usageExamples: ["Blusas leves", "Vestidos", "Saias", "Calcinhas", "Cuecas", "Biquínis", "Maiôs", "Tops", "Shorts"],
-          colors: [
-            { name: "Bubblegum", code: "PFL-003", swatch: "/lovable-uploads/darlyng-bubblegum.png" },
-            { name: "Aço", code: "PFL-004", swatch: "/lovable-uploads/darlyng-aco.png" },
-            { name: "Amalia", code: "PFL-005", swatch: "/lovable-uploads/darlyng-amalia.png" },
-            { name: "Amarelo BB", code: "PFL-006", swatch: "/lovable-uploads/darlyng-amarelo-bb.png" },
-            { name: "Aquaril", code: "PFL-007", swatch: "/lovable-uploads/darlyng-aquaril.png" },
-            { name: "Atalaia", code: "PFL-008", swatch: "/lovable-uploads/darlyng-atalaia.png" },
-            { name: "Branco Espuma", code: "PFL-009", swatch: "/lovable-uploads/darlyng-branco-espuma.png" },
-            { name: "Branco", code: "PFL-010", swatch: "/lovable-uploads/darlyng-branco-4.png" },
-            { name: "Herança", code: "PFL-011", swatch: "/lovable-uploads/darlyng-heranca.png" },
-            { name: "Canela", code: "PFL-012", swatch: "/lovable-uploads/darlyng-canela.png" },
-            { name: "Castanho", code: "PFL-013", swatch: "/lovable-uploads/darlyng-castanho.png" },
-            { name: "Chronos", code: "PFL-014", swatch: "/lovable-uploads/darlyng-chronos.png" },
-            { name: "Chumbo", code: "PFL-015", swatch: "/lovable-uploads/darlyng-chumbo.png" },
-            { name: "Coringa", code: "PFL-016", swatch: "/lovable-uploads/darlyng-coringa.png" },
-            { name: "Fantástico", code: "PFL-017", swatch: "/lovable-uploads/darlyng-fantastico.png" },
-            { name: "Frozen", code: "PFL-018", swatch: "/lovable-uploads/darlyng-frozen.png" },
-            { name: "Preto", code: "PFL-019", swatch: "/lovable-uploads/darlyng-preto.png" },
-            { name: "Luciana", code: "PFL-020", swatch: "/lovable-uploads/darlyng-luciana.png" },
-            { name: "Marinho", code: "PFL-021", swatch: "/lovable-uploads/darlyng-marinho.png" },
-            { name: "Marrocos", code: "PFL-022", swatch: "/lovable-uploads/darlyng-marrocos.png" },
-            { name: "Mocassim", code: "PFL-023", swatch: "/lovable-uploads/darlyng-mocassim.png" },
-            { name: "Mocha Mousse", code: "PFL-024", swatch: "/lovable-uploads/darlyng-mocha-mousse.png" },
-            { name: "Odalisca", code: "PFL-025", swatch: "/lovable-uploads/darlyng-odalisca.png" },
-            { name: "Pantera", code: "PFL-026", swatch: "/lovable-uploads/darlyng-pantera.png" },
-            { name: "Vermelho", code: "PFL-027", swatch: "/lovable-uploads/darlyng-vermelho.png" },
-            { name: "Racy", code: "PFL-028", swatch: "/lovable-uploads/darlyng-racy.png" },
-            { name: "Rosa", code: "PFL-029", swatch: "/lovable-uploads/darlyng-rosa.png" },
-            { name: "Rubi", code: "PFL-030", swatch: "/lovable-uploads/darlyng-rubi.png" },
-            { name: "Sandia", code: "PFL-031", swatch: "/lovable-uploads/darlyng-sandia.png" },
-            { name: "Sanremo", code: "PFL-032", swatch: "/lovable-uploads/darlyng-sanremo.png" },
-            { name: "Sensuale", code: "PFL-033", swatch: "/lovable-uploads/darlyng-sensuale.png" },
-            { name: "Teos", code: "PFL-034", swatch: "/lovable-uploads/darlyng-teos.png" },
-            { name: "Tibeton", code: "PFL-035", swatch: "/lovable-uploads/darlyng-tibeton.png" },
-            { name: "Tulipero", code: "PFL-036", swatch: "/lovable-uploads/darlyng-tulipero.png" }
-          ]
-        },
-        {
           type: "POLIAMIDA PREMIUM",
           category: "POLIAMIDA",
           description: "É um tecido de alto padrão, desenvolvido para quem busca qualidade superior, conforto e durabilidade.",
@@ -543,6 +389,87 @@ export const fabricsData: FabricsData = {
             { name: "Tulipero", code: "PP-034", swatch: "/lovable-uploads/poliamida-premium-tulipero.png" },
             { name: "Vintage", code: "PP-035", swatch: "/lovable-uploads/poliamida-premium-vintage.png" }
           ]
+        },
+        {
+          type: "DELITEX CONFORT",
+          category: "POLIAMIDA",
+          description: "Poliamida com elastano de alto conforto e certificado de proteção UV 50+.",
+          composition: "91% Poliamida, 9% Elastano",
+          recommendedUse: "Ideal para moda casual, body, camisa UV, moda praia e moda íntima",
+          mainImage: microfibraPoliamidaMain,
+          technicalSpecs: [
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,50m/kg" }
+          ],
+          usageExamples: ["Moda Casual", "Body", "Camisa UV", "Moda Praia", "Moda Íntima"],
+          technologies: [
+            { name: "Proteção UV 50+", description: "Certificado de proteção solar UV 50+" }
+          ],
+          colors: []
+        },
+        {
+          type: "DELITEX CANELADO",
+          category: "POLIAMIDA",
+          description: "Poliamida canelada com elastano, textura marcante e ótimo caimento.",
+          composition: "90% Poliamida, 10% Elastano",
+          recommendedUse: "Ideal para moda casual",
+          mainImage: microfibraPoliamidaMain,
+          technicalSpecs: [
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,50m/kg" }
+          ],
+          usageExamples: ["Moda Casual"],
+          colors: []
+        },
+        {
+          type: "MAX PREMIUM",
+          category: "POLIAMIDA",
+          description: "Poliamida premium com elastano, toque macio e excelente durabilidade.",
+          composition: "90% Poliamida, 10% Elastano",
+          recommendedUse: "Ideal para moda casual, body, camisa UV, moda praia e moda íntima",
+          mainImage: microfibraPoliamidaMain,
+          technicalSpecs: [
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "180g/m²" },
+            { label: "Rendimento", value: "3,50m/kg" }
+          ],
+          usageExamples: ["Moda Casual", "Body", "Camisa UV", "Moda Praia", "Moda Íntima"],
+          colors: []
+        },
+        {
+          type: "SUPLEX FLEX FIT",
+          category: "POLIAMIDA",
+          description: "Suplex de poliamida com alta elasticidade e compressão para alta performance.",
+          composition: "83% Poliamida, 17% Elastano",
+          recommendedUse: "Ideal para moda fitness e moda esportiva",
+          mainImage: microfibraPoliamidaMain,
+          technicalSpecs: [
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "305g/m²" },
+            { label: "Rendimento", value: "2,05m/kg" }
+          ],
+          usageExamples: ["Moda Fitness", "Moda Esportiva"],
+          colors: []
+        },
+        {
+          type: "SUPLEX BLACKOUT",
+          category: "POLIAMIDA",
+          description: "Suplex de poliamida com zero transparência, ideal para peças de alta performance.",
+          composition: "85% Poliamida, 15% Elastano",
+          recommendedUse: "Ideal para moda fitness e moda esportiva",
+          mainImage: microfibraPoliamidaMain,
+          technicalSpecs: [
+            { label: "Largura", value: "1,60m" },
+            { label: "Gramatura", value: "290g/m²" },
+            { label: "Rendimento", value: "2,02m/kg" }
+          ],
+          usageExamples: ["Moda Fitness", "Moda Esportiva"],
+          technologies: [
+            { name: "Zero Transparência", description: "Cobertura total mesmo em alongamento" }
+          ],
+          colors: []
         }
       ]
     },
