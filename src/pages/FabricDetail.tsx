@@ -10,18 +10,14 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 import { resolveUpload } from "@/lib/uploadAssets";
 import romantikMescladoMain from "@/assets/romantik-mesclado-main.jpg";
 import delitexPoliamidaMain from "@/assets/delitex-poliamida-main.jpg";
-import polisideMain from "@/assets/poliside-main.jpg";
 import summersoulMain from "@/assets/summersoul-main.jpg";
-import milaoMain from "@/assets/milao-main.jpg";
 import romantikRiscaMain from "@/assets/romantik-risca-main.jpg";
 
 // Override map for subfabric main images that need static imports
 const fabricMainImageOverrides: Record<string, string> = {
   "ROMANTIK MESCLADO": romantikMescladoMain,
   "DELITEX POLIAMIDA": delitexPoliamidaMain,
-  "POLISIDE": polisideMain,
   "SUMMERSOL": summersoulMain,
-  "MILÃO": milaoMain,
   "ROMANTIK RISCA DE GIZ": romantikRiscaMain,
 };
 
@@ -50,6 +46,14 @@ const FabricDetail = () => {
       navigate("/catalogo");
     }
   }, [categorySlug, fabricType, navigate]);
+
+  const isEstampado = categorySlug === "estampados";
+
+  const handlePrintsRequest = () => {
+    const message = `Olá! Vim do SITE e solicito catálogo de estampas disponíveis.`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5581994616071&text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   const handleGeneralBudgetRequest = () => {
     const fabricName = selectedFabric?.type || "";
@@ -168,14 +172,27 @@ const FabricDetail = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3 pt-4">
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full text-base py-6"
-                onClick={() => setIsColorModalOpen(true)}
-              >
-                Ver Cores
-              </Button>
+              {isEstampado ? (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full text-base py-6"
+                  onClick={handlePrintsRequest}
+                >
+                  Consultar disponibilidade de estampas
+                </Button>
+              ) : (
+                selectedFabric.colors.length > 0 && (
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full text-base py-6"
+                    onClick={() => setIsColorModalOpen(true)}
+                  >
+                    Ver Cores
+                  </Button>
+                )
+              )}
               <Button
                 size="lg"
                 className="w-full text-base py-6 bg-gradient-primary hover:scale-105 transition-all duration-300"
