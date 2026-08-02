@@ -23,12 +23,7 @@ const CategoryDetail = () => {
   }, [categorySlug, navigate]);
 
   const handleFabricClick = (fabricType: string) => {
-    // Special handling for ROMANTIK ESTAMPADO
-    if (fabricType === "ROMANTIK ESTAMPADO") {
-      navigate(`/catalogo/${categorySlug}/${encodeURIComponent(fabricType)}/selecionar-genero`);
-    } else {
-      navigate(`/catalogo/${categorySlug}/${encodeURIComponent(fabricType)}`);
-    }
+    navigate(`/catalogo/${categorySlug}/${encodeURIComponent(fabricType)}`);
   };
 
   if (!category) return null;

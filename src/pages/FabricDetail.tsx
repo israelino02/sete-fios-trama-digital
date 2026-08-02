@@ -64,9 +64,7 @@ const FabricDetail = () => {
 
   if (!selectedFabric) return null;
 
-  const pageTitle = gender 
-    ? `${selectedFabric.type} - ${gender.charAt(0).toUpperCase() + gender.slice(1)}`
-    : selectedFabric.type;
+  const pageTitle = selectedFabric.type;
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,13 +72,7 @@ const FabricDetail = () => {
         {/* Back Button */}
         <Button
           variant="ghost"
-          onClick={() => {
-            if (gender) {
-              navigate(`/catalogo/${categorySlug}/${encodeURIComponent(fabricType!)}/selecionar-genero`);
-            } else {
-              navigate(`/catalogo/${categorySlug}`);
-            }
-          }}
+          onClick={() => navigate(`/catalogo/${categorySlug}`)}
           className="mb-6"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
@@ -175,8 +167,7 @@ const FabricDetail = () => {
               {isEstampado ? (
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full text-base py-6"
+                  className="w-full text-base md:text-lg font-bold py-7 bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 shadow-lg"
                   onClick={handlePrintsRequest}
                 >
                   Consultar disponibilidade de estampas
