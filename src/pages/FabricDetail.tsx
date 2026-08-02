@@ -167,7 +167,7 @@ const FabricDetail = () => {
               {isEstampado ? (
                 <Button
                   size="lg"
-                  className="w-full text-base md:text-lg font-bold py-7 bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="w-full text-base md:text-lg font-bold py-7 bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-all duration-300 shadow-lg"
                   onClick={handlePrintsRequest}
                 >
                   Consultar disponibilidade de estampas
