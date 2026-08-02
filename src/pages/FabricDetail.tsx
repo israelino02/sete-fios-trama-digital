@@ -74,13 +74,7 @@ const FabricDetail = () => {
         {/* Back Button */}
         <Button
           variant="ghost"
-          onClick={() => {
-            if (gender) {
-              navigate(`/catalogo/${categorySlug}/${encodeURIComponent(fabricType!)}/selecionar-genero`);
-            } else {
-              navigate(`/catalogo/${categorySlug}`);
-            }
-          }}
+          onClick={() => navigate(`/catalogo/${categorySlug}`)}
           className="mb-6"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
