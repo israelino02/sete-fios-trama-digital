@@ -5,18 +5,19 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 
 // Lazy load pages for better performance
-const Index = React.lazy(() => import("./pages/Index"));
-const Catalogo = React.lazy(() => import("./pages/Catalogo"));
-const CategoryDetail = React.lazy(() => import("./pages/CategoryDetail"));
-const FabricDetail = React.lazy(() => import("./pages/FabricDetail"));
+const Index = lazyWithRetry(() => import("./pages/Index"));
+const Catalogo = lazyWithRetry(() => import("./pages/Catalogo"));
+const CategoryDetail = lazyWithRetry(() => import("./pages/CategoryDetail"));
+const FabricDetail = lazyWithRetry(() => import("./pages/FabricDetail"));
 
-const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
-const OutrosProdutos = React.lazy(() => import("./pages/OutrosProdutos"));
-const Sobre = React.lazy(() => import("./pages/Sobre"));
-const Contato = React.lazy(() => import("./pages/Contato"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
+const ProductDetail = lazyWithRetry(() => import("./pages/ProductDetail"));
+const OutrosProdutos = lazyWithRetry(() => import("./pages/OutrosProdutos"));
+const Sobre = lazyWithRetry(() => import("./pages/Sobre"));
+const Contato = lazyWithRetry(() => import("./pages/Contato"));
+const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
