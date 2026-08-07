@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 // Catalog page with static image imports for reliable loading
 import { useNavigate } from "react-router-dom";
 import { fabricsData } from "@/data/fabrics";
@@ -24,6 +25,11 @@ const Catalogo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Catálogo de Tecidos | 7 Fios Têxtil"
+        description="Catálogo de tecidos no atacado: microfibra de poliamida e poliéster, dry fit, malhas lisas e estampadas para confecção. Consulte cores e preços."
+        path="/catalogo"
+      />
       {/* Header */}
       <div className="bg-gradient-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -63,9 +69,9 @@ const Catalogo = () => {
 
               {/* Name */}
               <div className="p-3 md:p-6 bg-card border-t flex-shrink-0">
-                <h3 className="font-display font-bold text-base md:text-2xl text-foreground text-center">
+                <h2 className="font-display font-bold text-base md:text-2xl text-foreground text-center">
                   {category.name}
-                </h3>
+                </h2>
               </div>
             </button>
           ))}

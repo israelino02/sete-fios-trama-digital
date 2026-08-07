@@ -1,5 +1,6 @@
 import { MessageCircle, Mail, MapPin, Phone, Clock, Instagram, ChevronDown } from "lucide-react";
 import mapaSeteFios from "@/assets/mapa-sete-fios.png";
+import { Seo } from "@/components/Seo";
 
 
 const WHATSAPP_URL = "https://wa.me/5581994616071";
@@ -77,6 +78,38 @@ const faqs = [
 const Contato = () => {
   return (
     <div className="bg-background">
+      <Seo
+        title="Contato | 7 Fios Têxtil — Tecidos no Atacado"
+        description="Fale com a 7 Fios Têxtil pelo WhatsApp (81) 99461-6071. Loja na Av. Pref. Braz de Líra, 760, Santa Cruz do Capibaribe — PE. Seg a sex, 08h às 18h."
+        path="/contato"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "7 Fios Têxtil",
+          url: "https://setefios.com.br/contato",
+          image: "https://setefios.com.br/media/og-7fios.jpg",
+          telephone: "+55 81 99461-6071",
+          email: "Comercial@setefios.com.br",
+          priceRange: "$$",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Av. Pref. Braz de Líra, 760 — Novo",
+            addressLocality: "Santa Cruz do Capibaribe",
+            addressRegion: "PE",
+            postalCode: "55192-460",
+            addressCountry: "BR",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "08:00",
+              closes: "18:00",
+            },
+          ],
+          sameAs: ["https://www.instagram.com/7fiostextil/"],
+        }}
+      />
       {/* 1. HERO */}
       <section className="bg-primary text-primary-foreground px-4 py-10 md:px-10 md:py-14 text-center">
         <span className="inline-block text-[11px] font-bold tracking-[0.18em] text-accent uppercase mb-2">

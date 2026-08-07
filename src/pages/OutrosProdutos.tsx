@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { ProductCard } from "@/components/ProductCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Package, Scissors, Sparkles, Layers } from "lucide-react";
@@ -162,6 +163,12 @@ const MobileTabletView = () => {
 
 
 
+      <Seo
+        title="Aviamentos: Elástico, Renda e Viés | 7 Fios"
+        description="Aviamentos no atacado em Santa Cruz do Capibaribe: elásticos lisos e personalizados, rendas para lingerie e viés para acabamento de confecção."
+        path="/outros-produtos"
+      />
+
       {/* 1. Header */}
       <section style={{ backgroundColor: "#1B2A6B" }} className="px-4 py-5 md:px-10 md:py-8">
         <p className="text-[11px] md:text-xs font-semibold tracking-[0.2em] mb-2" style={{ color: "#FBBF24" }}>
@@ -243,9 +250,9 @@ const MobileTabletView = () => {
                     </span>
                   </div>
                   <div className="p-2.5 md:p-4 flex-1 flex flex-col">
-                    <h3 className="text-sm md:text-base font-bold leading-tight mb-1 md:mb-1.5" style={{ color: "#1B2A6B" }}>
+                    <h2 className="text-sm md:text-base font-bold leading-tight mb-1 md:mb-1.5" style={{ color: "#1B2A6B" }}>
                       {p.name}
-                    </h3>
+                    </h2>
                     <p className="text-[11px] md:text-[13px] text-gray-500 leading-tight mb-2.5 md:mb-3 flex-1">
                       {p.description}
                     </p>
