@@ -47,11 +47,32 @@ const horarios = [
 ];
 
 const faqs = [
-  { q: "Vocês fazem entrega?", a: "Entre em contato pelo WhatsApp para consultar prazo e condições." },
-  { q: "Vendem no atacado?", a: "Sim! Trabalhamos no atacado e varejo, com preços especiais para grandes quantidades." },
-  { q: "Posso ver os tecidos antes de comprar?", a: "Claro! Visite nossa loja física e avalie a qualidade pessoalmente." },
-  { q: "Dão consultoria para projetos?", a: "Nossa equipe está pronta para ajudar na escolha dos melhores materiais." },
+  {
+    q: "Vocês vendem tecido para confecção no atacado?",
+    a: "Sim. Somos fornecedor de tecidos para confecção e loja de tecidos no atacado e varejo: venda de tecidos no atacado em rolo ou por metro, ideal para comprar tecido para revenda, para lojistas, pequenas confecções, facção e costureira profissional. Consulte preço de tecido no atacado pelo WhatsApp.",
+  },
+  {
+    q: "Quais tipos de tecido e malha vocês fornecem?",
+    a: "Trabalhamos com malha poliamida atacado, tecido suplex atacado (incluindo suplex blackout e suplex flex fit), tecido dry fit atacado, malha canelada atacado, tecido liso para confecção, tecido risca de giz atacado, tecido mesclado para roupa, tecido estampado atacado e tecido premium para confecção — inclusive tecido para sublimação atacado e tecido para estamparia.",
+  },
+  {
+    q: "Trabalham com aviamentos: elástico, renda e viés?",
+    a: "Sim, somos loja de tecidos e aviamentos. Temos elástico para confecção atacado, elástico liso, elástico personalizado atacado, elástico para lingerie, elástico para roupa íntima, elástico para cueca atacado e elástico para costura industrial; renda para lingerie atacado, renda para confecção de roupa íntima e renda para moda íntima; além de viés para confecção atacado, viés colorido para confecção, viés para acabamento de roupa e viés para costura industrial.",
+  },
+  {
+    q: "Para quais tipos de roupa esses tecidos servem?",
+    a: "Nossos tecidos atendem moda fitness atacado e tecido para academia revenda, tecido para legging atacado, malha para legging e top, tecido para roupa esportiva e uniforme esportivo, tecido para camiseta dry fit e camisa polo dry fit, tecido para uniforme profissional, malha para moda praia e tecido para roupa de banho, tecido para moda praia feminina, tecido para lingerie atacado, malha para cueca e sutiã, tecido confort para roupa íntima, tecido para pijama atacado e malha para roupa infantil.",
+  },
+  {
+    q: "Onde comprar tecido no atacado em Santa Cruz do Capibaribe?",
+    a: "Estamos na Av. Pref. Braz de Líra, 760, em Santa Cruz do Capibaribe — PE, no coração do Polo de Confecções. Somos fornecedor de tecidos em Santa Cruz do Capibaribe e de aviamentos atacado, atendendo tecido para confecção em Pernambuco, no agreste pernambucano e em todo o Nordeste.",
+  },
+  { q: "Vocês fazem entrega?", a: "Entre em contato pelo WhatsApp para consultar prazo e condições de entrega de rolo de tecido para revenda em todo o Brasil." },
+  { q: "Vendem no atacado?", a: "Sim! Trabalhamos no atacado e varejo, com preços especiais para grandes quantidades — ideal para loja de roupas, malharia e facção de roupas." },
+  { q: "Posso ver os tecidos antes de comprar?", a: "Claro! Visite nossa loja física e avalie a qualidade dos tecidos e aviamentos para confecção pessoalmente." },
+  { q: "Dão consultoria para projetos?", a: "Nossa equipe está pronta para ajudar na escolha dos melhores materiais, do tecido para confecção de roupas ao elástico e viés para acabamento." },
 ];
+
 
 const Contato = () => {
   return (
