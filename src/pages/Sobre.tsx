@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { Award, Heart, Clock, Users, ShieldCheck, Lightbulb, Target, Rocket, MessageCircle } from "lucide-react";
 import { resolveUpload } from "@/lib/uploadAssets";
 
@@ -37,6 +38,12 @@ const Sobre = () => {
         }
 
       `}</style>
+
+      <Seo
+        title="Sobre a 7 Fios Têxtil | Nossa História"
+        description="Conheça a história, a missão e a equipe da 7 Fios Têxtil, fornecedora de tecidos e aviamentos no Polo de Confecções de Santa Cruz do Capibaribe, PE."
+        path="/sobre"
+      />
 
       {/* 1. HERO */}
       <section className="bg-primary text-primary-foreground px-4 py-10 md:px-10 md:py-14 text-center">

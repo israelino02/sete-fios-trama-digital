@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
@@ -35,6 +36,11 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={`${product.nome} | 7 Fios Têxtil`}
+        description={`${product.nome} (código ${product.codigo}) no atacado na 7 Fios Têxtil, Santa Cruz do Capibaribe — PE. Consulte cores, disponibilidade e preço pelo WhatsApp.`}
+        path={`/produto/${product.id}`}
+      />
       {/* Header */}
       <div className="bg-gradient-primary text-white py-8">
         <div className="container mx-auto px-4">

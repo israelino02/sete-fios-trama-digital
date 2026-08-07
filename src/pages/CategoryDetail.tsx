@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fabricsData, Category } from "@/data/fabrics";
@@ -30,6 +31,11 @@ const CategoryDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={`${category.name} no Atacado | 7 Fios Têxtil`}
+        description={`${category.name}: tecidos no atacado para confecção em Santa Cruz do Capibaribe, PE. Veja tipos, cores e composições e fale com um vendedor pelo WhatsApp.`}
+        path={`/catalogo/${category.slug}`}
+      />
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Back Button */}
         <Button
@@ -70,9 +76,9 @@ const CategoryDetail = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg text-foreground mb-4">
+              <h2 className="font-semibold text-lg text-foreground mb-4">
                 Subtecidos disponíveis:
-              </h3>
+              </h2>
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
                 {category.fabrics.map((fabric) => (
                   <Button

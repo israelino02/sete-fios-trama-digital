@@ -24,9 +24,18 @@ import heroPoliesterDesktop from "@/assets/hero-poliester-desktop-v2.webp";
 import heroPoliesterTablet from "@/assets/hero-poliester-tablet-v2.webp";
 import heroPoliesterMobile from "@/assets/hero-poliester-mobile-v3.webp";
 
+import { Seo } from "@/components/Seo";
+
 const heroDesktop = [heroMainDesktop, heroMicrofibrasDesktop, heroMicrofibraDesktop, heroPoliamidaDesktop, heroPoliesterDesktop];
 const heroTablet = [heroMainTablet, heroMicrofibrasTablet, heroMicrofibraTablet, heroPoliamidaTablet, heroPoliesterTablet];
 const heroMobile = [heroMainMobile, heroMicrofibrasMobile, heroMicrofibraMobile, heroPoliamidaMobile, heroPoliesterMobile];
+const heroAlts = [
+  "Loja 7 Fios Têxtil em Santa Cruz do Capibaribe, fornecedora de tecidos e aviamentos no atacado",
+  "Microfibras 7 Fios: tecidos de poliamida e poliéster para confecção",
+  "Referência em tecidos e aviamentos para confecção no agreste de Pernambuco",
+  "Microfibra de poliamida e poliéster para moda fitness e moda praia",
+  "Microfibra de poliéster para uniformes e roupas esportivas",
+];
 
 const WHATSAPP_PHONE = "5581994616071";
 const buildWa = (msg: string) =>
@@ -170,9 +179,44 @@ const Index = () => {
 
   return (
     <div>
+      <Seo
+        title="7 Fios Têxtil | Tecidos e Aviamentos no Atacado"
+        description="Fornecedor de tecidos e aviamentos no atacado em Santa Cruz do Capibaribe, PE: suplex, dry fit, poliamida, malha canelada, elástico, renda e viés."
+        path="/"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "7 Fios Têxtil",
+            url: "https://setefios.com.br",
+            logo: "https://setefios.com.br/media/og-7fios.jpg",
+            telephone: "+55 81 99461-6071",
+            email: "Comercial@setefios.com.br",
+            sameAs: ["https://www.instagram.com/7fiostextil/"],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Av. Pref. Braz de Líra, 760 — Novo",
+              addressLocality: "Santa Cruz do Capibaribe",
+              addressRegion: "PE",
+              postalCode: "55192-460",
+              addressCountry: "BR",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "7 Fios Têxtil",
+            url: "https://setefios.com.br",
+            inLanguage: "pt-BR",
+          },
+        ]}
+      />
       {/* 2. HERO */}
       <section className="relative w-full min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] overflow-hidden bg-primary">
-        <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} />
+        <h1 className="sr-only">
+          7 Fios Têxtil — Fornecedor de tecidos e aviamentos no atacado em Santa Cruz do Capibaribe, PE
+        </h1>
+        <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} alts={heroAlts} />
         <div className="pointer-events-none absolute inset-x-0 bottom-14 md:bottom-20 z-20 flex justify-center px-4">
           <div className="pointer-events-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button asChild size="lg" className="w-64 h-14 text-base bg-accent text-primary hover:bg-accent/90 font-semibold">
