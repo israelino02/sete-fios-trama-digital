@@ -233,6 +233,21 @@ const Contato = () => {
 
       {/* 6. FAQ */}
       <section className="bg-card px-4 py-8 md:px-10 md:py-12 mt-8">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            }),
+          }}
+        />
+
         <div className="text-center mb-6">
           <Tag>Dúvidas</Tag>
           <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">Perguntas Frequentes</h2>
