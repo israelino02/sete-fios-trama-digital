@@ -4,7 +4,7 @@ import { Seo } from "@/components/Seo";
 
 
 const WHATSAPP_URL = "https://wa.me/5581994616071";
-const ADDRESS = "Av. Pref. Braz de Líra, 760 — Novo, Santa Cruz do Capibaribe — PE, 55192-460";
+const ADDRESS = "Av. Pref. Braz de Líra, 760 - Novo, Santa Cruz do Capibaribe - PE, 55192-460";
 const MAPS_URL =
   "https://maps.google.com/?q=Av.+Pref.+Braz+de+Líra,+760+-+Novo,+Santa+Cruz+do+Capibaribe+-+PE,+55192-460";
 
@@ -34,7 +34,7 @@ const canais = [
   {
     icon: MapPin,
     title: "Endereço",
-    info: "Av. Pref. Braz de Líra, 760 — Novo, SCC — PE",
+    info: "Av. Pref. Braz de Líra, 760 - Novo, SCC - PE",
     label: "Ver no Mapa",
     url: MAPS_URL,
     wide: true,
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "Quais tipos de tecido e malha vocês fornecem?",
-    a: "Trabalhamos com malha poliamida atacado, tecido suplex atacado (incluindo suplex blackout e suplex flex fit), tecido dry fit atacado, malha canelada atacado, tecido liso para confecção, tecido risca de giz atacado, tecido mesclado para roupa, tecido estampado atacado e tecido premium para confecção — inclusive tecido para sublimação atacado e tecido para estamparia.",
+    a: "Trabalhamos com malha poliamida atacado, tecido suplex atacado (incluindo suplex blackout e suplex flex fit), tecido dry fit atacado, malha canelada atacado, tecido liso para confecção, tecido risca de giz atacado, tecido mesclado para roupa, tecido estampado atacado e tecido premium para confecção, inclusive tecido para sublimação atacado e tecido para estamparia.",
   },
   {
     q: "Trabalham com aviamentos: elástico, renda e viés?",
@@ -66,10 +66,10 @@ const faqs = [
   },
   {
     q: "Onde comprar tecido no atacado em Santa Cruz do Capibaribe?",
-    a: "Estamos na Av. Pref. Braz de Líra, 760, em Santa Cruz do Capibaribe — PE, no coração do Polo de Confecções. Somos fornecedor de tecidos em Santa Cruz do Capibaribe e de aviamentos atacado, atendendo tecido para confecção em Pernambuco, no agreste pernambucano e em todo o Nordeste.",
+    a: "Estamos na Av. Pref. Braz de Líra, 760, em Santa Cruz do Capibaribe - PE, no coração do Polo de Confecções. Somos fornecedor de tecidos em Santa Cruz do Capibaribe e de aviamentos atacado, atendendo tecido para confecção em Pernambuco, no agreste pernambucano e em todo o Nordeste.",
   },
   { q: "Vocês fazem entrega?", a: "Entre em contato pelo WhatsApp para consultar prazo e condições de entrega de rolo de tecido para revenda em todo o Brasil." },
-  { q: "Vendem no atacado?", a: "Sim! Trabalhamos no atacado e varejo, com preços especiais para grandes quantidades — ideal para loja de roupas, malharia e facção de roupas." },
+  { q: "Vendem no atacado?", a: "Sim! Trabalhamos no atacado e varejo, com preços especiais para grandes quantidades, ideal para loja de roupas, malharia e facção de roupas." },
   { q: "Posso ver os tecidos antes de comprar?", a: "Claro! Visite nossa loja física e avalie a qualidade dos tecidos e aviamentos para confecção pessoalmente." },
   { q: "Dão consultoria para projetos?", a: "Nossa equipe está pronta para ajudar na escolha dos melhores materiais, do tecido para confecção de roupas ao elástico e viés para acabamento." },
 ];
@@ -79,8 +79,8 @@ const Contato = () => {
   return (
     <div className="bg-background">
       <Seo
-        title="Contato | 7 Fios Têxtil — Tecidos no Atacado"
-        description="Fale com a 7 Fios Têxtil pelo WhatsApp (81) 99461-6071. Loja na Av. Pref. Braz de Líra, 760, Santa Cruz do Capibaribe — PE. Seg a sex, 08h às 18h."
+        title="Contato | 7 Fios Têxtil - Tecidos no Atacado"
+        description="Fale com a 7 Fios Têxtil pelo WhatsApp (81) 99461-6071. Loja na Av. Pref. Braz de Líra, 760, Santa Cruz do Capibaribe - PE. Seg a sex, 08h às 18h."
         path="/contato"
         jsonLd={{
           "@context": "https://schema.org",
@@ -93,7 +93,7 @@ const Contato = () => {
           priceRange: "$$",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Av. Pref. Braz de Líra, 760 — Novo",
+            streetAddress: "Av. Pref. Braz de Líra, 760 - Novo",
             addressLocality: "Santa Cruz do Capibaribe",
             addressRegion: "PE",
             postalCode: "55192-460",

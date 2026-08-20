@@ -129,7 +129,7 @@ const Sobre = () => {
             <div key={m.nome} className="sb-team-card bg-card rounded-xl p-2 md:p-4 text-center border border-border">
               <img
                 src={resolveUpload(m.img)}
-                alt={`${m.nome} — ${m.cargo}`}
+                alt={`${m.nome} - ${m.cargo}`}
                 loading="lazy"
                 className="w-16 h-16 md:w-28 md:h-28 rounded-full object-cover mx-auto mb-2 md:mb-3 bg-primary"
               />

@@ -87,7 +87,7 @@ const mobileGroups: MobileGroup[] = [
     products: [
       {
         name: "Renda 7 Mares",
-        description: "17cm — diversas cores",
+        description: "17cm, diversas cores",
         bg: "#fee2e2",
         image: resolveUpload("/lovable-uploads/renda-7-mares-1.jpg"),
       },
