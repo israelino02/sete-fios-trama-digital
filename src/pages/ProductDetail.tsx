@@ -38,7 +38,7 @@ const ProductDetail = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title={`${product.nome} | 7 Fios Têxtil`}
-        description={`${product.nome} (código ${product.codigo}) no atacado na 7 Fios Têxtil, Santa Cruz do Capibaribe — PE. Consulte cores, disponibilidade e preço pelo WhatsApp.`}
+        description={`${product.nome} (código ${product.codigo}) no atacado na 7 Fios Têxtil, Santa Cruz do Capibaribe - PE. Consulte cores, disponibilidade e preço pelo WhatsApp.`}
         path={`/produto/${product.id}`}
       />
       {/* Header */}

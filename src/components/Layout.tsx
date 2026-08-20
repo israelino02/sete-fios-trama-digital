@@ -129,7 +129,7 @@ export const Layout = ({ children }: LayoutProps) => {
               <ul className="space-y-2 text-sm text-primary-foreground/85">
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
-                  <span>Av. Pref. Braz de Líra, 760 — Santa Cruz do Capibaribe — PE</span>
+                  <span>Av. Pref. Braz de Líra, 760 - Santa Cruz do Capibaribe - PE</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-accent flex-shrink-0" />

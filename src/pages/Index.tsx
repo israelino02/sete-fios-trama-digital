@@ -195,7 +195,7 @@ const Index = () => {
             sameAs: ["https://www.instagram.com/7fiostextil/"],
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Av. Pref. Braz de Líra, 760 — Novo",
+              streetAddress: "Av. Pref. Braz de Líra, 760 - Novo",
               addressLocality: "Santa Cruz do Capibaribe",
               addressRegion: "PE",
               postalCode: "55192-460",
@@ -214,17 +214,22 @@ const Index = () => {
       {/* 2. HERO */}
       <section className="relative w-full min-h-[70vh] md:min-h-[75vh] lg:min-h-[80vh] overflow-hidden bg-primary">
         <h1 className="sr-only">
-          7 Fios Têxtil — Fornecedor de tecidos e aviamentos no atacado em Santa Cruz do Capibaribe, PE
+          7 Fios Têxtil - Fornecedor de tecidos e aviamentos no atacado em Santa Cruz do Capibaribe, PE
         </h1>
         <HeroCarousel images={heroDesktop} tabletImages={heroTablet} mobileImages={heroMobile} alts={heroAlts} />
         <div className="pointer-events-none absolute inset-x-0 bottom-14 md:bottom-20 z-20 flex justify-center px-4">
-          <div className="pointer-events-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="pointer-events-auto flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Button asChild size="lg" className="w-64 h-14 text-base bg-accent text-primary hover:bg-accent/90 font-semibold">
               <Link to="/catalogo">Ver Catálogo</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-64 h-14 text-base bg-white/10 backdrop-blur border-white text-white hover:bg-white hover:text-primary font-semibold">
               <a href={buildWa("Olá! Vim pelo site e gostaria de mais informações.")} target="_blank" rel="noopener noreferrer">
                 Falar no WhatsApp
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-64 h-14 text-base bg-white/10 backdrop-blur border-white text-white hover:bg-white hover:text-primary font-semibold">
+              <a href="tel:+5581994616071">
+                Ligar agora
               </a>
             </Button>
           </div>
